@@ -9,11 +9,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
-        body, html {
+        html {
             font-family: 'Roboto Mono', monospace;
-            background: #f2f4f8;
-            min-height: 100vh;
+            background-color: #f2f4f8;
             transition: background-color 0.3s, color 0.3s;
+        }
+        body, html {
+            min-height: 100vh;
+            margin: 0;
+        }
+        body {
+            background-color: transparent;
         }
         .isla-flotante {
             background: rgba(255,255,255,0.92);
@@ -57,44 +63,47 @@
         }
         .navbar-isla .nav-link {
             font-size: 1.1rem;
-            margin: 0 1rem;
+            margin: 0 1.8rem;
             transition: color 0.3s;
             white-space: nowrap;
         }
         
         /* Estilos para el Modo Oscuro */
-        body.dark-mode {
+        html.dark-mode {
             background: #121212;
             color: #e0e0e0;
         }
-        body.dark-mode .navbar-isla {
+        html.dark-mode .navbar-isla {
             background: #1E1E1E !important;
             box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
         }
-        body.dark-mode .navbar-isla .navbar-brand,
-        body.dark-mode .navbar-isla .nav-link,
-        body.dark-mode #theme-toggle {
+        html.dark-mode .navbar-isla .navbar-brand,
+        html.dark-mode .navbar-isla .nav-link,
+        html.dark-mode #theme-toggle {
             color: #e0e0e0;
         }
-        body.dark-mode .isla-flotante {
+        html.dark-mode .navbar-brand img {
+            filter: invert(1);
+        }
+        html.dark-mode .isla-flotante {
             background: #1E1E1E;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
             border-color: rgba(255, 255, 255, 0.1);
         }
-        body.dark-mode .isla-flotante .card {
+        html.dark-mode .isla-flotante .card {
             background-color: #2a2a2a;
             color: #e0e0e0;
             border-color: #444;
         }
-        body.dark-mode .isla-flotante .list-group-item {
+        html.dark-mode .isla-flotante .list-group-item {
             background-color: #2a2a2a;
             color: #e0e0e0;
             border-color: #444;
         }
-        body.dark-mode .isla-flotante .card-header {
+        html.dark-mode .isla-flotante .card-header {
             background-color: #333 !important;
         }
-        body.dark-mode .isla-flotante .alert-info {
+        html.dark-mode .isla-flotante .alert-info {
             background-color: #0c5460;
             color: #d1ecf1;
             border-color: #bee5eb;
@@ -105,6 +114,11 @@
             cursor: pointer;
             padding: 0;
             line-height: 1;
+        }
+        .navbar-brand img {
+            flex-shrink: 0;
+            margin-right: 2rem;
+            transition: filter 0.3s ease-in-out;
         }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -128,13 +142,13 @@
                             <a class="nav-link" href="/IndexUser.aspx"><i class="bx bxs-home"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Sobre.aspx">Sobre SyntaxError</a>
+                            <a class="nav-link" href="/Sobre.aspx">Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Libros.aspx">Libros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Recursos.aspx">Recursos digitales</a>
+                            <a class="nav-link" href="/Recursos.aspx">Digitales</a>
                         </li>
                     </ul>
 
@@ -174,23 +188,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+        const htmlElement = document.documentElement;
         const themeIcon = themeToggle.querySelector('i');
 
         const applyTheme = (theme) => {
             if (theme === 'dark') {
-                body.classList.add('dark-mode');
+                htmlElement.classList.add('dark-mode');
                 themeIcon.classList.remove('bxs-moon');
                 themeIcon.classList.add('bxs-sun');
             } else {
-                body.classList.remove('dark-mode');
+                htmlElement.classList.remove('dark-mode');
                 themeIcon.classList.remove('bxs-sun');
                 themeIcon.classList.add('bxs-moon');
             }
         };
 
         themeToggle.addEventListener('click', () => {
-            let currentTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+            let currentTheme = htmlElement.classList.contains('dark-mode') ? 'light' : 'dark';
             localStorage.setItem('theme', currentTheme);
             applyTheme(currentTheme);
         });
