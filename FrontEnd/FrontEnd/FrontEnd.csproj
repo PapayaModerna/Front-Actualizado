@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminBiblio.Master" />
     <None Include="Connected Services\PersonaWS\configuration91.svcinfo" />
     <None Include="Connected Services\PersonaWS\configuration.svcinfo" />
     <Content Include="Connected Services\PersonaWS\FrontEnd.PersonaWS.calcularLimitePrestamosResponse.datasource">
@@ -121,6 +122,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="IndexAdmin.aspx" />
     <Content Include="LoginBiblio.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -140,10 +142,24 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBiblio.Master.cs">
+      <DependentUpon>AdminBiblio.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBiblio.Master.designer.cs">
+      <DependentUpon>AdminBiblio.Master</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\PersonaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="IndexAdmin.aspx.cs">
+      <DependentUpon>IndexAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexAdmin.aspx.designer.cs">
+      <DependentUpon>IndexAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginBiblio.aspx.cs">
       <DependentUpon>LoginBiblio.aspx</DependentUpon>

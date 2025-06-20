@@ -27,7 +27,7 @@ namespace FrontEnd
                     hfMostrarLoader.Value = "true";
 
                     if (persona.tipo == tipoPersona.ADMINISTRADOR)
-                        Response.Redirect("~/librosPrincipal.aspx");
+                        Response.Redirect("~/IndexAdmin.aspx");
                     else
                         Response.Redirect("~/index.aspx");
                 }
