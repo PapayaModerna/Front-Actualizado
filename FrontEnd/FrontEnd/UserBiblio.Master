@@ -1,0 +1,205 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserBiblio.master.cs" Inherits="FrontEnd.UserBiblio" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>MyHolyLib</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            font-family: 'Roboto Mono', monospace;
+            background: #f2f4f8;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .isla-flotante {
+            background: rgba(255,255,255,0.92);
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            margin: 3rem auto 0 auto;
+            padding: 2.5rem 2rem;
+            max-width: 600px;
+            min-width: 500px;
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(8px);
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+        .navbar-isla {
+            background: rgba(255,255,255,0.97) !important;
+            border-radius: 2rem;
+            box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.10);
+            margin: 2rem auto 2.5rem auto;
+            max-width: 1200px;
+            min-width: 1050px;
+            padding: 0.5rem 2.5rem;
+            font-family: 'Roboto Mono', monospace;
+            transition: background-color 0.3s;
+        }
+        .navbar-isla .navbar-collapse {
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .navbar-isla .navbar-brand {
+            flex-shrink: 0;
+            margin-right: 2rem;
+        }
+        .navbar-isla .navbar-nav {
+            flex-direction: row;
+            align-items: center;
+        }
+        .navbar-isla .navbar-nav-right {
+            flex-shrink: 0;
+        }
+        .navbar-isla .nav-link {
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+        
+        /* Estilos para el Modo Oscuro */
+        body.dark-mode {
+            background: #121212;
+            color: #e0e0e0;
+        }
+        body.dark-mode .navbar-isla {
+            background: #1E1E1E !important;
+            box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
+        }
+        body.dark-mode .navbar-isla .navbar-brand,
+        body.dark-mode .navbar-isla .nav-link,
+        body.dark-mode #theme-toggle {
+            color: #e0e0e0;
+        }
+        body.dark-mode .isla-flotante {
+            background: #1E1E1E;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        body.dark-mode .isla-flotante .card {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+        body.dark-mode .isla-flotante .list-group-item {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+        body.dark-mode .isla-flotante .card-header {
+            background-color: #333 !important;
+        }
+        body.dark-mode .isla-flotante .alert-info {
+            background-color: #0c5460;
+            color: #d1ecf1;
+            border-color: #bee5eb;
+        }
+        #theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Navbar -->
+        <nav class="navbar navbar-isla">
+            <div class="container-fluid p-0">
+                <div class="navbar-collapse" id="navbarNav">
+                    <!-- Logo (Left) -->
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                        <img src="/Images/myholylogo.png" alt="Logo" width="62" height="40" class="d-inline-block align-text-top">
+                        MyHolyLib
+                    </a>
+
+                    <!-- Links (Center) -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/IndexUser.aspx"><i class="bx bxs-home"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Sobre.aspx">Sobre SyntaxError</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Libros.aspx">Libros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Recursos.aspx">Recursos digitales</a>
+                        </li>
+                    </ul>
+
+                    <!-- User actions (Right) -->
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item">
+                            <button id="theme-toggle" type="button" class="btn btn-link nav-link p-0 fs-4">
+                                <i class='bx bxs-moon'></i>
+                            </button>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <asp:LoginView ID="LoginView1" runat="server">
+                                <AnonymousTemplate>
+                                    <a class="nav-link" href="/LoginBiblio.aspx" title="Iniciar sesión"><i class="bx bx-user-circle fs-3"></i></a>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bx bx-user fs-4"></i> Mi cuenta
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="/Perfil.aspx">Perfil</a></li>
+                                        <li><a class="dropdown-item" href="/Logout.aspx">Cerrar sesión</a></li>
+                                    </ul>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Contenido principal -->
+        <div class="container isla-flotante mt-4">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const themeIcon = themeToggle.querySelector('i');
+
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                body.classList.add('dark-mode');
+                themeIcon.classList.remove('bxs-moon');
+                themeIcon.classList.add('bxs-sun');
+            } else {
+                body.classList.remove('dark-mode');
+                themeIcon.classList.remove('bxs-sun');
+                themeIcon.classList.add('bxs-moon');
+            }
+        };
+
+        themeToggle.addEventListener('click', () => {
+            let currentTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+            applyTheme(currentTheme);
+        });
+
+        // Aplicar tema guardado al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            applyTheme(savedTheme);
+        });
+    </script>
+</body>
+</html>
