@@ -121,6 +121,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\EjemplarWS\EjemplarWS.wsdl" />
+    <None Include="Connected Services\EjemplarWS\EjemplarWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.creadoresDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.ejemplaresDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -128,6 +138,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.insertarMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarEjemplaresMaterialResponse.datasource">
@@ -157,6 +170,9 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarPorCaracter_CreadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTemasPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -169,25 +185,9 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.obtenerPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.creadoresDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTemasPorMaterialResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.temasDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\EjemplarWS\EjemplarWS.wsdl" />
-    <None Include="Connected Services\EjemplarWS\EjemplarWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
     <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
       <SubType>Designer</SubType>

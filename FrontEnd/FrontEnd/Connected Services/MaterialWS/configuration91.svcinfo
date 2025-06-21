@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="mttIlmn4pY2TpPGntpS+EFn2ZI9w7ArqwsGeoDiaujk=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="QEa9+M08XgU2Rsj6lMKRlrApRczSE3vtXlo7VhnUn5k=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="MaterialWSPortBinding">
+    <bindingConfiguration bindingType="basicHttpBinding" name="MaterialWSPortBinding1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MaterialWSPortBinding</serializedValue>
+          <serializedValue>MaterialWSPortBinding1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="MaterialWSPort" contract="MaterialWS.MaterialWS" bindingType="basicHttpBinding" address="http://localhost:8080/myholywrapper-v2.1/MaterialWS" bindingConfiguration="MaterialWSPortBinding">
+    <endpoint name="MaterialWSPort1" contract="MaterialWS.MaterialWS" bindingType="basicHttpBinding" address="http://localhost:8080/myholywrapper-v2.1/MaterialWS" bindingConfiguration="MaterialWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8080/myholywrapper-v2.1/MaterialWS</serializedValue>
@@ -124,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MaterialWSPortBinding</serializedValue>
+          <serializedValue>MaterialWSPortBinding1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>MaterialWS.MaterialWS</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MaterialWSPort</serializedValue>
+          <serializedValue>MaterialWSPort1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

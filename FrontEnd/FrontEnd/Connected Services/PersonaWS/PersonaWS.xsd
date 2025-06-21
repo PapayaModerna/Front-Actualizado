@@ -134,6 +134,17 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:personasDTO" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="obtenerPersonaPorCredenciales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo_codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPersonaPorCredencialesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarPersona">
     <xs:sequence>
       <xs:element minOccurs="0" name="idPersona" type="xs:int" />
@@ -159,17 +170,6 @@
   <xs:complexType name="modificarPersonaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerPersonaPorCredenciales">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="correo_codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerPersonaPorCredencialesResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:personasDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="calcularLimitePrestamos">
