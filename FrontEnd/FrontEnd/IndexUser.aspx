@@ -12,7 +12,7 @@
             Libros disponibles
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cien años de soledad - Gabriel García Márquez</li>
+            <li class="list-group-item">Cambiar - Cambiar</li>
             <li class="list-group-item">Don Quijote de la Mancha - Miguel de Cervantes</li>
             <li class="list-group-item">Rayuela - Julio Cortázar</li>
             <li class="list-group-item">La sombra del viento - Carlos Ruiz Zafón</li>
