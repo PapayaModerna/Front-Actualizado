@@ -15,6 +15,15 @@ namespace FrontEnd
     {
 
         /// <summary>
+        /// Control UpdatePanelLibros.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanelLibros;
+
+        /// <summary>
         /// Control txtBuscar.
         /// </summary>
         /// <remarks>
@@ -33,15 +42,6 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.LinkButton btnBuscar;
 
         /// <summary>
-        /// Control UpdatePanelLibros.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanelLibros;
-
-        /// <summary>
         /// Control rptLibros.
         /// </summary>
         /// <remarks>
@@ -49,5 +49,14 @@ namespace FrontEnd
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptLibros;
+
+        /// <summary>
+        /// Control rptPaginacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptPaginacion;
     }
 }

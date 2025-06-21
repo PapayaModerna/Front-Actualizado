@@ -118,6 +118,21 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.obtenerPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.creadoresDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTemasPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.temasDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
     <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
       <SubType>Designer</SubType>
@@ -180,6 +195,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\IndexAdmin.css" />
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
     <Content Include="IndexAdmin.aspx" />
