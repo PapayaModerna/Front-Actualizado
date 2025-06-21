@@ -142,13 +142,13 @@
                             <a class="nav-link" href="/IndexUser.aspx"><i class="bx bxs-home"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Sobre.aspx">Nosotros</a>
+                            <a class="nav-link" href="/SobreNosotrosUser.aspx">Sobre nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Libros.aspx">Libros</a>
+                            <a class="nav-link" href="/RecursosUser.aspx">Recursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Recursos.aspx">Digitales</a>
+                            <a class="nav-link" href="/RecursosDigitalesUser.aspx">Recursos digitales</a>
                         </li>
                     </ul>
 
