@@ -15,6 +15,33 @@ namespace FrontEnd
     {
 
         /// <summary>
+        /// Control ddlSedes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSedes;
+
+        /// <summary>
+        /// Control lblCantidadLibros.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCantidadLibros;
+
+        /// <summary>
+        /// Control lblCantidadEjemplares.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCantidadEjemplares;
+
+        /// <summary>
         /// Control UpdatePanelLibros.
         /// </summary>
         /// <remarks>

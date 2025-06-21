@@ -5,16 +5,22 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FrontEnd.MaterialWS;
+using FrontEnd.SedeWS;
+using FrontEnd.EjemplarWS;
 namespace FrontEnd
 {
     public partial class IndexAdmin : System.Web.UI.Page
     {
         private MaterialWSClient materialWSClient;
+        private SedeWSClient sedeWSClient;
+        private EjemplarWSClient ejemplarWSClient;
         private const int CantidadPagina = 10;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             materialWSClient = new MaterialWSClient();
+            sedeWSClient = new SedeWSClient();
+            ejemplarWSClient= new EjemplarWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,8 +28,24 @@ namespace FrontEnd
             {
                 ViewState["Filtro"] = "";
                 ViewState["PaginaActual"] = 1;
+                CargarSedes();
                 CargarLibros(1);
+                int totalLibros = materialWSClient.contarMateriales();
+                var ejemplares = ejemplarWSClient.listarEjemplares();
+                int totalEjemplares = ejemplares.Length;
+                lblCantidadLibros.Text = $"{totalLibros} Libros";
+                lblCantidadEjemplares.Text = $"{totalEjemplares} Ejemplares físicos y digitales";
             }
+        }
+        private void CargarSedes()
+        {
+            var sedes = sedeWSClient.listarSedes(); 
+            ddlSedes.DataSource = sedes;
+            ddlSedes.DataTextField = "nombre";   
+            ddlSedes.DataValueField = "idSede";      
+            ddlSedes.DataBind();
+
+            ddlSedes.Items.Insert(0, new ListItem("Todas las sedes", "0")); 
         }
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -47,7 +69,7 @@ namespace FrontEnd
         private void CargarLibros(int pagina)
         {
             string filtro = ViewState["Filtro"].ToString();
-            List<materialesDTO> libros;
+            List<FrontEnd.MaterialWS.materialesDTO> libros;
             int total = 0;
 
             if (!string.IsNullOrEmpty(filtro))

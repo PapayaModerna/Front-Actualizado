@@ -30,40 +30,6 @@
     }
 }
 
-.carrusel-container {
-    width: 100%;
-    overflow: hidden;
-    margin-top: 30px;
-    height: 320px;
-}
-
-.carrusel-slide {
-    display: flex;
-    width: calc(100% * 2);
-    animation: slideCarrusel 20s infinite;
-}
-
-    .carrusel-slide img {
-        width: 100%;
-        flex: 0 0 100%;
-        height: 320px;
-        object-fit: cover;
-    }
-
-@keyframes slideCarrusel {
-    0%, 40% {
-        transform: translateX(0%);
-    }
-
-    50%, 90% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-
 .buscador-container {
     margin: 40px 0 20px 40px;
     position: relative;
@@ -116,7 +82,8 @@
         color: white;
     }
 
-    .tabla-libros th, .tabla-libros td {
+    .tabla-libros th,
+    .tabla-libros td {
         padding: 14px 20px;
         text-align: left;
         font-size: 1rem;
@@ -130,6 +97,19 @@
         .tabla-libros tbody tr:hover {
             background-color: #f1f1f1;
         }
+
+    .tabla-libros th:nth-child(1),
+    .tabla-libros td:nth-child(1) {
+        width: 100px;
+        max-width: 100px;
+    }
+
+    .tabla-libros th:nth-child(2),
+    .tabla-libros td:nth-child(2) {
+        width: calc(100% - 100px);
+        word-wrap: break-word;
+        white-space: normal;
+    }
 
 .loader-overlay {
     position: absolute;
@@ -164,15 +144,133 @@
     }
 }
 
-.tabla-libros th:nth-child(1),
-.tabla-libros td:nth-child(1) {
-    width: 100px; /* ancho fijo para ID */
-    max-width: 100px;
+.seccion-admin {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 40px;
+    margin: 40px auto 30px auto;
+    width: calc(100% - 80px); /* Igual margen a izquierda y derecha */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alineación superior */
+    gap: 40px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.tabla-libros th:nth-child(2),
-.tabla-libros td:nth-child(2) {
-    width: calc(100% - 100px); /* el resto del espacio para Título */
-    word-wrap: break-word;
-    white-space: normal;
+/* IZQUIERDA */
+.admin-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+/* CENTRO (Dropdown + datos) */
+.admin-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* DROPDOWN */
+.ddl-sedes {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 32px;
+    width: 220px;
+    padding: 4px 12px;
+    font-size: 1rem;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    background-image: none;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 3px;
+    text-align: left;
+}
+
+    .ddl-sedes::-ms-expand {
+        display: none; /* IE10+ */
+    }
+
+/* TEXTOS DE CONTEO */
+.conteo-libros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+.lbl-dato-libro, .lbl-seccion {
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    margin-top: 3px;
+}
+
+/* DERECHA: ÍCONO */
+.admin-logo {
+    height: 100px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.admin-logo img {
+    height: 80px;
+    width: auto;
+    filter: invert(1);
+    animation: fadeInZoom 0.8s ease-out forwards;
+    margin-top: 6px;
+}
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.paginacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-pagina {
+    padding: 8px 12px;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    margin-left: 4px;
+    min-width: 35px;
+    text-align: center;
+}
+
+    .btn-pagina:hover {
+        background-color: #343a40;
+        color: #fff;
+    }
+
+    .btn-pagina.activa {
+        background-color: #343a40;
+        color: #fff;
+        font-weight: bold;
+    }

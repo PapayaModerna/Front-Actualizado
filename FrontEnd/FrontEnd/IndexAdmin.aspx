@@ -11,12 +11,21 @@
         </div>
     </div>
 
-    <div class="carrusel-container">
-        <div class="carrusel-slide">
-            <img src="Images/biblio_carrusel.jpeg" alt="Imagen 1" />
-            <img src="Images/carrusel_biblio_02.jpg" alt="Imagen 2" />
+    <div class="seccion-admin">
+        <div class="admin-left">
+            <h2>Sede General</h2>
+            <p class="lbl-seccion">Libros disponibles</p>
+            <p class="lbl-seccion">Ejemplares de libros en el sistema</p>
         </div>
-    </div>    
+        <div class="admin-center">
+            <asp:DropDownList ID="ddlSedes" runat="server" CssClass="ddl-sedes" AutoPostBack="true" />
+            <asp:Label ID="lblCantidadLibros" runat="server" CssClass="lbl-dato-libro" />
+            <asp:Label ID="lblCantidadEjemplares" runat="server" CssClass="lbl-dato-libro" />
+        </div>
+        <div class="admin-logo">
+            <img src="images/myholylogo.png" alt="Logo Biblioteca">
+        </div>
+    </div>   
 
     <asp:UpdatePanel ID="UpdatePanelLibros" runat="server">
         <ContentTemplate>
@@ -58,8 +67,7 @@
                         <asp:LinkButton ID="lnkPagina" runat="server" Text='<%# Eval("NumeroPagina") %>' 
                             CommandArgument='<%# Eval("NumeroPagina") %>' 
                             OnClick="lnkPagina_Click"
-                            CssClass="btn-pagina"
-                            Style='<%# (int)Eval("NumeroPagina") == (int)ViewState["PaginaActual"] ? "font-weight:bold; text-decoration:underline;" : "" %>'>
+                            CssClass='<%# (int)Eval("NumeroPagina") == (int)ViewState["PaginaActual"] ? "btn-pagina activa" : "btn-pagina" %>'>
                         </asp:LinkButton>
                     </ItemTemplate>
                 </asp:Repeater>

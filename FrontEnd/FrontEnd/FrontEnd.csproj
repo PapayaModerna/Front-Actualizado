@@ -70,6 +70,57 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminBiblio.Master" />
+    <None Include="Connected Services\EjemplarWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EjemplarWS\configuration.svcinfo" />
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarDisponiblesPorSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarTotalPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarTotalPorSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.ejemplaresDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.eliminarEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.insertarEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.listarEjemplaresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.modificarEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.obtenerEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\EjemplarWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.ejemplaresDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -133,6 +184,10 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.temasDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\EjemplarWS\EjemplarWS.wsdl" />
+    <None Include="Connected Services\EjemplarWS\EjemplarWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
     <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
       <SubType>Designer</SubType>
@@ -179,6 +234,36 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\SedeWS\configuration91.svcinfo" />
+    <None Include="Connected Services\SedeWS\configuration.svcinfo" />
+    <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.eliminarSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.insertarSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.listarSedesActivasPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.listarSedesActivasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.listarSedesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.modificarSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.obtenerSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.sedesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SedeWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -210,6 +295,10 @@
     <None Include="Connected Services\PersonaWS\PersonaWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SedeWS\SedeWS.wsdl" />
+    <None Include="Connected Services\SedeWS\SedeWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -225,12 +314,22 @@
     <Compile Include="AdminBiblio.Master.designer.cs">
       <DependentUpon>AdminBiblio.Master</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\EjemplarWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\MaterialWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\PersonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SedeWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -303,8 +402,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\EjemplarWS\" />
     <WCFMetadataStorage Include="Connected Services\MaterialWS\" />
     <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\SedeWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
