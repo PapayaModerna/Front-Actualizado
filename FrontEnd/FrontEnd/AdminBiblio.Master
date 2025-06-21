@@ -6,7 +6,6 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Content/bootstrap.css" rel="stylesheet" />
-    <link href="Content/Fonts/css/all.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <link href="Content/siteUsuario.css" rel="stylesheet" />
 
@@ -132,10 +131,10 @@
                     <a href="IndexAdmin.aspx"><i class="fa-solid fa-warehouse me-2"></i>LIBROS</a>
                 </li>
                 <li class="nav-item mb-1">
-                    <a href="PrestamosPrincipal.aspx">PRÉSTAMOS</a>
+                    <a href="PrestamosPrincipalAdmin.aspx"><i class="fa-solid fa-book-bookmark me-2"></i>PRÉSTAMOS</a>
                 </li>
                 <li class="nav-item mb-1">
-                    <a href="ReportesPrincipal.aspx">REPORTES</a>
+                    <a href="ReportesPrincipalAdmin.aspx">REPORTES</a>
                 </li>
             </ul>
             <hr>
