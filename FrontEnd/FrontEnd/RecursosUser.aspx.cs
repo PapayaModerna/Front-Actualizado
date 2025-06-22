@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FrontEnd.MaterialWS;
@@ -10,61 +11,72 @@ namespace FrontEnd
 {
     public partial class RecursosUser : System.Web.UI.Page
     {
-        private MaterialWSClient materialWSClient;
-        private const int PageSize = 9;
+        private MaterialWSClient materialwsClient;
 
-        private int CurrentPage
+        [WebMethod]
+        public static string ObtenerCreadores(int idMaterial)
         {
-            get { return ViewState["CurrentPage"] == null ? 1 : (int)ViewState["CurrentPage"]; }
-            set { ViewState["CurrentPage"] = value; }
+            try
+            {
+                var wsClient = new MaterialWSClient();
+                var creadores = wsClient.listarCreadoresPorMaterial(idMaterial);
+
+                if (creadores != null && creadores.Any())
+                {
+                    return string.Join(", ", creadores.Select(c =>
+                        !string.IsNullOrEmpty(c.seudonimo) ? c.seudonimo : $"{c.nombre} {c.paterno}".Trim()
+                    ));
+                }
+                return "N/A";
+            }
+            catch (Exception)
+            {
+                // En un caso real, aquí se debería registrar el error.
+                return "No se pudo cargar la información.";
+            }
         }
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            materialWSClient = new MaterialWSClient();
+            materialwsClient = new MaterialWSClient();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                CargarMateriales();
+                CargarCatalogosPorNivel();
             }
         }
 
-        private void CargarMateriales()
+        private void CargarCatalogosPorNivel()
         {
             try
             {
-                MaterialWS.materialesDTO[] materialesArray = materialWSClient.listarMaterialesPaginado(PageSize, CurrentPage);
-                List<MaterialWS.materialesDTO> materiales = materialesArray.ToList();
-                rptMateriales.DataSource = materiales;
-                rptMateriales.DataBind();
+                // Mostrar solo los primeros 4 materiales para cada nivel
+                const int limite = 6;
+                const int pagina = 1;
 
-                lblPageNumber.Text = "Página " + CurrentPage;
-                btnPrev.Enabled = CurrentPage > 1;
-                btnNext.Enabled = materiales.Count == PageSize;
+                // Nivel Básico
+                var basicos = materialwsClient.listarTodosPaginadoBasico(limite, pagina).Take(4).ToList();
+                rptBasico.DataSource = basicos;
+                rptBasico.DataBind();
 
+                // Nivel Intermedio
+                var intermedios = materialwsClient.listarTodosPaginadoIntermedio(limite, pagina).Take(4).ToList();
+                rptIntermedio.DataSource = intermedios;
+                rptIntermedio.DataBind();
+
+                // Nivel Avanzado
+                var avanzados = materialwsClient.listarTodosPaginadoAvanzado(limite, pagina).Take(4).ToList();
+                rptAvanzado.DataSource = avanzados;
+                rptAvanzado.DataBind();
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert('Error al cargar los materiales: " + ex.Message + "');</script>");
+                // Manejar la excepción, quizás mostrando un mensaje general
+                Response.Write("<script>alert('Error al cargar los catálogos: " + ex.Message + "');</script>");
             }
-        }
-
-        protected void btnPrev_Click(object sender, EventArgs e)
-        {
-            if (CurrentPage > 1)
-            {
-                CurrentPage--;
-                CargarMateriales();
-            }
-        }
-
-        protected void btnNext_Click(object sender, EventArgs e)
-        {
-            CurrentPage++;
-            CargarMateriales();
         }
 
         protected void rptMateriales_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -73,27 +85,49 @@ namespace FrontEnd
             {
                 var material = (MaterialWS.materialesDTO)e.Item.DataItem;
 
-                // --- Disponibilidad ---
-                /*var lblAvailability = (Label)e.Item.FindControl("lblAvailability");
-                var ejemplares = materialWSClient.listarEjemplaresMaterial(material.idMaterial, 1, 1);
-                if (ejemplares != null && ejemplares.Length > 0)
+                var card = (System.Web.UI.HtmlControls.HtmlGenericControl)e.Item.FindControl("bookCard");
+                if (card != null)
                 {
-                    lblAvailability.Text = "AVAILABLE";
+                    // --- Nivel ---
+                    var nivelDesc = "N/A";
+                    if (material.nivel != null && !string.IsNullOrEmpty(material.nivel.descripcion))
+                    {
+                        nivelDesc = material.nivel.descripcion;
+                    }
+                    card.Attributes["data-nivel"] = nivelDesc;
+
+                    // --- Editorial ---
+                    var editorialNombre = "N/A";
+                    if (material.editorial != null && !string.IsNullOrEmpty(material.editorial.nombre))
+                    {
+                        editorialNombre = material.editorial.nombre;
+                    }
+                    card.Attributes["data-editorial"] = editorialNombre;
                 }
-                else
-                {
-                    lblAvailability.Text = "NOT AVAILABLE";
-                }*/
 
-                
-                var lblAuthor = (Label)e.Item.FindControl("lblAuthor");
-                var creadores = materialWSClient.listarCreadoresPorMaterial(material.idMaterial);
-                var primerCreador = creadores[0];
-                lblAuthor.Text = $"{primerCreador.nombre} {primerCreador.paterno}";
+                // --- Disponibilidad ---
+                var lblAvailability = (Label)e.Item.FindControl("lblAvailability");
+                int disponibles = material.disponiblesFisicos;
+                bool disponible = disponibles > 0;
+                lblAvailability.Text = disponible ? $"DISPONIBLE ({disponibles})" : "NO DISPONIBLE";
 
+                // --- Cover Image ---
                 var imgPortada = (Image)e.Item.FindControl("imgPortada");
                 imgPortada.ImageUrl = ResolveUrl("~/Images/Portadas/" + material.portada);
                 imgPortada.AlternateText = material.titulo;
+
+                // --- Botón BORROW ---
+                var btnBorrow = (Button)e.Item.FindControl("btnBorrow");
+                if (!disponible)
+                {
+                    btnBorrow.Enabled = false;
+                    btnBorrow.CssClass = "btn btn-secondary btn-sm";
+                }
+                else
+                {
+                    btnBorrow.Enabled = true;
+                    btnBorrow.CssClass = "btn btn-primary btn-sm";
+                }
             }
         }
     }
