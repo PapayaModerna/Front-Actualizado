@@ -27,7 +27,7 @@
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
             margin: 3rem auto 0 auto;
             padding: 2.5rem 2rem;
-            max-width: 600px;
+            max-width: 1200px;
             min-width: 500px;
             border: 1px solid rgba(255,255,255,0.3);
             backdrop-filter: blur(8px);
@@ -180,7 +180,7 @@
             </div>
         </nav>
         <!-- Contenido principal -->
-        <div class="container isla-flotante mt-4">
+        <div class="container-fluid isla-flotante mt-4">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
