@@ -70,81 +70,101 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminBiblio.Master" />
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.creadoresDTO1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.ejemplaresDTO1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.eliminarMaterialResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.insertarMaterialResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.creadoresDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.ejemplaresDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarEjemplaresMaterialResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.eliminarMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMasRecientesResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.insertarMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMasSolicitadosResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPaginadoResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarEjemplaresMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPorSedeResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMasRecientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMasSolicitadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialPorCaracteresResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarPorCaracter_CreadorResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPaginadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTemasPorMaterialResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPorSedeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.materialesDTO1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPorTituloParcialPaginadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.modificarMaterialResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.obtenerPorIdResponse1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialPorTituloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.temasDTO1.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarPorAutorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
-    <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTemasPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosPaginadoBasicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.materialesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.modificarMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.obtenerPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.temasDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\PersonaWS\configuration91.svcinfo" />
     <None Include="Connected Services\PersonaWS\configuration.svcinfo" />
-    <None Include="Connected Services\MaterialWS\configuration91.svcinfo" />
-    <None Include="Connected Services\MaterialWS\configuration.svcinfo" />
-    <None Include="Connected Services\MaterialWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Connected Services\PersonaWS\FrontEnd.PersonaWS.calcularLimitePrestamosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -176,6 +196,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\PersonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\MaterialWS\configuration91.svcinfo" />
+    <None Include="Connected Services\MaterialWS\configuration.svcinfo" />
+    <None Include="Connected Services\MaterialWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -211,6 +237,10 @@
     <None Include="Connected Services\PersonaWS\PersonaWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
+    <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -226,12 +256,12 @@
     <Compile Include="AdminBiblio.Master.designer.cs">
       <DependentUpon>AdminBiblio.Master</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\MaterialWS\Reference.cs">
+    <Compile Include="Connected Services\PersonaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\PersonaWS\Reference.cs">
+    <Compile Include="Connected Services\MaterialWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -311,8 +341,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\MaterialWS\" />
     <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\MaterialWS\" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
