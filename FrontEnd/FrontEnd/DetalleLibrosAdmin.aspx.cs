@@ -44,6 +44,7 @@ namespace FrontEnd
                     lblTemas.Text = (temas != null && temas.Length > 0)
                         ? string.Join(", ", temas.Select(t => t.descripcion))
                         : "-";
+                    Session["MaterialSeleccionado"] = libro;
                 }
                 else
                 {
@@ -61,6 +62,7 @@ namespace FrontEnd
         }
         protected void btnEditar_Click(object sender, EventArgs e)
         {
+            
             Response.Redirect("EditarMaterial.aspx");
         }
 
