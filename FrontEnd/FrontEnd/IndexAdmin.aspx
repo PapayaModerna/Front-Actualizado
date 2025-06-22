@@ -13,12 +13,13 @@
 
     <div class="seccion-admin">
         <div class="admin-left">
-            <h2>Sede General</h2>
+            <asp:Label ID="lblTituloSede" runat="server" Text="Sede General" style="display:block; font-size:2rem; font-weight:900; color:white; margin-bottom:10px; line-height:1.2;"/>
+            <p class="lbl-seccion"> </p>
             <p class="lbl-seccion">Libros disponibles</p>
             <p class="lbl-seccion">Ejemplares de libros en el sistema</p>
         </div>
         <div class="admin-center">
-            <asp:DropDownList ID="ddlSedes" runat="server" CssClass="ddl-sedes" AutoPostBack="true" />
+            <asp:DropDownList ID="ddlSedes" runat="server" CssClass="ddl-sedes" AutoPostBack="true" OnSelectedIndexChanged="ddlSedes_SelectedIndexChanged"/>
             <asp:Label ID="lblCantidadLibros" runat="server" CssClass="lbl-dato-libro" />
             <asp:Label ID="lblCantidadEjemplares" runat="server" CssClass="lbl-dato-libro" />
         </div>

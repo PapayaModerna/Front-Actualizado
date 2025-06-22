@@ -30,6 +30,7 @@ namespace FrontEnd
                 ViewState["PaginaActual"] = 1;
                 ViewState["MostrarTabla"] = false;
                 CargarSedes();
+                actualizarTituloSede();
                 int totalLibros = materialWSClient.contarMateriales();
                 var ejemplares = ejemplarWSClient.listarEjemplares();
                 int totalEjemplares = ejemplares.Length;
@@ -44,6 +45,20 @@ namespace FrontEnd
                     CargarLibros(paginaActual);
                 }
             }
+        }
+        protected void ddlSedes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            actualizarTituloSede();
+            /*cargarDatos();*/
+        }
+        private void actualizarTituloSede()
+        {
+            string sedeSeleccionada = ddlSedes.SelectedItem.Text;
+
+            if (!string.IsNullOrEmpty(sedeSeleccionada) && sedeSeleccionada.ToLower().Contains("general"))
+                lblTituloSede.Text = "Sede General";
+            else
+                lblTituloSede.Text = "Sede: " + sedeSeleccionada;
         }
         private void CargarSedes()
         {
