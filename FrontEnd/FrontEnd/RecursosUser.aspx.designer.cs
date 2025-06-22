@@ -15,30 +15,39 @@ namespace FrontEnd
     {
 
         /// <summary>
-        /// Control rptBasico.
+        /// Control rptMateriales.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptBasico;
+        protected global::System.Web.UI.WebControls.Repeater rptMateriales;
 
         /// <summary>
-        /// Control rptIntermedio.
+        /// Control btnPrev.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptIntermedio;
+        protected global::System.Web.UI.WebControls.Button btnPrev;
 
         /// <summary>
-        /// Control rptAvanzado.
+        /// Control lblPageNumber.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptAvanzado;
+        protected global::System.Web.UI.WebControls.Label lblPageNumber;
+
+        /// <summary>
+        /// Control btnNext.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNext;
     }
 }
