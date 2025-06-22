@@ -24,9 +24,11 @@ namespace FrontEnd
                     hfMostrarLoader.Value = "true";
 
                     if (persona.tipo == tipoPersona.ADMINISTRADOR)
-                        Response.Redirect("~/IndexAdmin.aspx");
+                        Session["redireccion"] = "~/IndexAdmin.aspx";
                     else
-                        Response.Redirect("~/index.aspx");
+                        Session["redireccion"] = "~/IndexUser.aspx";
+                    Response.Redirect("~/Loader.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
                 else
                 {

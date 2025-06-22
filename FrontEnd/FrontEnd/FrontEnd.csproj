@@ -321,6 +321,7 @@
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
     <Content Include="IndexAdmin.aspx" />
+    <Content Include="Loader.aspx" />
     <Content Include="LoginBiblio.aspx" />
     <Content Include="PrestamosPrincipalAdmin.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -388,6 +389,13 @@
     </Compile>
     <Compile Include="IndexAdmin.aspx.designer.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loader.aspx.cs">
+      <DependentUpon>Loader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loader.aspx.designer.cs">
+      <DependentUpon>Loader.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginBiblio.aspx.cs">
       <DependentUpon>LoginBiblio.aspx</DependentUpon>
