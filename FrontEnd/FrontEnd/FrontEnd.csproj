@@ -268,8 +268,93 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.contarPrestamosActivosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.contarPrestamosAtrasadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.contarPrestamosPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.ejemplaresDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.eliminarPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.insertarPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarEjemplaresPrestadosPorPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarEjemplaresSolicitadosPorPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosActivosPorPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosAtrasadosPorPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosAtrasadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosDevueltosPorPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosDevueltosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosNoCulminadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosPorPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosSolicitadosPorPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosSolicitadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.modificarPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.obtenerPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.prestamosDeEjemplaresDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.prestamosDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.solicitarPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosPaginadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosPorSedePaginadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\PrestamoWS\PrestamoWS.wsdl" />
+    <None Include="Connected Services\PrestamoWS\PrestamoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\SedeWS\configuration91.svcinfo" />
     <None Include="Connected Services\SedeWS\configuration.svcinfo" />
+    <None Include="Connected Services\PrestamoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PrestamoWS\configuration.svcinfo" />
+    <None Include="Connected Services\PrestamoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\SedeWS\FrontEnd.SedeWS.eliminarSedeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -360,6 +445,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\PersonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PrestamoWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -461,6 +551,7 @@
     <WCFMetadataStorage Include="Connected Services\EjemplarWS\" />
     <WCFMetadataStorage Include="Connected Services\MaterialWS\" />
     <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\PrestamoWS\" />
     <WCFMetadataStorage Include="Connected Services\SedeWS\" />
   </ItemGroup>
   <PropertyGroup>

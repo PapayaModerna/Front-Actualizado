@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/PersonaWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="listarPersonas">
-    <part name="parameters" element="tns:listarPersonas" />
+  <message name="listarPersonasPaginado">
+    <part name="parameters" element="tns:listarPersonasPaginado" />
   </message>
-  <message name="listarPersonasResponse">
-    <part name="parameters" element="tns:listarPersonasResponse" />
+  <message name="listarPersonasPaginadoResponse">
+    <part name="parameters" element="tns:listarPersonasPaginadoResponse" />
   </message>
   <message name="obtenerPersona">
     <part name="parameters" element="tns:obtenerPersona" />
@@ -23,11 +23,11 @@
   <message name="modificarPersonaResponse">
     <part name="parameters" element="tns:modificarPersonaResponse" />
   </message>
-  <message name="eliminarPersona">
-    <part name="parameters" element="tns:eliminarPersona" />
+  <message name="listarPersonas">
+    <part name="parameters" element="tns:listarPersonas" />
   </message>
-  <message name="eliminarPersonaResponse">
-    <part name="parameters" element="tns:eliminarPersonaResponse" />
+  <message name="listarPersonasResponse">
+    <part name="parameters" element="tns:listarPersonasResponse" />
   </message>
   <message name="insertarPersona">
     <part name="parameters" element="tns:insertarPersona" />
@@ -35,23 +35,23 @@
   <message name="insertarPersonaResponse">
     <part name="parameters" element="tns:insertarPersonaResponse" />
   </message>
-  <message name="listarPersonasPaginado">
-    <part name="parameters" element="tns:listarPersonasPaginado" />
+  <message name="eliminarPersona">
+    <part name="parameters" element="tns:eliminarPersona" />
   </message>
-  <message name="listarPersonasPaginadoResponse">
-    <part name="parameters" element="tns:listarPersonasPaginadoResponse" />
-  </message>
-  <message name="calcularLimitePrestamos">
-    <part name="parameters" element="tns:calcularLimitePrestamos" />
-  </message>
-  <message name="calcularLimitePrestamosResponse">
-    <part name="parameters" element="tns:calcularLimitePrestamosResponse" />
+  <message name="eliminarPersonaResponse">
+    <part name="parameters" element="tns:eliminarPersonaResponse" />
   </message>
   <message name="modificarContrasenha">
     <part name="parameters" element="tns:modificarContrasenha" />
   </message>
   <message name="modificarContrasenhaResponse">
     <part name="parameters" element="tns:modificarContrasenhaResponse" />
+  </message>
+  <message name="calcularLimitePrestamos">
+    <part name="parameters" element="tns:calcularLimitePrestamos" />
+  </message>
+  <message name="calcularLimitePrestamosResponse">
+    <part name="parameters" element="tns:calcularLimitePrestamosResponse" />
   </message>
   <message name="obtenerPersonaPorCredenciales">
     <part name="parameters" element="tns:obtenerPersonaPorCredenciales" />
@@ -66,9 +66,9 @@
     <part name="parameters" element="tns:contarPersonasResponse" />
   </message>
   <portType name="PersonaWS">
-    <operation name="listarPersonas">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasRequest" message="tns:listarPersonas" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasResponse" message="tns:listarPersonasResponse" />
+    <operation name="listarPersonasPaginado">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasPaginadoRequest" message="tns:listarPersonasPaginado" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasPaginadoResponse" message="tns:listarPersonasPaginadoResponse" />
     </operation>
     <operation name="obtenerPersona">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaRequest" message="tns:obtenerPersona" />
@@ -78,25 +78,25 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaRequest" message="tns:modificarPersona" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaResponse" message="tns:modificarPersonaResponse" />
     </operation>
-    <operation name="eliminarPersona">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaRequest" message="tns:eliminarPersona" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaResponse" message="tns:eliminarPersonaResponse" />
+    <operation name="listarPersonas">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasRequest" message="tns:listarPersonas" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasResponse" message="tns:listarPersonasResponse" />
     </operation>
     <operation name="insertarPersona">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaRequest" message="tns:insertarPersona" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaResponse" message="tns:insertarPersonaResponse" />
     </operation>
-    <operation name="listarPersonasPaginado">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasPaginadoRequest" message="tns:listarPersonasPaginado" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasPaginadoResponse" message="tns:listarPersonasPaginadoResponse" />
-    </operation>
-    <operation name="calcularLimitePrestamos">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/calcularLimitePrestamosRequest" message="tns:calcularLimitePrestamos" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/calcularLimitePrestamosResponse" message="tns:calcularLimitePrestamosResponse" />
+    <operation name="eliminarPersona">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaRequest" message="tns:eliminarPersona" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaResponse" message="tns:eliminarPersonaResponse" />
     </operation>
     <operation name="modificarContrasenha">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarContrasenhaRequest" message="tns:modificarContrasenha" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarContrasenhaResponse" message="tns:modificarContrasenhaResponse" />
+    </operation>
+    <operation name="calcularLimitePrestamos">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/calcularLimitePrestamosRequest" message="tns:calcularLimitePrestamos" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/calcularLimitePrestamosResponse" message="tns:calcularLimitePrestamosResponse" />
     </operation>
     <operation name="obtenerPersonaPorCredenciales">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredencialesRequest" message="tns:obtenerPersonaPorCredenciales" />
@@ -109,7 +109,7 @@
   </portType>
   <binding name="PersonaWSPortBinding" type="tns:PersonaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarPersonas">
+    <operation name="listarPersonasPaginado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -136,7 +136,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarPersona">
+    <operation name="listarPersonas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -154,16 +154,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPersonasPaginado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="calcularLimitePrestamos">
+    <operation name="eliminarPersona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -173,6 +164,15 @@
       </output>
     </operation>
     <operation name="modificarContrasenha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="calcularLimitePrestamos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

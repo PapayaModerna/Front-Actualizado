@@ -27,13 +27,15 @@
                 </div>
                 <asp:Panel ID="pnlTotales" runat="server" Visible="false">
                     <table class="tabla-libros">
-                        <thead><tr><th>ID</th><th>Libro</th></tr></thead>
+                        <thead><tr><th>ID</th><th>Fecha Solicitud</th><th>Fecha Préstamo</th><th>Fecha Devolución</th></tr></thead>
                         <tbody>
                             <asp:Repeater ID="rptTotales" runat="server">
                                 <ItemTemplate>
                                     <tr>
-                                        <td><%# Eval("ID") %></td>
-                                        <td><%# Eval("Libro") %></td>
+                                        <td><%# Eval("idPrestamo", "{0:000}") %></td>
+                                        <td><%# Eval("fechaSolicitud") %></td>
+                                        <td><%# Eval("fechaPrestamo") %></td>
+                                        <td><%# Eval("fechaDevolucion") %></td>
                                     </tr>
                                 </ItemTemplate>
                             </asp:Repeater>

@@ -43,181 +43,404 @@ namespace FrontEnd.MaterialWS {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", ConfigurationName="MaterialWS.MaterialWS")]
+    public interface MaterialWS {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
+            "orMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
+            "orMaterialResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
+            "orMaterial/Fault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse obtenerNombreCreadorRandomPorMaterial(FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
+            "orMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
+            "orMaterialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse> obtenerNombreCreadorRandomPorMaterialAsync(FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
+            "MaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
+            "MaterialResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
+            "Material/Fault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse contarDisponiblesFisicosPorMaterial(FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
+            "MaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
+            "MaterialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse> contarDisponiblesFisicosPorMaterialAsync(FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "EditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "EditorialResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "Editorial/Fault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialResponse listarMaterialesPaginadoPorEditorial(FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "EditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "EditorialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialResponse> listarMaterialesPaginadoPorEditorialAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloRequ" +
+            "est", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMaterialPorTituloResponse listarMaterialPorTitulo(FrontEnd.MaterialWS.listarMaterialPorTituloRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloRequ" +
+            "est", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloResp" +
+            "onse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialPorTituloResponse> listarMaterialPorTituloAsync(FrontEnd.MaterialWS.listarMaterialPorTituloRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoReq" +
+            "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMaterialesPaginadoResponse listarMaterialesPaginado(FrontEnd.MaterialWS.listarMaterialesPaginadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoReq" +
+            "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoResponse> listarMaterialesPaginadoAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRe" +
+            "quest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRe" +
+            "sponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasico/F" +
+            "ault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarTodosPaginadoBasicoResponse listarTodosPaginadoBasico(FrontEnd.MaterialWS.listarTodosPaginadoBasicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRe" +
+            "quest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoBasicoResponse> listarTodosPaginadoBasicoAsync(FrontEnd.MaterialWS.listarTodosPaginadoBasicoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.eliminarMaterialResponse eliminarMaterial(FrontEnd.MaterialWS.eliminarMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.eliminarMaterialResponse> eliminarMaterialAsync(FrontEnd.MaterialWS.eliminarMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.modificarMaterialResponse modificarMaterial(FrontEnd.MaterialWS.modificarMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.modificarMaterialResponse> modificarMaterialAsync(FrontEnd.MaterialWS.modificarMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarTodosResponse listarTodos(FrontEnd.MaterialWS.listarTodosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosResponse> listarTodosAsync(FrontEnd.MaterialWS.listarTodosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.obtenerPorIdResponse obtenerPorId(FrontEnd.MaterialWS.obtenerPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerPorIdResponse> obtenerPorIdAsync(FrontEnd.MaterialWS.obtenerPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.insertarMaterialResponse insertarMaterial(FrontEnd.MaterialWS.insertarMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.insertarMaterialResponse> insertarMaterialAsync(FrontEnd.MaterialWS.insertarMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRequest" +
+            "", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRespons" +
+            "e")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMasSolicitadosResponse listarMasSolicitados(FrontEnd.MaterialWS.listarMasSolicitadosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRequest" +
+            "", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRespons" +
+            "e")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasSolicitadosResponse> listarMasSolicitadosAsync(FrontEnd.MaterialWS.listarMasSolicitadosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialReq" +
+            "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarEjemplaresMaterialResponse listarEjemplaresMaterial(FrontEnd.MaterialWS.listarEjemplaresMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialReq" +
+            "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarEjemplaresMaterialResponse> listarEjemplaresMaterialAsync(FrontEnd.MaterialWS.listarEjemplaresMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeRequ" +
+            "est", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMaterialesPorSedeResponse listarMaterialesPorSede(FrontEnd.MaterialWS.listarMaterialesPorSedeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeRequ" +
+            "est", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeResp" +
+            "onse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPorSedeResponse> listarMaterialesPorSedeAsync(FrontEnd.MaterialWS.listarMaterialesPorSedeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialReque" +
+            "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarTemasPorMaterialResponse listarTemasPorMaterial(FrontEnd.MaterialWS.listarTemasPorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialReque" +
+            "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTemasPorMaterialResponse> listarTemasPorMaterialAsync(FrontEnd.MaterialWS.listarTemasPorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialR" +
+            "equest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse listarCreadoresPorMaterial(FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialR" +
+            "equest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialR" +
+            "esponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse> listarCreadoresPorMaterialAsync(FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFil" +
+            "troRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFil" +
+            "troResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroResponse listarMaterialesPorSedeYFiltro(FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFil" +
+            "troRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFil" +
+            "troResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroResponse> listarMaterialesPorSedeYFiltroAsync(FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPor" +
+            "SedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPor" +
+            "SedeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse listarMaterialesVigentesPorSede(FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPor" +
+            "SedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPor" +
+            "SedeResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse> listarMaterialesVigentesPorSedeAsync(FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
+            "lRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
+            "lResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
+            "l/Fault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse contarStockFisicoPorMaterial(FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
+            "lRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
+            "lResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse> contarStockFisicoPorMaterialAsync(FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
+            "terialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
+            "terialResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
+            "terial/Fault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse contarPrestadosFisicosPorMaterial(FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
+            "terialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
+            "terialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse> contarPrestadosFisicosPorMaterialAsync(FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
+            "ioRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
+            "ioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
+            "io/Fault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse listarTodosPaginadoIntermedio(FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
+            "ioRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
+            "ioResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse> listarTodosPaginadoIntermedioAsync(FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "TemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "TemaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "Tema/Fault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse listarMaterialesPaginadoPorTema(FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "TemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
+            "TemaResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse> listarMaterialesPaginadoPorTemaAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
+            "Request", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
+            "Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
+            "/Fault/BusinessException", Name="BusinessException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse listarTodosPaginadoAvanzado(FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
+            "Request", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
+            "Response")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse> listarTodosPaginadoAvanzadoAsync(FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarMasRecientesResponse listarMasRecientes(FrontEnd.MaterialWS.listarMasRecientesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasRecientesResponse> listarMasRecientesAsync(FrontEnd.MaterialWS.listarMasRecientesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.contarMaterialesResponse contarMateriales(FrontEnd.MaterialWS.contarMaterialesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarMaterialesResponse> contarMaterialesAsync(FrontEnd.MaterialWS.contarMaterialesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.MaterialWS.listarPorAutorResponse listarPorAutor(FrontEnd.MaterialWS.listarPorAutorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorResponse")]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarPorAutorResponse> listarPorAutorAsync(FrontEnd.MaterialWS.listarPorAutorRequest request);
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public partial class nivelesInglesDTO : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerNombreCreadorRandomPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class obtenerNombreCreadorRandomPorMaterialRequest {
         
-        private string descripcionField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
         
-        private int idNivelField;
-        
-        private nivel nivelField;
-        
-        private bool nivelFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
+        public obtenerNombreCreadorRandomPorMaterialRequest() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idNivel {
-            get {
-                return this.idNivelField;
-            }
-            set {
-                this.idNivelField = value;
-                this.RaisePropertyChanged("idNivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public nivel nivel {
-            get {
-                return this.nivelField;
-            }
-            set {
-                this.nivelField = value;
-                this.RaisePropertyChanged("nivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool nivelSpecified {
-            get {
-                return this.nivelFieldSpecified;
-            }
-            set {
-                this.nivelFieldSpecified = value;
-                this.RaisePropertyChanged("nivelSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
+        public obtenerNombreCreadorRandomPorMaterialRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public enum nivel {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerNombreCreadorRandomPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class obtenerNombreCreadorRandomPorMaterialResponse {
         
-        /// <remarks/>
-        BASICO,
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
         
-        /// <remarks/>
-        INTERMEDIO,
+        public obtenerNombreCreadorRandomPorMaterialResponse() {
+        }
         
-        /// <remarks/>
-        AVANZADO,
+        public obtenerNombreCreadorRandomPorMaterialResponse(string @return) {
+            this.@return = @return;
+        }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public partial class editorialesDTO : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarDisponiblesFisicosPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarDisponiblesFisicosPorMaterialRequest {
         
-        private int idEditorialField;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
         
-        private bool idEditorialFieldSpecified;
-        
-        private string nombreField;
-        
-        private string paisField;
-        
-        private string sitioWebField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int idEditorial {
-            get {
-                return this.idEditorialField;
-            }
-            set {
-                this.idEditorialField = value;
-                this.RaisePropertyChanged("idEditorial");
-            }
+        public contarDisponiblesFisicosPorMaterialRequest() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idEditorialSpecified {
-            get {
-                return this.idEditorialFieldSpecified;
-            }
-            set {
-                this.idEditorialFieldSpecified = value;
-                this.RaisePropertyChanged("idEditorialSpecified");
-            }
+        public contarDisponiblesFisicosPorMaterialRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarDisponiblesFisicosPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarDisponiblesFisicosPorMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public contarDisponiblesFisicosPorMaterialResponse() {
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string pais {
-            get {
-                return this.paisField;
-            }
-            set {
-                this.paisField = value;
-                this.RaisePropertyChanged("pais");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string sitioWeb {
-            get {
-                return this.sitioWebField;
-            }
-            set {
-                this.sitioWebField = value;
-                this.RaisePropertyChanged("sitioWeb");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
+        public contarDisponiblesFisicosPorMaterialResponse(int @return) {
+            this.@return = @return;
         }
     }
     
@@ -393,792 +616,182 @@ namespace FrontEnd.MaterialWS {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", ConfigurationName="MaterialWS.MaterialWS")]
-    public interface MaterialWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMasRecientesResponse listarMasRecientes(FrontEnd.MaterialWS.listarMasRecientesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasRecientesResponse> listarMasRecientesAsync(FrontEnd.MaterialWS.listarMasRecientesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPor" +
-            "SedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPor" +
-            "SedeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse listarMaterialesVigentesPorSede(FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPor" +
-            "SedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPor" +
-            "SedeResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse> listarMaterialesVigentesPorSedeAsync(FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
-            "terialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
-            "terialResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
-            "terial/Fault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse contarPrestadosFisicosPorMaterial(FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
-            "terialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMa" +
-            "terialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse> contarPrestadosFisicosPorMaterialAsync(FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
-            "Request", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
-            "Response")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
-            "/Fault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse listarTodosPaginadoAvanzado(FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
-            "Request", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado" +
-            "Response")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse> listarTodosPaginadoAvanzadoAsync(FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
-            "lRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
-            "lResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
-            "l/Fault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse contarStockFisicoPorMaterial(FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
-            "lRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMateria" +
-            "lResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse> contarStockFisicoPorMaterialAsync(FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
-            "ioRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
-            "ioResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
-            "io/Fault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse listarTodosPaginadoIntermedio(FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
-            "ioRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermed" +
-            "ioResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse> listarTodosPaginadoIntermedioAsync(FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "TemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "TemaResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "Tema/Fault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse listarMaterialesPaginadoPorTema(FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "TemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "TemaResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse> listarMaterialesPaginadoPorTemaAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarTodosResponse listarTodos(FrontEnd.MaterialWS.listarTodosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosResponse> listarTodosAsync(FrontEnd.MaterialWS.listarTodosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.modificarMaterialResponse modificarMaterial(FrontEnd.MaterialWS.modificarMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.modificarMaterialResponse> modificarMaterialAsync(FrontEnd.MaterialWS.modificarMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.insertarMaterialResponse insertarMaterial(FrontEnd.MaterialWS.insertarMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.insertarMaterialResponse> insertarMaterialAsync(FrontEnd.MaterialWS.insertarMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.obtenerPorIdResponse obtenerPorId(FrontEnd.MaterialWS.obtenerPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerPorIdResponse> obtenerPorIdAsync(FrontEnd.MaterialWS.obtenerPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.eliminarMaterialResponse eliminarMaterial(FrontEnd.MaterialWS.eliminarMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.eliminarMaterialResponse> eliminarMaterialAsync(FrontEnd.MaterialWS.eliminarMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "EditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "EditorialResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "Editorial/Fault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialResponse listarMaterialesPaginadoPorEditorial(FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "EditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPor" +
-            "EditorialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialResponse> listarMaterialesPaginadoPorEditorialAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloRequ" +
-            "est", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMaterialPorTituloResponse listarMaterialPorTitulo(FrontEnd.MaterialWS.listarMaterialPorTituloRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloRequ" +
-            "est", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloResp" +
-            "onse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialPorTituloResponse> listarMaterialPorTituloAsync(FrontEnd.MaterialWS.listarMaterialPorTituloRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRe" +
-            "quest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRe" +
-            "sponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasico/F" +
-            "ault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarTodosPaginadoBasicoResponse listarTodosPaginadoBasico(FrontEnd.MaterialWS.listarTodosPaginadoBasicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRe" +
-            "quest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoBasicoResponse> listarTodosPaginadoBasicoAsync(FrontEnd.MaterialWS.listarTodosPaginadoBasicoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoReq" +
-            "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMaterialesPaginadoResponse listarMaterialesPaginado(FrontEnd.MaterialWS.listarMaterialesPaginadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoReq" +
-            "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoResponse> listarMaterialesPaginadoAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFil" +
-            "troRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFil" +
-            "troResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroResponse listarMaterialesPorSedeYFiltro(FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFil" +
-            "troRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFil" +
-            "troResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroResponse> listarMaterialesPorSedeYFiltroAsync(FrontEnd.MaterialWS.listarMaterialesPorSedeYFiltroRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialReque" +
-            "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarTemasPorMaterialResponse listarTemasPorMaterial(FrontEnd.MaterialWS.listarTemasPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialReque" +
-            "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTemasPorMaterialResponse> listarTemasPorMaterialAsync(FrontEnd.MaterialWS.listarTemasPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialReq" +
-            "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarEjemplaresMaterialResponse listarEjemplaresMaterial(FrontEnd.MaterialWS.listarEjemplaresMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialReq" +
-            "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarEjemplaresMaterialResponse> listarEjemplaresMaterialAsync(FrontEnd.MaterialWS.listarEjemplaresMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialR" +
-            "equest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialR" +
-            "esponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse listarCreadoresPorMaterial(FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialR" +
-            "equest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialR" +
-            "esponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse> listarCreadoresPorMaterialAsync(FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeRequ" +
-            "est", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMaterialesPorSedeResponse listarMaterialesPorSede(FrontEnd.MaterialWS.listarMaterialesPorSedeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeRequ" +
-            "est", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeResp" +
-            "onse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPorSedeResponse> listarMaterialesPorSedeAsync(FrontEnd.MaterialWS.listarMaterialesPorSedeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRequest" +
-            "", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarMasSolicitadosResponse listarMasSolicitados(FrontEnd.MaterialWS.listarMasSolicitadosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRequest" +
-            "", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRespons" +
-            "e")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasSolicitadosResponse> listarMasSolicitadosAsync(FrontEnd.MaterialWS.listarMasSolicitadosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
-            "MaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
-            "MaterialResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
-            "Material/Fault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse contarDisponiblesFisicosPorMaterial(FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
-            "MaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarDisponiblesFisicosPor" +
-            "MaterialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse> contarDisponiblesFisicosPorMaterialAsync(FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
-            "orMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
-            "orMaterialResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontEnd.MaterialWS.BusinessException), Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
-            "orMaterial/Fault/BusinessException", Name="BusinessException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse obtenerNombreCreadorRandomPorMaterial(FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
-            "orMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomP" +
-            "orMaterialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse> obtenerNombreCreadorRandomPorMaterialAsync(FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.contarMaterialesResponse contarMateriales(FrontEnd.MaterialWS.contarMaterialesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarMaterialesResponse> contarMaterialesAsync(FrontEnd.MaterialWS.contarMaterialesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.MaterialWS.listarPorAutorResponse listarPorAutor(FrontEnd.MaterialWS.listarPorAutorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorResponse")]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarPorAutorResponse> listarPorAutorAsync(FrontEnd.MaterialWS.listarPorAutorRequest request);
-    }
-    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMasRecientes", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMasRecientesRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
+    public partial class editorialesDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int limite;
+        private int idEditorialField;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pagina;
+        private bool idEditorialFieldSpecified;
         
-        public listarMasRecientesRequest() {
+        private string nombreField;
+        
+        private string paisField;
+        
+        private string sitioWebField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idEditorial {
+            get {
+                return this.idEditorialField;
+            }
+            set {
+                this.idEditorialField = value;
+                this.RaisePropertyChanged("idEditorial");
+            }
         }
         
-        public listarMasRecientesRequest(int limite, int pagina) {
-            this.limite = limite;
-            this.pagina = pagina;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idEditorialSpecified {
+            get {
+                return this.idEditorialFieldSpecified;
+            }
+            set {
+                this.idEditorialFieldSpecified = value;
+                this.RaisePropertyChanged("idEditorialSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string pais {
+            get {
+                return this.paisField;
+            }
+            set {
+                this.paisField = value;
+                this.RaisePropertyChanged("pais");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string sitioWeb {
+            get {
+                return this.sitioWebField;
+            }
+            set {
+                this.sitioWebField = value;
+                this.RaisePropertyChanged("sitioWeb");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMasRecientesResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMasRecientesResponse {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
+    public partial class nivelesInglesDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO[] @return;
+        private string descripcionField;
         
-        public listarMasRecientesResponse() {
+        private int idNivelField;
+        
+        private nivel nivelField;
+        
+        private bool nivelFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
         }
         
-        public listarMasRecientesResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
-            this.@return = @return;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idNivel {
+            get {
+                return this.idNivelField;
+            }
+            set {
+                this.idNivelField = value;
+                this.RaisePropertyChanged("idNivel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public nivel nivel {
+            get {
+                return this.nivelField;
+            }
+            set {
+                this.nivelField = value;
+                this.RaisePropertyChanged("nivel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nivelSpecified {
+            get {
+                return this.nivelFieldSpecified;
+            }
+            set {
+                this.nivelFieldSpecified = value;
+                this.RaisePropertyChanged("nivelSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesVigentesPorSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMaterialesVigentesPorSedeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int limite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pagina;
-        
-        public listarMaterialesVigentesPorSedeRequest() {
-        }
-        
-        public listarMaterialesVigentesPorSedeRequest(int idSede, int limite, int pagina) {
-            this.idSede = idSede;
-            this.limite = limite;
-            this.pagina = pagina;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesVigentesPorSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMaterialesVigentesPorSedeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO[] @return;
-        
-        public listarMaterialesVigentesPorSedeResponse() {
-        }
-        
-        public listarMaterialesVigentesPorSedeResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarPrestadosFisicosPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarPrestadosFisicosPorMaterialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        public contarPrestadosFisicosPorMaterialRequest() {
-        }
-        
-        public contarPrestadosFisicosPorMaterialRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarPrestadosFisicosPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarPrestadosFisicosPorMaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public contarPrestadosFisicosPorMaterialResponse() {
-        }
-        
-        public contarPrestadosFisicosPorMaterialResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoAvanzado", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosPaginadoAvanzadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int limite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pagina;
-        
-        public listarTodosPaginadoAvanzadoRequest() {
-        }
-        
-        public listarTodosPaginadoAvanzadoRequest(int limite, int pagina) {
-            this.limite = limite;
-            this.pagina = pagina;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoAvanzadoResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosPaginadoAvanzadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO[] @return;
-        
-        public listarTodosPaginadoAvanzadoResponse() {
-        }
-        
-        public listarTodosPaginadoAvanzadoResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarStockFisicoPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarStockFisicoPorMaterialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        public contarStockFisicoPorMaterialRequest() {
-        }
-        
-        public contarStockFisicoPorMaterialRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarStockFisicoPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarStockFisicoPorMaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public contarStockFisicoPorMaterialResponse() {
-        }
-        
-        public contarStockFisicoPorMaterialResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoIntermedio", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosPaginadoIntermedioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int limite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pagina;
-        
-        public listarTodosPaginadoIntermedioRequest() {
-        }
-        
-        public listarTodosPaginadoIntermedioRequest(int limite, int pagina) {
-            this.limite = limite;
-            this.pagina = pagina;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoIntermedioResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosPaginadoIntermedioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO[] @return;
-        
-        public listarTodosPaginadoIntermedioResponse() {
-        }
-        
-        public listarTodosPaginadoIntermedioResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPaginadoPorTema", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMaterialesPaginadoPorTemaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcionTema;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int limite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pagina;
-        
-        public listarMaterialesPaginadoPorTemaRequest() {
-        }
-        
-        public listarMaterialesPaginadoPorTemaRequest(string descripcionTema, int limite, int pagina) {
-            this.descripcionTema = descripcionTema;
-            this.limite = limite;
-            this.pagina = pagina;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPaginadoPorTemaResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMaterialesPaginadoPorTemaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO[] @return;
-        
-        public listarMaterialesPaginadoPorTemaResponse() {
-        }
-        
-        public listarMaterialesPaginadoPorTemaResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodos", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosRequest {
-        
-        public listarTodosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO[] @return;
-        
-        public listarTodosResponse() {
-        }
-        
-        public listarTodosResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarMaterialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO material;
-        
-        public modificarMaterialRequest() {
-        }
-        
-        public modificarMaterialRequest(FrontEnd.MaterialWS.materialesDTO material) {
-            this.material = material;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarMaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarMaterialResponse() {
-        }
-        
-        public modificarMaterialResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarMaterialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO material;
-        
-        public insertarMaterialRequest() {
-        }
-        
-        public insertarMaterialRequest(FrontEnd.MaterialWS.materialesDTO material) {
-            this.material = material;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarMaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarMaterialResponse() {
-        }
-        
-        public insertarMaterialResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorId", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class obtenerPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        public obtenerPorIdRequest() {
-        }
-        
-        public obtenerPorIdRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIdResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class obtenerPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO @return;
-        
-        public obtenerPorIdResponse() {
-        }
-        
-        public obtenerPorIdResponse(FrontEnd.MaterialWS.materialesDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarMaterialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        public eliminarMaterialRequest() {
-        }
-        
-        public eliminarMaterialRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarMaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarMaterialResponse() {
-        }
-        
-        public eliminarMaterialResponse(int @return) {
-            this.@return = @return;
-        }
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
+    public enum nivel {
+        
+        /// <remarks/>
+        BASICO,
+        
+        /// <remarks/>
+        INTERMEDIO,
+        
+        /// <remarks/>
+        AVANZADO,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1276,47 +889,6 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoBasico", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosPaginadoBasicoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int limite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pagina;
-        
-        public listarTodosPaginadoBasicoRequest() {
-        }
-        
-        public listarTodosPaginadoBasicoRequest(int limite, int pagina) {
-            this.limite = limite;
-            this.pagina = pagina;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoBasicoResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosPaginadoBasicoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.materialesDTO[] @return;
-        
-        public listarTodosPaginadoBasicoResponse() {
-        }
-        
-        public listarTodosPaginadoBasicoResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPaginado", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class listarMaterialesPaginadoRequest {
         
@@ -1358,36 +930,21 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPorSedeYFiltro", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMaterialesPorSedeYFiltroRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoBasico", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosPaginadoBasicoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
+        public int limite;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string filtro;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool porTitulo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int limite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int pagina;
         
-        public listarMaterialesPorSedeYFiltroRequest() {
+        public listarTodosPaginadoBasicoRequest() {
         }
         
-        public listarMaterialesPorSedeYFiltroRequest(int idSede, string filtro, bool porTitulo, int limite, int pagina) {
-            this.idSede = idSede;
-            this.filtro = filtro;
-            this.porTitulo = porTitulo;
+        public listarTodosPaginadoBasicoRequest(int limite, int pagina) {
             this.limite = limite;
             this.pagina = pagina;
         }
@@ -1396,150 +953,35 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPorSedeYFiltroResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMaterialesPorSedeYFiltroResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoBasicoResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosPaginadoBasicoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public FrontEnd.MaterialWS.materialesDTO[] @return;
         
-        public listarMaterialesPorSedeYFiltroResponse() {
+        public listarTodosPaginadoBasicoResponse() {
         }
         
-        public listarMaterialesPorSedeYFiltroResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
+        public listarTodosPaginadoBasicoResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
             this.@return = @return;
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public partial class temasDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private categoria categoriaField;
-        
-        private bool categoriaFieldSpecified;
-        
-        private string descripcionField;
-        
-        private int idTemaField;
-        
-        private bool idTemaFieldSpecified;
-        
-        private temasDTO temaPadreField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public categoria categoria {
-            get {
-                return this.categoriaField;
-            }
-            set {
-                this.categoriaField = value;
-                this.RaisePropertyChanged("categoria");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool categoriaSpecified {
-            get {
-                return this.categoriaFieldSpecified;
-            }
-            set {
-                this.categoriaFieldSpecified = value;
-                this.RaisePropertyChanged("categoriaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idTema {
-            get {
-                return this.idTemaField;
-            }
-            set {
-                this.idTemaField = value;
-                this.RaisePropertyChanged("idTema");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idTemaSpecified {
-            get {
-                return this.idTemaFieldSpecified;
-            }
-            set {
-                this.idTemaFieldSpecified = value;
-                this.RaisePropertyChanged("idTemaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public temasDTO temaPadre {
-            get {
-                return this.temaPadreField;
-            }
-            set {
-                this.temaPadreField = value;
-                this.RaisePropertyChanged("temaPadre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public enum categoria {
-        
-        /// <remarks/>
-        GENERO,
-        
-        /// <remarks/>
-        EDAD,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemasPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTemasPorMaterialRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarMaterialRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idMaterial;
         
-        public listarTemasPorMaterialRequest() {
+        public eliminarMaterialRequest() {
         }
         
-        public listarTemasPorMaterialRequest(int idMaterial) {
+        public eliminarMaterialRequest(int idMaterial) {
             this.idMaterial = idMaterial;
         }
     }
@@ -1547,17 +989,194 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemasPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTemasPorMaterialResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarMaterialResponse() {
+        }
+        
+        public eliminarMaterialResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarMaterialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO material;
+        
+        public modificarMaterialRequest() {
+        }
+        
+        public modificarMaterialRequest(FrontEnd.MaterialWS.materialesDTO material) {
+            this.material = material;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarMaterialResponse() {
+        }
+        
+        public modificarMaterialResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodos", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosRequest {
+        
+        public listarTodosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.MaterialWS.temasDTO[] @return;
+        public FrontEnd.MaterialWS.materialesDTO[] @return;
         
-        public listarTemasPorMaterialResponse() {
+        public listarTodosResponse() {
         }
         
-        public listarTemasPorMaterialResponse(FrontEnd.MaterialWS.temasDTO[] @return) {
+        public listarTodosResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorId", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class obtenerPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        public obtenerPorIdRequest() {
+        }
+        
+        public obtenerPorIdRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorIdResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class obtenerPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO @return;
+        
+        public obtenerPorIdResponse() {
+        }
+        
+        public obtenerPorIdResponse(FrontEnd.MaterialWS.materialesDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarMaterialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO material;
+        
+        public insertarMaterialRequest() {
+        }
+        
+        public insertarMaterialRequest(FrontEnd.MaterialWS.materialesDTO material) {
+            this.material = material;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarMaterialResponse() {
+        }
+        
+        public insertarMaterialResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMasSolicitados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMasSolicitadosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int limite;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pagina;
+        
+        public listarMasSolicitadosRequest() {
+        }
+        
+        public listarMasSolicitadosRequest(int limite, int pagina) {
+            this.limite = limite;
+            this.pagina = pagina;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMasSolicitadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMasSolicitadosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO[] @return;
+        
+        public listarMasSolicitadosResponse() {
+        }
+        
+        public listarMasSolicitadosResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -1984,6 +1603,203 @@ namespace FrontEnd.MaterialWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPorSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMaterialesPorSedeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int limite;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pagina;
+        
+        public listarMaterialesPorSedeRequest() {
+        }
+        
+        public listarMaterialesPorSedeRequest(int idSede, int limite, int pagina) {
+            this.idSede = idSede;
+            this.limite = limite;
+            this.pagina = pagina;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPorSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMaterialesPorSedeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO[] @return;
+        
+        public listarMaterialesPorSedeResponse() {
+        }
+        
+        public listarMaterialesPorSedeResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
+    public partial class temasDTO : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private categoria categoriaField;
+        
+        private bool categoriaFieldSpecified;
+        
+        private string descripcionField;
+        
+        private int idTemaField;
+        
+        private bool idTemaFieldSpecified;
+        
+        private temasDTO temaPadreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public categoria categoria {
+            get {
+                return this.categoriaField;
+            }
+            set {
+                this.categoriaField = value;
+                this.RaisePropertyChanged("categoria");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool categoriaSpecified {
+            get {
+                return this.categoriaFieldSpecified;
+            }
+            set {
+                this.categoriaFieldSpecified = value;
+                this.RaisePropertyChanged("categoriaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idTema {
+            get {
+                return this.idTemaField;
+            }
+            set {
+                this.idTemaField = value;
+                this.RaisePropertyChanged("idTema");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idTemaSpecified {
+            get {
+                return this.idTemaFieldSpecified;
+            }
+            set {
+                this.idTemaFieldSpecified = value;
+                this.RaisePropertyChanged("idTemaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public temasDTO temaPadre {
+            get {
+                return this.temaPadreField;
+            }
+            set {
+                this.temaPadreField = value;
+                this.RaisePropertyChanged("temaPadre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
+    public enum categoria {
+        
+        /// <remarks/>
+        GENERO,
+        
+        /// <remarks/>
+        EDAD,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemasPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTemasPorMaterialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        public listarTemasPorMaterialRequest() {
+        }
+        
+        public listarTemasPorMaterialRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTemasPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTemasPorMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.temasDTO[] @return;
+        
+        public listarTemasPorMaterialResponse() {
+        }
+        
+        public listarTemasPorMaterialResponse(FrontEnd.MaterialWS.temasDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
@@ -2226,8 +2042,64 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPorSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMaterialesPorSedeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPorSedeYFiltro", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMaterialesPorSedeYFiltroRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string filtro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool porTitulo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int limite;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pagina;
+        
+        public listarMaterialesPorSedeYFiltroRequest() {
+        }
+        
+        public listarMaterialesPorSedeYFiltroRequest(int idSede, string filtro, bool porTitulo, int limite, int pagina) {
+            this.idSede = idSede;
+            this.filtro = filtro;
+            this.porTitulo = porTitulo;
+            this.limite = limite;
+            this.pagina = pagina;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPorSedeYFiltroResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMaterialesPorSedeYFiltroResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO[] @return;
+        
+        public listarMaterialesPorSedeYFiltroResponse() {
+        }
+        
+        public listarMaterialesPorSedeYFiltroResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesVigentesPorSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMaterialesVigentesPorSedeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -2241,10 +2113,10 @@ namespace FrontEnd.MaterialWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int pagina;
         
-        public listarMaterialesPorSedeRequest() {
+        public listarMaterialesVigentesPorSedeRequest() {
         }
         
-        public listarMaterialesPorSedeRequest(int idSede, int limite, int pagina) {
+        public listarMaterialesVigentesPorSedeRequest(int idSede, int limite, int pagina) {
             this.idSede = idSede;
             this.limite = limite;
             this.pagina = pagina;
@@ -2254,17 +2126,17 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPorSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMaterialesPorSedeResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesVigentesPorSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMaterialesVigentesPorSedeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public FrontEnd.MaterialWS.materialesDTO[] @return;
         
-        public listarMaterialesPorSedeResponse() {
+        public listarMaterialesVigentesPorSedeResponse() {
         }
         
-        public listarMaterialesPorSedeResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
+        public listarMaterialesVigentesPorSedeResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -2272,8 +2144,80 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMasSolicitados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMasSolicitadosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarStockFisicoPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarStockFisicoPorMaterialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        public contarStockFisicoPorMaterialRequest() {
+        }
+        
+        public contarStockFisicoPorMaterialRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarStockFisicoPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarStockFisicoPorMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public contarStockFisicoPorMaterialResponse() {
+        }
+        
+        public contarStockFisicoPorMaterialResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarPrestadosFisicosPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarPrestadosFisicosPorMaterialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        public contarPrestadosFisicosPorMaterialRequest() {
+        }
+        
+        public contarPrestadosFisicosPorMaterialRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarPrestadosFisicosPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarPrestadosFisicosPorMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public contarPrestadosFisicosPorMaterialResponse() {
+        }
+        
+        public contarPrestadosFisicosPorMaterialResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoIntermedio", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosPaginadoIntermedioRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -2283,10 +2227,10 @@ namespace FrontEnd.MaterialWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int pagina;
         
-        public listarMasSolicitadosRequest() {
+        public listarTodosPaginadoIntermedioRequest() {
         }
         
-        public listarMasSolicitadosRequest(int limite, int pagina) {
+        public listarTodosPaginadoIntermedioRequest(int limite, int pagina) {
             this.limite = limite;
             this.pagina = pagina;
         }
@@ -2295,17 +2239,17 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMasSolicitadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarMasSolicitadosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoIntermedioResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosPaginadoIntermedioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public FrontEnd.MaterialWS.materialesDTO[] @return;
         
-        public listarMasSolicitadosResponse() {
+        public listarTodosPaginadoIntermedioResponse() {
         }
         
-        public listarMasSolicitadosResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
+        public listarTodosPaginadoIntermedioResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -2313,35 +2257,45 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarDisponiblesFisicosPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarDisponiblesFisicosPorMaterialRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPaginadoPorTema", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMaterialesPaginadoPorTemaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
+        public string descripcionTema;
         
-        public contarDisponiblesFisicosPorMaterialRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int limite;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pagina;
+        
+        public listarMaterialesPaginadoPorTemaRequest() {
         }
         
-        public contarDisponiblesFisicosPorMaterialRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
+        public listarMaterialesPaginadoPorTemaRequest(string descripcionTema, int limite, int pagina) {
+            this.descripcionTema = descripcionTema;
+            this.limite = limite;
+            this.pagina = pagina;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarDisponiblesFisicosPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarDisponiblesFisicosPorMaterialResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaterialesPaginadoPorTemaResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMaterialesPaginadoPorTemaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO[] @return;
         
-        public contarDisponiblesFisicosPorMaterialResponse() {
+        public listarMaterialesPaginadoPorTemaResponse() {
         }
         
-        public contarDisponiblesFisicosPorMaterialResponse(int @return) {
+        public listarMaterialesPaginadoPorTemaResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -2349,35 +2303,81 @@ namespace FrontEnd.MaterialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerNombreCreadorRandomPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class obtenerNombreCreadorRandomPorMaterialRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoAvanzado", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosPaginadoAvanzadoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
+        public int limite;
         
-        public obtenerNombreCreadorRandomPorMaterialRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pagina;
+        
+        public listarTodosPaginadoAvanzadoRequest() {
         }
         
-        public obtenerNombreCreadorRandomPorMaterialRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
+        public listarTodosPaginadoAvanzadoRequest(int limite, int pagina) {
+            this.limite = limite;
+            this.pagina = pagina;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerNombreCreadorRandomPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class obtenerNombreCreadorRandomPorMaterialResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPaginadoAvanzadoResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosPaginadoAvanzadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO[] @return;
+        
+        public listarTodosPaginadoAvanzadoResponse() {
+        }
+        
+        public listarTodosPaginadoAvanzadoResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMasRecientes", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMasRecientesRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
+        public int limite;
         
-        public obtenerNombreCreadorRandomPorMaterialResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pagina;
+        
+        public listarMasRecientesRequest() {
         }
         
-        public obtenerNombreCreadorRandomPorMaterialResponse(string @return) {
+        public listarMasRecientesRequest(int limite, int pagina) {
+            this.limite = limite;
+            this.pagina = pagina;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMasRecientesResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarMasRecientesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.MaterialWS.materialesDTO[] @return;
+        
+        public listarMasRecientesResponse() {
+        }
+        
+        public listarMasRecientesResponse(FrontEnd.MaterialWS.materialesDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -2484,291 +2484,49 @@ namespace FrontEnd.MaterialWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarMasRecientesResponse FrontEnd.MaterialWS.MaterialWS.listarMasRecientes(FrontEnd.MaterialWS.listarMasRecientesRequest request) {
-            return base.Channel.listarMasRecientes(request);
+        FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.obtenerNombreCreadorRandomPorMaterial(FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest request) {
+            return base.Channel.obtenerNombreCreadorRandomPorMaterial(request);
         }
         
-        public FrontEnd.MaterialWS.materialesDTO[] listarMasRecientes(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMasRecientesRequest inValue = new FrontEnd.MaterialWS.listarMasRecientesRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarMasRecientesResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMasRecientes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasRecientesResponse> FrontEnd.MaterialWS.MaterialWS.listarMasRecientesAsync(FrontEnd.MaterialWS.listarMasRecientesRequest request) {
-            return base.Channel.listarMasRecientesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasRecientesResponse> listarMasRecientesAsync(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMasRecientesRequest inValue = new FrontEnd.MaterialWS.listarMasRecientesRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMasRecientesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse FrontEnd.MaterialWS.MaterialWS.listarMaterialesVigentesPorSede(FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest request) {
-            return base.Channel.listarMaterialesVigentesPorSede(request);
-        }
-        
-        public FrontEnd.MaterialWS.materialesDTO[] listarMaterialesVigentesPorSede(int idSede, int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest inValue = new FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest();
-            inValue.idSede = idSede;
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesVigentesPorSede(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse> FrontEnd.MaterialWS.MaterialWS.listarMaterialesVigentesPorSedeAsync(FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest request) {
-            return base.Channel.listarMaterialesVigentesPorSedeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse> listarMaterialesVigentesPorSedeAsync(int idSede, int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest inValue = new FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest();
-            inValue.idSede = idSede;
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesVigentesPorSedeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.contarPrestadosFisicosPorMaterial(FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest request) {
-            return base.Channel.contarPrestadosFisicosPorMaterial(request);
-        }
-        
-        public int contarPrestadosFisicosPorMaterial(int idMaterial) {
-            FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest();
+        public string obtenerNombreCreadorRandomPorMaterial(int idMaterial) {
+            FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest inValue = new FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest();
             inValue.idMaterial = idMaterial;
-            FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).contarPrestadosFisicosPorMaterial(inValue);
+            FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).obtenerNombreCreadorRandomPorMaterial(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.contarPrestadosFisicosPorMaterialAsync(FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest request) {
-            return base.Channel.contarPrestadosFisicosPorMaterialAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.obtenerNombreCreadorRandomPorMaterialAsync(FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest request) {
+            return base.Channel.obtenerNombreCreadorRandomPorMaterialAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse> contarPrestadosFisicosPorMaterialAsync(int idMaterial) {
-            FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest();
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse> obtenerNombreCreadorRandomPorMaterialAsync(int idMaterial) {
+            FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest inValue = new FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest();
             inValue.idMaterial = idMaterial;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).contarPrestadosFisicosPorMaterialAsync(inValue);
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).obtenerNombreCreadorRandomPorMaterialAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoAvanzado(FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest request) {
-            return base.Channel.listarTodosPaginadoAvanzado(request);
+        FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.contarDisponiblesFisicosPorMaterial(FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest request) {
+            return base.Channel.contarDisponiblesFisicosPorMaterial(request);
         }
         
-        public FrontEnd.MaterialWS.materialesDTO[] listarTodosPaginadoAvanzado(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest inValue = new FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosPaginadoAvanzado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse> FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoAvanzadoAsync(FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest request) {
-            return base.Channel.listarTodosPaginadoAvanzadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse> listarTodosPaginadoAvanzadoAsync(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest inValue = new FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosPaginadoAvanzadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.contarStockFisicoPorMaterial(FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest request) {
-            return base.Channel.contarStockFisicoPorMaterial(request);
-        }
-        
-        public int contarStockFisicoPorMaterial(int idMaterial) {
-            FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest();
+        public int contarDisponiblesFisicosPorMaterial(int idMaterial) {
+            FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest();
             inValue.idMaterial = idMaterial;
-            FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).contarStockFisicoPorMaterial(inValue);
+            FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).contarDisponiblesFisicosPorMaterial(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.contarStockFisicoPorMaterialAsync(FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest request) {
-            return base.Channel.contarStockFisicoPorMaterialAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.contarDisponiblesFisicosPorMaterialAsync(FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest request) {
+            return base.Channel.contarDisponiblesFisicosPorMaterialAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse> contarStockFisicoPorMaterialAsync(int idMaterial) {
-            FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest();
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse> contarDisponiblesFisicosPorMaterialAsync(int idMaterial) {
+            FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest();
             inValue.idMaterial = idMaterial;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).contarStockFisicoPorMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoIntermedio(FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest request) {
-            return base.Channel.listarTodosPaginadoIntermedio(request);
-        }
-        
-        public FrontEnd.MaterialWS.materialesDTO[] listarTodosPaginadoIntermedio(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest inValue = new FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosPaginadoIntermedio(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse> FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoIntermedioAsync(FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest request) {
-            return base.Channel.listarTodosPaginadoIntermedioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse> listarTodosPaginadoIntermedioAsync(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest inValue = new FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosPaginadoIntermedioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse FrontEnd.MaterialWS.MaterialWS.listarMaterialesPaginadoPorTema(FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest request) {
-            return base.Channel.listarMaterialesPaginadoPorTema(request);
-        }
-        
-        public FrontEnd.MaterialWS.materialesDTO[] listarMaterialesPaginadoPorTema(string descripcionTema, int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest();
-            inValue.descripcionTema = descripcionTema;
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPaginadoPorTema(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse> FrontEnd.MaterialWS.MaterialWS.listarMaterialesPaginadoPorTemaAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest request) {
-            return base.Channel.listarMaterialesPaginadoPorTemaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse> listarMaterialesPaginadoPorTemaAsync(string descripcionTema, int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest();
-            inValue.descripcionTema = descripcionTema;
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPaginadoPorTemaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarTodosResponse FrontEnd.MaterialWS.MaterialWS.listarTodos(FrontEnd.MaterialWS.listarTodosRequest request) {
-            return base.Channel.listarTodos(request);
-        }
-        
-        public FrontEnd.MaterialWS.materialesDTO[] listarTodos() {
-            FrontEnd.MaterialWS.listarTodosRequest inValue = new FrontEnd.MaterialWS.listarTodosRequest();
-            FrontEnd.MaterialWS.listarTodosResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosResponse> FrontEnd.MaterialWS.MaterialWS.listarTodosAsync(FrontEnd.MaterialWS.listarTodosRequest request) {
-            return base.Channel.listarTodosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosResponse> listarTodosAsync() {
-            FrontEnd.MaterialWS.listarTodosRequest inValue = new FrontEnd.MaterialWS.listarTodosRequest();
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.modificarMaterialResponse FrontEnd.MaterialWS.MaterialWS.modificarMaterial(FrontEnd.MaterialWS.modificarMaterialRequest request) {
-            return base.Channel.modificarMaterial(request);
-        }
-        
-        public int modificarMaterial(FrontEnd.MaterialWS.materialesDTO material) {
-            FrontEnd.MaterialWS.modificarMaterialRequest inValue = new FrontEnd.MaterialWS.modificarMaterialRequest();
-            inValue.material = material;
-            FrontEnd.MaterialWS.modificarMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).modificarMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.modificarMaterialResponse> FrontEnd.MaterialWS.MaterialWS.modificarMaterialAsync(FrontEnd.MaterialWS.modificarMaterialRequest request) {
-            return base.Channel.modificarMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.modificarMaterialResponse> modificarMaterialAsync(FrontEnd.MaterialWS.materialesDTO material) {
-            FrontEnd.MaterialWS.modificarMaterialRequest inValue = new FrontEnd.MaterialWS.modificarMaterialRequest();
-            inValue.material = material;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).modificarMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.insertarMaterialResponse FrontEnd.MaterialWS.MaterialWS.insertarMaterial(FrontEnd.MaterialWS.insertarMaterialRequest request) {
-            return base.Channel.insertarMaterial(request);
-        }
-        
-        public int insertarMaterial(FrontEnd.MaterialWS.materialesDTO material) {
-            FrontEnd.MaterialWS.insertarMaterialRequest inValue = new FrontEnd.MaterialWS.insertarMaterialRequest();
-            inValue.material = material;
-            FrontEnd.MaterialWS.insertarMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).insertarMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.insertarMaterialResponse> FrontEnd.MaterialWS.MaterialWS.insertarMaterialAsync(FrontEnd.MaterialWS.insertarMaterialRequest request) {
-            return base.Channel.insertarMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.insertarMaterialResponse> insertarMaterialAsync(FrontEnd.MaterialWS.materialesDTO material) {
-            FrontEnd.MaterialWS.insertarMaterialRequest inValue = new FrontEnd.MaterialWS.insertarMaterialRequest();
-            inValue.material = material;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).insertarMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.obtenerPorIdResponse FrontEnd.MaterialWS.MaterialWS.obtenerPorId(FrontEnd.MaterialWS.obtenerPorIdRequest request) {
-            return base.Channel.obtenerPorId(request);
-        }
-        
-        public FrontEnd.MaterialWS.materialesDTO obtenerPorId(int idMaterial) {
-            FrontEnd.MaterialWS.obtenerPorIdRequest inValue = new FrontEnd.MaterialWS.obtenerPorIdRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.MaterialWS.obtenerPorIdResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).obtenerPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerPorIdResponse> FrontEnd.MaterialWS.MaterialWS.obtenerPorIdAsync(FrontEnd.MaterialWS.obtenerPorIdRequest request) {
-            return base.Channel.obtenerPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerPorIdResponse> obtenerPorIdAsync(int idMaterial) {
-            FrontEnd.MaterialWS.obtenerPorIdRequest inValue = new FrontEnd.MaterialWS.obtenerPorIdRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).obtenerPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.eliminarMaterialResponse FrontEnd.MaterialWS.MaterialWS.eliminarMaterial(FrontEnd.MaterialWS.eliminarMaterialRequest request) {
-            return base.Channel.eliminarMaterial(request);
-        }
-        
-        public int eliminarMaterial(int idMaterial) {
-            FrontEnd.MaterialWS.eliminarMaterialRequest inValue = new FrontEnd.MaterialWS.eliminarMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.MaterialWS.eliminarMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).eliminarMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.eliminarMaterialResponse> FrontEnd.MaterialWS.MaterialWS.eliminarMaterialAsync(FrontEnd.MaterialWS.eliminarMaterialRequest request) {
-            return base.Channel.eliminarMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.eliminarMaterialResponse> eliminarMaterialAsync(int idMaterial) {
-            FrontEnd.MaterialWS.eliminarMaterialRequest inValue = new FrontEnd.MaterialWS.eliminarMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).eliminarMaterialAsync(inValue);
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).contarDisponiblesFisicosPorMaterialAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2826,6 +2584,31 @@ namespace FrontEnd.MaterialWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarMaterialesPaginadoResponse FrontEnd.MaterialWS.MaterialWS.listarMaterialesPaginado(FrontEnd.MaterialWS.listarMaterialesPaginadoRequest request) {
+            return base.Channel.listarMaterialesPaginado(request);
+        }
+        
+        public FrontEnd.MaterialWS.materialesDTO[] listarMaterialesPaginado(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMaterialesPaginadoRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPaginadoRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            FrontEnd.MaterialWS.listarMaterialesPaginadoResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPaginado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoResponse> FrontEnd.MaterialWS.MaterialWS.listarMaterialesPaginadoAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoRequest request) {
+            return base.Channel.listarMaterialesPaginadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoResponse> listarMaterialesPaginadoAsync(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMaterialesPaginadoRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPaginadoRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPaginadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontEnd.MaterialWS.listarTodosPaginadoBasicoResponse FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoBasico(FrontEnd.MaterialWS.listarTodosPaginadoBasicoRequest request) {
             return base.Channel.listarTodosPaginadoBasico(request);
         }
@@ -2851,28 +2634,241 @@ namespace FrontEnd.MaterialWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarMaterialesPaginadoResponse FrontEnd.MaterialWS.MaterialWS.listarMaterialesPaginado(FrontEnd.MaterialWS.listarMaterialesPaginadoRequest request) {
-            return base.Channel.listarMaterialesPaginado(request);
+        FrontEnd.MaterialWS.eliminarMaterialResponse FrontEnd.MaterialWS.MaterialWS.eliminarMaterial(FrontEnd.MaterialWS.eliminarMaterialRequest request) {
+            return base.Channel.eliminarMaterial(request);
         }
         
-        public FrontEnd.MaterialWS.materialesDTO[] listarMaterialesPaginado(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMaterialesPaginadoRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPaginadoRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarMaterialesPaginadoResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPaginado(inValue);
+        public int eliminarMaterial(int idMaterial) {
+            FrontEnd.MaterialWS.eliminarMaterialRequest inValue = new FrontEnd.MaterialWS.eliminarMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.MaterialWS.eliminarMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).eliminarMaterial(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoResponse> FrontEnd.MaterialWS.MaterialWS.listarMaterialesPaginadoAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoRequest request) {
-            return base.Channel.listarMaterialesPaginadoAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.eliminarMaterialResponse> FrontEnd.MaterialWS.MaterialWS.eliminarMaterialAsync(FrontEnd.MaterialWS.eliminarMaterialRequest request) {
+            return base.Channel.eliminarMaterialAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoResponse> listarMaterialesPaginadoAsync(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMaterialesPaginadoRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPaginadoRequest();
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.eliminarMaterialResponse> eliminarMaterialAsync(int idMaterial) {
+            FrontEnd.MaterialWS.eliminarMaterialRequest inValue = new FrontEnd.MaterialWS.eliminarMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).eliminarMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.modificarMaterialResponse FrontEnd.MaterialWS.MaterialWS.modificarMaterial(FrontEnd.MaterialWS.modificarMaterialRequest request) {
+            return base.Channel.modificarMaterial(request);
+        }
+        
+        public int modificarMaterial(FrontEnd.MaterialWS.materialesDTO material) {
+            FrontEnd.MaterialWS.modificarMaterialRequest inValue = new FrontEnd.MaterialWS.modificarMaterialRequest();
+            inValue.material = material;
+            FrontEnd.MaterialWS.modificarMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).modificarMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.modificarMaterialResponse> FrontEnd.MaterialWS.MaterialWS.modificarMaterialAsync(FrontEnd.MaterialWS.modificarMaterialRequest request) {
+            return base.Channel.modificarMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.modificarMaterialResponse> modificarMaterialAsync(FrontEnd.MaterialWS.materialesDTO material) {
+            FrontEnd.MaterialWS.modificarMaterialRequest inValue = new FrontEnd.MaterialWS.modificarMaterialRequest();
+            inValue.material = material;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).modificarMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarTodosResponse FrontEnd.MaterialWS.MaterialWS.listarTodos(FrontEnd.MaterialWS.listarTodosRequest request) {
+            return base.Channel.listarTodos(request);
+        }
+        
+        public FrontEnd.MaterialWS.materialesDTO[] listarTodos() {
+            FrontEnd.MaterialWS.listarTodosRequest inValue = new FrontEnd.MaterialWS.listarTodosRequest();
+            FrontEnd.MaterialWS.listarTodosResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosResponse> FrontEnd.MaterialWS.MaterialWS.listarTodosAsync(FrontEnd.MaterialWS.listarTodosRequest request) {
+            return base.Channel.listarTodosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosResponse> listarTodosAsync() {
+            FrontEnd.MaterialWS.listarTodosRequest inValue = new FrontEnd.MaterialWS.listarTodosRequest();
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.obtenerPorIdResponse FrontEnd.MaterialWS.MaterialWS.obtenerPorId(FrontEnd.MaterialWS.obtenerPorIdRequest request) {
+            return base.Channel.obtenerPorId(request);
+        }
+        
+        public FrontEnd.MaterialWS.materialesDTO obtenerPorId(int idMaterial) {
+            FrontEnd.MaterialWS.obtenerPorIdRequest inValue = new FrontEnd.MaterialWS.obtenerPorIdRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.MaterialWS.obtenerPorIdResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).obtenerPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerPorIdResponse> FrontEnd.MaterialWS.MaterialWS.obtenerPorIdAsync(FrontEnd.MaterialWS.obtenerPorIdRequest request) {
+            return base.Channel.obtenerPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerPorIdResponse> obtenerPorIdAsync(int idMaterial) {
+            FrontEnd.MaterialWS.obtenerPorIdRequest inValue = new FrontEnd.MaterialWS.obtenerPorIdRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).obtenerPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.insertarMaterialResponse FrontEnd.MaterialWS.MaterialWS.insertarMaterial(FrontEnd.MaterialWS.insertarMaterialRequest request) {
+            return base.Channel.insertarMaterial(request);
+        }
+        
+        public int insertarMaterial(FrontEnd.MaterialWS.materialesDTO material) {
+            FrontEnd.MaterialWS.insertarMaterialRequest inValue = new FrontEnd.MaterialWS.insertarMaterialRequest();
+            inValue.material = material;
+            FrontEnd.MaterialWS.insertarMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).insertarMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.insertarMaterialResponse> FrontEnd.MaterialWS.MaterialWS.insertarMaterialAsync(FrontEnd.MaterialWS.insertarMaterialRequest request) {
+            return base.Channel.insertarMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.insertarMaterialResponse> insertarMaterialAsync(FrontEnd.MaterialWS.materialesDTO material) {
+            FrontEnd.MaterialWS.insertarMaterialRequest inValue = new FrontEnd.MaterialWS.insertarMaterialRequest();
+            inValue.material = material;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).insertarMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarMasSolicitadosResponse FrontEnd.MaterialWS.MaterialWS.listarMasSolicitados(FrontEnd.MaterialWS.listarMasSolicitadosRequest request) {
+            return base.Channel.listarMasSolicitados(request);
+        }
+        
+        public FrontEnd.MaterialWS.materialesDTO[] listarMasSolicitados(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMasSolicitadosRequest inValue = new FrontEnd.MaterialWS.listarMasSolicitadosRequest();
             inValue.limite = limite;
             inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPaginadoAsync(inValue);
+            FrontEnd.MaterialWS.listarMasSolicitadosResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMasSolicitados(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasSolicitadosResponse> FrontEnd.MaterialWS.MaterialWS.listarMasSolicitadosAsync(FrontEnd.MaterialWS.listarMasSolicitadosRequest request) {
+            return base.Channel.listarMasSolicitadosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasSolicitadosResponse> listarMasSolicitadosAsync(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMasSolicitadosRequest inValue = new FrontEnd.MaterialWS.listarMasSolicitadosRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMasSolicitadosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarEjemplaresMaterialResponse FrontEnd.MaterialWS.MaterialWS.listarEjemplaresMaterial(FrontEnd.MaterialWS.listarEjemplaresMaterialRequest request) {
+            return base.Channel.listarEjemplaresMaterial(request);
+        }
+        
+        public FrontEnd.MaterialWS.ejemplaresDTO[] listarEjemplaresMaterial(int idMaterial, int limite, int pagina) {
+            FrontEnd.MaterialWS.listarEjemplaresMaterialRequest inValue = new FrontEnd.MaterialWS.listarEjemplaresMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            FrontEnd.MaterialWS.listarEjemplaresMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarEjemplaresMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarEjemplaresMaterialResponse> FrontEnd.MaterialWS.MaterialWS.listarEjemplaresMaterialAsync(FrontEnd.MaterialWS.listarEjemplaresMaterialRequest request) {
+            return base.Channel.listarEjemplaresMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarEjemplaresMaterialResponse> listarEjemplaresMaterialAsync(int idMaterial, int limite, int pagina) {
+            FrontEnd.MaterialWS.listarEjemplaresMaterialRequest inValue = new FrontEnd.MaterialWS.listarEjemplaresMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarEjemplaresMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarMaterialesPorSedeResponse FrontEnd.MaterialWS.MaterialWS.listarMaterialesPorSede(FrontEnd.MaterialWS.listarMaterialesPorSedeRequest request) {
+            return base.Channel.listarMaterialesPorSede(request);
+        }
+        
+        public FrontEnd.MaterialWS.materialesDTO[] listarMaterialesPorSede(int idSede, int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMaterialesPorSedeRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPorSedeRequest();
+            inValue.idSede = idSede;
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            FrontEnd.MaterialWS.listarMaterialesPorSedeResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPorSede(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPorSedeResponse> FrontEnd.MaterialWS.MaterialWS.listarMaterialesPorSedeAsync(FrontEnd.MaterialWS.listarMaterialesPorSedeRequest request) {
+            return base.Channel.listarMaterialesPorSedeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPorSedeResponse> listarMaterialesPorSedeAsync(int idSede, int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMaterialesPorSedeRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPorSedeRequest();
+            inValue.idSede = idSede;
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPorSedeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarTemasPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.listarTemasPorMaterial(FrontEnd.MaterialWS.listarTemasPorMaterialRequest request) {
+            return base.Channel.listarTemasPorMaterial(request);
+        }
+        
+        public FrontEnd.MaterialWS.temasDTO[] listarTemasPorMaterial(int idMaterial) {
+            FrontEnd.MaterialWS.listarTemasPorMaterialRequest inValue = new FrontEnd.MaterialWS.listarTemasPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.MaterialWS.listarTemasPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTemasPorMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTemasPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.listarTemasPorMaterialAsync(FrontEnd.MaterialWS.listarTemasPorMaterialRequest request) {
+            return base.Channel.listarTemasPorMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTemasPorMaterialResponse> listarTemasPorMaterialAsync(int idMaterial) {
+            FrontEnd.MaterialWS.listarTemasPorMaterialRequest inValue = new FrontEnd.MaterialWS.listarTemasPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTemasPorMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.listarCreadoresPorMaterial(FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest request) {
+            return base.Channel.listarCreadoresPorMaterial(request);
+        }
+        
+        public FrontEnd.MaterialWS.creadoresDTO[] listarCreadoresPorMaterial(int idMaterial) {
+            FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest inValue = new FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarCreadoresPorMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.listarCreadoresPorMaterialAsync(FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest request) {
+            return base.Channel.listarCreadoresPorMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse> listarCreadoresPorMaterialAsync(int idMaterial) {
+            FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest inValue = new FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarCreadoresPorMaterialAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2907,174 +2903,178 @@ namespace FrontEnd.MaterialWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarTemasPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.listarTemasPorMaterial(FrontEnd.MaterialWS.listarTemasPorMaterialRequest request) {
-            return base.Channel.listarTemasPorMaterial(request);
+        FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse FrontEnd.MaterialWS.MaterialWS.listarMaterialesVigentesPorSede(FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest request) {
+            return base.Channel.listarMaterialesVigentesPorSede(request);
         }
         
-        public FrontEnd.MaterialWS.temasDTO[] listarTemasPorMaterial(int idMaterial) {
-            FrontEnd.MaterialWS.listarTemasPorMaterialRequest inValue = new FrontEnd.MaterialWS.listarTemasPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.MaterialWS.listarTemasPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTemasPorMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTemasPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.listarTemasPorMaterialAsync(FrontEnd.MaterialWS.listarTemasPorMaterialRequest request) {
-            return base.Channel.listarTemasPorMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTemasPorMaterialResponse> listarTemasPorMaterialAsync(int idMaterial) {
-            FrontEnd.MaterialWS.listarTemasPorMaterialRequest inValue = new FrontEnd.MaterialWS.listarTemasPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTemasPorMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarEjemplaresMaterialResponse FrontEnd.MaterialWS.MaterialWS.listarEjemplaresMaterial(FrontEnd.MaterialWS.listarEjemplaresMaterialRequest request) {
-            return base.Channel.listarEjemplaresMaterial(request);
-        }
-        
-        public FrontEnd.MaterialWS.ejemplaresDTO[] listarEjemplaresMaterial(int idMaterial, int limite, int pagina) {
-            FrontEnd.MaterialWS.listarEjemplaresMaterialRequest inValue = new FrontEnd.MaterialWS.listarEjemplaresMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarEjemplaresMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarEjemplaresMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarEjemplaresMaterialResponse> FrontEnd.MaterialWS.MaterialWS.listarEjemplaresMaterialAsync(FrontEnd.MaterialWS.listarEjemplaresMaterialRequest request) {
-            return base.Channel.listarEjemplaresMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarEjemplaresMaterialResponse> listarEjemplaresMaterialAsync(int idMaterial, int limite, int pagina) {
-            FrontEnd.MaterialWS.listarEjemplaresMaterialRequest inValue = new FrontEnd.MaterialWS.listarEjemplaresMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarEjemplaresMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.listarCreadoresPorMaterial(FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest request) {
-            return base.Channel.listarCreadoresPorMaterial(request);
-        }
-        
-        public FrontEnd.MaterialWS.creadoresDTO[] listarCreadoresPorMaterial(int idMaterial) {
-            FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest inValue = new FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarCreadoresPorMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.listarCreadoresPorMaterialAsync(FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest request) {
-            return base.Channel.listarCreadoresPorMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarCreadoresPorMaterialResponse> listarCreadoresPorMaterialAsync(int idMaterial) {
-            FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest inValue = new FrontEnd.MaterialWS.listarCreadoresPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarCreadoresPorMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarMaterialesPorSedeResponse FrontEnd.MaterialWS.MaterialWS.listarMaterialesPorSede(FrontEnd.MaterialWS.listarMaterialesPorSedeRequest request) {
-            return base.Channel.listarMaterialesPorSede(request);
-        }
-        
-        public FrontEnd.MaterialWS.materialesDTO[] listarMaterialesPorSede(int idSede, int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMaterialesPorSedeRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPorSedeRequest();
+        public FrontEnd.MaterialWS.materialesDTO[] listarMaterialesVigentesPorSede(int idSede, int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest inValue = new FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest();
             inValue.idSede = idSede;
             inValue.limite = limite;
             inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarMaterialesPorSedeResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPorSede(inValue);
+            FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesVigentesPorSede(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPorSedeResponse> FrontEnd.MaterialWS.MaterialWS.listarMaterialesPorSedeAsync(FrontEnd.MaterialWS.listarMaterialesPorSedeRequest request) {
-            return base.Channel.listarMaterialesPorSedeAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse> FrontEnd.MaterialWS.MaterialWS.listarMaterialesVigentesPorSedeAsync(FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest request) {
+            return base.Channel.listarMaterialesVigentesPorSedeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPorSedeResponse> listarMaterialesPorSedeAsync(int idSede, int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMaterialesPorSedeRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPorSedeRequest();
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse> listarMaterialesVigentesPorSedeAsync(int idSede, int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest inValue = new FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeRequest();
             inValue.idSede = idSede;
             inValue.limite = limite;
             inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPorSedeAsync(inValue);
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesVigentesPorSedeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.listarMasSolicitadosResponse FrontEnd.MaterialWS.MaterialWS.listarMasSolicitados(FrontEnd.MaterialWS.listarMasSolicitadosRequest request) {
-            return base.Channel.listarMasSolicitados(request);
+        FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.contarStockFisicoPorMaterial(FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest request) {
+            return base.Channel.contarStockFisicoPorMaterial(request);
         }
         
-        public FrontEnd.MaterialWS.materialesDTO[] listarMasSolicitados(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMasSolicitadosRequest inValue = new FrontEnd.MaterialWS.listarMasSolicitadosRequest();
+        public int contarStockFisicoPorMaterial(int idMaterial) {
+            FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).contarStockFisicoPorMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.contarStockFisicoPorMaterialAsync(FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest request) {
+            return base.Channel.contarStockFisicoPorMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse> contarStockFisicoPorMaterialAsync(int idMaterial) {
+            FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarStockFisicoPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).contarStockFisicoPorMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.contarPrestadosFisicosPorMaterial(FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest request) {
+            return base.Channel.contarPrestadosFisicosPorMaterial(request);
+        }
+        
+        public int contarPrestadosFisicosPorMaterial(int idMaterial) {
+            FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).contarPrestadosFisicosPorMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.contarPrestadosFisicosPorMaterialAsync(FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest request) {
+            return base.Channel.contarPrestadosFisicosPorMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse> contarPrestadosFisicosPorMaterialAsync(int idMaterial) {
+            FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).contarPrestadosFisicosPorMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoIntermedio(FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest request) {
+            return base.Channel.listarTodosPaginadoIntermedio(request);
+        }
+        
+        public FrontEnd.MaterialWS.materialesDTO[] listarTodosPaginadoIntermedio(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest inValue = new FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest();
             inValue.limite = limite;
             inValue.pagina = pagina;
-            FrontEnd.MaterialWS.listarMasSolicitadosResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMasSolicitados(inValue);
+            FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosPaginadoIntermedio(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasSolicitadosResponse> FrontEnd.MaterialWS.MaterialWS.listarMasSolicitadosAsync(FrontEnd.MaterialWS.listarMasSolicitadosRequest request) {
-            return base.Channel.listarMasSolicitadosAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse> FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoIntermedioAsync(FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest request) {
+            return base.Channel.listarTodosPaginadoIntermedioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasSolicitadosResponse> listarMasSolicitadosAsync(int limite, int pagina) {
-            FrontEnd.MaterialWS.listarMasSolicitadosRequest inValue = new FrontEnd.MaterialWS.listarMasSolicitadosRequest();
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse> listarTodosPaginadoIntermedioAsync(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest inValue = new FrontEnd.MaterialWS.listarTodosPaginadoIntermedioRequest();
             inValue.limite = limite;
             inValue.pagina = pagina;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMasSolicitadosAsync(inValue);
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosPaginadoIntermedioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.contarDisponiblesFisicosPorMaterial(FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest request) {
-            return base.Channel.contarDisponiblesFisicosPorMaterial(request);
+        FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse FrontEnd.MaterialWS.MaterialWS.listarMaterialesPaginadoPorTema(FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest request) {
+            return base.Channel.listarMaterialesPaginadoPorTema(request);
         }
         
-        public int contarDisponiblesFisicosPorMaterial(int idMaterial) {
-            FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).contarDisponiblesFisicosPorMaterial(inValue);
+        public FrontEnd.MaterialWS.materialesDTO[] listarMaterialesPaginadoPorTema(string descripcionTema, int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest();
+            inValue.descripcionTema = descripcionTema;
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPaginadoPorTema(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.contarDisponiblesFisicosPorMaterialAsync(FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest request) {
-            return base.Channel.contarDisponiblesFisicosPorMaterialAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse> FrontEnd.MaterialWS.MaterialWS.listarMaterialesPaginadoPorTemaAsync(FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest request) {
+            return base.Channel.listarMaterialesPaginadoPorTemaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse> contarDisponiblesFisicosPorMaterialAsync(int idMaterial) {
-            FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest inValue = new FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).contarDisponiblesFisicosPorMaterialAsync(inValue);
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse> listarMaterialesPaginadoPorTemaAsync(string descripcionTema, int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest inValue = new FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaRequest();
+            inValue.descripcionTema = descripcionTema;
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMaterialesPaginadoPorTemaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse FrontEnd.MaterialWS.MaterialWS.obtenerNombreCreadorRandomPorMaterial(FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest request) {
-            return base.Channel.obtenerNombreCreadorRandomPorMaterial(request);
+        FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoAvanzado(FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest request) {
+            return base.Channel.listarTodosPaginadoAvanzado(request);
         }
         
-        public string obtenerNombreCreadorRandomPorMaterial(int idMaterial) {
-            FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest inValue = new FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).obtenerNombreCreadorRandomPorMaterial(inValue);
+        public FrontEnd.MaterialWS.materialesDTO[] listarTodosPaginadoAvanzado(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest inValue = new FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosPaginadoAvanzado(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse> FrontEnd.MaterialWS.MaterialWS.obtenerNombreCreadorRandomPorMaterialAsync(FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest request) {
-            return base.Channel.obtenerNombreCreadorRandomPorMaterialAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse> FrontEnd.MaterialWS.MaterialWS.listarTodosPaginadoAvanzadoAsync(FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest request) {
+            return base.Channel.listarTodosPaginadoAvanzadoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse> obtenerNombreCreadorRandomPorMaterialAsync(int idMaterial) {
-            FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest inValue = new FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.MaterialWS.MaterialWS)(this)).obtenerNombreCreadorRandomPorMaterialAsync(inValue);
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse> listarTodosPaginadoAvanzadoAsync(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest inValue = new FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarTodosPaginadoAvanzadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.MaterialWS.listarMasRecientesResponse FrontEnd.MaterialWS.MaterialWS.listarMasRecientes(FrontEnd.MaterialWS.listarMasRecientesRequest request) {
+            return base.Channel.listarMasRecientes(request);
+        }
+        
+        public FrontEnd.MaterialWS.materialesDTO[] listarMasRecientes(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMasRecientesRequest inValue = new FrontEnd.MaterialWS.listarMasRecientesRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            FrontEnd.MaterialWS.listarMasRecientesResponse retVal = ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMasRecientes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasRecientesResponse> FrontEnd.MaterialWS.MaterialWS.listarMasRecientesAsync(FrontEnd.MaterialWS.listarMasRecientesRequest request) {
+            return base.Channel.listarMasRecientesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.MaterialWS.listarMasRecientesResponse> listarMasRecientesAsync(int limite, int pagina) {
+            FrontEnd.MaterialWS.listarMasRecientesRequest inValue = new FrontEnd.MaterialWS.listarMasRecientesRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            return ((FrontEnd.MaterialWS.MaterialWS)(this)).listarMasRecientesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

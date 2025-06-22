@@ -16,6 +16,58 @@ namespace FrontEnd.EjemplarWS {
     public interface EjemplarWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPor" +
+            "MaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPor" +
+            "MaterialResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse contarFisicosDisponiblesPorMaterial(FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPor" +
+            "MaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPor" +
+            "MaterialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse> contarFisicosDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDispon" +
+            "iblePorMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDispon" +
+            "iblePorMaterialResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse obtenerPrimerEjemplarDisponiblePorMaterial(FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDispon" +
+            "iblePorMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDispon" +
+            "iblePorMaterialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse> obtenerPrimerEjemplarDisponiblePorMaterialAsync(FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponibles" +
+            "PorMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponibles" +
+            "PorMaterialResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse listarEjemplaresDisponiblesPorMaterial(FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponibles" +
+            "PorMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponibles" +
+            "PorMaterialResponse")]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse> listarEjemplaresDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPor" +
+            "MaterialYSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPor" +
+            "MaterialYSedeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse listarFisicosDisponiblesPorMaterialYSede(FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPor" +
+            "MaterialYSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPor" +
+            "MaterialYSedeResponse")]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse> listarFisicosDisponiblesPorMaterialYSedeAsync(FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/modificarEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/modificarEjemplarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -23,6 +75,24 @@ namespace FrontEnd.EjemplarWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/modificarEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/modificarEjemplarResponse")]
         System.Threading.Tasks.Task<FrontEnd.EjemplarWS.modificarEjemplarResponse> modificarEjemplarAsync(FrontEnd.EjemplarWS.modificarEjemplarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.EjemplarWS.obtenerEjemplarResponse obtenerEjemplar(FrontEnd.EjemplarWS.obtenerEjemplarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarResponse")]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerEjemplarResponse> obtenerEjemplarAsync(FrontEnd.EjemplarWS.obtenerEjemplarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.EjemplarWS.insertarEjemplarResponse insertarEjemplar(FrontEnd.EjemplarWS.insertarEjemplarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarResponse")]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.insertarEjemplarResponse> insertarEjemplarAsync(FrontEnd.EjemplarWS.insertarEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorSedeResponse")]
@@ -52,102 +122,6 @@ namespace FrontEnd.EjemplarWS {
         System.Threading.Tasks.Task<FrontEnd.EjemplarWS.eliminarEjemplarResponse> eliminarEjemplarAsync(FrontEnd.EjemplarWS.eliminarEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.EjemplarWS.obtenerEjemplarResponse obtenerEjemplar(FrontEnd.EjemplarWS.obtenerEjemplarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarResponse")]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerEjemplarResponse> obtenerEjemplarAsync(FrontEnd.EjemplarWS.obtenerEjemplarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.EjemplarWS.insertarEjemplarResponse insertarEjemplar(FrontEnd.EjemplarWS.insertarEjemplarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarResponse")]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.insertarEjemplarResponse> insertarEjemplarAsync(FrontEnd.EjemplarWS.insertarEjemplarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPor" +
-            "MaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPor" +
-            "MaterialResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse contarFisicosDisponiblesPorMaterial(FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPor" +
-            "MaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPor" +
-            "MaterialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse> contarFisicosDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponibles" +
-            "PorMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponibles" +
-            "PorMaterialResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse listarEjemplaresDisponiblesPorMaterial(FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponibles" +
-            "PorMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponibles" +
-            "PorMaterialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse> listarEjemplaresDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDispon" +
-            "iblePorMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDispon" +
-            "iblePorMaterialResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse obtenerPrimerEjemplarDisponiblePorMaterial(FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDispon" +
-            "iblePorMaterialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDispon" +
-            "iblePorMaterialResponse")]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse> obtenerPrimerEjemplarDisponiblePorMaterialAsync(FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPor" +
-            "MaterialYSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPor" +
-            "MaterialYSedeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse listarFisicosDisponiblesPorMaterialYSede(FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPor" +
-            "MaterialYSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPor" +
-            "MaterialYSedeResponse")]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse> listarFisicosDisponiblesPorMaterialYSedeAsync(FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisp" +
-            "oniblesPorMaterialYSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisp" +
-            "oniblesPorMaterialYSedeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse contarEjemplaresFisicosDisponiblesPorMaterialYSede(FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisp" +
-            "oniblesPorMaterialYSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisp" +
-            "oniblesPorMaterialYSedeResponse")]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse> contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMateria" +
-            "lRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMateria" +
-            "lResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse contarDisponiblesPorMaterial(FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMateria" +
-            "lRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMateria" +
-            "lResponse")]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse> contarDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorSedeReq" +
             "uest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorSedeRes" +
             "ponse")]
@@ -172,89 +146,48 @@ namespace FrontEnd.EjemplarWS {
             "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorMaterialRespo" +
             "nse")]
         System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarTotalPorMaterialResponse> contarTotalPorMaterialAsync(FrontEnd.EjemplarWS.contarTotalPorMaterialRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public enum tipoEjemplar {
         
-        /// <remarks/>
-        FISICO,
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMateria" +
+            "lRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMateria" +
+            "lResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse contarDisponiblesPorMaterial(FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest request);
         
-        /// <remarks/>
-        DIGITAL,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public enum formatoDigital {
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMateria" +
+            "lRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMateria" +
+            "lResponse")]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse> contarDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest request);
         
-        /// <remarks/>
-        MP3,
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisp" +
+            "oniblesPorMaterialYSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisp" +
+            "oniblesPorMaterialYSedeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse contarEjemplaresFisicosDisponiblesPorMaterialYSede(FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest request);
         
-        /// <remarks/>
-        PDF,
-        
-        /// <remarks/>
-        CBR,
-        
-        /// <remarks/>
-        PPT,
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisp" +
+            "oniblesPorMaterialYSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisp" +
+            "oniblesPorMaterialYSedeResponse")]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse> contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarEjemplarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarFisicosDisponiblesPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarFisicosDisponiblesPorMaterialRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEjemplar;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaAdquisicion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool disponible;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.EjemplarWS.tipoEjemplar tipo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.EjemplarWS.formatoDigital formatoDigital;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string ubicacion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idMaterial;
         
-        public modificarEjemplarRequest() {
+        public contarFisicosDisponiblesPorMaterialRequest() {
         }
         
-        public modificarEjemplarRequest(int idEjemplar, System.DateTime fechaAdquisicion, bool disponible, FrontEnd.EjemplarWS.tipoEjemplar tipo, FrontEnd.EjemplarWS.formatoDigital formatoDigital, string ubicacion, int idSede, int idMaterial) {
-            this.idEjemplar = idEjemplar;
-            this.fechaAdquisicion = fechaAdquisicion;
-            this.disponible = disponible;
-            this.tipo = tipo;
-            this.formatoDigital = formatoDigital;
-            this.ubicacion = ubicacion;
-            this.idSede = idSede;
+        public contarFisicosDisponiblesPorMaterialRequest(int idMaterial) {
             this.idMaterial = idMaterial;
         }
     }
@@ -262,53 +195,17 @@ namespace FrontEnd.EjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarEjemplarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarFisicosDisponiblesPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarFisicosDisponiblesPorMaterialResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarEjemplarResponse() {
+        public contarFisicosDisponiblesPorMaterialResponse() {
         }
         
-        public modificarEjemplarResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarTotalPorSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarTotalPorSedeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        public contarTotalPorSedeRequest() {
-        }
-        
-        public contarTotalPorSedeRequest(int idSede) {
-            this.idSede = idSede;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarTotalPorSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarTotalPorSedeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public contarTotalPorSedeResponse() {
-        }
-        
-        public contarTotalPorSedeResponse(int @return) {
+        public contarFisicosDisponiblesPorMaterialResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -511,6 +408,25 @@ namespace FrontEnd.EjemplarWS {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
+    public enum formatoDigital {
+        
+        /// <remarks/>
+        MP3,
+        
+        /// <remarks/>
+        PDF,
+        
+        /// <remarks/>
+        CBR,
+        
+        /// <remarks/>
+        PPT,
     }
     
     /// <remarks/>
@@ -1007,30 +923,56 @@ namespace FrontEnd.EjemplarWS {
         AVANZADO,
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
+    public enum tipoEjemplar {
+        
+        /// <remarks/>
+        FISICO,
+        
+        /// <remarks/>
+        DIGITAL,
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjemplares", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarEjemplaresRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPrimerEjemplarDisponiblePorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class obtenerPrimerEjemplarDisponiblePorMaterialRequest {
         
-        public listarEjemplaresRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        public obtenerPrimerEjemplarDisponiblePorMaterialRequest() {
+        }
+        
+        public obtenerPrimerEjemplarDisponiblePorMaterialRequest(int idMaterial, int idSede) {
+            this.idMaterial = idMaterial;
+            this.idSede = idSede;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjemplaresResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarEjemplaresResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPrimerEjemplarDisponiblePorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class obtenerPrimerEjemplarDisponiblePorMaterialResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.EjemplarWS.ejemplaresDTO[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.EjemplarWS.ejemplaresDTO @return;
         
-        public listarEjemplaresResponse() {
+        public obtenerPrimerEjemplarDisponiblePorMaterialResponse() {
         }
         
-        public listarEjemplaresResponse(FrontEnd.EjemplarWS.ejemplaresDTO[] @return) {
+        public obtenerPrimerEjemplarDisponiblePorMaterialResponse(FrontEnd.EjemplarWS.ejemplaresDTO @return) {
             this.@return = @return;
         }
     }
@@ -1038,35 +980,147 @@ namespace FrontEnd.EjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarEjemplarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjemplaresDisponiblesPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarEjemplaresDisponiblesPorMaterialRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEjemplar;
+        public int idMaterial;
         
-        public eliminarEjemplarRequest() {
+        public listarEjemplaresDisponiblesPorMaterialRequest() {
         }
         
-        public eliminarEjemplarRequest(int idEjemplar) {
-            this.idEjemplar = idEjemplar;
+        public listarEjemplaresDisponiblesPorMaterialRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarEjemplarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjemplaresDisponiblesPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarEjemplaresDisponiblesPorMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.EjemplarWS.ejemplaresDTO[] @return;
+        
+        public listarEjemplaresDisponiblesPorMaterialResponse() {
+        }
+        
+        public listarEjemplaresDisponiblesPorMaterialResponse(FrontEnd.EjemplarWS.ejemplaresDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFisicosDisponiblesPorMaterialYSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarFisicosDisponiblesPorMaterialYSedeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        public listarFisicosDisponiblesPorMaterialYSedeRequest() {
+        }
+        
+        public listarFisicosDisponiblesPorMaterialYSedeRequest(int idMaterial, int idSede) {
+            this.idMaterial = idMaterial;
+            this.idSede = idSede;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFisicosDisponiblesPorMaterialYSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarFisicosDisponiblesPorMaterialYSedeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.EjemplarWS.ejemplaresDTO[] @return;
+        
+        public listarFisicosDisponiblesPorMaterialYSedeResponse() {
+        }
+        
+        public listarFisicosDisponiblesPorMaterialYSedeResponse(FrontEnd.EjemplarWS.ejemplaresDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarEjemplarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEjemplar;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaAdquisicion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool disponible;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.EjemplarWS.tipoEjemplar tipo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.EjemplarWS.formatoDigital formatoDigital;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string ubicacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        public modificarEjemplarRequest() {
+        }
+        
+        public modificarEjemplarRequest(int idEjemplar, System.DateTime fechaAdquisicion, bool disponible, FrontEnd.EjemplarWS.tipoEjemplar tipo, FrontEnd.EjemplarWS.formatoDigital formatoDigital, string ubicacion, int idSede, int idMaterial) {
+            this.idEjemplar = idEjemplar;
+            this.fechaAdquisicion = fechaAdquisicion;
+            this.disponible = disponible;
+            this.tipo = tipo;
+            this.formatoDigital = formatoDigital;
+            this.ubicacion = ubicacion;
+            this.idSede = idSede;
+            this.idMaterial = idMaterial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarEjemplarResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarEjemplarResponse() {
+        public modificarEjemplarResponse() {
         }
         
-        public eliminarEjemplarResponse(int @return) {
+        public modificarEjemplarResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1176,35 +1230,35 @@ namespace FrontEnd.EjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarFisicosDisponiblesPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarFisicosDisponiblesPorMaterialRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarTotalPorSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarTotalPorSedeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
+        public int idSede;
         
-        public contarFisicosDisponiblesPorMaterialRequest() {
+        public contarTotalPorSedeRequest() {
         }
         
-        public contarFisicosDisponiblesPorMaterialRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
+        public contarTotalPorSedeRequest(int idSede) {
+            this.idSede = idSede;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarFisicosDisponiblesPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarFisicosDisponiblesPorMaterialResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarTotalPorSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarTotalPorSedeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public contarFisicosDisponiblesPorMaterialResponse() {
+        public contarTotalPorSedeResponse() {
         }
         
-        public contarFisicosDisponiblesPorMaterialResponse(int @return) {
+        public contarTotalPorSedeResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1212,35 +1266,27 @@ namespace FrontEnd.EjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjemplaresDisponiblesPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarEjemplaresDisponiblesPorMaterialRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjemplares", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarEjemplaresRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        public listarEjemplaresDisponiblesPorMaterialRequest() {
-        }
-        
-        public listarEjemplaresDisponiblesPorMaterialRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
+        public listarEjemplaresRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjemplaresDisponiblesPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarEjemplaresDisponiblesPorMaterialResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEjemplaresResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarEjemplaresResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public FrontEnd.EjemplarWS.ejemplaresDTO[] @return;
         
-        public listarEjemplaresDisponiblesPorMaterialResponse() {
+        public listarEjemplaresResponse() {
         }
         
-        public listarEjemplaresDisponiblesPorMaterialResponse(FrontEnd.EjemplarWS.ejemplaresDTO[] @return) {
+        public listarEjemplaresResponse(FrontEnd.EjemplarWS.ejemplaresDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -1248,158 +1294,35 @@ namespace FrontEnd.EjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPrimerEjemplarDisponiblePorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class obtenerPrimerEjemplarDisponiblePorMaterialRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarEjemplarRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
+        public int idEjemplar;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        public obtenerPrimerEjemplarDisponiblePorMaterialRequest() {
+        public eliminarEjemplarRequest() {
         }
         
-        public obtenerPrimerEjemplarDisponiblePorMaterialRequest(int idMaterial, int idSede) {
-            this.idMaterial = idMaterial;
-            this.idSede = idSede;
+        public eliminarEjemplarRequest(int idEjemplar) {
+            this.idEjemplar = idEjemplar;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPrimerEjemplarDisponiblePorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class obtenerPrimerEjemplarDisponiblePorMaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.EjemplarWS.ejemplaresDTO @return;
-        
-        public obtenerPrimerEjemplarDisponiblePorMaterialResponse() {
-        }
-        
-        public obtenerPrimerEjemplarDisponiblePorMaterialResponse(FrontEnd.EjemplarWS.ejemplaresDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFisicosDisponiblesPorMaterialYSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarFisicosDisponiblesPorMaterialYSedeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        public listarFisicosDisponiblesPorMaterialYSedeRequest() {
-        }
-        
-        public listarFisicosDisponiblesPorMaterialYSedeRequest(int idMaterial, int idSede) {
-            this.idMaterial = idMaterial;
-            this.idSede = idSede;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFisicosDisponiblesPorMaterialYSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarFisicosDisponiblesPorMaterialYSedeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.EjemplarWS.ejemplaresDTO[] @return;
-        
-        public listarFisicosDisponiblesPorMaterialYSedeResponse() {
-        }
-        
-        public listarFisicosDisponiblesPorMaterialYSedeResponse(FrontEnd.EjemplarWS.ejemplaresDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarEjemplaresFisicosDisponiblesPorMaterialYSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        public contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest() {
-        }
-        
-        public contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest(int idMaterial, int idSede) {
-            this.idMaterial = idMaterial;
-            this.idSede = idSede;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarEjemplarResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse() {
+        public eliminarEjemplarResponse() {
         }
         
-        public contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarDisponiblesPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarDisponiblesPorMaterialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        public contarDisponiblesPorMaterialRequest() {
-        }
-        
-        public contarDisponiblesPorMaterialRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contarDisponiblesPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class contarDisponiblesPorMaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public contarDisponiblesPorMaterialResponse() {
-        }
-        
-        public contarDisponiblesPorMaterialResponse(int @return) {
+        public eliminarEjemplarResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1476,6 +1399,83 @@ namespace FrontEnd.EjemplarWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarDisponiblesPorMaterial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarDisponiblesPorMaterialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        public contarDisponiblesPorMaterialRequest() {
+        }
+        
+        public contarDisponiblesPorMaterialRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarDisponiblesPorMaterialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarDisponiblesPorMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public contarDisponiblesPorMaterialResponse() {
+        }
+        
+        public contarDisponiblesPorMaterialResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarEjemplaresFisicosDisponiblesPorMaterialYSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        public contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest() {
+        }
+        
+        public contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest(int idMaterial, int idSede) {
+            this.idMaterial = idMaterial;
+            this.idSede = idSede;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse() {
+        }
+        
+        public contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EjemplarWSChannel : FrontEnd.EjemplarWS.EjemplarWS, System.ServiceModel.IClientChannel {
     }
@@ -1501,6 +1501,102 @@ namespace FrontEnd.EjemplarWS {
         
         public EjemplarWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse FrontEnd.EjemplarWS.EjemplarWS.contarFisicosDisponiblesPorMaterial(FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest request) {
+            return base.Channel.contarFisicosDisponiblesPorMaterial(request);
+        }
+        
+        public int contarFisicosDisponiblesPorMaterial(int idMaterial) {
+            FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarFisicosDisponiblesPorMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse> FrontEnd.EjemplarWS.EjemplarWS.contarFisicosDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest request) {
+            return base.Channel.contarFisicosDisponiblesPorMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse> contarFisicosDisponiblesPorMaterialAsync(int idMaterial) {
+            FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarFisicosDisponiblesPorMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse FrontEnd.EjemplarWS.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterial(FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest request) {
+            return base.Channel.obtenerPrimerEjemplarDisponiblePorMaterial(request);
+        }
+        
+        public FrontEnd.EjemplarWS.ejemplaresDTO obtenerPrimerEjemplarDisponiblePorMaterial(int idMaterial, int idSede) {
+            FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest inValue = new FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.idSede = idSede;
+            FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).obtenerPrimerEjemplarDisponiblePorMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse> FrontEnd.EjemplarWS.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialAsync(FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest request) {
+            return base.Channel.obtenerPrimerEjemplarDisponiblePorMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse> obtenerPrimerEjemplarDisponiblePorMaterialAsync(int idMaterial, int idSede) {
+            FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest inValue = new FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.idSede = idSede;
+            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).obtenerPrimerEjemplarDisponiblePorMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse FrontEnd.EjemplarWS.EjemplarWS.listarEjemplaresDisponiblesPorMaterial(FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest request) {
+            return base.Channel.listarEjemplaresDisponiblesPorMaterial(request);
+        }
+        
+        public FrontEnd.EjemplarWS.ejemplaresDTO[] listarEjemplaresDisponiblesPorMaterial(int idMaterial) {
+            FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).listarEjemplaresDisponiblesPorMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse> FrontEnd.EjemplarWS.EjemplarWS.listarEjemplaresDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest request) {
+            return base.Channel.listarEjemplaresDisponiblesPorMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse> listarEjemplaresDisponiblesPorMaterialAsync(int idMaterial) {
+            FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).listarEjemplaresDisponiblesPorMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse FrontEnd.EjemplarWS.EjemplarWS.listarFisicosDisponiblesPorMaterialYSede(FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest request) {
+            return base.Channel.listarFisicosDisponiblesPorMaterialYSede(request);
+        }
+        
+        public FrontEnd.EjemplarWS.ejemplaresDTO[] listarFisicosDisponiblesPorMaterialYSede(int idMaterial, int idSede) {
+            FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest inValue = new FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.idSede = idSede;
+            FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).listarFisicosDisponiblesPorMaterialYSede(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse> FrontEnd.EjemplarWS.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeAsync(FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest request) {
+            return base.Channel.listarFisicosDisponiblesPorMaterialYSedeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse> listarFisicosDisponiblesPorMaterialYSedeAsync(int idMaterial, int idSede) {
+            FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest inValue = new FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.idSede = idSede;
+            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).listarFisicosDisponiblesPorMaterialYSedeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1538,6 +1634,64 @@ namespace FrontEnd.EjemplarWS {
             inValue.idSede = idSede;
             inValue.idMaterial = idMaterial;
             return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).modificarEjemplarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.EjemplarWS.obtenerEjemplarResponse FrontEnd.EjemplarWS.EjemplarWS.obtenerEjemplar(FrontEnd.EjemplarWS.obtenerEjemplarRequest request) {
+            return base.Channel.obtenerEjemplar(request);
+        }
+        
+        public FrontEnd.EjemplarWS.ejemplaresDTO obtenerEjemplar(int idEjemplar) {
+            FrontEnd.EjemplarWS.obtenerEjemplarRequest inValue = new FrontEnd.EjemplarWS.obtenerEjemplarRequest();
+            inValue.idEjemplar = idEjemplar;
+            FrontEnd.EjemplarWS.obtenerEjemplarResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).obtenerEjemplar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerEjemplarResponse> FrontEnd.EjemplarWS.EjemplarWS.obtenerEjemplarAsync(FrontEnd.EjemplarWS.obtenerEjemplarRequest request) {
+            return base.Channel.obtenerEjemplarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerEjemplarResponse> obtenerEjemplarAsync(int idEjemplar) {
+            FrontEnd.EjemplarWS.obtenerEjemplarRequest inValue = new FrontEnd.EjemplarWS.obtenerEjemplarRequest();
+            inValue.idEjemplar = idEjemplar;
+            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).obtenerEjemplarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.EjemplarWS.insertarEjemplarResponse FrontEnd.EjemplarWS.EjemplarWS.insertarEjemplar(FrontEnd.EjemplarWS.insertarEjemplarRequest request) {
+            return base.Channel.insertarEjemplar(request);
+        }
+        
+        public int insertarEjemplar(System.DateTime fechaAdquisicion, bool disponible, FrontEnd.EjemplarWS.tipoEjemplar tipo, FrontEnd.EjemplarWS.formatoDigital formatoDigital, string ubicacion, int idSede, int idMaterial) {
+            FrontEnd.EjemplarWS.insertarEjemplarRequest inValue = new FrontEnd.EjemplarWS.insertarEjemplarRequest();
+            inValue.fechaAdquisicion = fechaAdquisicion;
+            inValue.disponible = disponible;
+            inValue.tipo = tipo;
+            inValue.formatoDigital = formatoDigital;
+            inValue.ubicacion = ubicacion;
+            inValue.idSede = idSede;
+            inValue.idMaterial = idMaterial;
+            FrontEnd.EjemplarWS.insertarEjemplarResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).insertarEjemplar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.insertarEjemplarResponse> FrontEnd.EjemplarWS.EjemplarWS.insertarEjemplarAsync(FrontEnd.EjemplarWS.insertarEjemplarRequest request) {
+            return base.Channel.insertarEjemplarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.insertarEjemplarResponse> insertarEjemplarAsync(System.DateTime fechaAdquisicion, bool disponible, FrontEnd.EjemplarWS.tipoEjemplar tipo, FrontEnd.EjemplarWS.formatoDigital formatoDigital, string ubicacion, int idSede, int idMaterial) {
+            FrontEnd.EjemplarWS.insertarEjemplarRequest inValue = new FrontEnd.EjemplarWS.insertarEjemplarRequest();
+            inValue.fechaAdquisicion = fechaAdquisicion;
+            inValue.disponible = disponible;
+            inValue.tipo = tipo;
+            inValue.formatoDigital = formatoDigital;
+            inValue.ubicacion = ubicacion;
+            inValue.idSede = idSede;
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).insertarEjemplarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1608,208 +1762,6 @@ namespace FrontEnd.EjemplarWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.EjemplarWS.obtenerEjemplarResponse FrontEnd.EjemplarWS.EjemplarWS.obtenerEjemplar(FrontEnd.EjemplarWS.obtenerEjemplarRequest request) {
-            return base.Channel.obtenerEjemplar(request);
-        }
-        
-        public FrontEnd.EjemplarWS.ejemplaresDTO obtenerEjemplar(int idEjemplar) {
-            FrontEnd.EjemplarWS.obtenerEjemplarRequest inValue = new FrontEnd.EjemplarWS.obtenerEjemplarRequest();
-            inValue.idEjemplar = idEjemplar;
-            FrontEnd.EjemplarWS.obtenerEjemplarResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).obtenerEjemplar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerEjemplarResponse> FrontEnd.EjemplarWS.EjemplarWS.obtenerEjemplarAsync(FrontEnd.EjemplarWS.obtenerEjemplarRequest request) {
-            return base.Channel.obtenerEjemplarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerEjemplarResponse> obtenerEjemplarAsync(int idEjemplar) {
-            FrontEnd.EjemplarWS.obtenerEjemplarRequest inValue = new FrontEnd.EjemplarWS.obtenerEjemplarRequest();
-            inValue.idEjemplar = idEjemplar;
-            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).obtenerEjemplarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.EjemplarWS.insertarEjemplarResponse FrontEnd.EjemplarWS.EjemplarWS.insertarEjemplar(FrontEnd.EjemplarWS.insertarEjemplarRequest request) {
-            return base.Channel.insertarEjemplar(request);
-        }
-        
-        public int insertarEjemplar(System.DateTime fechaAdquisicion, bool disponible, FrontEnd.EjemplarWS.tipoEjemplar tipo, FrontEnd.EjemplarWS.formatoDigital formatoDigital, string ubicacion, int idSede, int idMaterial) {
-            FrontEnd.EjemplarWS.insertarEjemplarRequest inValue = new FrontEnd.EjemplarWS.insertarEjemplarRequest();
-            inValue.fechaAdquisicion = fechaAdquisicion;
-            inValue.disponible = disponible;
-            inValue.tipo = tipo;
-            inValue.formatoDigital = formatoDigital;
-            inValue.ubicacion = ubicacion;
-            inValue.idSede = idSede;
-            inValue.idMaterial = idMaterial;
-            FrontEnd.EjemplarWS.insertarEjemplarResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).insertarEjemplar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.insertarEjemplarResponse> FrontEnd.EjemplarWS.EjemplarWS.insertarEjemplarAsync(FrontEnd.EjemplarWS.insertarEjemplarRequest request) {
-            return base.Channel.insertarEjemplarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.insertarEjemplarResponse> insertarEjemplarAsync(System.DateTime fechaAdquisicion, bool disponible, FrontEnd.EjemplarWS.tipoEjemplar tipo, FrontEnd.EjemplarWS.formatoDigital formatoDigital, string ubicacion, int idSede, int idMaterial) {
-            FrontEnd.EjemplarWS.insertarEjemplarRequest inValue = new FrontEnd.EjemplarWS.insertarEjemplarRequest();
-            inValue.fechaAdquisicion = fechaAdquisicion;
-            inValue.disponible = disponible;
-            inValue.tipo = tipo;
-            inValue.formatoDigital = formatoDigital;
-            inValue.ubicacion = ubicacion;
-            inValue.idSede = idSede;
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).insertarEjemplarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse FrontEnd.EjemplarWS.EjemplarWS.contarFisicosDisponiblesPorMaterial(FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest request) {
-            return base.Channel.contarFisicosDisponiblesPorMaterial(request);
-        }
-        
-        public int contarFisicosDisponiblesPorMaterial(int idMaterial) {
-            FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarFisicosDisponiblesPorMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse> FrontEnd.EjemplarWS.EjemplarWS.contarFisicosDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest request) {
-            return base.Channel.contarFisicosDisponiblesPorMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialResponse> contarFisicosDisponiblesPorMaterialAsync(int idMaterial) {
-            FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarFisicosDisponiblesPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarFisicosDisponiblesPorMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse FrontEnd.EjemplarWS.EjemplarWS.listarEjemplaresDisponiblesPorMaterial(FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest request) {
-            return base.Channel.listarEjemplaresDisponiblesPorMaterial(request);
-        }
-        
-        public FrontEnd.EjemplarWS.ejemplaresDTO[] listarEjemplaresDisponiblesPorMaterial(int idMaterial) {
-            FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).listarEjemplaresDisponiblesPorMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse> FrontEnd.EjemplarWS.EjemplarWS.listarEjemplaresDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest request) {
-            return base.Channel.listarEjemplaresDisponiblesPorMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialResponse> listarEjemplaresDisponiblesPorMaterialAsync(int idMaterial) {
-            FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.listarEjemplaresDisponiblesPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).listarEjemplaresDisponiblesPorMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse FrontEnd.EjemplarWS.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterial(FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest request) {
-            return base.Channel.obtenerPrimerEjemplarDisponiblePorMaterial(request);
-        }
-        
-        public FrontEnd.EjemplarWS.ejemplaresDTO obtenerPrimerEjemplarDisponiblePorMaterial(int idMaterial, int idSede) {
-            FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest inValue = new FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            inValue.idSede = idSede;
-            FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).obtenerPrimerEjemplarDisponiblePorMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse> FrontEnd.EjemplarWS.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialAsync(FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest request) {
-            return base.Channel.obtenerPrimerEjemplarDisponiblePorMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse> obtenerPrimerEjemplarDisponiblePorMaterialAsync(int idMaterial, int idSede) {
-            FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest inValue = new FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            inValue.idSede = idSede;
-            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).obtenerPrimerEjemplarDisponiblePorMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse FrontEnd.EjemplarWS.EjemplarWS.listarFisicosDisponiblesPorMaterialYSede(FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest request) {
-            return base.Channel.listarFisicosDisponiblesPorMaterialYSede(request);
-        }
-        
-        public FrontEnd.EjemplarWS.ejemplaresDTO[] listarFisicosDisponiblesPorMaterialYSede(int idMaterial, int idSede) {
-            FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest inValue = new FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest();
-            inValue.idMaterial = idMaterial;
-            inValue.idSede = idSede;
-            FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).listarFisicosDisponiblesPorMaterialYSede(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse> FrontEnd.EjemplarWS.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeAsync(FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest request) {
-            return base.Channel.listarFisicosDisponiblesPorMaterialYSedeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeResponse> listarFisicosDisponiblesPorMaterialYSedeAsync(int idMaterial, int idSede) {
-            FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest inValue = new FrontEnd.EjemplarWS.listarFisicosDisponiblesPorMaterialYSedeRequest();
-            inValue.idMaterial = idMaterial;
-            inValue.idSede = idSede;
-            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).listarFisicosDisponiblesPorMaterialYSedeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse FrontEnd.EjemplarWS.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSede(FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest request) {
-            return base.Channel.contarEjemplaresFisicosDisponiblesPorMaterialYSede(request);
-        }
-        
-        public int contarEjemplaresFisicosDisponiblesPorMaterialYSede(int idMaterial, int idSede) {
-            FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest inValue = new FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest();
-            inValue.idMaterial = idMaterial;
-            inValue.idSede = idSede;
-            FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarEjemplaresFisicosDisponiblesPorMaterialYSede(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse> FrontEnd.EjemplarWS.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest request) {
-            return base.Channel.contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse> contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(int idMaterial, int idSede) {
-            FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest inValue = new FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest();
-            inValue.idMaterial = idMaterial;
-            inValue.idSede = idSede;
-            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse FrontEnd.EjemplarWS.EjemplarWS.contarDisponiblesPorMaterial(FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest request) {
-            return base.Channel.contarDisponiblesPorMaterial(request);
-        }
-        
-        public int contarDisponiblesPorMaterial(int idMaterial) {
-            FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarDisponiblesPorMaterial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse> FrontEnd.EjemplarWS.EjemplarWS.contarDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest request) {
-            return base.Channel.contarDisponiblesPorMaterialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse> contarDisponiblesPorMaterialAsync(int idMaterial) {
-            FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest();
-            inValue.idMaterial = idMaterial;
-            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarDisponiblesPorMaterialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontEnd.EjemplarWS.contarDisponiblesPorSedeResponse FrontEnd.EjemplarWS.EjemplarWS.contarDisponiblesPorSede(FrontEnd.EjemplarWS.contarDisponiblesPorSedeRequest request) {
             return base.Channel.contarDisponiblesPorSede(request);
         }
@@ -1853,6 +1805,54 @@ namespace FrontEnd.EjemplarWS {
             FrontEnd.EjemplarWS.contarTotalPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarTotalPorMaterialRequest();
             inValue.idMaterial = idMaterial;
             return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarTotalPorMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse FrontEnd.EjemplarWS.EjemplarWS.contarDisponiblesPorMaterial(FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest request) {
+            return base.Channel.contarDisponiblesPorMaterial(request);
+        }
+        
+        public int contarDisponiblesPorMaterial(int idMaterial) {
+            FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarDisponiblesPorMaterial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse> FrontEnd.EjemplarWS.EjemplarWS.contarDisponiblesPorMaterialAsync(FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest request) {
+            return base.Channel.contarDisponiblesPorMaterialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarDisponiblesPorMaterialResponse> contarDisponiblesPorMaterialAsync(int idMaterial) {
+            FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest inValue = new FrontEnd.EjemplarWS.contarDisponiblesPorMaterialRequest();
+            inValue.idMaterial = idMaterial;
+            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarDisponiblesPorMaterialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse FrontEnd.EjemplarWS.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSede(FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest request) {
+            return base.Channel.contarEjemplaresFisicosDisponiblesPorMaterialYSede(request);
+        }
+        
+        public int contarEjemplaresFisicosDisponiblesPorMaterialYSede(int idMaterial, int idSede) {
+            FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest inValue = new FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.idSede = idSede;
+            FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse retVal = ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarEjemplaresFisicosDisponiblesPorMaterialYSede(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse> FrontEnd.EjemplarWS.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest request) {
+            return base.Channel.contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse> contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(int idMaterial, int idSede) {
+            FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest inValue = new FrontEnd.EjemplarWS.contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest();
+            inValue.idMaterial = idMaterial;
+            inValue.idSede = idSede;
+            return ((FrontEnd.EjemplarWS.EjemplarWS)(this)).contarEjemplaresFisicosDisponiblesPorMaterialYSedeAsync(inValue);
         }
     }
 }
