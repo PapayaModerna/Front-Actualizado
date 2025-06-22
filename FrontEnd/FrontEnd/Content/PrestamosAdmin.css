@@ -1,4 +1,5 @@
-﻿.banner-negro {
+﻿/* 🟧 Banner superior */
+.banner-negro {
     background-color: #000;
     width: 100%;
     padding: 15px 0 15px 40px;
@@ -29,6 +30,8 @@
         opacity: 1;
     }
 }
+
+/* 🟩 Contenedor principal de la tabla */
 .tabla-libros-container {
     margin: 40px auto 60px auto;
     width: 85%;
@@ -44,7 +47,7 @@
         transform: scale(1.005);
     }
 
-    /* Título de cada tabla */
+    /* 🟦 Título de la sección */
     .tabla-libros-container h2 {
         font-family: 'Roboto', sans-serif;
         font-size: 1.5rem;
@@ -56,30 +59,43 @@
         padding-bottom: 6px;
     }
 
-/* Dropdown bonito */
-.ddl-sedes {
-    appearance: none;
-    height: 38px;
-    width: 250px;
-    padding: 8px 16px;
+/* 🟨 Estilo del buscador */
+.buscador-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 8px;
+}
+
+.input-buscador {
+    flex: 1;
+    padding: 8px 12px;
     font-size: 1rem;
-    background-color: #f8f9fa;
-    color: #333;
     border: 2px solid #ccc;
     border-radius: 8px;
-    margin-bottom: 16px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
-    font-family: 'Roboto', sans-serif;
     transition: border-color 0.3s ease;
 }
 
-    .ddl-sedes:hover,
-    .ddl-sedes:focus {
+    .input-buscador:focus {
         border-color: #343a40;
         outline: none;
     }
 
-/* Tabla refinada */
+.btn-buscador {
+    background-color: #343a40;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+}
+
+/* 🟫 Tabla refinada */
 .tabla-libros {
     width: 100%;
     border-collapse: collapse;
@@ -112,13 +128,80 @@
         width: 100px;
     }
 
+/* 🟪 Loader dentro de la tabla */
+.loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.spinner {
+    border: 6px solid #ccc;
+    border-top: 6px solid #343a40;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 🔵 Paginación */
+.paginacion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-pagina {
+    background-color: #eee;
+    color: #333;
+    border: none;
+    padding: 8px 14px;
+    margin: 0 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+    .btn-pagina:hover {
+        background-color: #ddd;
+    }
+
+    .btn-pagina.activa {
+        background-color: #343a40;
+        color: #fff;
+    }
+
+/* 📱 Responsive para móviles */
 @media (max-width: 768px) {
     .tabla-libros-container {
         width: 95%;
         padding: 16px;
     }
 
-    .ddl-sedes {
+    .input-buscador,
+    .btn-buscador {
         width: 100%;
+    }
+
+    .buscador-container {
+        flex-direction: column;
+        gap: 10px;
     }
 }

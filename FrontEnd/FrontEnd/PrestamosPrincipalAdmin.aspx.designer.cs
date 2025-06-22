@@ -42,13 +42,13 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.LinkButton btnBuscarTotales;
 
         /// <summary>
-        /// Control pnlTotales.
+        /// Control lblSinResultadosTotales.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTotales;
+        protected global::System.Web.UI.WebControls.Label lblSinResultadosTotales;
 
         /// <summary>
         /// Control rptTotales.
@@ -58,6 +58,15 @@ namespace FrontEnd
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptTotales;
+
+        /// <summary>
+        /// Control rptPaginacionTotales.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptPaginacionTotales;
 
         /// <summary>
         /// Control updAtrasados.
@@ -87,13 +96,13 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.LinkButton btnBuscarAtrasados;
 
         /// <summary>
-        /// Control pnlAtrasados.
+        /// Control lblSinResultadosAtrasados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlAtrasados;
+        protected global::System.Web.UI.WebControls.Label lblSinResultadosAtrasados;
 
         /// <summary>
         /// Control rptAtrasados.
@@ -103,6 +112,15 @@ namespace FrontEnd
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptAtrasados;
+
+        /// <summary>
+        /// Control rptPaginacionAtrasados.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptPaginacionAtrasados;
 
         /// <summary>
         /// Control updSolicitados.
@@ -132,13 +150,13 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.LinkButton btnBuscarSolicitados;
 
         /// <summary>
-        /// Control pnlSolicitados.
+        /// Control lblSinResultadosSolicitados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlSolicitados;
+        protected global::System.Web.UI.WebControls.Label lblSinResultadosSolicitados;
 
         /// <summary>
         /// Control rptSolicitados.
@@ -150,93 +168,12 @@ namespace FrontEnd
         protected global::System.Web.UI.WebControls.Repeater rptSolicitados;
 
         /// <summary>
-        /// Control updNoCulminados.
+        /// Control rptPaginacionSolicitados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updNoCulminados;
-
-        /// <summary>
-        /// Control txtBuscarNoCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscarNoCulminados;
-
-        /// <summary>
-        /// Control btnBuscarNoCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnBuscarNoCulminados;
-
-        /// <summary>
-        /// Control pnlNoCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlNoCulminados;
-
-        /// <summary>
-        /// Control rptNoCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptNoCulminados;
-
-        /// <summary>
-        /// Control updCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updCulminados;
-
-        /// <summary>
-        /// Control txtBuscarCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscarCulminados;
-
-        /// <summary>
-        /// Control btnBuscarCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnBuscarCulminados;
-
-        /// <summary>
-        /// Control pnlCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlCulminados;
-
-        /// <summary>
-        /// Control rptCulminados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptCulminados;
+        protected global::System.Web.UI.WebControls.Repeater rptPaginacionSolicitados;
     }
 }

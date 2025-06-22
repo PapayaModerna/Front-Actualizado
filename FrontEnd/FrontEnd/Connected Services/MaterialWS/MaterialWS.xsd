@@ -33,6 +33,8 @@
   <xs:element name="listarMaterialesPorSedeResponse" type="tns:listarMaterialesPorSedeResponse" />
   <xs:element name="listarMaterialesPorSedeYFiltro" type="tns:listarMaterialesPorSedeYFiltro" />
   <xs:element name="listarMaterialesPorSedeYFiltroResponse" type="tns:listarMaterialesPorSedeYFiltroResponse" />
+  <xs:element name="listarMaterialesPorTituloParcialPaginado" type="tns:listarMaterialesPorTituloParcialPaginado" />
+  <xs:element name="listarMaterialesPorTituloParcialPaginadoResponse" type="tns:listarMaterialesPorTituloParcialPaginadoResponse" />
   <xs:element name="listarMaterialesVigentesPorSede" type="tns:listarMaterialesVigentesPorSede" />
   <xs:element name="listarMaterialesVigentesPorSedeResponse" type="tns:listarMaterialesVigentesPorSedeResponse" />
   <xs:element name="listarPorAutor" type="tns:listarPorAutor" />
@@ -167,18 +169,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarMaterialPorTitulo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="caracteres" type="xs:string" />
-      <xs:element name="limite" type="xs:int" />
-      <xs:element name="pagina" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarMaterialPorTituloResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarMaterialesPorSedeYFiltro">
     <xs:sequence>
       <xs:element minOccurs="0" name="idSede" type="xs:int" />
@@ -193,14 +183,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarPrestadosFisicosPorMaterial">
+  <xs:complexType name="listarMaterialPorTitulo">
     <xs:sequence>
-      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="caracteres" type="xs:string" />
+      <xs:element name="limite" type="xs:int" />
+      <xs:element name="pagina" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarPrestadosFisicosPorMaterialResponse">
+  <xs:complexType name="listarMaterialPorTituloResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarMasRecientes">
@@ -214,6 +206,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="contarPrestadosFisicosPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPrestadosFisicosPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarTodosPaginadoAvanzado">
     <xs:sequence>
       <xs:element name="limite" type="xs:int" />
@@ -221,6 +223,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosPaginadoAvanzadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialesPorTituloParcialPaginado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="textoBusqueda" type="xs:string" />
+      <xs:element name="sedeId" type="xs:int" />
+      <xs:element name="limite" type="xs:int" />
+      <xs:element name="pagina" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialesPorTituloParcialPaginadoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
     </xs:sequence>
@@ -237,16 +252,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerNombreCreadorRandomPorMaterial">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerNombreCreadorRandomPorMaterialResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="contarStockFisicoPorMaterial">
     <xs:sequence>
       <xs:element name="idMaterial" type="xs:int" />
@@ -255,6 +260,16 @@
   <xs:complexType name="contarStockFisicoPorMaterialResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerNombreCreadorRandomPorMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerNombreCreadorRandomPorMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarEjemplaresMaterial">
@@ -369,16 +384,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialesDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarDisponiblesFisicosPorMaterial">
-    <xs:sequence>
-      <xs:element name="idMaterial" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="contarDisponiblesFisicosPorMaterialResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarTemasPorMaterial">
     <xs:sequence>
       <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
@@ -395,6 +400,16 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="idTema" type="xs:int" />
       <xs:element minOccurs="0" name="temaPadre" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesFisicosPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesFisicosPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosPaginadoIntermedio">

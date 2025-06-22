@@ -74,7 +74,7 @@ namespace FrontEnd
                 var material = (MaterialWS.materialesDTO)e.Item.DataItem;
 
                 // --- Disponibilidad ---
-                var lblAvailability = (Label)e.Item.FindControl("lblAvailability");
+                /*var lblAvailability = (Label)e.Item.FindControl("lblAvailability");
                 var ejemplares = materialWSClient.listarEjemplaresMaterial(material.idMaterial, 1, 1);
                 if (ejemplares != null && ejemplares.Length > 0)
                 {
@@ -83,15 +83,14 @@ namespace FrontEnd
                 else
                 {
                     lblAvailability.Text = "NOT AVAILABLE";
-                }
+                }*/
 
-                // --- Autor ---
-                /*var lblAuthor = (Label)e.Item.FindControl("lblAuthor");
+                
+                var lblAuthor = (Label)e.Item.FindControl("lblAuthor");
                 var creadores = materialWSClient.listarCreadoresPorMaterial(material.idMaterial);
                 var primerCreador = creadores[0];
-                lblAuthor.Text = $"{primerCreador.nombre} {primerCreador.paterno}";*/
+                lblAuthor.Text = $"{primerCreador.nombre} {primerCreador.paterno}";
 
-                // --- Cover Image ---
                 var imgPortada = (Image)e.Item.FindControl("imgPortada");
                 imgPortada.ImageUrl = ResolveUrl("~/Images/Portadas/" + material.portada);
                 imgPortada.AlternateText = material.titulo;
