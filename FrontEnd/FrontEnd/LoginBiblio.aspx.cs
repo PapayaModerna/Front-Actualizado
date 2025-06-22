@@ -11,11 +11,8 @@ namespace FrontEnd
     {
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            // Aquí va tu lógica de autenticación
             string identificador = txtLoginCodigo.Text.Trim();
             string password = txtPassword.Text;
-
-
             try
             {
                 PersonaWSClient cliente = new PersonaWSClient();
@@ -27,9 +24,11 @@ namespace FrontEnd
                     hfMostrarLoader.Value = "true";
 
                     if (persona.tipo == tipoPersona.ADMINISTRADOR)
-                        Response.Redirect("~/IndexAdmin.aspx");
+                        Session["redireccion"] = "~/IndexAdmin.aspx";
                     else
-                        Response.Redirect("~/index.aspx");
+                        Session["redireccion"] = "~/IndexUser.aspx";
+                    Response.Redirect("~/Loader.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
                 else
                 {
@@ -42,7 +41,6 @@ namespace FrontEnd
             }
             catch (Exception ex)
             {
-                // Verifica si el mensaje contiene "Credenciales inválidas"
                 if (ex.Message != null && ex.Message.Contains("Verifica correo"))
                 {
                     lblMensaje.Text = "Correo o contraseña incorrectos. Intenta nuevamente.";

@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="calcularLimitePrestamos" type="tns:calcularLimitePrestamos" />
   <xs:element name="calcularLimitePrestamosResponse" type="tns:calcularLimitePrestamosResponse" />
+  <xs:element name="contarPersonas" type="tns:contarPersonas" />
+  <xs:element name="contarPersonasResponse" type="tns:contarPersonasResponse" />
   <xs:element name="eliminarPersona" type="tns:eliminarPersona" />
   <xs:element name="eliminarPersonaResponse" type="tns:eliminarPersonaResponse" />
   <xs:element name="insertarPersona" type="tns:insertarPersona" />
@@ -178,6 +180,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="calcularLimitePrestamosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPersonas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="contarPersonasResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

@@ -264,13 +264,21 @@
     text-align: center;
 }
 
-    .btn-pagina:hover {
-        background-color: #343a40;
-        color: #fff;
-    }
+.btn-pagina:hover {
+    background-color: #343a40;
+    color: #fff;
+}
 
-    .btn-pagina.activa {
-        background-color: #343a40;
-        color: #fff;
-        font-weight: bold;
-    }
+.btn-pagina.activa {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bold;
+}
+.lbl-sin-resultados {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #a0a0a0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}

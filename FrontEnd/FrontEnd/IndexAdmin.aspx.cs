@@ -28,13 +28,21 @@ namespace FrontEnd
             {
                 ViewState["Filtro"] = "";
                 ViewState["PaginaActual"] = 1;
+                ViewState["MostrarTabla"] = false;
                 CargarSedes();
-                CargarLibros(1);
                 int totalLibros = materialWSClient.contarMateriales();
                 var ejemplares = ejemplarWSClient.listarEjemplares();
                 int totalEjemplares = ejemplares.Length;
                 lblCantidadLibros.Text = $"{totalLibros} Libros";
                 lblCantidadEjemplares.Text = $"{totalEjemplares} Ejemplares físicos y digitales";
+            }
+            else
+            {
+                if ((bool)ViewState["MostrarTabla"])
+                {
+                    int paginaActual = (int)ViewState["PaginaActual"];
+                    CargarLibros(paginaActual);
+                }
             }
         }
         private void CargarSedes()
@@ -51,18 +59,21 @@ namespace FrontEnd
         {
             ViewState["Filtro"] = txtBuscar.Text.Trim();
             ViewState["PaginaActual"] = 1;
+            ViewState["MostrarTabla"] = true;
             CargarLibros(1);
         }
         protected void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             ViewState["Filtro"] = txtBuscar.Text.Trim();
             ViewState["PaginaActual"] = 1;
+            ViewState["MostrarTabla"] = true;
             CargarLibros(1);
         }
         protected void lnkPagina_Click(object sender, EventArgs e)
         {
             int paginaSeleccionada = int.Parse(((LinkButton)sender).CommandArgument);
             ViewState["PaginaActual"] = paginaSeleccionada;
+            ViewState["MostrarTabla"] = true;
             CargarLibros(paginaSeleccionada);
         }
 
@@ -74,9 +85,17 @@ namespace FrontEnd
 
             if (!string.IsNullOrEmpty(filtro))
             {
-                var todos = materialWSClient.listarMaterialPorCaracteres(filtro, 1000, 1);
-                total = todos.Length;
-                libros = todos.Skip((pagina - 1) * CantidadPagina).Take(CantidadPagina).ToList();
+                var todos = materialWSClient.listarMaterialPorTitulo(filtro, 1000, 1);
+                if (todos != null)
+                {
+                    total = todos.Length;
+                    libros = todos.Skip((pagina - 1) * CantidadPagina).Take(CantidadPagina).ToList();
+                }
+                else
+                {
+                    total = 0;
+                    libros = new List<FrontEnd.MaterialWS.materialesDTO>(); // ⛑️ lista vacía
+                }
             }
             else
             {
@@ -86,7 +105,7 @@ namespace FrontEnd
 
             rptLibros.DataSource = libros;
             rptLibros.DataBind();
-
+            lblSinResultados.Visible = (libros.Count == 0);
             CargarPaginacion(total);
         }
         private void CargarPaginacion(int totalMateriales)

@@ -16,64 +16,6 @@ namespace FrontEnd.PersonaWS {
     public interface PersonaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PersonaWS.eliminarPersonaResponse eliminarPersona(FrontEnd.PersonaWS.eliminarPersonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.eliminarPersonaResponse> eliminarPersonaAsync(FrontEnd.PersonaWS.eliminarPersonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PersonaWS.obtenerPersonaResponse obtenerPersona(FrontEnd.PersonaWS.obtenerPersonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.obtenerPersonaResponse> obtenerPersonaAsync(FrontEnd.PersonaWS.obtenerPersonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PersonaWS.modificarPersonaResponse modificarPersona(FrontEnd.PersonaWS.modificarPersonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.modificarPersonaResponse> modificarPersonaAsync(FrontEnd.PersonaWS.modificarPersonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PersonaWS.insertarPersonaResponse insertarPersona(FrontEnd.PersonaWS.insertarPersonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.insertarPersonaResponse> insertarPersonaAsync(FrontEnd.PersonaWS.insertarPersonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PersonaWS.listarPersonasResponse listarPersonas(FrontEnd.PersonaWS.listarPersonasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasResponse> listarPersonasAsync(FrontEnd.PersonaWS.listarPersonasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredenciale" +
-            "sRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredenciale" +
-            "sResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PersonaWS.obtenerPersonaPorCredencialesResponse obtenerPersonaPorCredenciales(FrontEnd.PersonaWS.obtenerPersonaPorCredencialesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredenciale" +
-            "sRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredenciale" +
-            "sResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.obtenerPersonaPorCredencialesResponse> obtenerPersonaPorCredencialesAsync(FrontEnd.PersonaWS.obtenerPersonaPorCredencialesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasPaginadoReques" +
             "t", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasPaginadoRespon" +
             "se")]
@@ -85,6 +27,51 @@ namespace FrontEnd.PersonaWS {
             "t", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasPaginadoRespon" +
             "se")]
         System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasPaginadoResponse> listarPersonasPaginadoAsync(FrontEnd.PersonaWS.listarPersonasPaginadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PersonaWS.obtenerPersonaResponse obtenerPersona(FrontEnd.PersonaWS.obtenerPersonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.obtenerPersonaResponse> obtenerPersonaAsync(FrontEnd.PersonaWS.obtenerPersonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PersonaWS.insertarPersonaResponse insertarPersona(FrontEnd.PersonaWS.insertarPersonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/insertarPersonaResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.insertarPersonaResponse> insertarPersonaAsync(FrontEnd.PersonaWS.insertarPersonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PersonaWS.eliminarPersonaResponse eliminarPersona(FrontEnd.PersonaWS.eliminarPersonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/eliminarPersonaResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.eliminarPersonaResponse> eliminarPersonaAsync(FrontEnd.PersonaWS.eliminarPersonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PersonaWS.listarPersonasResponse listarPersonas(FrontEnd.PersonaWS.listarPersonasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/listarPersonasResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasResponse> listarPersonasAsync(FrontEnd.PersonaWS.listarPersonasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PersonaWS.modificarPersonaResponse modificarPersona(FrontEnd.PersonaWS.modificarPersonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarPersonaResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.modificarPersonaResponse> modificarPersonaAsync(FrontEnd.PersonaWS.modificarPersonaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/calcularLimitePrestamosReque" +
@@ -100,6 +87,28 @@ namespace FrontEnd.PersonaWS {
         System.Threading.Tasks.Task<FrontEnd.PersonaWS.calcularLimitePrestamosResponse> calcularLimitePrestamosAsync(FrontEnd.PersonaWS.calcularLimitePrestamosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/contarPersonasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/contarPersonasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PersonaWS.contarPersonasResponse contarPersonas(FrontEnd.PersonaWS.contarPersonasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/contarPersonasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/contarPersonasResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.contarPersonasResponse> contarPersonasAsync(FrontEnd.PersonaWS.contarPersonasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredenciale" +
+            "sRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredenciale" +
+            "sResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PersonaWS.obtenerPersonaPorCredencialesResponse obtenerPersonaPorCredenciales(FrontEnd.PersonaWS.obtenerPersonaPorCredencialesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredenciale" +
+            "sRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/obtenerPersonaPorCredenciale" +
+            "sResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.obtenerPersonaPorCredencialesResponse> obtenerPersonaPorCredencialesAsync(FrontEnd.PersonaWS.obtenerPersonaPorCredencialesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarContrasenhaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PersonaWS/modificarContrasenhaResponse" +
             "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -111,44 +120,8 @@ namespace FrontEnd.PersonaWS {
         System.Threading.Tasks.Task<FrontEnd.PersonaWS.modificarContrasenhaResponse> modificarContrasenhaAsync(FrontEnd.PersonaWS.modificarContrasenhaRequest request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersona", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarPersonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPersona;
-        
-        public eliminarPersonaRequest() {
-        }
-        
-        public eliminarPersonaRequest(int idPersona) {
-            this.idPersona = idPersona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonaResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarPersonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPersonaResponse() {
-        }
-        
-        public eliminarPersonaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -530,7 +503,7 @@ namespace FrontEnd.PersonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -604,7 +577,7 @@ namespace FrontEnd.PersonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
     public enum nivel {
@@ -620,7 +593,7 @@ namespace FrontEnd.PersonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -764,7 +737,7 @@ namespace FrontEnd.PersonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
     public enum tipoPersona {
@@ -780,7 +753,7 @@ namespace FrontEnd.PersonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
     public enum turnos {
@@ -793,6 +766,47 @@ namespace FrontEnd.PersonaWS {
         
         /// <remarks/>
         NOCHE,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonasPaginado", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPersonasPaginadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int limite;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pagina;
+        
+        public listarPersonasPaginadoRequest() {
+        }
+        
+        public listarPersonasPaginadoRequest(int limite, int pagina) {
+            this.limite = limite;
+            this.pagina = pagina;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonasPaginadoResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPersonasPaginadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PersonaWS.personasDTO[] @return;
+        
+        public listarPersonasPaginadoResponse() {
+        }
+        
+        public listarPersonasPaginadoResponse(FrontEnd.PersonaWS.personasDTO[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -827,6 +841,203 @@ namespace FrontEnd.PersonaWS {
         }
         
         public obtenerPersonaResponse(FrontEnd.PersonaWS.personasDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersona", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarPersonaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string codigo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string paterno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string materno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string direccion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string telefono;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string contrasenha;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PersonaWS.tipoPersona tipo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PersonaWS.turnos turno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaContratoInicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaContratoFinal;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double deuda;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaSancionFinal;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool vigente;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idNivel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        public insertarPersonaRequest() {
+        }
+        
+        public insertarPersonaRequest(
+                    string codigo, 
+                    string nombre, 
+                    string paterno, 
+                    string materno, 
+                    string direccion, 
+                    string telefono, 
+                    string correo, 
+                    string contrasenha, 
+                    FrontEnd.PersonaWS.tipoPersona tipo, 
+                    FrontEnd.PersonaWS.turnos turno, 
+                    System.DateTime fechaContratoInicio, 
+                    System.DateTime fechaContratoFinal, 
+                    double deuda, 
+                    System.DateTime fechaSancionFinal, 
+                    bool vigente, 
+                    int idNivel, 
+                    int idSede) {
+            this.codigo = codigo;
+            this.nombre = nombre;
+            this.paterno = paterno;
+            this.materno = materno;
+            this.direccion = direccion;
+            this.telefono = telefono;
+            this.correo = correo;
+            this.contrasenha = contrasenha;
+            this.tipo = tipo;
+            this.turno = turno;
+            this.fechaContratoInicio = fechaContratoInicio;
+            this.fechaContratoFinal = fechaContratoFinal;
+            this.deuda = deuda;
+            this.fechaSancionFinal = fechaSancionFinal;
+            this.vigente = vigente;
+            this.idNivel = idNivel;
+            this.idSede = idSede;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersonaResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarPersonaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarPersonaResponse() {
+        }
+        
+        public insertarPersonaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersona", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarPersonaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPersona;
+        
+        public eliminarPersonaRequest() {
+        }
+        
+        public eliminarPersonaRequest(int idPersona) {
+            this.idPersona = idPersona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonaResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarPersonaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPersonaResponse() {
+        }
+        
+        public eliminarPersonaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonas", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPersonasRequest {
+        
+        public listarPersonasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonasResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPersonasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PersonaWS.personasDTO[] @return;
+        
+        public listarPersonasResponse() {
+        }
+        
+        public listarPersonasResponse(FrontEnd.PersonaWS.personasDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -973,132 +1184,35 @@ namespace FrontEnd.PersonaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersona", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarPersonaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularLimitePrestamos", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class calcularLimitePrestamosRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codigo;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string paterno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string materno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string direccion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string telefono;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string contrasenha;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PersonaWS.tipoPersona tipo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PersonaWS.turnos turno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=10)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaContratoInicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=11)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaContratoFinal;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=12)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double deuda;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=13)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaSancionFinal;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=14)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool vigente;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=15)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idNivel;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=16)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        public insertarPersonaRequest() {
+        public calcularLimitePrestamosRequest() {
         }
         
-        public insertarPersonaRequest(
-                    string codigo, 
-                    string nombre, 
-                    string paterno, 
-                    string materno, 
-                    string direccion, 
-                    string telefono, 
-                    string correo, 
-                    string contrasenha, 
-                    FrontEnd.PersonaWS.tipoPersona tipo, 
-                    FrontEnd.PersonaWS.turnos turno, 
-                    System.DateTime fechaContratoInicio, 
-                    System.DateTime fechaContratoFinal, 
-                    double deuda, 
-                    System.DateTime fechaSancionFinal, 
-                    bool vigente, 
-                    int idNivel, 
-                    int idSede) {
+        public calcularLimitePrestamosRequest(string codigo) {
             this.codigo = codigo;
-            this.nombre = nombre;
-            this.paterno = paterno;
-            this.materno = materno;
-            this.direccion = direccion;
-            this.telefono = telefono;
-            this.correo = correo;
-            this.contrasenha = contrasenha;
-            this.tipo = tipo;
-            this.turno = turno;
-            this.fechaContratoInicio = fechaContratoInicio;
-            this.fechaContratoFinal = fechaContratoFinal;
-            this.deuda = deuda;
-            this.fechaSancionFinal = fechaSancionFinal;
-            this.vigente = vigente;
-            this.idNivel = idNivel;
-            this.idSede = idSede;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersonaResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarPersonaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularLimitePrestamosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class calcularLimitePrestamosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarPersonaResponse() {
+        public calcularLimitePrestamosResponse() {
         }
         
-        public insertarPersonaResponse(int @return) {
+        public calcularLimitePrestamosResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1106,27 +1220,27 @@ namespace FrontEnd.PersonaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonas", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPersonasRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarPersonas", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarPersonasRequest {
         
-        public listarPersonasRequest() {
+        public contarPersonasRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonasResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPersonasResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contarPersonasResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class contarPersonasResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PersonaWS.personasDTO[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarPersonasResponse() {
+        public contarPersonasResponse() {
         }
         
-        public listarPersonasResponse(FrontEnd.PersonaWS.personasDTO[] @return) {
+        public contarPersonasResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1168,83 +1282,6 @@ namespace FrontEnd.PersonaWS {
         }
         
         public obtenerPersonaPorCredencialesResponse(FrontEnd.PersonaWS.personasDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonasPaginado", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPersonasPaginadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int limite;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pagina;
-        
-        public listarPersonasPaginadoRequest() {
-        }
-        
-        public listarPersonasPaginadoRequest(int limite, int pagina) {
-            this.limite = limite;
-            this.pagina = pagina;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPersonasPaginadoResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPersonasPaginadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PersonaWS.personasDTO[] @return;
-        
-        public listarPersonasPaginadoResponse() {
-        }
-        
-        public listarPersonasPaginadoResponse(FrontEnd.PersonaWS.personasDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularLimitePrestamos", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class calcularLimitePrestamosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string codigo;
-        
-        public calcularLimitePrestamosRequest() {
-        }
-        
-        public calcularLimitePrestamosRequest(string codigo) {
-            this.codigo = codigo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularLimitePrestamosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class calcularLimitePrestamosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public calcularLimitePrestamosResponse() {
-        }
-        
-        public calcularLimitePrestamosResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1318,26 +1355,28 @@ namespace FrontEnd.PersonaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PersonaWS.eliminarPersonaResponse FrontEnd.PersonaWS.PersonaWS.eliminarPersona(FrontEnd.PersonaWS.eliminarPersonaRequest request) {
-            return base.Channel.eliminarPersona(request);
+        FrontEnd.PersonaWS.listarPersonasPaginadoResponse FrontEnd.PersonaWS.PersonaWS.listarPersonasPaginado(FrontEnd.PersonaWS.listarPersonasPaginadoRequest request) {
+            return base.Channel.listarPersonasPaginado(request);
         }
         
-        public int eliminarPersona(int idPersona) {
-            FrontEnd.PersonaWS.eliminarPersonaRequest inValue = new FrontEnd.PersonaWS.eliminarPersonaRequest();
-            inValue.idPersona = idPersona;
-            FrontEnd.PersonaWS.eliminarPersonaResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).eliminarPersona(inValue);
+        public FrontEnd.PersonaWS.personasDTO[] listarPersonasPaginado(int limite, int pagina) {
+            FrontEnd.PersonaWS.listarPersonasPaginadoRequest inValue = new FrontEnd.PersonaWS.listarPersonasPaginadoRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            FrontEnd.PersonaWS.listarPersonasPaginadoResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).listarPersonasPaginado(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.eliminarPersonaResponse> FrontEnd.PersonaWS.PersonaWS.eliminarPersonaAsync(FrontEnd.PersonaWS.eliminarPersonaRequest request) {
-            return base.Channel.eliminarPersonaAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasPaginadoResponse> FrontEnd.PersonaWS.PersonaWS.listarPersonasPaginadoAsync(FrontEnd.PersonaWS.listarPersonasPaginadoRequest request) {
+            return base.Channel.listarPersonasPaginadoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.eliminarPersonaResponse> eliminarPersonaAsync(int idPersona) {
-            FrontEnd.PersonaWS.eliminarPersonaRequest inValue = new FrontEnd.PersonaWS.eliminarPersonaRequest();
-            inValue.idPersona = idPersona;
-            return ((FrontEnd.PersonaWS.PersonaWS)(this)).eliminarPersonaAsync(inValue);
+        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasPaginadoResponse> listarPersonasPaginadoAsync(int limite, int pagina) {
+            FrontEnd.PersonaWS.listarPersonasPaginadoRequest inValue = new FrontEnd.PersonaWS.listarPersonasPaginadoRequest();
+            inValue.limite = limite;
+            inValue.pagina = pagina;
+            return ((FrontEnd.PersonaWS.PersonaWS)(this)).listarPersonasPaginadoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1361,6 +1400,139 @@ namespace FrontEnd.PersonaWS {
             FrontEnd.PersonaWS.obtenerPersonaRequest inValue = new FrontEnd.PersonaWS.obtenerPersonaRequest();
             inValue.idPersona = idPersona;
             return ((FrontEnd.PersonaWS.PersonaWS)(this)).obtenerPersonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PersonaWS.insertarPersonaResponse FrontEnd.PersonaWS.PersonaWS.insertarPersona(FrontEnd.PersonaWS.insertarPersonaRequest request) {
+            return base.Channel.insertarPersona(request);
+        }
+        
+        public int insertarPersona(
+                    string codigo, 
+                    string nombre, 
+                    string paterno, 
+                    string materno, 
+                    string direccion, 
+                    string telefono, 
+                    string correo, 
+                    string contrasenha, 
+                    FrontEnd.PersonaWS.tipoPersona tipo, 
+                    FrontEnd.PersonaWS.turnos turno, 
+                    System.DateTime fechaContratoInicio, 
+                    System.DateTime fechaContratoFinal, 
+                    double deuda, 
+                    System.DateTime fechaSancionFinal, 
+                    bool vigente, 
+                    int idNivel, 
+                    int idSede) {
+            FrontEnd.PersonaWS.insertarPersonaRequest inValue = new FrontEnd.PersonaWS.insertarPersonaRequest();
+            inValue.codigo = codigo;
+            inValue.nombre = nombre;
+            inValue.paterno = paterno;
+            inValue.materno = materno;
+            inValue.direccion = direccion;
+            inValue.telefono = telefono;
+            inValue.correo = correo;
+            inValue.contrasenha = contrasenha;
+            inValue.tipo = tipo;
+            inValue.turno = turno;
+            inValue.fechaContratoInicio = fechaContratoInicio;
+            inValue.fechaContratoFinal = fechaContratoFinal;
+            inValue.deuda = deuda;
+            inValue.fechaSancionFinal = fechaSancionFinal;
+            inValue.vigente = vigente;
+            inValue.idNivel = idNivel;
+            inValue.idSede = idSede;
+            FrontEnd.PersonaWS.insertarPersonaResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).insertarPersona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.insertarPersonaResponse> FrontEnd.PersonaWS.PersonaWS.insertarPersonaAsync(FrontEnd.PersonaWS.insertarPersonaRequest request) {
+            return base.Channel.insertarPersonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.insertarPersonaResponse> insertarPersonaAsync(
+                    string codigo, 
+                    string nombre, 
+                    string paterno, 
+                    string materno, 
+                    string direccion, 
+                    string telefono, 
+                    string correo, 
+                    string contrasenha, 
+                    FrontEnd.PersonaWS.tipoPersona tipo, 
+                    FrontEnd.PersonaWS.turnos turno, 
+                    System.DateTime fechaContratoInicio, 
+                    System.DateTime fechaContratoFinal, 
+                    double deuda, 
+                    System.DateTime fechaSancionFinal, 
+                    bool vigente, 
+                    int idNivel, 
+                    int idSede) {
+            FrontEnd.PersonaWS.insertarPersonaRequest inValue = new FrontEnd.PersonaWS.insertarPersonaRequest();
+            inValue.codigo = codigo;
+            inValue.nombre = nombre;
+            inValue.paterno = paterno;
+            inValue.materno = materno;
+            inValue.direccion = direccion;
+            inValue.telefono = telefono;
+            inValue.correo = correo;
+            inValue.contrasenha = contrasenha;
+            inValue.tipo = tipo;
+            inValue.turno = turno;
+            inValue.fechaContratoInicio = fechaContratoInicio;
+            inValue.fechaContratoFinal = fechaContratoFinal;
+            inValue.deuda = deuda;
+            inValue.fechaSancionFinal = fechaSancionFinal;
+            inValue.vigente = vigente;
+            inValue.idNivel = idNivel;
+            inValue.idSede = idSede;
+            return ((FrontEnd.PersonaWS.PersonaWS)(this)).insertarPersonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PersonaWS.eliminarPersonaResponse FrontEnd.PersonaWS.PersonaWS.eliminarPersona(FrontEnd.PersonaWS.eliminarPersonaRequest request) {
+            return base.Channel.eliminarPersona(request);
+        }
+        
+        public int eliminarPersona(int idPersona) {
+            FrontEnd.PersonaWS.eliminarPersonaRequest inValue = new FrontEnd.PersonaWS.eliminarPersonaRequest();
+            inValue.idPersona = idPersona;
+            FrontEnd.PersonaWS.eliminarPersonaResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).eliminarPersona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.eliminarPersonaResponse> FrontEnd.PersonaWS.PersonaWS.eliminarPersonaAsync(FrontEnd.PersonaWS.eliminarPersonaRequest request) {
+            return base.Channel.eliminarPersonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.eliminarPersonaResponse> eliminarPersonaAsync(int idPersona) {
+            FrontEnd.PersonaWS.eliminarPersonaRequest inValue = new FrontEnd.PersonaWS.eliminarPersonaRequest();
+            inValue.idPersona = idPersona;
+            return ((FrontEnd.PersonaWS.PersonaWS)(this)).eliminarPersonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PersonaWS.listarPersonasResponse FrontEnd.PersonaWS.PersonaWS.listarPersonas(FrontEnd.PersonaWS.listarPersonasRequest request) {
+            return base.Channel.listarPersonas(request);
+        }
+        
+        public FrontEnd.PersonaWS.personasDTO[] listarPersonas() {
+            FrontEnd.PersonaWS.listarPersonasRequest inValue = new FrontEnd.PersonaWS.listarPersonasRequest();
+            FrontEnd.PersonaWS.listarPersonasResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).listarPersonas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasResponse> FrontEnd.PersonaWS.PersonaWS.listarPersonasAsync(FrontEnd.PersonaWS.listarPersonasRequest request) {
+            return base.Channel.listarPersonasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasResponse> listarPersonasAsync() {
+            FrontEnd.PersonaWS.listarPersonasRequest inValue = new FrontEnd.PersonaWS.listarPersonasRequest();
+            return ((FrontEnd.PersonaWS.PersonaWS)(this)).listarPersonasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1457,113 +1629,47 @@ namespace FrontEnd.PersonaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PersonaWS.insertarPersonaResponse FrontEnd.PersonaWS.PersonaWS.insertarPersona(FrontEnd.PersonaWS.insertarPersonaRequest request) {
-            return base.Channel.insertarPersona(request);
+        FrontEnd.PersonaWS.calcularLimitePrestamosResponse FrontEnd.PersonaWS.PersonaWS.calcularLimitePrestamos(FrontEnd.PersonaWS.calcularLimitePrestamosRequest request) {
+            return base.Channel.calcularLimitePrestamos(request);
         }
         
-        public int insertarPersona(
-                    string codigo, 
-                    string nombre, 
-                    string paterno, 
-                    string materno, 
-                    string direccion, 
-                    string telefono, 
-                    string correo, 
-                    string contrasenha, 
-                    FrontEnd.PersonaWS.tipoPersona tipo, 
-                    FrontEnd.PersonaWS.turnos turno, 
-                    System.DateTime fechaContratoInicio, 
-                    System.DateTime fechaContratoFinal, 
-                    double deuda, 
-                    System.DateTime fechaSancionFinal, 
-                    bool vigente, 
-                    int idNivel, 
-                    int idSede) {
-            FrontEnd.PersonaWS.insertarPersonaRequest inValue = new FrontEnd.PersonaWS.insertarPersonaRequest();
+        public int calcularLimitePrestamos(string codigo) {
+            FrontEnd.PersonaWS.calcularLimitePrestamosRequest inValue = new FrontEnd.PersonaWS.calcularLimitePrestamosRequest();
             inValue.codigo = codigo;
-            inValue.nombre = nombre;
-            inValue.paterno = paterno;
-            inValue.materno = materno;
-            inValue.direccion = direccion;
-            inValue.telefono = telefono;
-            inValue.correo = correo;
-            inValue.contrasenha = contrasenha;
-            inValue.tipo = tipo;
-            inValue.turno = turno;
-            inValue.fechaContratoInicio = fechaContratoInicio;
-            inValue.fechaContratoFinal = fechaContratoFinal;
-            inValue.deuda = deuda;
-            inValue.fechaSancionFinal = fechaSancionFinal;
-            inValue.vigente = vigente;
-            inValue.idNivel = idNivel;
-            inValue.idSede = idSede;
-            FrontEnd.PersonaWS.insertarPersonaResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).insertarPersona(inValue);
+            FrontEnd.PersonaWS.calcularLimitePrestamosResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).calcularLimitePrestamos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.insertarPersonaResponse> FrontEnd.PersonaWS.PersonaWS.insertarPersonaAsync(FrontEnd.PersonaWS.insertarPersonaRequest request) {
-            return base.Channel.insertarPersonaAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.calcularLimitePrestamosResponse> FrontEnd.PersonaWS.PersonaWS.calcularLimitePrestamosAsync(FrontEnd.PersonaWS.calcularLimitePrestamosRequest request) {
+            return base.Channel.calcularLimitePrestamosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.insertarPersonaResponse> insertarPersonaAsync(
-                    string codigo, 
-                    string nombre, 
-                    string paterno, 
-                    string materno, 
-                    string direccion, 
-                    string telefono, 
-                    string correo, 
-                    string contrasenha, 
-                    FrontEnd.PersonaWS.tipoPersona tipo, 
-                    FrontEnd.PersonaWS.turnos turno, 
-                    System.DateTime fechaContratoInicio, 
-                    System.DateTime fechaContratoFinal, 
-                    double deuda, 
-                    System.DateTime fechaSancionFinal, 
-                    bool vigente, 
-                    int idNivel, 
-                    int idSede) {
-            FrontEnd.PersonaWS.insertarPersonaRequest inValue = new FrontEnd.PersonaWS.insertarPersonaRequest();
+        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.calcularLimitePrestamosResponse> calcularLimitePrestamosAsync(string codigo) {
+            FrontEnd.PersonaWS.calcularLimitePrestamosRequest inValue = new FrontEnd.PersonaWS.calcularLimitePrestamosRequest();
             inValue.codigo = codigo;
-            inValue.nombre = nombre;
-            inValue.paterno = paterno;
-            inValue.materno = materno;
-            inValue.direccion = direccion;
-            inValue.telefono = telefono;
-            inValue.correo = correo;
-            inValue.contrasenha = contrasenha;
-            inValue.tipo = tipo;
-            inValue.turno = turno;
-            inValue.fechaContratoInicio = fechaContratoInicio;
-            inValue.fechaContratoFinal = fechaContratoFinal;
-            inValue.deuda = deuda;
-            inValue.fechaSancionFinal = fechaSancionFinal;
-            inValue.vigente = vigente;
-            inValue.idNivel = idNivel;
-            inValue.idSede = idSede;
-            return ((FrontEnd.PersonaWS.PersonaWS)(this)).insertarPersonaAsync(inValue);
+            return ((FrontEnd.PersonaWS.PersonaWS)(this)).calcularLimitePrestamosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PersonaWS.listarPersonasResponse FrontEnd.PersonaWS.PersonaWS.listarPersonas(FrontEnd.PersonaWS.listarPersonasRequest request) {
-            return base.Channel.listarPersonas(request);
+        FrontEnd.PersonaWS.contarPersonasResponse FrontEnd.PersonaWS.PersonaWS.contarPersonas(FrontEnd.PersonaWS.contarPersonasRequest request) {
+            return base.Channel.contarPersonas(request);
         }
         
-        public FrontEnd.PersonaWS.personasDTO[] listarPersonas() {
-            FrontEnd.PersonaWS.listarPersonasRequest inValue = new FrontEnd.PersonaWS.listarPersonasRequest();
-            FrontEnd.PersonaWS.listarPersonasResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).listarPersonas(inValue);
+        public int contarPersonas() {
+            FrontEnd.PersonaWS.contarPersonasRequest inValue = new FrontEnd.PersonaWS.contarPersonasRequest();
+            FrontEnd.PersonaWS.contarPersonasResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).contarPersonas(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasResponse> FrontEnd.PersonaWS.PersonaWS.listarPersonasAsync(FrontEnd.PersonaWS.listarPersonasRequest request) {
-            return base.Channel.listarPersonasAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.PersonaWS.contarPersonasResponse> FrontEnd.PersonaWS.PersonaWS.contarPersonasAsync(FrontEnd.PersonaWS.contarPersonasRequest request) {
+            return base.Channel.contarPersonasAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasResponse> listarPersonasAsync() {
-            FrontEnd.PersonaWS.listarPersonasRequest inValue = new FrontEnd.PersonaWS.listarPersonasRequest();
-            return ((FrontEnd.PersonaWS.PersonaWS)(this)).listarPersonasAsync(inValue);
+        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.contarPersonasResponse> contarPersonasAsync() {
+            FrontEnd.PersonaWS.contarPersonasRequest inValue = new FrontEnd.PersonaWS.contarPersonasRequest();
+            return ((FrontEnd.PersonaWS.PersonaWS)(this)).contarPersonasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1589,54 +1695,6 @@ namespace FrontEnd.PersonaWS {
             inValue.correo_codigo = correo_codigo;
             inValue.contrasenha = contrasenha;
             return ((FrontEnd.PersonaWS.PersonaWS)(this)).obtenerPersonaPorCredencialesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PersonaWS.listarPersonasPaginadoResponse FrontEnd.PersonaWS.PersonaWS.listarPersonasPaginado(FrontEnd.PersonaWS.listarPersonasPaginadoRequest request) {
-            return base.Channel.listarPersonasPaginado(request);
-        }
-        
-        public FrontEnd.PersonaWS.personasDTO[] listarPersonasPaginado(int limite, int pagina) {
-            FrontEnd.PersonaWS.listarPersonasPaginadoRequest inValue = new FrontEnd.PersonaWS.listarPersonasPaginadoRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            FrontEnd.PersonaWS.listarPersonasPaginadoResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).listarPersonasPaginado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasPaginadoResponse> FrontEnd.PersonaWS.PersonaWS.listarPersonasPaginadoAsync(FrontEnd.PersonaWS.listarPersonasPaginadoRequest request) {
-            return base.Channel.listarPersonasPaginadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.listarPersonasPaginadoResponse> listarPersonasPaginadoAsync(int limite, int pagina) {
-            FrontEnd.PersonaWS.listarPersonasPaginadoRequest inValue = new FrontEnd.PersonaWS.listarPersonasPaginadoRequest();
-            inValue.limite = limite;
-            inValue.pagina = pagina;
-            return ((FrontEnd.PersonaWS.PersonaWS)(this)).listarPersonasPaginadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PersonaWS.calcularLimitePrestamosResponse FrontEnd.PersonaWS.PersonaWS.calcularLimitePrestamos(FrontEnd.PersonaWS.calcularLimitePrestamosRequest request) {
-            return base.Channel.calcularLimitePrestamos(request);
-        }
-        
-        public int calcularLimitePrestamos(string codigo) {
-            FrontEnd.PersonaWS.calcularLimitePrestamosRequest inValue = new FrontEnd.PersonaWS.calcularLimitePrestamosRequest();
-            inValue.codigo = codigo;
-            FrontEnd.PersonaWS.calcularLimitePrestamosResponse retVal = ((FrontEnd.PersonaWS.PersonaWS)(this)).calcularLimitePrestamos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PersonaWS.calcularLimitePrestamosResponse> FrontEnd.PersonaWS.PersonaWS.calcularLimitePrestamosAsync(FrontEnd.PersonaWS.calcularLimitePrestamosRequest request) {
-            return base.Channel.calcularLimitePrestamosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.PersonaWS.calcularLimitePrestamosResponse> calcularLimitePrestamosAsync(string codigo) {
-            FrontEnd.PersonaWS.calcularLimitePrestamosRequest inValue = new FrontEnd.PersonaWS.calcularLimitePrestamosRequest();
-            inValue.codigo = codigo;
-            return ((FrontEnd.PersonaWS.PersonaWS)(this)).calcularLimitePrestamosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminBiblio.Master" AutoEventWireup="true" CodeBehind="IndexAdmin.aspx.cs" Inherits="FrontEnd.IndexAdmin" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/AdminBiblio.Master" AutoEventWireup="true" CodeBehind="IndexAdmin.aspx.cs" Inherits="FrontEnd.IndexAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="<%= ResolveUrl("~/Content/IndexAdmin.css") %>" rel="stylesheet" type="text/css" />
 </asp:Content>
@@ -42,6 +42,7 @@
                 <div id="loaderTabla" class="loader-overlay" style="display: none;">
                     <div class="spinner"></div>
                 </div>
+                <asp:Label ID="lblSinResultados" runat="server" CssClass="lbl-sin-resultados" Visible="false" Text="No hay resultados para esta búsqueda."></asp:Label>
                 <table class="tabla-libros">
                     <thead>
                         <tr>
@@ -96,7 +97,7 @@
         });
 
         function irDetalle(id) {
-            window.location.href = 'DetalleLibro.aspx?id=' + id;
+            window.location.href = 'DetalleLibrosAdmin.aspx?id=' + id;
         }
 
         // Loader control via ScriptManager

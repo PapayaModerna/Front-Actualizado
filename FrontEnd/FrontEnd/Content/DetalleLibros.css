@@ -1,0 +1,48 @@
+﻿.detalle-libro-container {
+    margin: 40px auto;
+    width: 80%;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.07);
+    padding: 40px 30px 30px 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.detalle-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.detalle-item {
+    margin-bottom: 18px;
+}
+
+.detalle-label {
+    font-weight: bold;
+    color: #555;
+    width: 140px;
+    display: inline-block;
+}
+
+.detalle-valor {
+    color: #222;
+}
+
+.btn-volver {
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .btn-volver:hover {
+        background: #23272b;
+    }
