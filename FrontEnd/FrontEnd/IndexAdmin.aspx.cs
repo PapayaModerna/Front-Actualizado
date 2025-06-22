@@ -85,7 +85,7 @@ namespace FrontEnd
 
             if (!string.IsNullOrEmpty(filtro))
             {
-                var todos = materialWSClient.listarMaterialPorCaracteres(filtro, 1000, 1);
+                var todos = materialWSClient.listarMaterialPorTitulo(filtro, 1000, 1);
                 if (todos != null)
                 {
                     total = todos.Length;

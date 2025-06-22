@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="1b5943c0-90bf-486b-a89a-c3df0911a3aa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="1165bb51-f03a-4871-9c33-fc59b4519b1d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/myholywrapper-v2.1/EjemplarWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EjemplarWS.xsd" MetadataType="Schema" ID="a5d30930-b3a3-4e68-a626-d0ddd311dd94" SourceId="1" SourceUrl="http://localhost:8080/myholywrapper-v2.1/EjemplarWS?xsd=1" />
-    <MetadataFile FileName="EjemplarWS.wsdl" MetadataType="Wsdl" ID="83ca46d2-10b4-4ef3-8ea9-289a9b08437e" SourceId="1" SourceUrl="http://localhost:8080/myholywrapper-v2.1/EjemplarWS?wsdl" />
+    <MetadataFile FileName="EjemplarWS.xsd" MetadataType="Schema" ID="d8b0052a-c42b-4f8a-b7d3-0d8eba01e09e" SourceId="1" SourceUrl="http://localhost:8080/myholywrapper-v2.1/EjemplarWS?xsd=1" />
+    <MetadataFile FileName="EjemplarWS.wsdl" MetadataType="Wsdl" ID="321c11e8-d6c0-4494-80ea-c812b95381cb" SourceId="1" SourceUrl="http://localhost:8080/myholywrapper-v2.1/EjemplarWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

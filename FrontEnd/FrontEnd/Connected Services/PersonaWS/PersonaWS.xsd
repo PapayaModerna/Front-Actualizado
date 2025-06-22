@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="calcularLimitePrestamos" type="tns:calcularLimitePrestamos" />
   <xs:element name="calcularLimitePrestamosResponse" type="tns:calcularLimitePrestamosResponse" />
+  <xs:element name="contarPersonas" type="tns:contarPersonas" />
+  <xs:element name="contarPersonasResponse" type="tns:contarPersonasResponse" />
   <xs:element name="eliminarPersona" type="tns:eliminarPersona" />
   <xs:element name="eliminarPersonaResponse" type="tns:eliminarPersonaResponse" />
   <xs:element name="insertarPersona" type="tns:insertarPersona" />
@@ -134,17 +136,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:personasDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerPersonaPorCredenciales">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="correo_codigo" type="xs:string" />
-      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerPersonaPorCredencialesResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:personasDTO" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarPersona">
     <xs:sequence>
       <xs:element minOccurs="0" name="idPersona" type="xs:int" />
@@ -172,12 +163,31 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="obtenerPersonaPorCredenciales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo_codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPersonaPorCredencialesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="calcularLimitePrestamos">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="calcularLimitePrestamosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPersonas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="contarPersonasResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

@@ -121,11 +121,18 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\EjemplarWS\EjemplarWS.wsdl" />
-    <None Include="Connected Services\EjemplarWS\EjemplarWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Connected Services\MaterialWS\configuration91.svcinfo" />
+    <None Include="Connected Services\MaterialWS\configuration.svcinfo" />
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarDisponiblesFisicosPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarPrestadosFisicosPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarStockFisicoPorMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.creadoresDTO.datasource">
@@ -152,6 +159,12 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMasSolicitadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPaginadoPorEditorialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPaginadoPorTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPaginadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -164,13 +177,22 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesVigentesPorSedeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialPorCaracteresResponse.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialPorTituloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarPorCaracter_CreadorResponse.datasource">
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarPorAutorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTemasPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosPaginadoAvanzadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosPaginadoBasicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosPaginadoIntermedioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarTodosResponse.datasource">
@@ -182,25 +204,23 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.modificarMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.obtenerNombreCreadorRandomPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.obtenerPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.temasDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
-    <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\PersonaWS\configuration91.svcinfo" />
-    <None Include="Connected Services\PersonaWS\configuration.svcinfo" />
-    <None Include="Connected Services\MaterialWS\configuration91.svcinfo" />
-    <None Include="Connected Services\MaterialWS\configuration.svcinfo" />
     <None Include="Connected Services\MaterialWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Connected Services\PersonaWS\FrontEnd.PersonaWS.calcularLimitePrestamosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PersonaWS\FrontEnd.PersonaWS.contarPersonasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\PersonaWS\FrontEnd.PersonaWS.eliminarPersonaResponse.datasource">
@@ -230,6 +250,20 @@
     <Content Include="Connected Services\PersonaWS\FrontEnd.PersonaWS.personasDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\EjemplarWS\EjemplarWS.wsdl" />
+    <None Include="Connected Services\EjemplarWS\EjemplarWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MaterialWS\MaterialWS.wsdl" />
+    <None Include="Connected Services\MaterialWS\MaterialWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonaWS\PersonaWS.wsdl" />
+    <None Include="Connected Services\PersonaWS\PersonaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PersonaWS\configuration.svcinfo" />
     <None Include="Connected Services\PersonaWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -280,8 +314,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\DetalleLibros.css" />
     <Content Include="Content\IndexAdmin.css" />
     <Content Include="Content\PrestamosAdmin.css" />
+    <Content Include="DetalleLibrosAdmin.aspx" />
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
     <Content Include="IndexAdmin.aspx" />
@@ -293,10 +329,6 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Connected Services\PersonaWS\PersonaWS.wsdl" />
-    <None Include="Connected Services\PersonaWS\PersonaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\SedeWS\SedeWS.wsdl" />
     <None Include="Connected Services\SedeWS\SedeWS.xsd">
       <SubType>Designer</SubType>
@@ -335,6 +367,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleLibrosAdmin.aspx.cs">
+      <DependentUpon>DetalleLibrosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleLibrosAdmin.aspx.designer.cs">
+      <DependentUpon>DetalleLibrosAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="IndexUser.aspx.cs">
       <DependentUpon>IndexUser.aspx</DependentUpon>

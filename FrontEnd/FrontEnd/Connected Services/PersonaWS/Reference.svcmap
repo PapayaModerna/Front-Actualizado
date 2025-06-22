@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="f938e6a5-ecad-4061-8cec-cb303103d845" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="30d68eac-5107-4bf8-80ec-7c50b97994a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/myholywrapper-v2.1/PersonaWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PersonaWS.xsd" MetadataType="Schema" ID="543b32e0-3874-49cb-b7e5-add77af6a2a2" SourceId="1" SourceUrl="http://localhost:8080/myholywrapper-v2.1/PersonaWS?xsd=1" />
-    <MetadataFile FileName="PersonaWS.wsdl" MetadataType="Wsdl" ID="b088b760-47b9-4f85-997b-4055ed8f2dcd" SourceId="1" SourceUrl="http://localhost:8080/myholywrapper-v2.1/PersonaWS?wsdl" />
+    <MetadataFile FileName="PersonaWS.xsd" MetadataType="Schema" ID="da6d86f4-caa2-466f-8449-a349c6817d6d" SourceId="1" SourceUrl="http://localhost:8080/myholywrapper-v2.1/PersonaWS?xsd=1" />
+    <MetadataFile FileName="PersonaWS.wsdl" MetadataType="Wsdl" ID="86a06a2f-9be6-4ebb-b1de-ffedd08aa35a" SourceId="1" SourceUrl="http://localhost:8080/myholywrapper-v2.1/PersonaWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
