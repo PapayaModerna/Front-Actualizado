@@ -207,6 +207,136 @@
         </asp:UpdatePanel>
     </div>
 
+    <!-- NO CULMINADOS -->
+    <div class="tabla-libros-container" style="position: relative; margin-top: 60px;">
+        <h2 class="lbl-seccion">PRÉSTAMOS NO CULMINADOS</h2>
+        <asp:UpdatePanel ID="updNoCulminados" runat="server">
+            <ContentTemplate>
+                <div class="buscador-container">
+                    <asp:TextBox ID="txtBuscarNoCulminados" runat="server" CssClass="input-buscador"
+                        placeholder="Buscar préstamo..." AutoPostBack="true"
+                        OnTextChanged="txtBuscarNoCulminados_TextChanged" />
+                    <asp:LinkButton ID="btnBuscarNoCulminados" runat="server" CssClass="btn-buscador"
+                        OnClick="btnBuscarNoCulminados_Click" CausesValidation="false" UseSubmitBehavior="false">
+                        <i class="fas fa-search"></i>
+                    </asp:LinkButton>
+                </div>
+
+                <div class="tabla-libros-container" style="position: relative;">
+                    <div id="loaderTablaNoCulminados" class="loader-overlay" style="display: none;">
+                        <div class="spinner"></div>
+                    </div>
+                    <asp:Label ID="lblSinResultadosNoCulminados" runat="server" CssClass="lbl-sin-resultados" Visible="false"
+                        Text="No hay resultados para esta búsqueda." />
+                    <table class="tabla-libros">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha Solicitud</th>
+                                <th>Fecha Préstamo</th>
+                                <th>Fecha Devolución</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <asp:Repeater ID="rptNoCulminados" runat="server">
+                                <ItemTemplate>
+                                    <tr>
+                                        <td><%# Eval("idPrestamo", "{0:000}") %></td>
+                                        <td><%# Eval("fechaSolicitud") %></td>
+                                        <td><%# Eval("fechaPrestamo") %></td>
+                                        <td><%# Eval("fechaDevolucion") %></td>
+                                    </tr>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="paginacion" style="text-align: center; margin-top: 20px;">
+                    <asp:Repeater ID="rptPaginacionNoCulminados" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkPaginaNoCulminados" runat="server"
+                                Text='<%# Eval("NumeroPagina") %>'
+                                CommandArgument='<%# Eval("NumeroPagina") %>'
+                                OnClick="lnkPaginaNoCulminados_Click"
+                                CssClass='<%# (int)Eval("NumeroPagina") == (int)ViewState["PaginaActualNoCulminados"] ? "btn-pagina activa" : "btn-pagina" %>'>
+                            </asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="btnBuscarNoCulminados" EventName="Click" />
+                <asp:AsyncPostBackTrigger ControlID="txtBuscarNoCulminados" EventName="TextChanged" />
+            </Triggers>
+        </asp:UpdatePanel>
+    </div>
+
+    <!--  culminados -->
+    <div class="tabla-libros-container" style="position: relative; margin-top: 60px;">
+        <h2 class="lbl-seccion">PRÉSTAMOS ENTREGADOS</h2>
+        <asp:UpdatePanel ID="updCulminados" runat="server">
+            <ContentTemplate>
+                <div class="buscador-container">
+                    <asp:TextBox ID="txtBuscarCulminados" runat="server" CssClass="input-buscador"
+                        placeholder="Buscar préstamo..." AutoPostBack="true"
+                        OnTextChanged="txtBuscarCulminados_TextChanged" />
+                    <asp:LinkButton ID="btnBuscarCulminados" runat="server" CssClass="btn-buscador"
+                        OnClick="btnBuscarCulminados_Click" CausesValidation="false" UseSubmitBehavior="false">
+                        <i class="fas fa-search"></i>
+                    </asp:LinkButton>
+                </div>
+
+                <div class="tabla-libros-container" style="position: relative;">
+                    <div id="loaderTablaCulminados" class="loader-overlay" style="display: none;">
+                        <div class="spinner"></div>
+                    </div>
+                    <asp:Label ID="lblSinResultadosCulminados" runat="server" CssClass="lbl-sin-resultados" Visible="false"
+                        Text="No hay resultados para esta búsqueda." />
+                    <table class="tabla-libros">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha Solicitud</th>
+                                <th>Fecha Préstamo</th>
+                                <th>Fecha Devolución</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <asp:Repeater ID="rptCulminados" runat="server">
+                                <ItemTemplate>
+                                    <tr>
+                                        <td><%# Eval("idPrestamo", "{0:000}") %></td>
+                                        <td><%# Eval("fechaSolicitud") %></td>
+                                        <td><%# Eval("fechaPrestamo") %></td>
+                                        <td><%# Eval("fechaDevolucion") %></td>
+                                    </tr>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="paginacion" style="text-align: center; margin-top: 20px;">
+                    <asp:Repeater ID="rptPaginacionCulminados" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkPaginaCulminados" runat="server"
+                                Text='<%# Eval("NumeroPagina") %>'
+                                CommandArgument='<%# Eval("NumeroPagina") %>'
+                                OnClick="lnkPaginaCulminados_Click"
+                                CssClass='<%# (int)Eval("NumeroPagina") == (int)ViewState["PaginaActualCulminados"] ? "btn-pagina activa" : "btn-pagina" %>'>
+                            </asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="btnBuscarCulminados" EventName="Click" />
+                <asp:AsyncPostBackTrigger ControlID="txtBuscarCulminados" EventName="TextChanged" />
+            </Triggers>
+        </asp:UpdatePanel>
+    </div>
+
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
             const mensaje = "HISTORIAL DE PRÉSTAMOS DEL SISTEMA";
@@ -241,6 +371,14 @@
                     const loaderSolicitados = document.getElementById("loaderTablaSolicitados");
                     if (loaderSolicitados) loaderSolicitados.style.display = "flex";
                 }
+                if (el.id.endsWith("btnBuscarNoCulminados") || el.id.endsWith("txtBuscarNoCulminados") || el.id.endsWith("lnkPaginaNoCulminados")) {
+                    const loaderNoCulminados = document.getElementById("loaderTablaNoCulminados");
+                    if (loaderNoCulminados) loaderNoCulminados.style.display = "flex";
+                }
+                if (el.id.endsWith("btnBuscarCulminados") || el.id.endsWith("txtBuscarCulminados") || el.id.endsWith("lnkPaginaCulminados")) {
+                    const loaderCulminados = document.getElementById("loaderTablaCulminados");
+                    if (loaderCulminados) loaderCulminados.style.display = "flex";
+                }
             }
         });
 
@@ -251,6 +389,10 @@
             if (loaderAtrasados) loaderAtrasados.style.display = "none";
             const loaderSolicitados = document.getElementById("loaderTablaSolicitados");
             if (loaderSolicitados) loaderSolicitados.style.display = "none";
+            const loaderNoCulminados = document.getElementById("loaderTablaNoCulminados");
+            if (loaderNoCulminados) loaderNoCulminados.style.display = "none";
+            const loaderCulminados = document.getElementById("loaderTablaCulminados");
+            if (loaderCulminados) loaderCulminados.style.display = "none";
         });
     </script>
 

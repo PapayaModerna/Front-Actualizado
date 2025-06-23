@@ -188,41 +188,106 @@ namespace FrontEnd
                 lblSinResultadosSolicitados.Visible = true;
             }
         }
-
-        /*protected void btnBuscarSolicitados_Click(object sender, EventArgs e)
+        protected void txtBuscarNoCulminados_TextChanged(object sender, EventArgs e)
         {
-            var lista = new List<dynamic>
-            {
-                new { ID = "301", Libro = "Solicitud nueva" },
-                new { ID = "302", Libro = "Pendiente revisión" }
-            };
-            rptSolicitados.DataSource = lista;
-            rptSolicitados.DataBind();
-            pnlSolicitados.Visible = true;
+            ViewState["PaginaActualNoCulminados"] = 1;
+            CargarPrestamosNoCulminados(1);
         }
 
         protected void btnBuscarNoCulminados_Click(object sender, EventArgs e)
         {
-            var lista = new List<dynamic>
+            ViewState["PaginaActualNoCulminados"] = 1;
+            CargarPrestamosNoCulminados(1);
+        }
+
+        protected void lnkPaginaNoCulminados_Click(object sender, EventArgs e)
+        {
+            int pagina = int.Parse(((LinkButton)sender).CommandArgument);
+            ViewState["PaginaActualNoCulminados"] = pagina;
+            CargarPrestamosNoCulminados(pagina);
+        }
+
+        private void CargarPrestamosNoCulminados(int pagina)
+        {
+            try
             {
-                new { ID = "401", Libro = "En renovación" },
-                new { ID = "402", Libro = "Entrega parcial" }
-            };
-            rptNoCulminados.DataSource = lista;
-            rptNoCulminados.DataBind();
-            pnlNoCulminados.Visible = true;
+                var prestamos = prestamoWSClient.listarPrestamosPorEstadoPaginado(estadoPrestamoEjemplar.PRESTADO, 10, pagina);
+
+                var lista = prestamos
+                    .Select(p => new
+                    {
+                        idPrestamo = p.idPrestamo,
+                        fechaSolicitud = p.fechaSolicitudSpecified ? p.fechaSolicitud.ToString("yyyy-MM-dd") : "Sin fecha",
+                        fechaPrestamo = p.fechaPrestamoSpecified ? p.fechaPrestamo.ToString("yyyy-MM-dd") : "Sin fecha",
+                        fechaDevolucion = p.fechaDevolucionSpecified ? p.fechaDevolucion.ToString("yyyy-MM-dd") : "Sin fecha",
+                    })
+                    .ToList();
+
+                rptNoCulminados.DataSource = lista;
+                rptNoCulminados.DataBind();
+                lblSinResultadosNoCulminados.Visible = lista.Count == 0;
+
+                var paginas = Enumerable.Range(1, 5).Select(i => new { NumeroPagina = i }).ToList();
+                rptPaginacionNoCulminados.DataSource = paginas;
+                rptPaginacionNoCulminados.DataBind();
+            }
+            catch
+            {
+                rptNoCulminados.DataSource = null;
+                rptNoCulminados.DataBind();
+                lblSinResultadosNoCulminados.Visible = true;
+            }
+        }
+        // ----------------------------- CULMINADOS -----------------------------
+        protected void txtBuscarCulminados_TextChanged(object sender, EventArgs e)
+        {
+            ViewState["PaginaActualCulminados"] = 1;
+            CargarPrestamosCulminados(1);
         }
 
         protected void btnBuscarCulminados_Click(object sender, EventArgs e)
         {
-            var lista = new List<dynamic>
+            ViewState["PaginaActualCulminados"] = 1;
+            CargarPrestamosCulminados(1);
+        }
+
+        protected void lnkPaginaCulminados_Click(object sender, EventArgs e)
+        {
+            int pagina = int.Parse(((LinkButton)sender).CommandArgument);
+            ViewState["PaginaActualCulminados"] = pagina;
+            CargarPrestamosCulminados(pagina);
+        }
+
+        private void CargarPrestamosCulminados(int pagina)
+        {
+            try
             {
-                new { ID = "501", Libro = "Devuelto sin observaciones" },
-                new { ID = "502", Libro = "Culminado correctamente" }
-            };
-            rptCulminados.DataSource = lista;
-            rptCulminados.DataBind();
-            pnlCulminados.Visible = true;
-        }*/
+                var prestamos = prestamoWSClient.listarPrestamosPorEstadoPaginado(estadoPrestamoEjemplar.DEVUELTO, 10, pagina);
+
+                var lista = prestamos
+                    .Select(p => new
+                    {
+                        idPrestamo = p.idPrestamo,
+                        fechaSolicitud = p.fechaSolicitudSpecified ? p.fechaSolicitud.ToString("yyyy-MM-dd") : "Sin fecha",
+                        fechaPrestamo = p.fechaPrestamoSpecified ? p.fechaPrestamo.ToString("yyyy-MM-dd") : "Sin fecha",
+                        fechaDevolucion = p.fechaDevolucionSpecified ? p.fechaDevolucion.ToString("yyyy-MM-dd") : "Sin fecha",
+                    })
+                    .ToList();
+
+                rptCulminados.DataSource = lista;
+                rptCulminados.DataBind();
+                lblSinResultadosCulminados.Visible = lista.Count == 0;
+
+                var paginas = Enumerable.Range(1, 5).Select(i => new { NumeroPagina = i }).ToList();
+                rptPaginacionCulminados.DataSource = paginas;
+                rptPaginacionCulminados.DataBind();
+            }
+            catch
+            {
+                rptCulminados.DataSource = null;
+                rptCulminados.DataBind();
+                lblSinResultadosCulminados.Visible = true;
+            }
+        }
     }
 }

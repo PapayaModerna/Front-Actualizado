@@ -100,8 +100,6 @@ namespace FrontEnd
             try
             {
                 materialId = Convert.ToInt32(hfIdMaterial.Value);
-
-
                 string titulo = txtTitulo.Text;
                 string edicion = txtEdicion.Text;
                 int anioPublicacion = Convert.ToInt32(ddlAnioPublicacion.SelectedValue);
@@ -146,7 +144,6 @@ namespace FrontEnd
                 {
                     portada = hiddenPortadaAnterior.Value;
                 }
-
                 material.idMaterial = materialId;
                 material.idMaterialSpecified = true;
                 material.titulo = titulo;
@@ -174,7 +171,7 @@ namespace FrontEnd
                 if (result > 0)
                 {
                     Response.Write("<script>alert('Material actualizado exitosamente');</script>");
-                    //Response.Redirect("librosPrincipal.aspx");
+                    Response.Redirect("IndexAdmin.aspx");
                 }
                 else
                 {
@@ -183,7 +180,8 @@ namespace FrontEnd
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert('Error al actualizar el material: " + ex.Message + "');</script>");
+                string mensaje = $"Error al actualizar el material con ID {material.idMaterial}: {ex.Message}";
+                Response.Write("<script>alert('" + mensaje.Replace("'", "\\'") + "');</script>");
             }
         }
     }
