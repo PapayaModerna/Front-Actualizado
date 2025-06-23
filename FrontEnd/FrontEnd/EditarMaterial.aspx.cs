@@ -91,12 +91,15 @@ namespace FrontEnd
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            int materialId = 0;
+            int materialId = 11;
             var material = new MaterialWS.materialesDTO();
+
+            material.nivel = new MaterialWS.nivelesInglesDTO();
+            material.editorial = new MaterialWS.editorialesDTO();
+
             try
             {
                 materialId = Convert.ToInt32(hfIdMaterial.Value);
-                
                 string titulo = txtTitulo.Text;
                 string edicion = txtEdicion.Text;
                 int anioPublicacion = Convert.ToInt32(ddlAnioPublicacion.SelectedValue);
@@ -144,15 +147,25 @@ namespace FrontEnd
                 material.idMaterial = materialId;
                 material.idMaterialSpecified = true;
                 material.titulo = titulo;
+
                 material.edicion = edicion;
+
                 material.anioPublicacion = anioPublicacion;
+                material.anioPublicacionSpecified = true;
+
                 material.portada = portada;
+
                 material.vigente = vigente;
-                material.nivel = new MaterialWS.nivelesInglesDTO();
+                material.vigenteSpecified = true;
+
                 material.nivel.idNivel = 1;
-                material.editorial = new MaterialWS.editorialesDTO();
+
+
                 material.editorial.idEditorial = idEditorial;
-                
+                material.editorial.idEditorialSpecified = true;
+
+
+                // Llamar al servicio para actualizar el material
                 var result = materialwsClient.modificarMaterial(material);
 
                 if (result > 0)
