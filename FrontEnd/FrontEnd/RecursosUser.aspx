@@ -400,7 +400,11 @@
                                 <div class="card-body card-body-custom">
                                     <h5 class="card-title card-title-custom" title='<%# Eval("titulo") %>'><%# Eval("titulo") %></h5>
                                     <p class="card-author">by <asp:Label ID="lblAuthor" runat="server" Text="Desconocido"></asp:Label></p>
-                                    <p class="card-text small"><a id="lnkDetalle" runat="server" class="text-primary" href="#">Ver detalle</a></p>
+                                    <p class="card-text small">
+                                    <asp:LinkButton ID="lnkDetalle" runat="server"
+                                    CssClass="text-primary"
+                                    Text="Ver detalle"
+                                    OnClick="lnkDetalle_Click" />
                                 </div>
                                 <div class="card-footer-custom">
                                      <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" />
@@ -441,17 +445,22 @@
                                 <div class="card-body card-body-custom">
                                     <h5 class="card-title card-title-custom" title='<%# Eval("titulo") %>'><%# Eval("titulo") %></h5>
                                     <p class="card-author">by <asp:Label ID="lblAuthor" runat="server" Text="Desconocido"></asp:Label></p>
-                                    <p class="card-text small"><a id="lnkDetalle" runat="server" class="text-primary" href="#">Ver detalle</a></p>
+                                    <p class="card-text small">
+                                    <a id="lnkDetalle" runat="server" class="text-primary" href="#">Ver detalle</a></p>
                                 </div>
                                 <div class="card-footer-custom">
-                                     <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" />
-                                     <a href="#" class="btn btn-light btn-sm"><i class="fas fa-bookmark"></i></a>
+                                        <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" />
+                                        <a href="#" class="btn btn-light btn-sm"><i class="fas fa-bookmark"></i></a>
                                 </div>
                             </div>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
+            <asp:Button ID="btnTestFueraRepeater" runat="server" 
+            Text="🚀 TEST AGREGAR ID 2 AL CARRITO"
+            CssClass="btn btn-danger mt-3"
+            OnClick="btnTestFueraRepeater_Click" />
              <div class="details-expander"></div>
         </div>
     </div>

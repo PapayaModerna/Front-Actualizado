@@ -18,10 +18,16 @@
             <p class="lbl-seccion">Libros disponibles</p>
             <p class="lbl-seccion">Ejemplares de libros en el sistema</p>
         </div>
-        <div class="admin-center">
-            <asp:DropDownList ID="ddlSedes" runat="server" CssClass="ddl-sedes" AutoPostBack="true" OnSelectedIndexChanged="ddlSedes_SelectedIndexChanged"/>
-            <asp:Label ID="lblCantidadLibros" runat="server" CssClass="lbl-dato-libro" />
-            <asp:Label ID="lblCantidadEjemplares" runat="server" CssClass="lbl-dato-libro" />
+        <div class="admin-center" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 10px; flex: 1; padding-left: 40px;">
+            <asp:DropDownList ID="ddlSedes" runat="server" CssClass="ddl-sedes"
+                style="height: 36px; width: 220px; padding: 6px 12px; font-size: 1rem; background-color: #2c2c2c; color: white; border: none; border-radius: 6px; margin-top: 2px;" 
+                AutoPostBack="true" OnSelectedIndexChanged="ddlSedes_SelectedIndexChanged" />
+    
+            <asp:Label ID="lblCantidadLibros" runat="server" CssClass="lbl-dato-libro"
+                Style="color: #ffffff; font-size: 1rem; line-height: 1.4; margin-top: 2px;" />
+
+            <asp:Label ID="lblCantidadEjemplares" runat="server" CssClass="lbl-dato-libro"
+                Style="color: #ffffff; font-size: 1rem; line-height: 1.4; margin-top: 2px;" />
         </div>
         <div class="admin-logo">
             <img src="images/myholylogo.png" alt="Logo Biblioteca">

@@ -74,6 +74,7 @@
     <None Include="Connected Services\EditorialWS\EditorialWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Carrito.aspx" />
     <Content Include="Connected Services\EditorialWS\FrontEnd.EditorialWS.editorialesDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -389,9 +390,6 @@
     <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosPorEstadoYSedePaginadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.prestamosDeEjemplaresDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\PrestamoWS\PrestamoWS.wsdl" />
     <None Include="Connected Services\PrestamoWS\PrestamoWS.xsd">
       <SubType>Designer</SubType>
@@ -486,6 +484,13 @@
     </Compile>
     <Compile Include="AdminBiblio.Master.designer.cs">
       <DependentUpon>AdminBiblio.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\EditorialWS\Reference.cs">
       <AutoGen>True</AutoGen>

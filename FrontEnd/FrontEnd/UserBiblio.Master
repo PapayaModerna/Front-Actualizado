@@ -159,9 +159,12 @@
                                 <i class='bx bxs-moon'></i>
                             </button>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item position-relative">
                             <a class="nav-link" href="/Carrito.aspx" title="Ver carrito">
                                 <i class="bx bx-cart fs-3"></i>
+                                <asp:Label ID="lblCantidadCarrito" runat="server"
+                                    CssClass="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                    Style="font-size: 0.75rem; min-width: 18px; padding: 2px 6px;">0</asp:Label>
                             </a>
                         </li>
                         <li class="nav-item dropdown">

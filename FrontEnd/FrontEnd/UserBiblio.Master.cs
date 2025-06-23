@@ -11,8 +11,17 @@ namespace FrontEnd
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			// No se requiere lógica del lado del servidor para el cambio de tema.
-			// Esto se maneja con JavaScript en el cliente.
-		}
-	}
+            if (!IsPostBack)
+            {
+                ActualizarCantidadCarrito();
+            }
+        }
+        public void ActualizarCantidadCarrito()
+        {
+            var carrito = Session["CarritoEjemplares"] as List<int>;
+            int cantidad = carrito != null ? carrito.Count : 0;
+            lblCantidadCarrito.Text = cantidad.ToString();
+            lblCantidadCarrito.Visible = cantidad > 0;
+        }
+    }
 }
