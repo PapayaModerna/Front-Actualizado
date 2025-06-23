@@ -21,7 +21,28 @@ namespace FrontEnd
 
                 if (persona != null)
                 {
+                    // Guarda el objeto completo (opcional)
                     Session["usuario"] = persona;
+
+                    // Guarda los campos individuales
+                    Session["idPersona"] = persona.idPersona;
+                    Session["codigo"] = persona.codigo;
+                    Session["nombre"] = persona.nombre;
+                    Session["paterno"] = persona.paterno;
+                    Session["materno"] = persona.materno;
+                    Session["direccion"] = persona.direccion;
+                    Session["telefono"] = persona.telefono;
+                    Session["correo"] = persona.correo;
+                    Session["tipo"] = persona.tipo;
+                    Session["turno"] = persona.turno;
+                    Session["fechaContratoInicio"] = persona.fechaContratoInicio;
+                    Session["fechaContratoFinal"] = persona.fechaContratoFinal;
+                    Session["deuda"] = persona.deuda;
+                    Session["fechaSancionFinal"] = persona.fechaSancionFinal;
+                    Session["vigente"] = persona.vigente;
+                    Session["idNivel"] = persona.nivel != null ? persona.nivel.idNivel : 0;
+                    Session["idSede"] = persona.sede != null ? persona.sede.idSede : 0;
+
                     hfMostrarLoader.Value = "true";
 
                     if (persona.tipo == tipoPersona.ADMINISTRADOR)

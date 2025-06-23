@@ -165,20 +165,17 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <asp:LoginView ID="LoginView1" runat="server">
-                                <AnonymousTemplate>
-                                    <a class="nav-link" href="/LoginBiblio.aspx" title="Iniciar sesión"><i class="bx bx-user-circle fs-3"></i></a>
-                                </AnonymousTemplate>
-                                <LoggedInTemplate>
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="bx bx-user fs-4"></i> Mi cuenta
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="/Perfil.aspx">Perfil</a></li>
-                                        <li><a class="dropdown-item" href="/Logout.aspx">Cerrar sesión</a></li>
-                                    </ul>
-                                </LoggedInTemplate>
-                            </asp:LoginView>
+                            <% if (Session["idPersona"] == null) { %>
+                                <a class="nav-link" href="/LoginBiblio.aspx" title="Iniciar sesión"><i class="bx bx-user-circle fs-3"></i></a>
+                            <% } else { %>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bx bx-user fs-4"></i> Mi cuenta
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/PerfilUser.aspx">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="/LogoutUser.aspx">Cerrar sesión</a></li>
+                                </ul>
+                            <% } %>
                         </li>
                     </ul>
                 </div>
@@ -218,6 +215,21 @@
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme') || 'light';
             applyTheme(savedTheme);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var userIcon = document.getElementById('userIconLink');
+            var isLoggedIn = document.getElementById('isLoggedIn');
+            if (userIcon && isLoggedIn) {
+                userIcon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (isLoggedIn.value === "1") {
+                        window.location.href = '/PerfilUser.aspx';
+                    } else {
+                        window.location.href = '/LoginBiblio.aspx';
+                    }
+                });
+            }
         });
     </script>
 </body>
