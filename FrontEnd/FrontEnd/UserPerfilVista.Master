@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/UserBiblio.Master" AutoEventWireup="true" CodeBehind="UserPerfilVista.master.cs" Inherits="FrontEnd.UserPerfilVista" %>
+
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
+    <!-- Estilos específicos para las páginas de perfil -->
+    <style>
+        .profile-menu .list-group-item {
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        .profile-menu .list-group-item.active {
+            background-color: #f0f7ff;
+            border-left: 3px solid #0d6efd;
+            font-weight: 500;
+        }
+        .profile-menu .list-group-item:hover:not(.active) {
+            background-color: #f8f9fa;
+        }
+        
+        /* Modo oscuro */
+        html.dark-mode .profile-menu .list-group-item {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            border-color: #444;
+        }
+        html.dark-mode .profile-menu .list-group-item.active {
+            background-color: #1a365d;
+            border-left-color: #4299e1;
+            color: #4299e1;
+        }
+        html.dark-mode .profile-menu .list-group-item:hover:not(.active) {
+            background-color: #333;
+        }
+    </style>
+</asp:Content>
+
+<asp:Content ID="ContentMain" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="row g-4">
+        <!-- Barra lateral -->
+        <div class="col-lg-3">
+            <div class="profile-menu card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class='bx bx-user-circle'></i> Mi Cuenta</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="/PerfilUser.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/PerfilUser.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+                        <i class='bx bx-user'></i> Mi Perfil
+                    </a>
+                    <a href="/MisPrestamos.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/MisPrestamos.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+                        <i class='bx bx-book'></i> Mis Préstamos
+                    </a>
+                    <a href="/MisReservas.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/MisReservas.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+                        <i class='bx bx-calendar'></i> Mis Reservas
+                    </a>
+                    <a href="/HistorialPrestamos.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/HistorialPrestamos.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+                        <i class='bx bx-history'></i> Historial
+                    </a>
+                    <a href="/ConfiguracionCuenta.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/ConfiguracionCuenta.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+                        <i class='bx bx-cog'></i> Configuración
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenido principal -->
+        <div class="col-lg-9">
+            <asp:ContentPlaceHolder ID="PerfilContent" runat="server">
+                <!-- Contenido específico de cada página -->
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
