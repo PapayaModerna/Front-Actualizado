@@ -36,6 +36,62 @@ namespace FrontEnd
             }
         }
 
+        [WebMethod]
+        public static string BuscarMateriales(string texto, string tipo)
+        {
+            try
+            {
+                var wsClient = new MaterialWSClient();
+                int limite = 12; // cantidad máxima de resultados
+                int pagina = 1;
+                var materiales = tipo == "autor"
+                    ? wsClient.listarPorAutor(texto, limite, pagina)
+                    : wsClient.listarMaterialPorTitulo(texto, limite, pagina);
+
+                if (materiales == null || materiales.Length == 0)
+                {
+                    return "<div class='alert alert-warning'>No se encontraron resultados para la búsqueda.</div>";
+                }
+
+                // Generar HTML de resultados
+                var html = "<div class='row g-3'>";
+                foreach (var mat in materiales)
+                {
+                    var portada = !string.IsNullOrEmpty(mat.portada) ? mat.portada : "portadaprueba.jpg";
+                    var editorial = mat.editorial != null && !string.IsNullOrEmpty(mat.editorial.nombre) ? mat.editorial.nombre : "N/A";
+                    var nivel = mat.nivel != null && !string.IsNullOrEmpty(mat.nivel.descripcion) ? mat.nivel.descripcion : "N/A";
+                    var disponibles = mat.disponiblesFisicos;
+                    var disponible = disponibles > 0;
+                    var disponibilidad = disponible ? $"DISPONIBLE ({disponibles})" : "NO DISPONIBLE";
+                    var btnClass = disponible ? "btn-primary" : "btn-secondary";
+                    var btnDisabled = disponible ? "" : "disabled";
+                    html += $@"
+                    <div class='col-12 col-md-6 col-lg-4'>
+                        <div class='card h-100 position-relative'>
+                            <div class='card-availability'>{disponibilidad}</div>
+                            <img src='Images/Portadas/{portada}' class='card-img-top card-img-top-custom' alt='Portada de {mat.titulo}' />
+                            <div class='card-body card-body-custom'>
+                                <h5 class='card-title card-title-custom' title='{mat.titulo}'>{mat.titulo}</h5>
+                                <p class='card-author'>Editorial: {editorial}</p>
+                                <p class='card-author'>Nivel: {nivel}</p>
+                                <p class='card-author'>Año: {mat.anioPublicacion}</p>
+                            </div>
+                            <div class='card-footer-custom'>
+                                <button class='btn {btnClass} btn-sm' {btnDisabled}>BORROW</button>
+                                <a href='#' class='btn btn-light btn-sm'><i class='fas fa-bookmark'></i></a>
+                            </div>
+                        </div>
+                    </div>";
+                }
+                html += "</div>";
+                return html;
+            }
+            catch (Exception ex)
+            {
+                return $"<div class='alert alert-danger'>Error al buscar materiales: {HttpUtility.HtmlEncode(ex.Message)}</div>";
+            }
+        }
+
         protected void Page_Init(object sender, EventArgs e)
         {
             materialwsClient = new MaterialWSClient();
