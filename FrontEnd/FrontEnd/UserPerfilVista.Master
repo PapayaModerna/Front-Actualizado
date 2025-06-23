@@ -47,17 +47,11 @@
                     <a href="/PerfilUser.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/PerfilUser.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
                         <i class='bx bx-user'></i> Mi Perfil
                     </a>
-                    <a href="/MisPrestamos.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/MisPrestamos.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+                    <a href="/PrestamosUser.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/MisPrestamos.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
                         <i class='bx bx-book'></i> Mis Préstamos
                     </a>
-                    <a href="/MisReservas.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/MisReservas.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-                        <i class='bx bx-calendar'></i> Mis Reservas
-                    </a>
-                    <a href="/HistorialPrestamos.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/HistorialPrestamos.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+                    <a href="/HistorialPrestamosUser.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/HistorialPrestamos.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
                         <i class='bx bx-history'></i> Historial
-                    </a>
-                    <a href="/ConfiguracionCuenta.aspx" class="list-group-item list-group-item-action <%= Request.Url.AbsolutePath.Equals("/ConfiguracionCuenta.aspx", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-                        <i class='bx bx-cog'></i> Configuración
                     </a>
                 </div>
             </div>
