@@ -359,9 +359,6 @@
     <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.obtenerPrestamoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.prestamosDeEjemplaresDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.prestamosDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -378,6 +375,21 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.obtenerEstadoPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.contarTotalPrestamosPorEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.contarTotalPrestamosPorEstadoYSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.contarTotalPrestamosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosPorEstadoYSedePaginadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.prestamosDeEjemplaresDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\PrestamoWS\PrestamoWS.wsdl" />

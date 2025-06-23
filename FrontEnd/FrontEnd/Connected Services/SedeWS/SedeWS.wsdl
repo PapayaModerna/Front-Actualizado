@@ -5,11 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/SedeWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="listarSedes">
-    <part name="parameters" element="tns:listarSedes" />
+  <message name="listarSedesActivasPorMaterial">
+    <part name="parameters" element="tns:listarSedesActivasPorMaterial" />
   </message>
-  <message name="listarSedesResponse">
-    <part name="parameters" element="tns:listarSedesResponse" />
+  <message name="listarSedesActivasPorMaterialResponse">
+    <part name="parameters" element="tns:listarSedesActivasPorMaterialResponse" />
+  </message>
+  <message name="obtenerSede">
+    <part name="parameters" element="tns:obtenerSede" />
+  </message>
+  <message name="obtenerSedeResponse">
+    <part name="parameters" element="tns:obtenerSedeResponse" />
+  </message>
+  <message name="eliminarSede">
+    <part name="parameters" element="tns:eliminarSede" />
+  </message>
+  <message name="eliminarSedeResponse">
+    <part name="parameters" element="tns:eliminarSedeResponse" />
   </message>
   <message name="insertarSede">
     <part name="parameters" element="tns:insertarSede" />
@@ -23,11 +35,11 @@
   <message name="listarSedesActivasResponse">
     <part name="parameters" element="tns:listarSedesActivasResponse" />
   </message>
-  <message name="eliminarSede">
-    <part name="parameters" element="tns:eliminarSede" />
+  <message name="listarSedes">
+    <part name="parameters" element="tns:listarSedes" />
   </message>
-  <message name="eliminarSedeResponse">
-    <part name="parameters" element="tns:eliminarSedeResponse" />
+  <message name="listarSedesResponse">
+    <part name="parameters" element="tns:listarSedesResponse" />
   </message>
   <message name="modificarSede">
     <part name="parameters" element="tns:modificarSede" />
@@ -35,22 +47,18 @@
   <message name="modificarSedeResponse">
     <part name="parameters" element="tns:modificarSedeResponse" />
   </message>
-  <message name="obtenerSede">
-    <part name="parameters" element="tns:obtenerSede" />
-  </message>
-  <message name="obtenerSedeResponse">
-    <part name="parameters" element="tns:obtenerSedeResponse" />
-  </message>
-  <message name="listarSedesActivasPorMaterial">
-    <part name="parameters" element="tns:listarSedesActivasPorMaterial" />
-  </message>
-  <message name="listarSedesActivasPorMaterialResponse">
-    <part name="parameters" element="tns:listarSedesActivasPorMaterialResponse" />
-  </message>
   <portType name="SedeWS">
-    <operation name="listarSedes">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesRequest" message="tns:listarSedes" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesResponse" message="tns:listarSedesResponse" />
+    <operation name="listarSedesActivasPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasPorMaterialRequest" message="tns:listarSedesActivasPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasPorMaterialResponse" message="tns:listarSedesActivasPorMaterialResponse" />
+    </operation>
+    <operation name="obtenerSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest" message="tns:obtenerSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse" message="tns:obtenerSedeResponse" />
+    </operation>
+    <operation name="eliminarSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeRequest" message="tns:eliminarSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeResponse" message="tns:eliminarSedeResponse" />
     </operation>
     <operation name="insertarSede">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeRequest" message="tns:insertarSede" />
@@ -60,26 +68,36 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasRequest" message="tns:listarSedesActivas" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasResponse" message="tns:listarSedesActivasResponse" />
     </operation>
-    <operation name="eliminarSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeRequest" message="tns:eliminarSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeResponse" message="tns:eliminarSedeResponse" />
+    <operation name="listarSedes">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesRequest" message="tns:listarSedes" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesResponse" message="tns:listarSedesResponse" />
     </operation>
     <operation name="modificarSede">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeRequest" message="tns:modificarSede" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeResponse" message="tns:modificarSedeResponse" />
     </operation>
-    <operation name="obtenerSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest" message="tns:obtenerSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse" message="tns:obtenerSedeResponse" />
-    </operation>
-    <operation name="listarSedesActivasPorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasPorMaterialRequest" message="tns:listarSedesActivasPorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasPorMaterialResponse" message="tns:listarSedesActivasPorMaterialResponse" />
-    </operation>
   </portType>
   <binding name="SedeWSPortBinding" type="tns:SedeWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarSedes">
+    <operation name="listarSedesActivasPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -106,7 +124,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarSede">
+    <operation name="listarSedes">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -116,24 +134,6 @@
       </output>
     </operation>
     <operation name="modificarSede">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerSede">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarSedesActivasPorMaterial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

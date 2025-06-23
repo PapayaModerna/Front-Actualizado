@@ -91,10 +91,11 @@ namespace FrontEnd
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-
+            int materialId = 0;
+            var material = new MaterialWS.materialesDTO();
             try
             {
-                int materialId = Convert.ToInt32(hfIdMaterial.Value);
+                materialId = Convert.ToInt32(hfIdMaterial.Value);
                 
                 string titulo = txtTitulo.Text;
                 string edicion = txtEdicion.Text;
@@ -140,27 +141,24 @@ namespace FrontEnd
                 {
                     portada = hiddenPortadaAnterior.Value;
                 }
-                var material = new MaterialWS.materialesDTO();
                 material.idMaterial = materialId;
+                material.idMaterialSpecified = true;
                 material.titulo = titulo;
                 material.edicion = edicion;
                 material.anioPublicacion = anioPublicacion;
                 material.portada = portada;
                 material.vigente = vigente;
-                material.nivel = new MaterialWS.nivelesInglesDTO(); // o el tipo real de nivel
+                material.nivel = new MaterialWS.nivelesInglesDTO();
                 material.nivel.idNivel = 1;
                 material.editorial = new MaterialWS.editorialesDTO();
                 material.editorial.idEditorial = idEditorial;
-
-
-
-                // Llamar al servicio para actualizar el material
+                
                 var result = materialwsClient.modificarMaterial(material);
 
                 if (result > 0)
                 {
                     Response.Write("<script>alert('Material actualizado exitosamente');</script>");
-                    //Response.Redirect("librosPrincipal.aspx");
+                    Response.Redirect("IndexAdmin.aspx");
                 }
                 else
                 {
@@ -169,7 +167,8 @@ namespace FrontEnd
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert('Error al actualizar el material: " + ex.Message + "');</script>");
+                string mensaje = $"Error al actualizar el material con ID {material.idMaterial}: {ex.Message}";
+                Response.Write("<script>alert('" + mensaje.Replace("'", "\\'") + "');</script>");
             }
         }
     }
