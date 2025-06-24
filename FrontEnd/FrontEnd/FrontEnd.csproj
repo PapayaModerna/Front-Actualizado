@@ -511,8 +511,6 @@
     <Compile Include="AdminBiblio.Master.designer.cs">
       <DependentUpon>AdminBiblio.Master</DependentUpon>
     </Compile>
-
-    </Compile>
     <Compile Include="Connected Services\EditorialWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
