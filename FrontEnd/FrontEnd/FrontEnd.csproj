@@ -272,6 +272,9 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.listarMaterialesPorTituloParcialPaginadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesPorSedeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\MaterialWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -352,6 +355,42 @@
     <None Include="Connected Services\PersonaWS\configuration91.svcinfo" />
     <None Include="Connected Services\PersonaWS\configuration.svcinfo" />
     <None Include="Connected Services\PersonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PrestamoEjemplarWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PrestamoEjemplarWS\configuration.svcinfo" />
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.listarPrestamosNoCulminadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.obtenerPrestamoEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoEjemplarWS\FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\PrestamoEjemplarWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -445,6 +484,10 @@
     <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosPorEstadoYSedePaginadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\PrestamoEjemplarWS\PrestamoEjemplarWS.wsdl" />
+    <None Include="Connected Services\PrestamoEjemplarWS\PrestamoEjemplarWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\PrestamoWS\PrestamoWS.wsdl" />
     <None Include="Connected Services\PrestamoWS\PrestamoWS.xsd">
       <SubType>Designer</SubType>
@@ -576,6 +619,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\PrestamoEjemplarWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\PrestamoWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -592,6 +640,55 @@
     </Compile>
     <Compile Include="DetalleLibrosAdmin.aspx.designer.cs">
       <DependentUpon>DetalleLibrosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialPrestamosUser.aspx.cs">
+      <DependentUpon>HistorialPrestamosUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistorialPrestamosUser.aspx.designer.cs">
+      <DependentUpon>HistorialPrestamosUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogoutUser.aspx.cs">
+      <DependentUpon>LogoutUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogoutUser.aspx.designer.cs">
+      <DependentUpon>LogoutUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilUser.aspx.cs">
+      <DependentUpon>PerfilUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilUser.aspx.designer.cs">
+      <DependentUpon>PerfilUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrestamosUser.aspx.cs">
+      <DependentUpon>PrestamosUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrestamosUser.aspx.designer.cs">
+      <DependentUpon>PrestamosUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecojoPrestamo.aspx.cs">
+      <DependentUpon>RecojoPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecojoPrestamo.aspx.designer.cs">
+      <DependentUpon>RecojoPrestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPerfilVista.Master.cs">
+      <DependentUpon>UserPerfilVista.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPerfilVista.Master.designer.cs">
+      <DependentUpon>UserPerfilVista.Master</DependentUpon>
     </Compile>
     <Compile Include="DetallesAdmin.aspx.cs">
       <DependentUpon>DetallesAdmin.aspx</DependentUpon>
@@ -723,6 +820,7 @@
     <WCFMetadataStorage Include="Connected Services\MaterialWS\" />
     <WCFMetadataStorage Include="Connected Services\NivelInglesWS\" />
     <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\PrestamoEjemplarWS\" />
     <WCFMetadataStorage Include="Connected Services\PrestamoWS\" />
     <WCFMetadataStorage Include="Connected Services\SedeWS\" />
   </ItemGroup>

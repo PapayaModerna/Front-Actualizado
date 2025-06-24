@@ -86,11 +86,9 @@
             </div>
         </div>
 
-        <!-- Recuadro de creadores agregados -->
         <asp:Panel ID="panelCreadoresInsertados" runat="server" CssClass="d-flex flex-wrap gap-2 mt-3 mt-creadores" />
         </div>
 
-        <!-- Mensajes de estado -->
         <div class="success-message" id="successMessage">
             ✅ Material actualizado correctamente
         </div>
@@ -99,7 +97,6 @@
             ❌ Error al procesar la solicitud
         </div>
 
-        <!-- Botones -->
         <div class="d-flex justify-content-center gap-3 align-items-center">
             <asp:Button ID="btnVolver" runat="server" CssClass="btn custom-btn" Text="Volver a Principal" OnClick="btnVolver_Click" />
             <asp:Button ID="btnInsertar" runat="server" CssClass="btn custom-btn"

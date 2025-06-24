@@ -211,7 +211,6 @@ namespace FrontEnd
 
 
 
-                // 🧠 Agregar lista de creadores insertados
                 /*material.creadores(
                     CreadoresInsertados.Select(id => new MaterialWS.creadoresDTO
                     {
@@ -219,8 +218,6 @@ namespace FrontEnd
                         idCreadorSpecified = true
                     }).ToList()
                 );
-                */
-                // Llamar al servicio de inserción
                 var materialCliente = new MaterialWS.MaterialWSClient();
                 var result = materialCliente.insertarMaterial(material);
 
@@ -232,7 +229,7 @@ namespace FrontEnd
                 else
                 {
                     Response.Write("<script>alert('❌ No se pudo insertar el material');</script>");
-                }
+                }*/
             }
             catch (Exception ex)
             {

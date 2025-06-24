@@ -42,6 +42,19 @@ namespace FrontEnd.PrestamoEjemplarWS {
         System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse> listarPrestamosDevueltosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+            "mplarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse insertarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+            "mplarResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse> insertarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
             "citadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
             "citadosResponse")]
@@ -53,19 +66,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
             "citadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
             "citadosResponse")]
         System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> listarPrestamosSolicitadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
-            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
-            "mplarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse eliminarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
-            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
-            "mplarResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse> eliminarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/modificarPrestamoEj" +
@@ -81,17 +81,17 @@ namespace FrontEnd.PrestamoEjemplarWS {
         System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse> modificarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
-            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
+            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
             "mplarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse insertarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarRequest request);
+        FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse eliminarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
-            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
+            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
             "mplarResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse> insertarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarRequest request);
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse> eliminarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
@@ -131,622 +131,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
             "plarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/obtenerPrestamoEjem" +
             "plarResponse")]
         System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.obtenerPrestamoEjemplarResponse> obtenerPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.obtenerPrestamoEjemplarRequest request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public partial class prestamosDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime fechaDevolucionField;
-        
-        private bool fechaDevolucionFieldSpecified;
-        
-        private System.DateTime fechaPrestamoField;
-        
-        private bool fechaPrestamoFieldSpecified;
-        
-        private System.DateTime fechaSolicitudField;
-        
-        private bool fechaSolicitudFieldSpecified;
-        
-        private int idPrestamoField;
-        
-        private bool idPrestamoFieldSpecified;
-        
-        private personasDTO personaField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime fechaDevolucion {
-            get {
-                return this.fechaDevolucionField;
-            }
-            set {
-                this.fechaDevolucionField = value;
-                this.RaisePropertyChanged("fechaDevolucion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaDevolucionSpecified {
-            get {
-                return this.fechaDevolucionFieldSpecified;
-            }
-            set {
-                this.fechaDevolucionFieldSpecified = value;
-                this.RaisePropertyChanged("fechaDevolucionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fechaPrestamo {
-            get {
-                return this.fechaPrestamoField;
-            }
-            set {
-                this.fechaPrestamoField = value;
-                this.RaisePropertyChanged("fechaPrestamo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaPrestamoSpecified {
-            get {
-                return this.fechaPrestamoFieldSpecified;
-            }
-            set {
-                this.fechaPrestamoFieldSpecified = value;
-                this.RaisePropertyChanged("fechaPrestamoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fechaSolicitud {
-            get {
-                return this.fechaSolicitudField;
-            }
-            set {
-                this.fechaSolicitudField = value;
-                this.RaisePropertyChanged("fechaSolicitud");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSolicitudSpecified {
-            get {
-                return this.fechaSolicitudFieldSpecified;
-            }
-            set {
-                this.fechaSolicitudFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSolicitudSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idPrestamo {
-            get {
-                return this.idPrestamoField;
-            }
-            set {
-                this.idPrestamoField = value;
-                this.RaisePropertyChanged("idPrestamo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idPrestamoSpecified {
-            get {
-                return this.idPrestamoFieldSpecified;
-            }
-            set {
-                this.idPrestamoFieldSpecified = value;
-                this.RaisePropertyChanged("idPrestamoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public personasDTO persona {
-            get {
-                return this.personaField;
-            }
-            set {
-                this.personaField = value;
-                this.RaisePropertyChanged("persona");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public partial class personasDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string codigoField;
-        
-        private string contrasenhaField;
-        
-        private string correoField;
-        
-        private double deudaField;
-        
-        private bool deudaFieldSpecified;
-        
-        private string direccionField;
-        
-        private System.DateTime fechaContratoFinalField;
-        
-        private bool fechaContratoFinalFieldSpecified;
-        
-        private System.DateTime fechaContratoInicioField;
-        
-        private bool fechaContratoInicioFieldSpecified;
-        
-        private System.DateTime fechaSancionFinalField;
-        
-        private bool fechaSancionFinalFieldSpecified;
-        
-        private int idPersonaField;
-        
-        private bool idPersonaFieldSpecified;
-        
-        private string maternoField;
-        
-        private nivelesInglesDTO nivelField;
-        
-        private string nombreField;
-        
-        private string paternoField;
-        
-        private sedesDTO sedeField;
-        
-        private string telefonoField;
-        
-        private tipoPersona tipoField;
-        
-        private bool tipoFieldSpecified;
-        
-        private turnos turnoField;
-        
-        private bool turnoFieldSpecified;
-        
-        private bool vigenteField;
-        
-        private bool vigenteFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigo {
-            get {
-                return this.codigoField;
-            }
-            set {
-                this.codigoField = value;
-                this.RaisePropertyChanged("codigo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string contrasenha {
-            get {
-                return this.contrasenhaField;
-            }
-            set {
-                this.contrasenhaField = value;
-                this.RaisePropertyChanged("contrasenha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double deuda {
-            get {
-                return this.deudaField;
-            }
-            set {
-                this.deudaField = value;
-                this.RaisePropertyChanged("deuda");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool deudaSpecified {
-            get {
-                return this.deudaFieldSpecified;
-            }
-            set {
-                this.deudaFieldSpecified = value;
-                this.RaisePropertyChanged("deudaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public System.DateTime fechaContratoFinal {
-            get {
-                return this.fechaContratoFinalField;
-            }
-            set {
-                this.fechaContratoFinalField = value;
-                this.RaisePropertyChanged("fechaContratoFinal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaContratoFinalSpecified {
-            get {
-                return this.fechaContratoFinalFieldSpecified;
-            }
-            set {
-                this.fechaContratoFinalFieldSpecified = value;
-                this.RaisePropertyChanged("fechaContratoFinalSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public System.DateTime fechaContratoInicio {
-            get {
-                return this.fechaContratoInicioField;
-            }
-            set {
-                this.fechaContratoInicioField = value;
-                this.RaisePropertyChanged("fechaContratoInicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaContratoInicioSpecified {
-            get {
-                return this.fechaContratoInicioFieldSpecified;
-            }
-            set {
-                this.fechaContratoInicioFieldSpecified = value;
-                this.RaisePropertyChanged("fechaContratoInicioSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public System.DateTime fechaSancionFinal {
-            get {
-                return this.fechaSancionFinalField;
-            }
-            set {
-                this.fechaSancionFinalField = value;
-                this.RaisePropertyChanged("fechaSancionFinal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSancionFinalSpecified {
-            get {
-                return this.fechaSancionFinalFieldSpecified;
-            }
-            set {
-                this.fechaSancionFinalFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSancionFinalSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int idPersona {
-            get {
-                return this.idPersonaField;
-            }
-            set {
-                this.idPersonaField = value;
-                this.RaisePropertyChanged("idPersona");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idPersonaSpecified {
-            get {
-                return this.idPersonaFieldSpecified;
-            }
-            set {
-                this.idPersonaFieldSpecified = value;
-                this.RaisePropertyChanged("idPersonaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string materno {
-            get {
-                return this.maternoField;
-            }
-            set {
-                this.maternoField = value;
-                this.RaisePropertyChanged("materno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public nivelesInglesDTO nivel {
-            get {
-                return this.nivelField;
-            }
-            set {
-                this.nivelField = value;
-                this.RaisePropertyChanged("nivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public string paterno {
-            get {
-                return this.paternoField;
-            }
-            set {
-                this.paternoField = value;
-                this.RaisePropertyChanged("paterno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        public sedesDTO sede {
-            get {
-                return this.sedeField;
-            }
-            set {
-                this.sedeField = value;
-                this.RaisePropertyChanged("sede");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
-        public tipoPersona tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool tipoSpecified {
-            get {
-                return this.tipoFieldSpecified;
-            }
-            set {
-                this.tipoFieldSpecified = value;
-                this.RaisePropertyChanged("tipoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
-        public turnos turno {
-            get {
-                return this.turnoField;
-            }
-            set {
-                this.turnoField = value;
-                this.RaisePropertyChanged("turno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool turnoSpecified {
-            get {
-                return this.turnoFieldSpecified;
-            }
-            set {
-                this.turnoFieldSpecified = value;
-                this.RaisePropertyChanged("turnoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
-        public bool vigente {
-            get {
-                return this.vigenteField;
-            }
-            set {
-                this.vigenteField = value;
-                this.RaisePropertyChanged("vigente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool vigenteSpecified {
-            get {
-                return this.vigenteFieldSpecified;
-            }
-            set {
-                this.vigenteFieldSpecified = value;
-                this.RaisePropertyChanged("vigenteSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public partial class nivelesInglesDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private int idNivelField;
-        
-        private nivel nivelField;
-        
-        private bool nivelFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idNivel {
-            get {
-                return this.idNivelField;
-            }
-            set {
-                this.idNivelField = value;
-                this.RaisePropertyChanged("idNivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public nivel nivel {
-            get {
-                return this.nivelField;
-            }
-            set {
-                this.nivelField = value;
-                this.RaisePropertyChanged("nivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool nivelSpecified {
-            get {
-                return this.nivelFieldSpecified;
-            }
-            set {
-                this.nivelFieldSpecified = value;
-                this.RaisePropertyChanged("nivelSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public enum nivel {
-        
-        /// <remarks/>
-        BASICO,
-        
-        /// <remarks/>
-        INTERMEDIO,
-        
-        /// <remarks/>
-        AVANZADO,
     }
     
     /// <remarks/>
@@ -901,182 +285,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
         NO_RECOGIDO,
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public partial class sedesDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activaField;
-        
-        private bool activaFieldSpecified;
-        
-        private string correoContactoField;
-        
-        private string direccionField;
-        
-        private string distritoField;
-        
-        private int idSedeField;
-        
-        private bool idSedeFieldSpecified;
-        
-        private string nombreField;
-        
-        private string telefonoContactoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activa {
-            get {
-                return this.activaField;
-            }
-            set {
-                this.activaField = value;
-                this.RaisePropertyChanged("activa");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool activaSpecified {
-            get {
-                return this.activaFieldSpecified;
-            }
-            set {
-                this.activaFieldSpecified = value;
-                this.RaisePropertyChanged("activaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string correoContacto {
-            get {
-                return this.correoContactoField;
-            }
-            set {
-                this.correoContactoField = value;
-                this.RaisePropertyChanged("correoContacto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string distrito {
-            get {
-                return this.distritoField;
-            }
-            set {
-                this.distritoField = value;
-                this.RaisePropertyChanged("distrito");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int idSede {
-            get {
-                return this.idSedeField;
-            }
-            set {
-                this.idSedeField = value;
-                this.RaisePropertyChanged("idSede");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idSedeSpecified {
-            get {
-                return this.idSedeFieldSpecified;
-            }
-            set {
-                this.idSedeFieldSpecified = value;
-                this.RaisePropertyChanged("idSedeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string telefonoContacto {
-            get {
-                return this.telefonoContactoField;
-            }
-            set {
-                this.telefonoContactoField = value;
-                this.RaisePropertyChanged("telefonoContacto");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public enum tipoPersona {
-        
-        /// <remarks/>
-        PROFESOR,
-        
-        /// <remarks/>
-        ADMINISTRADOR,
-        
-        /// <remarks/>
-        ESTUDIANTE,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
-    public enum turnos {
-        
-        /// <remarks/>
-        MANHANA,
-        
-        /// <remarks/>
-        TARDE,
-        
-        /// <remarks/>
-        NOCHE,
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1095,12 +303,12 @@ namespace FrontEnd.PrestamoEjemplarWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PrestamoEjemplarWS.prestamosDTO[] @return;
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
         
         public listarPrestamosAtrasadosResponse() {
         }
         
-        public listarPrestamosAtrasadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDTO[] @return) {
+        public listarPrestamosAtrasadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -1123,117 +331,12 @@ namespace FrontEnd.PrestamoEjemplarWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PrestamoEjemplarWS.prestamosDTO[] @return;
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
         
         public listarPrestamosDevueltosResponse() {
         }
         
-        public listarPrestamosDevueltosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosSolicitados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPrestamosSolicitadosRequest {
-        
-        public listarPrestamosSolicitadosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosSolicitadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPrestamosSolicitadosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PrestamoEjemplarWS.prestamosDTO[] @return;
-        
-        public listarPrestamosSolicitadosResponse() {
-        }
-        
-        public listarPrestamosSolicitadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarPrestamoEjemplarRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPrestamo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEjemplar;
-        
-        public eliminarPrestamoEjemplarRequest() {
-        }
-        
-        public eliminarPrestamoEjemplarRequest(int idPrestamo, int idEjemplar) {
-            this.idPrestamo = idPrestamo;
-            this.idEjemplar = idEjemplar;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPrestamoEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarPrestamoEjemplarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPrestamoEjemplarResponse() {
-        }
-        
-        public eliminarPrestamoEjemplarResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarPrestamoEjemplarRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO dto;
-        
-        public modificarPrestamoEjemplarRequest() {
-        }
-        
-        public modificarPrestamoEjemplarRequest(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO dto) {
-            this.dto = dto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPrestamoEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarPrestamoEjemplarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarPrestamoEjemplarResponse() {
-        }
-        
-        public modificarPrestamoEjemplarResponse(int @return) {
+        public listarPrestamosDevueltosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -1287,6 +390,111 @@ namespace FrontEnd.PrestamoEjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosSolicitados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPrestamosSolicitadosRequest {
+        
+        public listarPrestamosSolicitadosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosSolicitadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPrestamosSolicitadosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
+        
+        public listarPrestamosSolicitadosResponse() {
+        }
+        
+        public listarPrestamosSolicitadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarPrestamoEjemplarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO dto;
+        
+        public modificarPrestamoEjemplarRequest() {
+        }
+        
+        public modificarPrestamoEjemplarRequest(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO dto) {
+            this.dto = dto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPrestamoEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarPrestamoEjemplarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarPrestamoEjemplarResponse() {
+        }
+        
+        public modificarPrestamoEjemplarResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarPrestamoEjemplarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPrestamo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEjemplar;
+        
+        public eliminarPrestamoEjemplarRequest() {
+        }
+        
+        public eliminarPrestamoEjemplarRequest(int idPrestamo, int idEjemplar) {
+            this.idPrestamo = idPrestamo;
+            this.idEjemplar = idEjemplar;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPrestamoEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarPrestamoEjemplarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPrestamoEjemplarResponse() {
+        }
+        
+        public eliminarPrestamoEjemplarResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class listarTodosPrestamoEjemplarRequest {
         
@@ -1330,12 +538,12 @@ namespace FrontEnd.PrestamoEjemplarWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PrestamoEjemplarWS.prestamosDTO[] @return;
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
         
         public listarPrestamosNoCulminadosResponse() {
         }
         
-        public listarPrestamosNoCulminadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDTO[] @return) {
+        public listarPrestamosNoCulminadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -1413,7 +621,7 @@ namespace FrontEnd.PrestamoEjemplarWS {
             return base.Channel.listarPrestamosAtrasados(request);
         }
         
-        public FrontEnd.PrestamoEjemplarWS.prestamosDTO[] listarPrestamosAtrasados() {
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosAtrasados() {
             FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest();
             FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosAtrasados(inValue);
             return retVal.@return;
@@ -1434,7 +642,7 @@ namespace FrontEnd.PrestamoEjemplarWS {
             return base.Channel.listarPrestamosDevueltos(request);
         }
         
-        public FrontEnd.PrestamoEjemplarWS.prestamosDTO[] listarPrestamosDevueltos() {
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosDevueltos() {
             FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest();
             FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosDevueltos(inValue);
             return retVal.@return;
@@ -1448,75 +656,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
         public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse> listarPrestamosDevueltosAsync() {
             FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest();
             return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosDevueltosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosSolicitados(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request) {
-            return base.Channel.listarPrestamosSolicitados(request);
-        }
-        
-        public FrontEnd.PrestamoEjemplarWS.prestamosDTO[] listarPrestamosSolicitados() {
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest();
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosSolicitados(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosSolicitadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request) {
-            return base.Channel.listarPrestamosSolicitadosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> listarPrestamosSolicitadosAsync() {
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest();
-            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosSolicitadosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.eliminarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request) {
-            return base.Channel.eliminarPrestamoEjemplar(request);
-        }
-        
-        public int eliminarPrestamoEjemplar(int idPrestamo, int idEjemplar) {
-            FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest();
-            inValue.idPrestamo = idPrestamo;
-            inValue.idEjemplar = idEjemplar;
-            FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).eliminarPrestamoEjemplar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.eliminarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request) {
-            return base.Channel.eliminarPrestamoEjemplarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse> eliminarPrestamoEjemplarAsync(int idPrestamo, int idEjemplar) {
-            FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest();
-            inValue.idPrestamo = idPrestamo;
-            inValue.idEjemplar = idEjemplar;
-            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).eliminarPrestamoEjemplarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.modificarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest request) {
-            return base.Channel.modificarPrestamoEjemplar(request);
-        }
-        
-        public int modificarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO dto) {
-            FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest();
-            inValue.dto = dto;
-            FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).modificarPrestamoEjemplar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.modificarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest request) {
-            return base.Channel.modificarPrestamoEjemplarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse> modificarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO dto) {
-            FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest();
-            inValue.dto = dto;
-            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).modificarPrestamoEjemplarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1547,6 +686,75 @@ namespace FrontEnd.PrestamoEjemplarWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosSolicitados(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request) {
+            return base.Channel.listarPrestamosSolicitados(request);
+        }
+        
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosSolicitados() {
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest();
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosSolicitados(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosSolicitadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request) {
+            return base.Channel.listarPrestamosSolicitadosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> listarPrestamosSolicitadosAsync() {
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest();
+            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosSolicitadosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.modificarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest request) {
+            return base.Channel.modificarPrestamoEjemplar(request);
+        }
+        
+        public int modificarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO dto) {
+            FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest();
+            inValue.dto = dto;
+            FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).modificarPrestamoEjemplar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.modificarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest request) {
+            return base.Channel.modificarPrestamoEjemplarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse> modificarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO dto) {
+            FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest();
+            inValue.dto = dto;
+            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).modificarPrestamoEjemplarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.eliminarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request) {
+            return base.Channel.eliminarPrestamoEjemplar(request);
+        }
+        
+        public int eliminarPrestamoEjemplar(int idPrestamo, int idEjemplar) {
+            FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest();
+            inValue.idPrestamo = idPrestamo;
+            inValue.idEjemplar = idEjemplar;
+            FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).eliminarPrestamoEjemplar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.eliminarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request) {
+            return base.Channel.eliminarPrestamoEjemplarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse> eliminarPrestamoEjemplarAsync(int idPrestamo, int idEjemplar) {
+            FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest();
+            inValue.idPrestamo = idPrestamo;
+            inValue.idEjemplar = idEjemplar;
+            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).eliminarPrestamoEjemplarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarTodosPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request) {
             return base.Channel.listarTodosPrestamoEjemplar(request);
         }
@@ -1572,7 +780,7 @@ namespace FrontEnd.PrestamoEjemplarWS {
             return base.Channel.listarPrestamosNoCulminados(request);
         }
         
-        public FrontEnd.PrestamoEjemplarWS.prestamosDTO[] listarPrestamosNoCulminados() {
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosNoCulminados() {
             FrontEnd.PrestamoEjemplarWS.listarPrestamosNoCulminadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosNoCulminadosRequest();
             FrontEnd.PrestamoEjemplarWS.listarPrestamosNoCulminadosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosNoCulminados(inValue);
             return retVal.@return;
