@@ -40,8 +40,8 @@ namespace FrontEnd
 
                     if (prestamo != null)
                     {
-                        txtFechaSolicitud.Text = prestamo.fechaSolicitud.ToShortDateString(); // Fecha de solicitud
-                        txtFechaDevolucion.Text = prestamo.fechaDevolucion.ToShortDateString(); // Fecha de devolución
+                        txtFechaSolicitud.Text = prestamo.fechaSolicitud.ToShortDateString(); 
+                        txtFechaDevolucion.Text = prestamo.fechaDevolucion.ToShortDateString();
 
                         var persona = personaWSClient.obtenerPersona(prestamo.persona.idPersona);
 

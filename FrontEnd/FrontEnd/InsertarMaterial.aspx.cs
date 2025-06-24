@@ -5,23 +5,22 @@ using System.Linq;
 using System.IO;
 using System.Web;
 using System.Web.UI;
-using System.Collections;
 using System.Web.UI.WebControls;
 using FrontEnd.EditorialWS;
 using FrontEnd.MaterialWS;
-//using FrontEnd.CreadorWS;
+using FrontEnd.CreadorWS;
 
 namespace FrontEnd
 {
     public partial class InsertarMaterial : System.Web.UI.Page
     {
-        /*
+        
         private List<CreadorWS.creadoresDTO> CreadoresDisponibles
         {
             get => ViewState["CreadoresDisponibles"] as List<CreadorWS.creadoresDTO> ?? new List<CreadorWS.creadoresDTO>();
             set => ViewState["CreadoresDisponibles"] = value;
         }
-        */
+        
         private List<int> CreadoresInsertados
         {
             get => ViewState["CreadoresInsertados"] as List<int> ?? new List<int>();
@@ -53,7 +52,7 @@ namespace FrontEnd
             ddlEditorial.Items.Insert(0, new ListItem("Seleccione una editorial", "0"));
 
         }
-        /*
+        
         private void ListarCreadores()
         {
             var creadorCliente = new CreadorWS.CreadorWSClient();
@@ -83,7 +82,7 @@ namespace FrontEnd
 
             MostrarCreadoresInsertados();
         }
-        /*
+        
         private void MostrarCreadoresInsertados()
         {
             panelCreadoresInsertados.Controls.Clear();
@@ -116,7 +115,7 @@ namespace FrontEnd
                             }
             
         }
-        */
+        
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("IndexAdmin.aspx");
@@ -131,7 +130,7 @@ namespace FrontEnd
             lista.Remove(id);
             CreadoresInsertados = lista;
 
-            //MostrarCreadoresInsertados();
+            MostrarCreadoresInsertados();
         }
         protected void btnAgregarCreador_Click(object sender, EventArgs e)
         {
@@ -144,10 +143,7 @@ namespace FrontEnd
 
             lista.Add(id);
 
-            // ¡Clave para que el ViewState se actualice!
             CreadoresInsertados = lista;
-
-            //MostrarCreadoresInsertados();
         }
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
@@ -213,7 +209,7 @@ namespace FrontEnd
 
 
 
-                /*material.creadores(
+                material.creadores(
                     CreadoresInsertados.Select(id => new MaterialWS.creadoresDTO
                     {
                         idCreador = id,
@@ -231,7 +227,7 @@ namespace FrontEnd
                 else
                 {
                     Response.Write("<script>alert('❌ No se pudo insertar el material');</script>");
-                }*/
+                }
             }
             catch (Exception ex)
             {

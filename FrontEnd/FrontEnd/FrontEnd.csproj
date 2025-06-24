@@ -543,6 +543,30 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\TemaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\TemaWS\configuration.svcinfo" />
+    <Content Include="Connected Services\TemaWS\FrontEnd.TemaWS.eliminarTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TemaWS\FrontEnd.TemaWS.insertarTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TemaWS\FrontEnd.TemaWS.listarTemasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TemaWS\FrontEnd.TemaWS.modificarTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TemaWS\FrontEnd.TemaWS.obtenerTemaPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TemaWS\FrontEnd.TemaWS.temasDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TemaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -587,6 +611,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Connected Services\SedeWS\SedeWS.wsdl" />
     <None Include="Connected Services\SedeWS\SedeWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TemaWS\TemaWS.wsdl" />
+    <None Include="Connected Services\TemaWS\TemaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
@@ -647,6 +675,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\SedeWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TemaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -847,6 +880,7 @@
     <WCFMetadataStorage Include="Connected Services\PrestamoEjemplarWS\" />
     <WCFMetadataStorage Include="Connected Services\PrestamoWS\" />
     <WCFMetadataStorage Include="Connected Services\SedeWS\" />
+    <WCFMetadataStorage Include="Connected Services\TemaWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
