@@ -188,7 +188,6 @@
         color: #fff;
     }
 
-/* 📱 Responsive para móviles */
 @media (max-width: 768px) {
     .tabla-libros-container {
         width: 95%;

@@ -70,11 +70,38 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminBiblio.Master" />
+    <None Include="Connected Services\CreadorWS\CreadorWS.wsdl" />
+    <None Include="Connected Services\CreadorWS\CreadorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.creadoresDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.eliminarCreadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.insertarCreadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.listarCreadoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.modificarCreadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.obtenerCreadorPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\EditorialWS\EditorialWS.wsdl" />
     <None Include="Connected Services\EditorialWS\EditorialWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Carrito.aspx" />
+    <None Include="Connected Services\CreadorWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CreadorWS\configuration.svcinfo" />
+    <None Include="Connected Services\CreadorWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\EditorialWS\FrontEnd.EditorialWS.editorialesDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -478,6 +505,7 @@
     <Content Include="Content\DetallesPersona.css" />
     <Content Include="Content\EditarMaterial.css" />
     <Content Include="Content\IndexAdmin.css" />
+    <Content Include="Content\InsertarMaterial.css" />
     <Content Include="Content\PrestamosAdmin.css" />
     <Content Include="DetalleLibrosAdmin.aspx" />
     <Content Include="DetallesAdmin.aspx" />
@@ -485,6 +513,7 @@
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
     <Content Include="IndexAdmin.aspx" />
+    <Content Include="InsertarMaterial.aspx" />
     <Content Include="Loader.aspx" />
     <Content Include="LoginBiblio.aspx" />
     <Content Include="ModificarUsuarioAdmin.aspx" />
@@ -517,12 +546,10 @@
     <Compile Include="AdminBiblio.Master.designer.cs">
       <DependentUpon>AdminBiblio.Master</DependentUpon>
     </Compile>
-    <Compile Include="Carrito.aspx.cs">
-      <DependentUpon>Carrito.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Carrito.aspx.designer.cs">
-      <DependentUpon>Carrito.aspx</DependentUpon>
+    <Compile Include="Connected Services\CreadorWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\EditorialWS\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -593,6 +620,13 @@
     </Compile>
     <Compile Include="IndexAdmin.aspx.designer.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarMaterial.aspx.cs">
+      <DependentUpon>InsertarMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertarMaterial.aspx.designer.cs">
+      <DependentUpon>InsertarMaterial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Loader.aspx.cs">
       <DependentUpon>Loader.aspx</DependentUpon>
@@ -683,6 +717,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CreadorWS\" />
     <WCFMetadataStorage Include="Connected Services\EditorialWS\" />
     <WCFMetadataStorage Include="Connected Services\EjemplarWS\" />
     <WCFMetadataStorage Include="Connected Services\MaterialWS\" />

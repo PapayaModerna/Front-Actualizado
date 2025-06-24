@@ -49,6 +49,22 @@ namespace FrontEnd
         protected void ddlSedes_SelectedIndexChanged(object sender, EventArgs e)
         {
             actualizarTituloSede();
+            int idSede = int.Parse(ddlSedes.SelectedValue);
+            int totalLibros = 0;
+            int totalEjemplares = 0;
+            if (idSede == 0)
+            {
+                totalLibros = materialWSClient.contarMateriales();
+                var ejemplares = ejemplarWSClient.listarEjemplares();
+                totalEjemplares = ejemplares.Length;
+            }
+            else // Una sede específica
+            {
+                totalLibros = materialWSClient.contarMaterialesPorSede(idSede);
+                totalEjemplares = ejemplarWSClient.contarTotalPorSede(idSede);
+            }
+            lblCantidadLibros.Text = $"{totalLibros} Libros";
+            lblCantidadEjemplares.Text = $"{totalEjemplares} Ejemplares físicos y digitales";
             ViewState["PaginaActual"] = 1;
             ViewState["MostrarTabla"] = false;
             rptLibros.DataSource = null;
