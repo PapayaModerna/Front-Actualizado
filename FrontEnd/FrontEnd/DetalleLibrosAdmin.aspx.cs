@@ -20,6 +20,7 @@ namespace FrontEnd
             if (!IsPostBack)
             {
                 CargarDetalle();
+                
             }
         }
         private void CargarDetalle()
@@ -45,6 +46,7 @@ namespace FrontEnd
                         ? string.Join(", ", temas.Select(t => t.descripcion))
                         : "-";
                     Session["MaterialSeleccionado"] = libro;
+                    imgPortada.ImageUrl = libro.portada ?? "~/Images/Portadas/portadaprueba.jpg";
                 }
                 else
                 {

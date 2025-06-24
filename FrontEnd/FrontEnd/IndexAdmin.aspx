@@ -34,7 +34,7 @@
     </div>   
 
     <div class="seccion-cabecera-materiales">
-        <h2 class="titulo-materiales">📚 Materiales</h2>
+        <h2 class="titulo-materiales">📚 Libros</h2>
         <a href="InsertarMaterial.aspx" class="btn btn-dark btn-agregar">+ Agregar material</a>
     </div>
 
