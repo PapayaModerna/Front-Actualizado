@@ -16,6 +16,24 @@ namespace FrontEnd.CreadorWS {
     public interface CreadorWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.CreadorWS.modificarCreadorResponse modificarCreador(FrontEnd.CreadorWS.modificarCreadorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorResponse")]
+        System.Threading.Tasks.Task<FrontEnd.CreadorWS.modificarCreadorResponse> modificarCreadorAsync(FrontEnd.CreadorWS.modificarCreadorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.CreadorWS.insertarCreadorResponse insertarCreador(FrontEnd.CreadorWS.insertarCreadorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse")]
+        System.Threading.Tasks.Task<FrontEnd.CreadorWS.insertarCreadorResponse> insertarCreadorAsync(FrontEnd.CreadorWS.insertarCreadorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/eliminarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/eliminarCreadorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -34,24 +52,6 @@ namespace FrontEnd.CreadorWS {
         System.Threading.Tasks.Task<FrontEnd.CreadorWS.listarCreadoresResponse> listarCreadoresAsync(FrontEnd.CreadorWS.listarCreadoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.CreadorWS.insertarCreadorResponse insertarCreador(FrontEnd.CreadorWS.insertarCreadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse")]
-        System.Threading.Tasks.Task<FrontEnd.CreadorWS.insertarCreadorResponse> insertarCreadorAsync(FrontEnd.CreadorWS.insertarCreadorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.CreadorWS.modificarCreadorResponse modificarCreador(FrontEnd.CreadorWS.modificarCreadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorResponse")]
-        System.Threading.Tasks.Task<FrontEnd.CreadorWS.modificarCreadorResponse> modificarCreadorAsync(FrontEnd.CreadorWS.modificarCreadorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/obtenerCreadorPorIdRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/obtenerCreadorPorIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -61,44 +61,8 @@ namespace FrontEnd.CreadorWS {
         System.Threading.Tasks.Task<FrontEnd.CreadorWS.obtenerCreadorPorIdResponse> obtenerCreadorPorIdAsync(FrontEnd.CreadorWS.obtenerCreadorPorIdRequest request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCreador", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarCreadorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCreador;
-        
-        public eliminarCreadorRequest() {
-        }
-        
-        public eliminarCreadorRequest(int idCreador) {
-            this.idCreador = idCreador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCreadorResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarCreadorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCreadorResponse() {
-        }
-        
-        public eliminarCreadorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -270,7 +234,7 @@ namespace FrontEnd.CreadorWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/")]
     public enum tipoCreador {
@@ -303,27 +267,35 @@ namespace FrontEnd.CreadorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreadores", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarCreadoresRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCreador", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarCreadorRequest {
         
-        public listarCreadoresRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.CreadorWS.creadoresDTO creador;
+        
+        public modificarCreadorRequest() {
+        }
+        
+        public modificarCreadorRequest(FrontEnd.CreadorWS.creadoresDTO creador) {
+            this.creador = creador;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreadoresResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarCreadoresResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCreadorResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarCreadorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.CreadorWS.creadoresDTO[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarCreadoresResponse() {
+        public modificarCreadorResponse() {
         }
         
-        public listarCreadoresResponse(FrontEnd.CreadorWS.creadoresDTO[] @return) {
+        public modificarCreadorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -367,35 +339,63 @@ namespace FrontEnd.CreadorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCreador", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarCreadorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCreador", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarCreadorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.CreadorWS.creadoresDTO creador;
+        public int idCreador;
         
-        public modificarCreadorRequest() {
+        public eliminarCreadorRequest() {
         }
         
-        public modificarCreadorRequest(FrontEnd.CreadorWS.creadoresDTO creador) {
-            this.creador = creador;
+        public eliminarCreadorRequest(int idCreador) {
+            this.idCreador = idCreador;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCreadorResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarCreadorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCreadorResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarCreadorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarCreadorResponse() {
+        public eliminarCreadorResponse() {
         }
         
-        public modificarCreadorResponse(int @return) {
+        public eliminarCreadorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreadores", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarCreadoresRequest {
+        
+        public listarCreadoresRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCreadoresResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarCreadoresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.CreadorWS.creadoresDTO[] @return;
+        
+        public listarCreadoresResponse() {
+        }
+        
+        public listarCreadoresResponse(FrontEnd.CreadorWS.creadoresDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -464,6 +464,52 @@ namespace FrontEnd.CreadorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.CreadorWS.modificarCreadorResponse FrontEnd.CreadorWS.CreadorWS.modificarCreador(FrontEnd.CreadorWS.modificarCreadorRequest request) {
+            return base.Channel.modificarCreador(request);
+        }
+        
+        public int modificarCreador(FrontEnd.CreadorWS.creadoresDTO creador) {
+            FrontEnd.CreadorWS.modificarCreadorRequest inValue = new FrontEnd.CreadorWS.modificarCreadorRequest();
+            inValue.creador = creador;
+            FrontEnd.CreadorWS.modificarCreadorResponse retVal = ((FrontEnd.CreadorWS.CreadorWS)(this)).modificarCreador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.CreadorWS.modificarCreadorResponse> FrontEnd.CreadorWS.CreadorWS.modificarCreadorAsync(FrontEnd.CreadorWS.modificarCreadorRequest request) {
+            return base.Channel.modificarCreadorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.CreadorWS.modificarCreadorResponse> modificarCreadorAsync(FrontEnd.CreadorWS.creadoresDTO creador) {
+            FrontEnd.CreadorWS.modificarCreadorRequest inValue = new FrontEnd.CreadorWS.modificarCreadorRequest();
+            inValue.creador = creador;
+            return ((FrontEnd.CreadorWS.CreadorWS)(this)).modificarCreadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.CreadorWS.insertarCreadorResponse FrontEnd.CreadorWS.CreadorWS.insertarCreador(FrontEnd.CreadorWS.insertarCreadorRequest request) {
+            return base.Channel.insertarCreador(request);
+        }
+        
+        public int insertarCreador(FrontEnd.CreadorWS.creadoresDTO creador) {
+            FrontEnd.CreadorWS.insertarCreadorRequest inValue = new FrontEnd.CreadorWS.insertarCreadorRequest();
+            inValue.creador = creador;
+            FrontEnd.CreadorWS.insertarCreadorResponse retVal = ((FrontEnd.CreadorWS.CreadorWS)(this)).insertarCreador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.CreadorWS.insertarCreadorResponse> FrontEnd.CreadorWS.CreadorWS.insertarCreadorAsync(FrontEnd.CreadorWS.insertarCreadorRequest request) {
+            return base.Channel.insertarCreadorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.CreadorWS.insertarCreadorResponse> insertarCreadorAsync(FrontEnd.CreadorWS.creadoresDTO creador) {
+            FrontEnd.CreadorWS.insertarCreadorRequest inValue = new FrontEnd.CreadorWS.insertarCreadorRequest();
+            inValue.creador = creador;
+            return ((FrontEnd.CreadorWS.CreadorWS)(this)).insertarCreadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontEnd.CreadorWS.eliminarCreadorResponse FrontEnd.CreadorWS.CreadorWS.eliminarCreador(FrontEnd.CreadorWS.eliminarCreadorRequest request) {
             return base.Channel.eliminarCreador(request);
         }
@@ -505,52 +551,6 @@ namespace FrontEnd.CreadorWS {
         public System.Threading.Tasks.Task<FrontEnd.CreadorWS.listarCreadoresResponse> listarCreadoresAsync() {
             FrontEnd.CreadorWS.listarCreadoresRequest inValue = new FrontEnd.CreadorWS.listarCreadoresRequest();
             return ((FrontEnd.CreadorWS.CreadorWS)(this)).listarCreadoresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.CreadorWS.insertarCreadorResponse FrontEnd.CreadorWS.CreadorWS.insertarCreador(FrontEnd.CreadorWS.insertarCreadorRequest request) {
-            return base.Channel.insertarCreador(request);
-        }
-        
-        public int insertarCreador(FrontEnd.CreadorWS.creadoresDTO creador) {
-            FrontEnd.CreadorWS.insertarCreadorRequest inValue = new FrontEnd.CreadorWS.insertarCreadorRequest();
-            inValue.creador = creador;
-            FrontEnd.CreadorWS.insertarCreadorResponse retVal = ((FrontEnd.CreadorWS.CreadorWS)(this)).insertarCreador(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.CreadorWS.insertarCreadorResponse> FrontEnd.CreadorWS.CreadorWS.insertarCreadorAsync(FrontEnd.CreadorWS.insertarCreadorRequest request) {
-            return base.Channel.insertarCreadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.CreadorWS.insertarCreadorResponse> insertarCreadorAsync(FrontEnd.CreadorWS.creadoresDTO creador) {
-            FrontEnd.CreadorWS.insertarCreadorRequest inValue = new FrontEnd.CreadorWS.insertarCreadorRequest();
-            inValue.creador = creador;
-            return ((FrontEnd.CreadorWS.CreadorWS)(this)).insertarCreadorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.CreadorWS.modificarCreadorResponse FrontEnd.CreadorWS.CreadorWS.modificarCreador(FrontEnd.CreadorWS.modificarCreadorRequest request) {
-            return base.Channel.modificarCreador(request);
-        }
-        
-        public int modificarCreador(FrontEnd.CreadorWS.creadoresDTO creador) {
-            FrontEnd.CreadorWS.modificarCreadorRequest inValue = new FrontEnd.CreadorWS.modificarCreadorRequest();
-            inValue.creador = creador;
-            FrontEnd.CreadorWS.modificarCreadorResponse retVal = ((FrontEnd.CreadorWS.CreadorWS)(this)).modificarCreador(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.CreadorWS.modificarCreadorResponse> FrontEnd.CreadorWS.CreadorWS.modificarCreadorAsync(FrontEnd.CreadorWS.modificarCreadorRequest request) {
-            return base.Channel.modificarCreadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.CreadorWS.modificarCreadorResponse> modificarCreadorAsync(FrontEnd.CreadorWS.creadoresDTO creador) {
-            FrontEnd.CreadorWS.modificarCreadorRequest inValue = new FrontEnd.CreadorWS.modificarCreadorRequest();
-            inValue.creador = creador;
-            return ((FrontEnd.CreadorWS.CreadorWS)(this)).modificarCreadorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
