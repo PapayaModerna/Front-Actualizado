@@ -1,0 +1,60 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-guardar {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.col-12.d-flex.justify-content-end {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido al final del contenedor */
+    padding-right: 20px; /* Añade un pequeño espacio a la derecha */
+    margin-top: 20px; /* Espacio adicional arriba */
+}
+
+    .btn-guardar:hover {
+        background-color: #333333; 
+        transform: scale(1.05); 
+    }
+
+.btn-logout {
+    font-size: 1rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .btn-logout:hover {
+        background-color: #c82333; 
+        transform: scale(1.05); 
+    }
+
+.initial-label {
+    font-size: 3em;
+}
+.profile-name {
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    margin-left: 10px;
+    color: #333; 
+}
+h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 20px; 
+}
+
+    h4 strong {
+        font-size: 2rem;
+        font-weight: 900; 
+    }

@@ -120,10 +120,12 @@
     <div class="container-fluid d-flex p-0 h-100">
         <div id="sideBarMster" class="d-flex flex-column flex-shrink-0 p-3 text-white offcanvas-md offcanvas-start">
             <div class="text-center perfil-usuario">    
-                <a href="UsuarioAdmin.aspx" class="avatar-circle avatar-master mx-auto mb-2">
+                <a href="DetallesAdmin.aspx?id=<%= ((FrontEnd.PersonaWS.personasDTO)Session["usuario"]).idPersona %>" class="avatar-circle avatar-master mx-auto mb-2">
                     <span id="lblInicial" runat="server" class="initial"></span>
                 </a>
+                <a href="DetallesAdmin.aspx?id=<%= ((FrontEnd.PersonaWS.personasDTO)Session["usuario"]).idPersona %>">
                 <div id="lblNombreMaster" runat="server" class="fw-bold"></div>
+                </a>
             </div>
             
             <ul class="mynav nav nav-pills flex-column mb-auto">

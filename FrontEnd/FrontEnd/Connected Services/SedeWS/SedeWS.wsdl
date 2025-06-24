@@ -11,17 +11,11 @@
   <message name="listarSedesActivasPorMaterialResponse">
     <part name="parameters" element="tns:listarSedesActivasPorMaterialResponse" />
   </message>
-  <message name="obtenerSede">
-    <part name="parameters" element="tns:obtenerSede" />
+  <message name="listarSedesActivas">
+    <part name="parameters" element="tns:listarSedesActivas" />
   </message>
-  <message name="obtenerSedeResponse">
-    <part name="parameters" element="tns:obtenerSedeResponse" />
-  </message>
-  <message name="eliminarSede">
-    <part name="parameters" element="tns:eliminarSede" />
-  </message>
-  <message name="eliminarSedeResponse">
-    <part name="parameters" element="tns:eliminarSedeResponse" />
+  <message name="listarSedesActivasResponse">
+    <part name="parameters" element="tns:listarSedesActivasResponse" />
   </message>
   <message name="insertarSede">
     <part name="parameters" element="tns:insertarSede" />
@@ -29,17 +23,11 @@
   <message name="insertarSedeResponse">
     <part name="parameters" element="tns:insertarSedeResponse" />
   </message>
-  <message name="listarSedesActivas">
-    <part name="parameters" element="tns:listarSedesActivas" />
+  <message name="obtenerSede">
+    <part name="parameters" element="tns:obtenerSede" />
   </message>
-  <message name="listarSedesActivasResponse">
-    <part name="parameters" element="tns:listarSedesActivasResponse" />
-  </message>
-  <message name="listarSedes">
-    <part name="parameters" element="tns:listarSedes" />
-  </message>
-  <message name="listarSedesResponse">
-    <part name="parameters" element="tns:listarSedesResponse" />
+  <message name="obtenerSedeResponse">
+    <part name="parameters" element="tns:obtenerSedeResponse" />
   </message>
   <message name="modificarSede">
     <part name="parameters" element="tns:modificarSede" />
@@ -47,34 +35,46 @@
   <message name="modificarSedeResponse">
     <part name="parameters" element="tns:modificarSedeResponse" />
   </message>
+  <message name="listarSedes">
+    <part name="parameters" element="tns:listarSedes" />
+  </message>
+  <message name="listarSedesResponse">
+    <part name="parameters" element="tns:listarSedesResponse" />
+  </message>
+  <message name="eliminarSede">
+    <part name="parameters" element="tns:eliminarSede" />
+  </message>
+  <message name="eliminarSedeResponse">
+    <part name="parameters" element="tns:eliminarSedeResponse" />
+  </message>
   <portType name="SedeWS">
     <operation name="listarSedesActivasPorMaterial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasPorMaterialRequest" message="tns:listarSedesActivasPorMaterial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasPorMaterialResponse" message="tns:listarSedesActivasPorMaterialResponse" />
     </operation>
-    <operation name="obtenerSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest" message="tns:obtenerSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse" message="tns:obtenerSedeResponse" />
-    </operation>
-    <operation name="eliminarSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeRequest" message="tns:eliminarSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeResponse" message="tns:eliminarSedeResponse" />
+    <operation name="listarSedesActivas">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasRequest" message="tns:listarSedesActivas" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasResponse" message="tns:listarSedesActivasResponse" />
     </operation>
     <operation name="insertarSede">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeRequest" message="tns:insertarSede" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeResponse" message="tns:insertarSedeResponse" />
     </operation>
-    <operation name="listarSedesActivas">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasRequest" message="tns:listarSedesActivas" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesActivasResponse" message="tns:listarSedesActivasResponse" />
+    <operation name="obtenerSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest" message="tns:obtenerSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse" message="tns:obtenerSedeResponse" />
+    </operation>
+    <operation name="modificarSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeRequest" message="tns:modificarSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeResponse" message="tns:modificarSedeResponse" />
     </operation>
     <operation name="listarSedes">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesRequest" message="tns:listarSedes" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/listarSedesResponse" message="tns:listarSedesResponse" />
     </operation>
-    <operation name="modificarSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeRequest" message="tns:modificarSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeResponse" message="tns:modificarSedeResponse" />
+    <operation name="eliminarSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeRequest" message="tns:eliminarSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeResponse" message="tns:eliminarSedeResponse" />
     </operation>
   </portType>
   <binding name="SedeWSPortBinding" type="tns:SedeWS">
@@ -88,16 +88,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerSede">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarSede">
+    <operation name="listarSedesActivas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,7 +106,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarSedesActivas">
+    <operation name="obtenerSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarSede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -133,7 +133,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarSede">
+    <operation name="eliminarSede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
