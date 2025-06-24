@@ -96,12 +96,7 @@
     <None Include="Connected Services\EditorialWS\EditorialWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CreadorWS\configuration91.svcinfo" />
-    <None Include="Connected Services\CreadorWS\configuration.svcinfo" />
-    <None Include="Connected Services\CreadorWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <Content Include="Carrito.aspx" />
     <Content Include="Connected Services\EditorialWS\FrontEnd.EditorialWS.editorialesDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -417,9 +412,6 @@
     <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.listarPrestamosPorEstadoYSedePaginadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.prestamosDeEjemplaresDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\PrestamoWS\PrestamoWS.wsdl" />
     <None Include="Connected Services\PrestamoWS\PrestamoWS.xsd">
       <SubType>Designer</SubType>
@@ -477,11 +469,13 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\DetalleLibros.css" />
+    <Content Include="Content\DetallesPersona.css" />
     <Content Include="Content\EditarMaterial.css" />
     <Content Include="Content\IndexAdmin.css" />
     <Content Include="Content\InsertarMaterial.css" />
     <Content Include="Content\PrestamosAdmin.css" />
     <Content Include="DetalleLibrosAdmin.aspx" />
+    <Content Include="DetallesAdmin.aspx" />
     <Content Include="EditarMaterial.aspx" />
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
@@ -517,10 +511,12 @@
     <Compile Include="AdminBiblio.Master.designer.cs">
       <DependentUpon>AdminBiblio.Master</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\CreadorWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\EditorialWS\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -558,6 +554,13 @@
     </Compile>
     <Compile Include="DetalleLibrosAdmin.aspx.designer.cs">
       <DependentUpon>DetalleLibrosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesAdmin.aspx.cs">
+      <DependentUpon>DetallesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallesAdmin.aspx.designer.cs">
+      <DependentUpon>DetallesAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditarMaterial.aspx.cs">
       <DependentUpon>EditarMaterial.aspx</DependentUpon>
