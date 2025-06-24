@@ -35,24 +35,6 @@
       <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarSedesActivasPorMaterial">
-    <xs:sequence>
-      <xs:element name="idMaterial" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarSedesActivasPorMaterialResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sedesDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarSedesActivas">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarSedesActivasResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sedesDTO" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarSede">
     <xs:sequence>
       <xs:element minOccurs="0" name="idSede" type="xs:int" />
@@ -67,6 +49,24 @@
   <xs:complexType name="modificarSedeResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSedesActivas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarSedesActivasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sedesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSedesActivasPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSedesActivasPorMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sedesDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarSede">

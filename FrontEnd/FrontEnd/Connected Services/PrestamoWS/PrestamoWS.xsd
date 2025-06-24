@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BusinessException" type="tns:BusinessException" />
   <xs:element name="contarPrestamosActivos" type="tns:contarPrestamosActivos" />
   <xs:element name="contarPrestamosActivosResponse" type="tns:contarPrestamosActivosResponse" />
   <xs:element name="contarPrestamosAtrasados" type="tns:contarPrestamosAtrasados" />
@@ -12,6 +13,8 @@
   <xs:element name="contarTotalPrestamosPorEstadoYSede" type="tns:contarTotalPrestamosPorEstadoYSede" />
   <xs:element name="contarTotalPrestamosPorEstadoYSedeResponse" type="tns:contarTotalPrestamosPorEstadoYSedeResponse" />
   <xs:element name="contarTotalPrestamosResponse" type="tns:contarTotalPrestamosResponse" />
+  <xs:element name="devolverPrestamo" type="tns:devolverPrestamo" />
+  <xs:element name="devolverPrestamoResponse" type="tns:devolverPrestamoResponse" />
   <xs:element name="eliminarPrestamo" type="tns:eliminarPrestamo" />
   <xs:element name="eliminarPrestamoResponse" type="tns:eliminarPrestamoResponse" />
   <xs:element name="insertarPrestamo" type="tns:insertarPrestamo" />
@@ -54,30 +57,21 @@
   <xs:element name="obtenerEstadoPrestamoResponse" type="tns:obtenerEstadoPrestamoResponse" />
   <xs:element name="obtenerPrestamo" type="tns:obtenerPrestamo" />
   <xs:element name="obtenerPrestamoResponse" type="tns:obtenerPrestamoResponse" />
+  <xs:element name="recogerPrestamo" type="tns:recogerPrestamo" />
+  <xs:element name="recogerPrestamoResponse" type="tns:recogerPrestamoResponse" />
   <xs:element name="solicitarPrestamo" type="tns:solicitarPrestamo" />
   <xs:element name="solicitarPrestamoResponse" type="tns:solicitarPrestamoResponse" />
-  <xs:complexType name="modificarPrestamo">
+  <xs:complexType name="recogerPrestamo">
     <xs:sequence>
       <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
-      <xs:element minOccurs="0" name="fechaSolicitud" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechaPrestamo" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechaDevolucion" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarPrestamoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="recogerPrestamoResponse">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="contarPrestamosPorMaterial">
+  <xs:complexType name="BusinessException">
     <xs:sequence>
-      <xs:element name="idMaterial" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="contarPrestamosPorMaterialResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPrestamosAtrasadosPorPersona">
@@ -137,6 +131,30 @@
       <xs:element minOccurs="0" name="idSede" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPrestamosPorMaterial">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarPrestamosPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaSolicitud" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPrestamo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaDevolucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="contarTotalPrestamosPorEstado">
@@ -316,6 +334,15 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDTO" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="devolverPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="idEjemplaresDevueltos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="devolverPrestamoResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarPrestamosPorEstadoYSedePaginado">
     <xs:sequence>

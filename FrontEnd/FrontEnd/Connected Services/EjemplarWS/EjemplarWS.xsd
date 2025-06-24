@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BusinessException" type="tns:BusinessException" />
   <xs:element name="contarDisponiblesPorMaterial" type="tns:contarDisponiblesPorMaterial" />
   <xs:element name="contarDisponiblesPorMaterialResponse" type="tns:contarDisponiblesPorMaterialResponse" />
   <xs:element name="contarDisponiblesPorSede" type="tns:contarDisponiblesPorSede" />
   <xs:element name="contarDisponiblesPorSedeResponse" type="tns:contarDisponiblesPorSedeResponse" />
+  <xs:element name="contarEjemplaresDisponiblesPorMaterialYSede" type="tns:contarEjemplaresDisponiblesPorMaterialYSede" />
+  <xs:element name="contarEjemplaresDisponiblesPorMaterialYSedeResponse" type="tns:contarEjemplaresDisponiblesPorMaterialYSedeResponse" />
   <xs:element name="contarEjemplaresFisicosDisponiblesPorMaterialYSede" type="tns:contarEjemplaresFisicosDisponiblesPorMaterialYSede" />
   <xs:element name="contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse" type="tns:contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse" />
+  <xs:element name="contarEjemplaresNoDisponiblesPorMaterialYSede" type="tns:contarEjemplaresNoDisponiblesPorMaterialYSede" />
+  <xs:element name="contarEjemplaresNoDisponiblesPorMaterialYSedeResponse" type="tns:contarEjemplaresNoDisponiblesPorMaterialYSedeResponse" />
   <xs:element name="contarFisicosDisponiblesPorMaterial" type="tns:contarFisicosDisponiblesPorMaterial" />
   <xs:element name="contarFisicosDisponiblesPorMaterialResponse" type="tns:contarFisicosDisponiblesPorMaterialResponse" />
   <xs:element name="contarTotalPorMaterial" type="tns:contarTotalPorMaterial" />
@@ -90,16 +95,6 @@
       <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarDisponiblesPorMaterial">
-    <xs:sequence>
-      <xs:element name="idMaterial" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="contarDisponiblesPorMaterialResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="obtenerEjemplar">
     <xs:sequence>
       <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
@@ -110,12 +105,30 @@
       <xs:element minOccurs="0" name="return" type="tns:ejemplaresDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEjemplares">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarEjemplaresResponse">
+  <xs:complexType name="contarDisponiblesPorMaterial">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+      <xs:element name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarEjemplaresDisponiblesPorMaterialYSede">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarEjemplaresDisponiblesPorMaterialYSedeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BusinessException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="contarTotalPorSede">
@@ -128,6 +141,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarEjemplares">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarEjemplar">
     <xs:sequence>
       <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
@@ -138,12 +159,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarDisponiblesPorSede">
+  <xs:complexType name="contarFisicosDisponiblesPorMaterial">
     <xs:sequence>
-      <xs:element name="idSede" type="xs:int" />
+      <xs:element name="idMaterial" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarDisponiblesPorSedeResponse">
+  <xs:complexType name="contarFisicosDisponiblesPorMaterialResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -158,12 +179,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarFisicosDisponiblesPorMaterial">
+  <xs:complexType name="contarDisponiblesPorSede">
     <xs:sequence>
-      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element name="idSede" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarFisicosDisponiblesPorMaterialResponse">
+  <xs:complexType name="contarDisponiblesPorSedeResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -192,6 +213,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarEjemplaresNoDisponiblesPorMaterialYSede">
+    <xs:sequence>
+      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarEjemplaresNoDisponiblesPorMaterialYSedeResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

@@ -2,6 +2,48 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="<%= ResolveUrl("~/Content/PrestamosAdmin.css") %>" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .botones-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .btn-recojo {
+            background-color: #388E3C;  /* Verde */
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 48%; 
+            text-align: center;
+        }
+
+        .btn-recojo:hover {
+            background-color: #2c6f2f; 
+        }
+
+        .btn-devolucion {
+            background-color: #D32F2F; 
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 48%; 
+            text-align: center;
+        }
+
+        .btn-devolucion:hover {
+            background-color: #c12d2d; 
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">
@@ -11,7 +53,10 @@
             <h1 id="bienvenida"></h1>
         </div>
     </div>
-
+    <div class="botones-container">
+        <asp:Button ID="btnRecojoPrestamo" runat="server" Text="Recojo Préstamo" CssClass="btn-recojo" OnClientClick="window.location.href='RecojoPrestamo.aspx'; return false;" />
+        <asp:Button ID="btnDevolucionPrestamo" runat="server" Text="Devolución Préstamo" CssClass="btn-devolucion" OnClientClick="window.location.href='DevolucionPrestamo.aspx'; return false;" />
+    </div>
     <!--  SOLO PRÉSTAMOS TOTALES -->
     <div class="tabla-libros-container" style="position: relative;">
         <h2 class="lbl-seccion">PRÉSTAMOS TOTALES</h2>
