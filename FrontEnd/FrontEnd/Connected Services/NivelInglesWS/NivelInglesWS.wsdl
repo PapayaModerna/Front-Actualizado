@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="NivelInglesWS" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/NivelInglesWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarNivel">
+    <part name="parameters" element="tns:insertarNivel" />
+  </message>
+  <message name="insertarNivelResponse">
+    <part name="parameters" element="tns:insertarNivelResponse" />
+  </message>
+  <message name="eliminarNivel">
+    <part name="parameters" element="tns:eliminarNivel" />
+  </message>
+  <message name="eliminarNivelResponse">
+    <part name="parameters" element="tns:eliminarNivelResponse" />
+  </message>
+  <message name="modificarNivel">
+    <part name="parameters" element="tns:modificarNivel" />
+  </message>
+  <message name="modificarNivelResponse">
+    <part name="parameters" element="tns:modificarNivelResponse" />
+  </message>
+  <message name="listarNiveles">
+    <part name="parameters" element="tns:listarNiveles" />
+  </message>
+  <message name="listarNivelesResponse">
+    <part name="parameters" element="tns:listarNivelesResponse" />
+  </message>
+  <message name="obtenerNivelPorId">
+    <part name="parameters" element="tns:obtenerNivelPorId" />
+  </message>
+  <message name="obtenerNivelPorIdResponse">
+    <part name="parameters" element="tns:obtenerNivelPorIdResponse" />
+  </message>
+  <portType name="NivelInglesWS">
+    <operation name="insertarNivel">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/insertarNivelRequest" message="tns:insertarNivel" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/insertarNivelResponse" message="tns:insertarNivelResponse" />
+    </operation>
+    <operation name="eliminarNivel">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelRequest" message="tns:eliminarNivel" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelResponse" message="tns:eliminarNivelResponse" />
+    </operation>
+    <operation name="modificarNivel">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelRequest" message="tns:modificarNivel" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelResponse" message="tns:modificarNivelResponse" />
+    </operation>
+    <operation name="listarNiveles">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesRequest" message="tns:listarNiveles" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesResponse" message="tns:listarNivelesResponse" />
+    </operation>
+    <operation name="obtenerNivelPorId">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/obtenerNivelPorIdRequest" message="tns:obtenerNivelPorId" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/obtenerNivelPorIdResponse" message="tns:obtenerNivelPorIdResponse" />
+    </operation>
+  </portType>
+  <binding name="NivelInglesWSPortBinding" type="tns:NivelInglesWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarNiveles">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerNivelPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NivelInglesWS">
+    <port name="NivelInglesWSPort" binding="tns:NivelInglesWSPortBinding">
+      <soap:address location="http://localhost:8080/myholywrapper-v2.1/NivelInglesWS" />
+    </port>
+  </service>
+</definitions>
