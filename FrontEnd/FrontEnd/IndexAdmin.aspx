@@ -28,6 +28,13 @@
         </div>
     </div>   
 
+    <div class="seccion-cabecera-materiales">
+        <h2 class="titulo-materiales">📚 Materiales</h2>
+        <a href="InsertarMaterial.aspx" class="btn btn-dark btn-agregar">+ Agregar material</a>
+    </div>
+
+
+
     <asp:UpdatePanel ID="UpdatePanelLibros" runat="server">
         <ContentTemplate>
             <div class="buscador-container">
