@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminBiblio.Master" AutoEventWireup="true" CodeBehind="RecojoPrestamo.aspx.cs" Inherits="FrontEnd.RecojoPrestamo" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminBiblio.Master" AutoEventWireup="true" CodeBehind="DevolucionPrestamo.aspx.cs" Inherits="FrontEnd.DevolucionPrestamo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         body {
@@ -76,7 +75,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">
-    <h4 style="font-weight: bold; font-size: 36px; color: #6c757d; margin-bottom: 30px;">Formulario de Recojo de Préstamo</h4>
+    <h4 style="font-weight: bold; font-size: 36px; color: #6c757d; margin-bottom: 30px;">Formulario de Devolución de Préstamo</h4>
 
     <div class="form-row" style="margin-bottom: 20px;">
         <label><strong>CÓDIGO:</strong></label>
@@ -88,7 +87,7 @@
         
         <div id="loaderContainer" class="loader-container">
             <div class="spinner"></div>
-            <span>Buscando usuario...</span>
+            <span>Buscando prestamo...</span>
         </div>
     </div>
 
@@ -97,14 +96,27 @@
         <asp:TextBox ID="txtNombres" runat="server" CssClass="form-control" />
     </div>
 
+    <!-- Fecha Solicitud -->
     <div class="form-row" style="margin-bottom: 20px;">
         <label><strong>FECHA SOLICITUD:</strong></label>
-        <asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" />
+        <asp:TextBox ID="txtFechaSolicitud" runat="server" CssClass="form-control" />
+    </div>
+
+    <!-- Fecha Devolución -->
+    <div class="form-row" style="margin-bottom: 20px;">
+        <label><strong>FECHA DEVOLUCIÓN:</strong></label>
+        <asp:TextBox ID="txtFechaDevolucion" runat="server" CssClass="form-control" />
+    </div>
+
+    <!-- Fecha Real Devolución -->
+    <div class="form-row" style="margin-bottom: 20px;">
+        <label><strong>FECHA REAL DEVOLUCIÓN:</strong></label>
+        <asp:TextBox ID="txtFechaRealDevolucion" runat="server" CssClass="form-control" />
     </div>
 
     <div class="form-row" style="margin-bottom: 20px;">
-        <label><strong>EJEMPLAR(ES):</strong></label>
-        <asp:TextBox ID="txtEjemplares" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" />
+        <label><strong>Ejemplares:</strong></label>
+        <asp:PlaceHolder ID="phEjemplares" runat="server"></asp:PlaceHolder>
     </div>
     
     <div class="button-container">

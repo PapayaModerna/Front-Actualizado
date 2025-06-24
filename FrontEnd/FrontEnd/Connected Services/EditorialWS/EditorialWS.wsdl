@@ -11,12 +11,6 @@
   <message name="listarEditorialesResponse">
     <part name="parameters" element="tns:listarEditorialesResponse" />
   </message>
-  <message name="obtenerEditorial">
-    <part name="parameters" element="tns:obtenerEditorial" />
-  </message>
-  <message name="obtenerEditorialResponse">
-    <part name="parameters" element="tns:obtenerEditorialResponse" />
-  </message>
   <message name="insertarEditorial">
     <part name="parameters" element="tns:insertarEditorial" />
   </message>
@@ -35,14 +29,16 @@
   <message name="eliminarEditorialResponse">
     <part name="parameters" element="tns:eliminarEditorialResponse" />
   </message>
+  <message name="obtenerEditorial">
+    <part name="parameters" element="tns:obtenerEditorial" />
+  </message>
+  <message name="obtenerEditorialResponse">
+    <part name="parameters" element="tns:obtenerEditorialResponse" />
+  </message>
   <portType name="EditorialWS">
     <operation name="listarEditoriales">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesRequest" message="tns:listarEditoriales" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesResponse" message="tns:listarEditorialesResponse" />
-    </operation>
-    <operation name="obtenerEditorial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest" message="tns:obtenerEditorial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse" message="tns:obtenerEditorialResponse" />
     </operation>
     <operation name="insertarEditorial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialRequest" message="tns:insertarEditorial" />
@@ -56,19 +52,14 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest" message="tns:eliminarEditorial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse" message="tns:eliminarEditorialResponse" />
     </operation>
+    <operation name="obtenerEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest" message="tns:obtenerEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse" message="tns:obtenerEditorialResponse" />
+    </operation>
   </portType>
   <binding name="EditorialWSPortBinding" type="tns:EditorialWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="listarEditoriales">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerEditorial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -96,6 +87,15 @@
       </output>
     </operation>
     <operation name="eliminarEditorial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerEditorial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

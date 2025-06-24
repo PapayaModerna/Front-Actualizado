@@ -173,6 +173,12 @@
     <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.obtenerPrimerEjemplarDisponiblePorMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarEjemplaresDisponiblesPorMaterialYSedeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarEjemplaresNoDisponiblesPorMaterialYSedeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\EjemplarWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -488,6 +494,15 @@
     <None Include="Connected Services\PrestamoEjemplarWS\PrestamoEjemplarWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.devolverPrestamoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.prestamosDeEjemplaresDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PrestamoWS\FrontEnd.PrestamoWS.recogerPrestamoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\PrestamoWS\PrestamoWS.wsdl" />
     <None Include="Connected Services\PrestamoWS\PrestamoWS.xsd">
       <SubType>Designer</SubType>
@@ -552,6 +567,7 @@
     <Content Include="Content\PrestamosAdmin.css" />
     <Content Include="DetalleLibrosAdmin.aspx" />
     <Content Include="DetallesAdmin.aspx" />
+    <Content Include="DevolucionPrestamo.aspx" />
     <Content Include="EditarMaterial.aspx" />
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
@@ -559,6 +575,7 @@
     <Content Include="InsertarMaterial.aspx" />
     <Content Include="Loader.aspx" />
     <Content Include="LoginBiblio.aspx" />
+    <Content Include="LogoutUser.aspx" />
     <Content Include="ModificarUsuarioAdmin.aspx" />
     <Content Include="PrestamosPrincipalAdmin.aspx" />
     <Content Include="RecursosUser.aspx" />
@@ -648,47 +665,54 @@
     <Compile Include="Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx.cs</DependentUpon>
     </Compile>
+    <Compile Include="DevolucionPrestamo.aspx.cs">
+      <DependentUpon>DevolucionPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DevolucionPrestamo.aspx.designer.cs">
+      <DependentUpon>DevolucionPrestamo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HistorialPrestamosUser.aspx.cs">
       <DependentUpon>HistorialPrestamosUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="HistorialPrestamosUser.aspx.designer.cs">
-      <DependentUpon>HistorialPrestamosUser.aspx</DependentUpon>
+      <DependentUpon>HistorialPrestamosUser.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="LogoutUser.aspx.cs">
       <DependentUpon>LogoutUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LogoutUser.aspx.designer.cs">
-      <DependentUpon>LogoutUser.aspx</DependentUpon>
+      <DependentUpon>LogoutUser.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="PerfilUser.aspx.cs">
       <DependentUpon>PerfilUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PerfilUser.aspx.designer.cs">
-      <DependentUpon>PerfilUser.aspx</DependentUpon>
+      <DependentUpon>PerfilUser.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="PrestamosUser.aspx.cs">
       <DependentUpon>PrestamosUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PrestamosUser.aspx.designer.cs">
-      <DependentUpon>PrestamosUser.aspx</DependentUpon>
+      <DependentUpon>PrestamosUser.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="RecojoPrestamo.aspx.cs">
       <DependentUpon>RecojoPrestamo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="RecojoPrestamo.aspx.designer.cs">
-      <DependentUpon>RecojoPrestamo.aspx</DependentUpon>
+      <DependentUpon>RecojoPrestamo.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="UserPerfilVista.Master.cs">
       <DependentUpon>UserPerfilVista.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPerfilVista.Master.designer.cs">
-      <DependentUpon>UserPerfilVista.Master</DependentUpon>
+      <DependentUpon>UserPerfilVista.Master.cs</DependentUpon>
     </Compile>
     <Compile Include="DetallesAdmin.aspx.cs">
       <DependentUpon>DetallesAdmin.aspx</DependentUpon>

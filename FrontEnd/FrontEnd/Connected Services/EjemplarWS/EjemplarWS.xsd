@@ -95,16 +95,6 @@
       <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerEjemplar">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerEjemplarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:ejemplaresDTO" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="contarDisponiblesPorMaterial">
     <xs:sequence>
       <xs:element name="idMaterial" type="xs:int" />
@@ -113,6 +103,16 @@
   <xs:complexType name="contarDisponiblesPorMaterialResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEjemplar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEjemplarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ejemplaresDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="contarEjemplaresDisponiblesPorMaterialYSede">
@@ -129,16 +129,6 @@
   <xs:complexType name="BusinessException">
     <xs:sequence>
       <xs:element minOccurs="0" name="message" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="contarTotalPorSede">
-    <xs:sequence>
-      <xs:element name="idSede" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="contarTotalPorSedeResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarEjemplares">
@@ -159,12 +149,22 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarFisicosDisponiblesPorMaterial">
+  <xs:complexType name="contarTotalPorSede">
     <xs:sequence>
-      <xs:element name="idMaterial" type="xs:int" />
+      <xs:element name="idSede" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarFisicosDisponiblesPorMaterialResponse">
+  <xs:complexType name="contarTotalPorSedeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorSede">
+    <xs:sequence>
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorSedeResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -179,12 +179,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarDisponiblesPorSede">
+  <xs:complexType name="contarFisicosDisponiblesPorMaterial">
     <xs:sequence>
-      <xs:element name="idSede" type="xs:int" />
+      <xs:element name="idMaterial" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarDisponiblesPorSedeResponse">
+  <xs:complexType name="contarFisicosDisponiblesPorMaterialResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

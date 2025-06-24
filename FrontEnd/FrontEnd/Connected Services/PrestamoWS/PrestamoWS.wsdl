@@ -5,29 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/PrestamoWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="listarEjemplaresSolicitadosPorPersona">
-    <part name="parameters" element="tns:listarEjemplaresSolicitadosPorPersona" />
+  <message name="listarPrestamosPorEstadoPaginado">
+    <part name="parameters" element="tns:listarPrestamosPorEstadoPaginado" />
   </message>
-  <message name="listarEjemplaresSolicitadosPorPersonaResponse">
-    <part name="parameters" element="tns:listarEjemplaresSolicitadosPorPersonaResponse" />
+  <message name="listarPrestamosPorEstadoPaginadoResponse">
+    <part name="parameters" element="tns:listarPrestamosPorEstadoPaginadoResponse" />
   </message>
-  <message name="listarEjemplaresPrestadosPorPersona">
-    <part name="parameters" element="tns:listarEjemplaresPrestadosPorPersona" />
+  <message name="contarTotalPrestamosPorEstado">
+    <part name="parameters" element="tns:contarTotalPrestamosPorEstado" />
   </message>
-  <message name="listarEjemplaresPrestadosPorPersonaResponse">
-    <part name="parameters" element="tns:listarEjemplaresPrestadosPorPersonaResponse" />
+  <message name="contarTotalPrestamosPorEstadoResponse">
+    <part name="parameters" element="tns:contarTotalPrestamosPorEstadoResponse" />
   </message>
-  <message name="listarPrestamosDevueltosPorPersona">
-    <part name="parameters" element="tns:listarPrestamosDevueltosPorPersona" />
+  <message name="contarTotalPrestamosPorEstadoYSede">
+    <part name="parameters" element="tns:contarTotalPrestamosPorEstadoYSede" />
   </message>
-  <message name="listarPrestamosDevueltosPorPersonaResponse">
-    <part name="parameters" element="tns:listarPrestamosDevueltosPorPersonaResponse" />
-  </message>
-  <message name="listarPrestamosAtrasadosPorPersona">
-    <part name="parameters" element="tns:listarPrestamosAtrasadosPorPersona" />
-  </message>
-  <message name="listarPrestamosAtrasadosPorPersonaResponse">
-    <part name="parameters" element="tns:listarPrestamosAtrasadosPorPersonaResponse" />
+  <message name="contarTotalPrestamosPorEstadoYSedeResponse">
+    <part name="parameters" element="tns:contarTotalPrestamosPorEstadoYSedeResponse" />
   </message>
   <message name="listarPrestamosAtrasados">
     <part name="parameters" element="tns:listarPrestamosAtrasados" />
@@ -35,17 +29,11 @@
   <message name="listarPrestamosAtrasadosResponse">
     <part name="parameters" element="tns:listarPrestamosAtrasadosResponse" />
   </message>
-  <message name="contarPrestamosActivos">
-    <part name="parameters" element="tns:contarPrestamosActivos" />
+  <message name="listarPrestamosPorPersona">
+    <part name="parameters" element="tns:listarPrestamosPorPersona" />
   </message>
-  <message name="contarPrestamosActivosResponse">
-    <part name="parameters" element="tns:contarPrestamosActivosResponse" />
-  </message>
-  <message name="contarPrestamosAtrasados">
-    <part name="parameters" element="tns:contarPrestamosAtrasados" />
-  </message>
-  <message name="contarPrestamosAtrasadosResponse">
-    <part name="parameters" element="tns:contarPrestamosAtrasadosResponse" />
+  <message name="listarPrestamosPorPersonaResponse">
+    <part name="parameters" element="tns:listarPrestamosPorPersonaResponse" />
   </message>
   <message name="listarPrestamosDevueltos">
     <part name="parameters" element="tns:listarPrestamosDevueltos" />
@@ -53,41 +41,29 @@
   <message name="listarPrestamosDevueltosResponse">
     <part name="parameters" element="tns:listarPrestamosDevueltosResponse" />
   </message>
+  <message name="contarPrestamosActivos">
+    <part name="parameters" element="tns:contarPrestamosActivos" />
+  </message>
+  <message name="contarPrestamosActivosResponse">
+    <part name="parameters" element="tns:contarPrestamosActivosResponse" />
+  </message>
   <message name="listarPrestamosSolicitados">
     <part name="parameters" element="tns:listarPrestamosSolicitados" />
   </message>
   <message name="listarPrestamosSolicitadosResponse">
     <part name="parameters" element="tns:listarPrestamosSolicitadosResponse" />
   </message>
-  <message name="listarPrestamosPorPersona">
-    <part name="parameters" element="tns:listarPrestamosPorPersona" />
+  <message name="contarPrestamosAtrasados">
+    <part name="parameters" element="tns:contarPrestamosAtrasados" />
   </message>
-  <message name="listarPrestamosPorPersonaResponse">
-    <part name="parameters" element="tns:listarPrestamosPorPersonaResponse" />
+  <message name="contarPrestamosAtrasadosResponse">
+    <part name="parameters" element="tns:contarPrestamosAtrasadosResponse" />
   </message>
   <message name="contarPrestamosPorMaterial">
     <part name="parameters" element="tns:contarPrestamosPorMaterial" />
   </message>
   <message name="contarPrestamosPorMaterialResponse">
     <part name="parameters" element="tns:contarPrestamosPorMaterialResponse" />
-  </message>
-  <message name="eliminarPrestamo">
-    <part name="parameters" element="tns:eliminarPrestamo" />
-  </message>
-  <message name="eliminarPrestamoResponse">
-    <part name="parameters" element="tns:eliminarPrestamoResponse" />
-  </message>
-  <message name="obtenerPrestamo">
-    <part name="parameters" element="tns:obtenerPrestamo" />
-  </message>
-  <message name="obtenerPrestamoResponse">
-    <part name="parameters" element="tns:obtenerPrestamoResponse" />
-  </message>
-  <message name="listarPrestamos">
-    <part name="parameters" element="tns:listarPrestamos" />
-  </message>
-  <message name="listarPrestamosResponse">
-    <part name="parameters" element="tns:listarPrestamosResponse" />
   </message>
   <message name="modificarPrestamo">
     <part name="parameters" element="tns:modificarPrestamo" />
@@ -119,17 +95,29 @@
   <message name="listarPrestamosNoCulminadosResponse">
     <part name="parameters" element="tns:listarPrestamosNoCulminadosResponse" />
   </message>
-  <message name="listarPrestamosPorEstadoYSedePaginado">
-    <part name="parameters" element="tns:listarPrestamosPorEstadoYSedePaginado" />
+  <message name="listarEjemplaresPrestadosPorPersona">
+    <part name="parameters" element="tns:listarEjemplaresPrestadosPorPersona" />
   </message>
-  <message name="listarPrestamosPorEstadoYSedePaginadoResponse">
-    <part name="parameters" element="tns:listarPrestamosPorEstadoYSedePaginadoResponse" />
+  <message name="listarEjemplaresPrestadosPorPersonaResponse">
+    <part name="parameters" element="tns:listarEjemplaresPrestadosPorPersonaResponse" />
+  </message>
+  <message name="listarEjemplaresSolicitadosPorPersona">
+    <part name="parameters" element="tns:listarEjemplaresSolicitadosPorPersona" />
+  </message>
+  <message name="listarEjemplaresSolicitadosPorPersonaResponse">
+    <part name="parameters" element="tns:listarEjemplaresSolicitadosPorPersonaResponse" />
   </message>
   <message name="listarPrestamosSolicitadosPorPersona">
     <part name="parameters" element="tns:listarPrestamosSolicitadosPorPersona" />
   </message>
   <message name="listarPrestamosSolicitadosPorPersonaResponse">
     <part name="parameters" element="tns:listarPrestamosSolicitadosPorPersonaResponse" />
+  </message>
+  <message name="listarPrestamosPorEstadoYSedePaginado">
+    <part name="parameters" element="tns:listarPrestamosPorEstadoYSedePaginado" />
+  </message>
+  <message name="listarPrestamosPorEstadoYSedePaginadoResponse">
+    <part name="parameters" element="tns:listarPrestamosPorEstadoYSedePaginadoResponse" />
   </message>
   <message name="devolverPrestamo">
     <part name="parameters" element="tns:devolverPrestamo" />
@@ -145,6 +133,42 @@
   </message>
   <message name="recogerPrestamoResponse">
     <part name="parameters" element="tns:recogerPrestamoResponse" />
+  </message>
+  <message name="eliminarPrestamo">
+    <part name="parameters" element="tns:eliminarPrestamo" />
+  </message>
+  <message name="eliminarPrestamoResponse">
+    <part name="parameters" element="tns:eliminarPrestamoResponse" />
+  </message>
+  <message name="obtenerPrestamo">
+    <part name="parameters" element="tns:obtenerPrestamo" />
+  </message>
+  <message name="obtenerPrestamoResponse">
+    <part name="parameters" element="tns:obtenerPrestamoResponse" />
+  </message>
+  <message name="listarPrestamos">
+    <part name="parameters" element="tns:listarPrestamos" />
+  </message>
+  <message name="listarPrestamosResponse">
+    <part name="parameters" element="tns:listarPrestamosResponse" />
+  </message>
+  <message name="listarPrestamosDevueltosPorPersona">
+    <part name="parameters" element="tns:listarPrestamosDevueltosPorPersona" />
+  </message>
+  <message name="listarPrestamosDevueltosPorPersonaResponse">
+    <part name="parameters" element="tns:listarPrestamosDevueltosPorPersonaResponse" />
+  </message>
+  <message name="listarPrestamosAtrasadosPorPersona">
+    <part name="parameters" element="tns:listarPrestamosAtrasadosPorPersona" />
+  </message>
+  <message name="listarPrestamosAtrasadosPorPersonaResponse">
+    <part name="parameters" element="tns:listarPrestamosAtrasadosPorPersonaResponse" />
+  </message>
+  <message name="obtenerEstadoPrestamo">
+    <part name="parameters" element="tns:obtenerEstadoPrestamo" />
+  </message>
+  <message name="obtenerEstadoPrestamoResponse">
+    <part name="parameters" element="tns:obtenerEstadoPrestamoResponse" />
   </message>
   <message name="contarTotalPrestamos">
     <part name="parameters" element="tns:contarTotalPrestamos" />
@@ -164,86 +188,46 @@
   <message name="listarPrestamosPorSedePaginadoResponse">
     <part name="parameters" element="tns:listarPrestamosPorSedePaginadoResponse" />
   </message>
-  <message name="obtenerEstadoPrestamo">
-    <part name="parameters" element="tns:obtenerEstadoPrestamo" />
-  </message>
-  <message name="obtenerEstadoPrestamoResponse">
-    <part name="parameters" element="tns:obtenerEstadoPrestamoResponse" />
-  </message>
-  <message name="listarPrestamosPorEstadoPaginado">
-    <part name="parameters" element="tns:listarPrestamosPorEstadoPaginado" />
-  </message>
-  <message name="listarPrestamosPorEstadoPaginadoResponse">
-    <part name="parameters" element="tns:listarPrestamosPorEstadoPaginadoResponse" />
-  </message>
-  <message name="contarTotalPrestamosPorEstado">
-    <part name="parameters" element="tns:contarTotalPrestamosPorEstado" />
-  </message>
-  <message name="contarTotalPrestamosPorEstadoResponse">
-    <part name="parameters" element="tns:contarTotalPrestamosPorEstadoResponse" />
-  </message>
-  <message name="contarTotalPrestamosPorEstadoYSede">
-    <part name="parameters" element="tns:contarTotalPrestamosPorEstadoYSede" />
-  </message>
-  <message name="contarTotalPrestamosPorEstadoYSedeResponse">
-    <part name="parameters" element="tns:contarTotalPrestamosPorEstadoYSedeResponse" />
-  </message>
   <portType name="PrestamoWS">
-    <operation name="listarEjemplaresSolicitadosPorPersona">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarEjemplaresSolicitadosPorPersonaRequest" message="tns:listarEjemplaresSolicitadosPorPersona" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarEjemplaresSolicitadosPorPersonaResponse" message="tns:listarEjemplaresSolicitadosPorPersonaResponse" />
+    <operation name="listarPrestamosPorEstadoPaginado">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorEstadoPaginadoRequest" message="tns:listarPrestamosPorEstadoPaginado" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorEstadoPaginadoResponse" message="tns:listarPrestamosPorEstadoPaginadoResponse" />
     </operation>
-    <operation name="listarEjemplaresPrestadosPorPersona">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarEjemplaresPrestadosPorPersonaRequest" message="tns:listarEjemplaresPrestadosPorPersona" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarEjemplaresPrestadosPorPersonaResponse" message="tns:listarEjemplaresPrestadosPorPersonaResponse" />
+    <operation name="contarTotalPrestamosPorEstado">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosPorEstadoRequest" message="tns:contarTotalPrestamosPorEstado" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosPorEstadoResponse" message="tns:contarTotalPrestamosPorEstadoResponse" />
     </operation>
-    <operation name="listarPrestamosDevueltosPorPersona">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosDevueltosPorPersonaRequest" message="tns:listarPrestamosDevueltosPorPersona" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosDevueltosPorPersonaResponse" message="tns:listarPrestamosDevueltosPorPersonaResponse" />
-    </operation>
-    <operation name="listarPrestamosAtrasadosPorPersona">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosAtrasadosPorPersonaRequest" message="tns:listarPrestamosAtrasadosPorPersona" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosAtrasadosPorPersonaResponse" message="tns:listarPrestamosAtrasadosPorPersonaResponse" />
+    <operation name="contarTotalPrestamosPorEstadoYSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosPorEstadoYSedeRequest" message="tns:contarTotalPrestamosPorEstadoYSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosPorEstadoYSedeResponse" message="tns:contarTotalPrestamosPorEstadoYSedeResponse" />
     </operation>
     <operation name="listarPrestamosAtrasados">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosAtrasadosRequest" message="tns:listarPrestamosAtrasados" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosAtrasadosResponse" message="tns:listarPrestamosAtrasadosResponse" />
     </operation>
-    <operation name="contarPrestamosActivos">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosActivosRequest" message="tns:contarPrestamosActivos" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosActivosResponse" message="tns:contarPrestamosActivosResponse" />
-    </operation>
-    <operation name="contarPrestamosAtrasados">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosAtrasadosRequest" message="tns:contarPrestamosAtrasados" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosAtrasadosResponse" message="tns:contarPrestamosAtrasadosResponse" />
+    <operation name="listarPrestamosPorPersona">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorPersonaRequest" message="tns:listarPrestamosPorPersona" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorPersonaResponse" message="tns:listarPrestamosPorPersonaResponse" />
     </operation>
     <operation name="listarPrestamosDevueltos">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosDevueltosRequest" message="tns:listarPrestamosDevueltos" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosDevueltosResponse" message="tns:listarPrestamosDevueltosResponse" />
     </operation>
+    <operation name="contarPrestamosActivos">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosActivosRequest" message="tns:contarPrestamosActivos" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosActivosResponse" message="tns:contarPrestamosActivosResponse" />
+    </operation>
     <operation name="listarPrestamosSolicitados">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosSolicitadosRequest" message="tns:listarPrestamosSolicitados" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosSolicitadosResponse" message="tns:listarPrestamosSolicitadosResponse" />
     </operation>
-    <operation name="listarPrestamosPorPersona">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorPersonaRequest" message="tns:listarPrestamosPorPersona" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorPersonaResponse" message="tns:listarPrestamosPorPersonaResponse" />
+    <operation name="contarPrestamosAtrasados">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosAtrasadosRequest" message="tns:contarPrestamosAtrasados" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosAtrasadosResponse" message="tns:contarPrestamosAtrasadosResponse" />
     </operation>
     <operation name="contarPrestamosPorMaterial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosPorMaterialRequest" message="tns:contarPrestamosPorMaterial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarPrestamosPorMaterialResponse" message="tns:contarPrestamosPorMaterialResponse" />
-    </operation>
-    <operation name="eliminarPrestamo">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/eliminarPrestamoRequest" message="tns:eliminarPrestamo" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/eliminarPrestamoResponse" message="tns:eliminarPrestamoResponse" />
-    </operation>
-    <operation name="obtenerPrestamo">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/obtenerPrestamoRequest" message="tns:obtenerPrestamo" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/obtenerPrestamoResponse" message="tns:obtenerPrestamoResponse" />
-    </operation>
-    <operation name="listarPrestamos">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosRequest" message="tns:listarPrestamos" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosResponse" message="tns:listarPrestamosResponse" />
     </operation>
     <operation name="modificarPrestamo">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/modificarPrestamoRequest" message="tns:modificarPrestamo" />
@@ -265,13 +249,21 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosNoCulminadosRequest" message="tns:listarPrestamosNoCulminados" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosNoCulminadosResponse" message="tns:listarPrestamosNoCulminadosResponse" />
     </operation>
-    <operation name="listarPrestamosPorEstadoYSedePaginado">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorEstadoYSedePaginadoRequest" message="tns:listarPrestamosPorEstadoYSedePaginado" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorEstadoYSedePaginadoResponse" message="tns:listarPrestamosPorEstadoYSedePaginadoResponse" />
+    <operation name="listarEjemplaresPrestadosPorPersona">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarEjemplaresPrestadosPorPersonaRequest" message="tns:listarEjemplaresPrestadosPorPersona" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarEjemplaresPrestadosPorPersonaResponse" message="tns:listarEjemplaresPrestadosPorPersonaResponse" />
+    </operation>
+    <operation name="listarEjemplaresSolicitadosPorPersona">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarEjemplaresSolicitadosPorPersonaRequest" message="tns:listarEjemplaresSolicitadosPorPersona" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarEjemplaresSolicitadosPorPersonaResponse" message="tns:listarEjemplaresSolicitadosPorPersonaResponse" />
     </operation>
     <operation name="listarPrestamosSolicitadosPorPersona">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosSolicitadosPorPersonaRequest" message="tns:listarPrestamosSolicitadosPorPersona" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosSolicitadosPorPersonaResponse" message="tns:listarPrestamosSolicitadosPorPersonaResponse" />
+    </operation>
+    <operation name="listarPrestamosPorEstadoYSedePaginado">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorEstadoYSedePaginadoRequest" message="tns:listarPrestamosPorEstadoYSedePaginado" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorEstadoYSedePaginadoResponse" message="tns:listarPrestamosPorEstadoYSedePaginadoResponse" />
     </operation>
     <operation name="devolverPrestamo">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/devolverPrestamoRequest" message="tns:devolverPrestamo" />
@@ -282,6 +274,30 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/recogerPrestamoRequest" message="tns:recogerPrestamo" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/recogerPrestamoResponse" message="tns:recogerPrestamoResponse" />
       <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/recogerPrestamo/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="eliminarPrestamo">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/eliminarPrestamoRequest" message="tns:eliminarPrestamo" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/eliminarPrestamoResponse" message="tns:eliminarPrestamoResponse" />
+    </operation>
+    <operation name="obtenerPrestamo">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/obtenerPrestamoRequest" message="tns:obtenerPrestamo" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/obtenerPrestamoResponse" message="tns:obtenerPrestamoResponse" />
+    </operation>
+    <operation name="listarPrestamos">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosRequest" message="tns:listarPrestamos" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosResponse" message="tns:listarPrestamosResponse" />
+    </operation>
+    <operation name="listarPrestamosDevueltosPorPersona">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosDevueltosPorPersonaRequest" message="tns:listarPrestamosDevueltosPorPersona" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosDevueltosPorPersonaResponse" message="tns:listarPrestamosDevueltosPorPersonaResponse" />
+    </operation>
+    <operation name="listarPrestamosAtrasadosPorPersona">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosAtrasadosPorPersonaRequest" message="tns:listarPrestamosAtrasadosPorPersona" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosAtrasadosPorPersonaResponse" message="tns:listarPrestamosAtrasadosPorPersonaResponse" />
+    </operation>
+    <operation name="obtenerEstadoPrestamo">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/obtenerEstadoPrestamoRequest" message="tns:obtenerEstadoPrestamo" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/obtenerEstadoPrestamoResponse" message="tns:obtenerEstadoPrestamoResponse" />
     </operation>
     <operation name="contarTotalPrestamos">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosRequest" message="tns:contarTotalPrestamos" />
@@ -295,26 +311,10 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorSedePaginadoRequest" message="tns:listarPrestamosPorSedePaginado" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorSedePaginadoResponse" message="tns:listarPrestamosPorSedePaginadoResponse" />
     </operation>
-    <operation name="obtenerEstadoPrestamo">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/obtenerEstadoPrestamoRequest" message="tns:obtenerEstadoPrestamo" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/obtenerEstadoPrestamoResponse" message="tns:obtenerEstadoPrestamoResponse" />
-    </operation>
-    <operation name="listarPrestamosPorEstadoPaginado">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorEstadoPaginadoRequest" message="tns:listarPrestamosPorEstadoPaginado" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/listarPrestamosPorEstadoPaginadoResponse" message="tns:listarPrestamosPorEstadoPaginadoResponse" />
-    </operation>
-    <operation name="contarTotalPrestamosPorEstado">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosPorEstadoRequest" message="tns:contarTotalPrestamosPorEstado" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosPorEstadoResponse" message="tns:contarTotalPrestamosPorEstadoResponse" />
-    </operation>
-    <operation name="contarTotalPrestamosPorEstadoYSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosPorEstadoYSedeRequest" message="tns:contarTotalPrestamosPorEstadoYSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoWS/contarTotalPrestamosPorEstadoYSedeResponse" message="tns:contarTotalPrestamosPorEstadoYSedeResponse" />
-    </operation>
   </portType>
   <binding name="PrestamoWSPortBinding" type="tns:PrestamoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarEjemplaresSolicitadosPorPersona">
+    <operation name="listarPrestamosPorEstadoPaginado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -323,7 +323,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarEjemplaresPrestadosPorPersona">
+    <operation name="contarTotalPrestamosPorEstado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -332,16 +332,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPrestamosDevueltosPorPersona">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPrestamosAtrasadosPorPersona">
+    <operation name="contarTotalPrestamosPorEstadoYSede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -359,16 +350,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="contarPrestamosActivos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="contarPrestamosAtrasados">
+    <operation name="listarPrestamosPorPersona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -386,6 +368,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="contarPrestamosActivos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarPrestamosSolicitados">
       <soap:operation soapAction="" />
       <input>
@@ -395,7 +386,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPrestamosPorPersona">
+    <operation name="contarPrestamosAtrasados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -405,33 +396,6 @@
       </output>
     </operation>
     <operation name="contarPrestamosPorMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarPrestamo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerPrestamo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPrestamos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -485,7 +449,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPrestamosPorEstadoYSedePaginado">
+    <operation name="listarEjemplaresPrestadosPorPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEjemplaresSolicitadosPorPersona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -495,6 +468,15 @@
       </output>
     </operation>
     <operation name="listarPrestamosSolicitadosPorPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPrestamosPorEstadoYSedePaginado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -527,6 +509,60 @@
         <soap:fault use="literal" name="BusinessException" namespace="" />
       </fault>
     </operation>
+    <operation name="eliminarPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPrestamos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPrestamosDevueltosPorPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPrestamosAtrasadosPorPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerEstadoPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="contarTotalPrestamos">
       <soap:operation soapAction="" />
       <input>
@@ -546,42 +582,6 @@
       </output>
     </operation>
     <operation name="listarPrestamosPorSedePaginado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerEstadoPrestamo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPrestamosPorEstadoPaginado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="contarTotalPrestamosPorEstado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="contarTotalPrestamosPorEstadoYSede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
