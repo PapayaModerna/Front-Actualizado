@@ -287,3 +287,29 @@ body {
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
 }
+
+/*Boton para agregar material*/
+.btn-agregar {
+    color: white;
+    background-color: #000;
+    border: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+    .btn-agregar:hover {
+        transform: scale(1.05);
+        background-color: #333;
+        color: white; /* mantiene el texto blanco */
+    }
+
+.seccion-cabecera-materiales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; /* iguala el padding del contenedor superior */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
