@@ -22,85 +22,147 @@ namespace FrontEnd
             prestamoWSClient = new PrestamoWSClient();
             personaWSClient = new PersonaWSClient();
             materialWSClient = new MaterialWSClient();
-          
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                // Recuperamos los ejemplares prestados desde la sesión si es un postback
+                if (Session["ejemplaresPrestados"] != null)
+                {
+                    ejemplaresPrestados = (List<FrontEnd.PrestamoWS.ejemplaresDTO>)Session["ejemplaresPrestados"];
+                }
 
+                // Recuperamos los ejemplares seleccionados desde la sesión
+                List<int> ejemplaresSeleccionados = (List<int>)Session["ejemplaresSeleccionados"];
+
+                if (ejemplaresPrestados != null && ejemplaresPrestados.Count > 0)
+                {
+                    // Iteramos a través de los ejemplares para generar los CheckBox
+                    foreach (var ejemplar in ejemplaresPrestados)
+                    {
+                        var material = materialWSClient.obtenerPorId(ejemplar.material.idMaterial);
+                        if (material != null)
+                        {
+                            CheckBox cbEjemplar = new CheckBox
+                            {
+                                Text = $"Ejemplar: {material.titulo}",
+                                ID = "cb" + ejemplar.idEjemplar
+                            };
+
+                            // Asignamos el valor del ID del ejemplar para poder identificarlo
+                            cbEjemplar.Attributes["data-id"] = ejemplar.idEjemplar.ToString();
+
+                            // Verificamos si el ejemplar está en la lista de seleccionados
+                            if (ejemplaresSeleccionados != null && ejemplaresSeleccionados.Contains(ejemplar.idEjemplar))
+                            {
+                                cbEjemplar.Checked = true; // Marcamos el CheckBox si está seleccionado
+                            }
+
+                            Panel pnlEjemplar = new Panel();
+                            pnlEjemplar.Controls.Add(cbEjemplar);
+                            phEjemplares.Controls.Add(pnlEjemplar);
+                        }
+                    }
+                }
+            }
         }
+
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            int codigo; 
-
-            if (int.TryParse(txtCodigo.Text.Trim(), out codigo))
+            if (sender == btnBuscar)
             {
-                try
+                int codigo;
+
+                if (int.TryParse(txtCodigo.Text.Trim(), out codigo))
                 {
-                    var prestamo = prestamoWSClient.obtenerPrestamo(codigo);
-
-                    if (prestamo != null)
+                    try
                     {
-                        txtFechaSolicitud.Text = prestamo.fechaSolicitud.ToShortDateString(); 
-                        txtFechaDevolucion.Text = prestamo.fechaDevolucion.ToShortDateString();
+                        var prestamo = prestamoWSClient.obtenerPrestamo(codigo);
 
-                        var persona = personaWSClient.obtenerPersona(prestamo.persona.idPersona);
-
-                        if (persona != null)
+                        if (prestamo != null)
                         {
-                            string nombreCompleto = $"{persona.nombre} {persona.paterno} {persona.materno}";
-                            txtNombres.Text = $"Código: {persona.codigo} - {nombreCompleto}";
-                            ejemplaresPrestados = prestamoWSClient.listarEjemplaresPrestadosPorPersona(prestamo.persona.idPersona).ToList();
-                            phEjemplares.Controls.Clear();
-                            var titulosMateriales = new List<string>();
-                            if (ejemplaresPrestados != null && ejemplaresPrestados.Count > 0)
+                            txtFechaSolicitud.Text = prestamo.fechaSolicitud.ToShortDateString();
+                            txtFechaDevolucion.Text = prestamo.fechaDevolucion.ToShortDateString();
+
+                            var persona = personaWSClient.obtenerPersona(prestamo.persona.idPersona);
+
+                            if (persona != null)
                             {
-                                foreach (var ejemplar in ejemplaresPrestados)
+                                string nombreCompleto = $"{persona.nombre} {persona.paterno} {persona.materno}";
+                                txtNombres.Text = $"Código: {persona.codigo} - {nombreCompleto}";
+                                ejemplaresPrestados = prestamoWSClient.listarEjemplaresPrestadosPorPersona(prestamo.persona.idPersona).ToList();
+                                Session["ejemplaresPrestados"] = ejemplaresPrestados;
+
+                                // Guardamos los ejemplares seleccionados en la sesión
+                                List<int> ejemplaresSeleccionados = new List<int>();
+
+                                phEjemplares.Controls.Clear();
+
+                                if (ejemplaresPrestados != null && ejemplaresPrestados.Count > 0)
                                 {
-                                    var material = materialWSClient.obtenerPorId(ejemplar.material.idMaterial);
-                                    if (material != null)
+                                    foreach (var ejemplar in ejemplaresPrestados)
                                     {
-                                        titulosMateriales.Add(material.titulo);
-
-                                        CheckBox cbEjemplar = new CheckBox
+                                        var material = materialWSClient.obtenerPorId(ejemplar.material.idMaterial);
+                                        if (material != null)
                                         {
-                                            Text = $"Ejemplar: {material.titulo}", 
-                                            ID = "cb" + ejemplar.idEjemplar 
-                                        };
+                                            CheckBox cbEjemplar = new CheckBox
+                                            {
+                                                Text = $"Ejemplar: {material.titulo}",
+                                                ID = "cb" + ejemplar.idEjemplar
+                                            };
 
-                                        Panel pnlEjemplar = new Panel();
-                                        pnlEjemplar.Controls.Add(cbEjemplar);
+                                            // Asignamos el valor del ID del ejemplar para poder identificarlo
+                                            cbEjemplar.Attributes["data-id"] = ejemplar.idEjemplar.ToString();
 
-                                        phEjemplares.Controls.Add(pnlEjemplar);
+                                            // Agregamos el ID del ejemplar a la lista de seleccionados
+                                            ejemplaresSeleccionados.Add(ejemplar.idEjemplar);
+
+                                            Panel pnlEjemplar = new Panel();
+                                            pnlEjemplar.Controls.Add(cbEjemplar);
+
+                                            phEjemplares.Controls.Add(pnlEjemplar);
+                                        }
                                     }
+
+                                    // Guardamos los ejemplares seleccionados en la sesión
+                                    Session["ejemplaresSeleccionados"] = ejemplaresSeleccionados;
+                                }
+                                else
+                                {
+                                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('No se encontraron ejemplares para esta persona.');", true);
                                 }
                             }
                             else
                             {
-                                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('No se encontraron ejemplares para esta persona.');", true);
+                                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Persona no encontrada.');", true);
                             }
                         }
                         else
                         {
-                            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Persona no encontrada.');", true);
+                            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Prestamo no encontrado.');", true);
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Prestamo no encontrado.');", true);
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error al buscar el préstamo: " + ex.Message + "');", true);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error al buscar el préstamo: " + ex.Message + "');", true);
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Por favor ingrese un código para buscar.');", true);
                 }
             }
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Por favor ingrese un código para buscar.');", true);
-            }
         }
+
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (Session["ejemplaresPrestados"] != null)
+            {
+                ejemplaresPrestados = (List<FrontEnd.PrestamoWS.ejemplaresDTO>)Session["ejemplaresPrestados"];
+            }
+
             if (ejemplaresPrestados != null && ejemplaresPrestados.Count > 0)
             {
                 var ejemplaresSeleccionados = new List<int>();
@@ -108,10 +170,12 @@ namespace FrontEnd
                 {
                     if (control is Panel pnl && pnl.Controls[0] is CheckBox cbEjemplar && cbEjemplar.Checked)
                     {
-                        var ejemplarId = int.Parse(cbEjemplar.ID.Substring(2)); // ID del ejemplar (ejemplo: "cb123")
+                        // Recuperamos el ID del ejemplar desde el atributo personalizado 'data-id'
+                        var ejemplarId = int.Parse(cbEjemplar.Attributes["data-id"]);
                         ejemplaresSeleccionados.Add(ejemplarId);
                     }
                 }
+
                 if (ejemplaresSeleccionados.Count > 0)
                 {
                     try
@@ -121,6 +185,7 @@ namespace FrontEnd
                         prestamoWSClient.devolverPrestamo(idPrestamo, ejemplaresArray);
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Devolución registrada correctamente.');", true);
                         LimpiarCampos();
+                        Response.Redirect("PrestamosPrincipalAdmin.aspx");
                     }
                     catch (Exception ex)
                     {
@@ -137,12 +202,26 @@ namespace FrontEnd
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('No se encontraron ejemplares para esta persona.');", true);
             }
         }
+
         protected void btnRegresar_Click(object sender, EventArgs e)
         {
             Response.Redirect("PrestamosPrincipalAdmin.aspx");
         }
+
         private void LimpiarCampos()
         {
+            txtCodigo.Text = "";
+            txtFechaSolicitud.Text = "";
+            txtFechaDevolucion.Text = "";
+            txtNombres.Text = "";
+
+            foreach (Control control in phEjemplares.Controls)
+            {
+                if (control is Panel pnl && pnl.Controls[0] is CheckBox cbEjemplar)
+                {
+                    cbEjemplar.Checked = false;
+                }
+            }
         }
     }
 }

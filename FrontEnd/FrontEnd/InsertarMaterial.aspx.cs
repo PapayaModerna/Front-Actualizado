@@ -147,7 +147,7 @@ namespace FrontEnd
         }
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-            var material = new MaterialWS.materialesDTO();
+        /*    var material = new MaterialWS.materialesDTO();
 
             material.nivel = new MaterialWS.nivelesInglesDTO();
             material.editorial = new MaterialWS.editorialesDTO();
@@ -233,7 +233,7 @@ namespace FrontEnd
             {
                 string mensaje = $"Error al insertar el material: {ex.Message}";
                 Response.Write("<script>alert('" + mensaje.Replace("'", "\\'") + "');</script>");
-            }
+            }*/
         }
     }
 }
