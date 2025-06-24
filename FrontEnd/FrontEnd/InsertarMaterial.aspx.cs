@@ -9,18 +9,19 @@ using System.Collections;
 using System.Web.UI.WebControls;
 using FrontEnd.EditorialWS;
 using FrontEnd.MaterialWS;
-using FrontEnd.CreadorWS;
+//using FrontEnd.CreadorWS;
 
 namespace FrontEnd
 {
     public partial class InsertarMaterial : System.Web.UI.Page
     {
+        /*
         private List<CreadorWS.creadoresDTO> CreadoresDisponibles
         {
             get => ViewState["CreadoresDisponibles"] as List<CreadorWS.creadoresDTO> ?? new List<CreadorWS.creadoresDTO>();
             set => ViewState["CreadoresDisponibles"] = value;
         }
-
+        */
         private List<int> CreadoresInsertados
         {
             get => ViewState["CreadoresInsertados"] as List<int> ?? new List<int>();
@@ -52,7 +53,7 @@ namespace FrontEnd
             ddlEditorial.Items.Insert(0, new ListItem("Seleccione una editorial", "0"));
 
         }
-
+        /*
         private void ListarCreadores()
         {
             var creadorCliente = new CreadorWS.CreadorWSClient();
@@ -82,7 +83,7 @@ namespace FrontEnd
 
             MostrarCreadoresInsertados();
         }
-
+        /*
         private void MostrarCreadoresInsertados()
         {
             panelCreadoresInsertados.Controls.Clear();
@@ -115,6 +116,7 @@ namespace FrontEnd
                             }
             
         }
+        */
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("IndexAdmin.aspx");
@@ -129,7 +131,7 @@ namespace FrontEnd
             lista.Remove(id);
             CreadoresInsertados = lista;
 
-            MostrarCreadoresInsertados();
+            //MostrarCreadoresInsertados();
         }
         protected void btnAgregarCreador_Click(object sender, EventArgs e)
         {
@@ -145,7 +147,7 @@ namespace FrontEnd
             // ¡Clave para que el ViewState se actualice!
             CreadoresInsertados = lista;
 
-            MostrarCreadoresInsertados();
+            //MostrarCreadoresInsertados();
         }
         protected void btnInsertar_Click(object sender, EventArgs e)
         {

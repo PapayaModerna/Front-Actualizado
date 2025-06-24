@@ -46,3 +46,16 @@
     .btn-volver:hover {
         background: #23272b;
     }
+
+/*Agregado para agregar la imagen de la portada del libro*/
+.portada-img {
+    max-height: 60vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+
