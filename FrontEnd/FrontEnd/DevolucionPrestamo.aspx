@@ -115,7 +115,7 @@
     </div>
 
     <div class="form-row" style="margin-bottom: 20px;">
-        <label><strong>Ejemplares:</strong></label>
+        <label><strong>EJEMPLARES:</strong></label>
         <asp:PlaceHolder ID="phEjemplares" runat="server"></asp:PlaceHolder>
     </div>
     

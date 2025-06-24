@@ -104,7 +104,7 @@ namespace FrontEnd
                 var prestamoMasAntiguo = prestamos.OrderBy(p => p.fechaSolicitud).FirstOrDefault();
                 if (prestamoMasAntiguo != null)
                 {
-                    /*recogerPrestamo(prestamoMasAntiguo.idPrestamo);*/
+                    prestamoWSClient.recogerPrestamo(prestamoMasAntiguo.idPrestamo);
                     Response.Redirect("~/PrestamosPrincipal.aspx");
                 }
                 else
