@@ -49,7 +49,14 @@ namespace FrontEnd
         protected void ddlSedes_SelectedIndexChanged(object sender, EventArgs e)
         {
             actualizarTituloSede();
-            /*cargarDatos();*/
+            ViewState["PaginaActual"] = 1;
+            ViewState["MostrarTabla"] = false;
+            rptLibros.DataSource = null;
+            rptLibros.DataBind();
+            lblSinResultados.Visible = false;
+
+            rptPaginacion.DataSource = null;
+            rptPaginacion.DataBind();
         }
         private void actualizarTituloSede()
         {
@@ -95,12 +102,37 @@ namespace FrontEnd
         private void CargarLibros(int pagina)
         {
             string filtro = ViewState["Filtro"].ToString();
+            int idSede = int.Parse(ddlSedes.SelectedValue);
+            bool porTitulo = !string.IsNullOrEmpty(filtro);
+
             List<FrontEnd.MaterialWS.materialesDTO> libros;
             int total = 0;
 
-            if (!string.IsNullOrEmpty(filtro))
+            if (idSede == 0) // TODAS LAS SEDES
             {
-                var todos = materialWSClient.listarMaterialPorTitulo(filtro, 1000, 1);
+                if (porTitulo)
+                {
+                    var todos = materialWSClient.listarMaterialPorTitulo(filtro, 1000, 1);
+                    if (todos != null)
+                    {
+                        total = todos.Length;
+                        libros = todos.Skip((pagina - 1) * CantidadPagina).Take(CantidadPagina).ToList();
+                    }
+                    else
+                    {
+                        total = 0;
+                        libros = new List<FrontEnd.MaterialWS.materialesDTO>();
+                    }
+                }
+                else
+                {
+                    libros = materialWSClient.listarMaterialesPaginado(CantidadPagina, pagina).ToList();
+                    total = materialWSClient.contarMateriales();
+                }
+            }
+            else // UNA SEDE ESPECÍFICA
+            {
+                var todos = materialWSClient.listarMaterialesPorTituloParcialPaginado(filtro,idSede, 1000, 1);
                 if (todos != null)
                 {
                     total = todos.Length;
@@ -109,20 +141,15 @@ namespace FrontEnd
                 else
                 {
                     total = 0;
-                    libros = new List<FrontEnd.MaterialWS.materialesDTO>(); // ⛑️ lista vacía
+                    libros = new List<FrontEnd.MaterialWS.materialesDTO>();
                 }
             }
-            else
-            {
-                libros = materialWSClient.listarMaterialesPaginado(CantidadPagina, pagina).ToList();
-                total = materialWSClient.contarMateriales();
-            }
-
             rptLibros.DataSource = libros;
             rptLibros.DataBind();
             lblSinResultados.Visible = (libros.Count == 0);
             CargarPaginacion(total);
         }
+
         private void CargarPaginacion(int totalMateriales)
         {
             int totalPaginas = (int)Math.Ceiling((double)totalMateriales / CantidadPagina);

@@ -447,10 +447,12 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\DetalleLibros.css" />
+    <Content Include="Content\DetallesPersona.css" />
     <Content Include="Content\EditarMaterial.css" />
     <Content Include="Content\IndexAdmin.css" />
     <Content Include="Content\PrestamosAdmin.css" />
     <Content Include="DetalleLibrosAdmin.aspx" />
+    <Content Include="DetallesAdmin.aspx" />
     <Content Include="EditarMaterial.aspx" />
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
@@ -528,6 +530,13 @@
     </Compile>
     <Compile Include="DetalleLibrosAdmin.aspx.designer.cs">
       <DependentUpon>DetalleLibrosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesAdmin.aspx.cs">
+      <DependentUpon>DetallesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallesAdmin.aspx.designer.cs">
+      <DependentUpon>DetallesAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditarMaterial.aspx.cs">
       <DependentUpon>EditarMaterial.aspx</DependentUpon>

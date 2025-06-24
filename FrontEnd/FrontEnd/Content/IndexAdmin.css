@@ -12,6 +12,7 @@ body {
     width: 100%;
     padding: 15px 0 15px 40px;
     box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
 .bienvenida-container {
@@ -44,7 +45,7 @@ body {
 .seccion-admin {
     background-color: #000;
     color: #fff;
-    padding: 30px 40px;
+    padding: 15px 40px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -61,13 +62,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
 
-.lbl-seccion {
+.lbl-libros {
     font-size: 1rem;
     color: #ffffff;
     line-height: 1.4;
     margin-top: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+.lbl-ejemplares {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.4;
+    margin-top: 1px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -98,13 +107,6 @@ body {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-}
-
-.lbl-dato-libro {
-    color: #ffffff;
-    font-size: 0.95rem;
-    line-height: 1.2;
-    margin-top: 3px;
 }
 
 /* Columna derecha - logo */

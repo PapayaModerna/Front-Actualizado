@@ -13,21 +13,20 @@
 
     <div class="seccion-admin">
         <div class="admin-left">
-            <asp:Label ID="lblTituloSede" runat="server" Text="Sede General" style="display:block; font-size:2rem; font-weight:900; color:white; margin-bottom:10px; line-height:1.2;"/>
-            <p class="lbl-seccion"> </p>
-            <p class="lbl-seccion">Libros disponibles</p>
-            <p class="lbl-seccion">Ejemplares de libros en el sistema</p>
+            <asp:Label ID="lblTituloSede" runat="server" Text="Sede General" style="font-size:1.6rem; font-weight:900; color:white; margin-top:15px;margin-bottom:3px; line-height:1.2;"/>
+            <p class="lbl-libros">Libros disponibles</p>
+            <p class="lbl-ejemplares">Ejemplares de libros en el sistema</p>
         </div>
-        <div class="admin-center" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 10px; flex: 1; padding-left: 40px;">
+        <div class="admin-center" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 15px; flex: 1; padding-left: 40px;">
             <asp:DropDownList ID="ddlSedes" runat="server" CssClass="ddl-sedes"
-                style="height: 36px; width: 220px; padding: 6px 12px; font-size: 1rem; background-color: #2c2c2c; color: white; border: none; border-radius: 6px; margin-top: 2px;" 
+                style="height: 28px; width: 220px; padding: 4px 10px; font-size: 0.95rem; background-color: #2c2c2c; color: white; border: none; border-radius: 6px; margin-top: 2px;" 
                 AutoPostBack="true" OnSelectedIndexChanged="ddlSedes_SelectedIndexChanged" />
     
             <asp:Label ID="lblCantidadLibros" runat="server" CssClass="lbl-dato-libro"
-                Style="color: #ffffff; font-size: 1rem; line-height: 1.4; margin-top: 2px;" />
+                Style="color: #ffffff; font-size: 1rem; line-height: 1.4; margin-top: 1px;" />
 
             <asp:Label ID="lblCantidadEjemplares" runat="server" CssClass="lbl-dato-libro"
-                Style="color: #ffffff; font-size: 1rem; line-height: 1.4; margin-top: 2px;" />
+                Style="color: #ffffff; font-size: 1rem; line-height: 1.4; margin-top: 1px;" />
         </div>
         <div class="admin-logo">
             <img src="images/myholylogo.png" alt="Logo Biblioteca">
