@@ -5,18 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/CreadorWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="insertarCreador">
-    <part name="parameters" element="tns:insertarCreador" />
-  </message>
-  <message name="insertarCreadorResponse">
-    <part name="parameters" element="tns:insertarCreadorResponse" />
-  </message>
-  <message name="modificarCreador">
-    <part name="parameters" element="tns:modificarCreador" />
-  </message>
-  <message name="modificarCreadorResponse">
-    <part name="parameters" element="tns:modificarCreadorResponse" />
-  </message>
   <message name="eliminarCreador">
     <part name="parameters" element="tns:eliminarCreador" />
   </message>
@@ -29,6 +17,18 @@
   <message name="listarCreadoresResponse">
     <part name="parameters" element="tns:listarCreadoresResponse" />
   </message>
+  <message name="insertarCreador">
+    <part name="parameters" element="tns:insertarCreador" />
+  </message>
+  <message name="insertarCreadorResponse">
+    <part name="parameters" element="tns:insertarCreadorResponse" />
+  </message>
+  <message name="modificarCreador">
+    <part name="parameters" element="tns:modificarCreador" />
+  </message>
+  <message name="modificarCreadorResponse">
+    <part name="parameters" element="tns:modificarCreadorResponse" />
+  </message>
   <message name="obtenerCreadorPorId">
     <part name="parameters" element="tns:obtenerCreadorPorId" />
   </message>
@@ -36,14 +36,6 @@
     <part name="parameters" element="tns:obtenerCreadorPorIdResponse" />
   </message>
   <portType name="CreadorWS">
-    <operation name="insertarCreador">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest" message="tns:insertarCreador" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse" message="tns:insertarCreadorResponse" />
-    </operation>
-    <operation name="modificarCreador">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorRequest" message="tns:modificarCreador" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorResponse" message="tns:modificarCreadorResponse" />
-    </operation>
     <operation name="eliminarCreador">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/eliminarCreadorRequest" message="tns:eliminarCreador" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/eliminarCreadorResponse" message="tns:eliminarCreadorResponse" />
@@ -52,6 +44,14 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresRequest" message="tns:listarCreadores" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresResponse" message="tns:listarCreadoresResponse" />
     </operation>
+    <operation name="insertarCreador">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest" message="tns:insertarCreador" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse" message="tns:insertarCreadorResponse" />
+    </operation>
+    <operation name="modificarCreador">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorRequest" message="tns:modificarCreador" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorResponse" message="tns:modificarCreadorResponse" />
+    </operation>
     <operation name="obtenerCreadorPorId">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/obtenerCreadorPorIdRequest" message="tns:obtenerCreadorPorId" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/obtenerCreadorPorIdResponse" message="tns:obtenerCreadorPorIdResponse" />
@@ -59,24 +59,6 @@
   </portType>
   <binding name="CreadorWSPortBinding" type="tns:CreadorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarCreador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarCreador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarCreador">
       <soap:operation soapAction="" />
       <input>
@@ -87,6 +69,24 @@
       </output>
     </operation>
     <operation name="listarCreadores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCreador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCreador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
