@@ -607,6 +607,7 @@
     <Content Include="ModificarUsuarioAdmin.aspx" />
     <Content Include="PrestamosPrincipalAdmin.aspx" />
     <Content Include="RecursosUser.aspx" />
+    <Content Include="ReportesPrincipalAdmin.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -764,6 +765,13 @@
     </Compile>
     <Compile Include="RecojoPrestamo.aspx.designer.cs">
       <DependentUpon>RecojoPrestamo.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesPrincipalAdmin.aspx.cs">
+      <DependentUpon>ReportesPrincipalAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesPrincipalAdmin.aspx.designer.cs">
+      <DependentUpon>ReportesPrincipalAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPerfilVista.Master.cs">
       <DependentUpon>UserPerfilVista.Master</DependentUpon>

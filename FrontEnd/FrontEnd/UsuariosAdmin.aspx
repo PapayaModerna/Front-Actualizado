@@ -42,6 +42,7 @@
                                 <th>Materno</th>
                                 <th>Tipo</th>
                                 <th>Acciones</th>
+                                <th>Sancionar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -58,6 +59,10 @@
                                             <a href='ModificarUsuarioAdmin.aspx?id=<%# Eval("idPersona") %>' class="btn btn-primary btn-sm">
                                                 <i class="fas fa-edit"></i> Editar
                                             </a>
+                                        </td>
+                                        <td>
+                                            <asp:Button ID="btnSancionar" runat="server" Text="Sancionar" CssClass="btn btn-danger btn-sm"
+                                                CommandArgument='<%# Eval("idPersona") %>' OnClick="btnSancionar_Click" />
                                         </td>
                                     </tr>
                                 </ItemTemplate>
