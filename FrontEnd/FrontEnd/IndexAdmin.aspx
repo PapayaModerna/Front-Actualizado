@@ -110,7 +110,8 @@
         });
 
         function irDetalle(id) {
-            window.location.href = 'DetalleLibrosAdmin.aspx?id=' + id;
+            var sede = document.getElementById('<%= ddlSedes.ClientID %>').value;
+            window.location.href = 'DetalleLibrosAdmin.aspx?id=' + id + '&sede=' + sede;
         }
 
         // Loader control via ScriptManager
