@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using FrontEnd.MaterialWS;
 using FrontEnd.EditorialWS;
+using System.Collections;
 
 namespace FrontEnd
 {
@@ -14,6 +15,33 @@ namespace FrontEnd
     {
         private MaterialWSClient materialwsClient;
         private EditorialWSClient editorialwsClient;
+
+        private void LlenarAnioPublicacion()
+        {
+            int currentYear = DateTime.Now.Year;
+
+            // Agregar los años al DropDownList
+            for (int i = 1900; i <= currentYear; i++)
+            {
+                ddlAnioPublicacion.Items.Add(new ListItem(i.ToString(), i.ToString()));
+            }
+        }
+        private void ListarEditoriales()
+        {
+            var editorialCliente = new EditorialWS.EditorialWSClient();
+            FrontEnd.EditorialWS.editorialesDTO[] editoriales = editorialCliente.listarEditoriales();
+            ArrayList editorialList = new ArrayList();
+            foreach (var editorial in editoriales)
+            {
+                editorialList.Add(new { editorial.idEditorial, editorial.nombre });
+            }
+            ddlEditorial.DataSource = editorialList;
+            ddlEditorial.DataTextField = "nombre";
+            ddlEditorial.DataValueField = "idEditorial";
+            ddlEditorial.DataBind();
+            //  ddlEditorial.Items.Insert(0, new ListItem("Seleccione una editorial", "0"));
+
+        }
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -37,6 +65,8 @@ namespace FrontEnd
                     Response.Write("<script>alert('ID de material no válido en sesión');</script>");
                     Response.Redirect("IndexAdmin.aspx");
                 }
+                ListarEditoriales();
+                LlenarAnioPublicacion();
             }
         }
 
@@ -164,6 +194,7 @@ namespace FrontEnd
                 material.editorial.idEditorial = idEditorial;
                 material.editorial.idEditorialSpecified = true;
 
+                Response.Write("<script>alert('IdEditorial'+ material.editorial.idEditorial);</script>");
 
                 // Llamar al servicio para actualizar el material
                 var result = materialwsClient.modificarMaterial(material);

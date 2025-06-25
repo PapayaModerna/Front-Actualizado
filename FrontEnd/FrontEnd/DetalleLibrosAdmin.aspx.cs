@@ -29,13 +29,18 @@ namespace FrontEnd
             if (int.TryParse(idStr, out int id))
             {
                 var libro = materialWSClient.obtenerPorId(id);
+                var editorialCliente = new EditorialWS.EditorialWSClient();
+                
+
                 if (libro != null)
                 {
                     lblId.Text = libro.idMaterial.ToString("000");
                     lblTitulo.Text = libro.titulo;
                     lblAnio.Text = libro.anioPublicacion.ToString() ?? "-";
                     lblEdicion.Text = libro.edicion ?? "-";
-                    lblEditorial.Text = libro.editorial != null ? libro.editorial.nombre : "-";
+                    var editorial = editorialCliente.obtenerEditorial(libro.editorial.idEditorial);
+                    libro.editorial.nombre = editorial.nombre;
+                    lblEditorial.Text = libro.editorial != null ? editorial.nombre : "-";
                     var creadores = materialWSClient.listarCreadoresPorMaterial(id);
                     lblCreadores.Text = (creadores != null && creadores.Length > 0)
                         ? string.Join(", ", creadores.Select(c => c.nombre))
