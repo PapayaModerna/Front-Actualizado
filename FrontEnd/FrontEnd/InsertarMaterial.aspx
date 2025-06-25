@@ -77,17 +77,45 @@
             </div>
         </div>
 
+      
         <!-- Creador -->
         <div class="form-group">
-            <label for="ddlCreadores" class="form-label">Creador:</label>
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <label for="ddlCreadores" class="form-label m-0">Creador:</label>
+                <asp:Button ID="btnCargarCreadores" runat="server"
+                    CssClass="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"
+                    OnClick="btnCargarCreadores_Click" ToolTip="Cargar Creadores" Text="⟳ Cargar" />
+            </div>
+
             <div class="d-flex gap-2 align-items-center">
                 <asp:DropDownList ID="ddlCreadores" runat="server" CssClass="form-control" />
-                <asp:Button ID="btnAgregarCreador" runat="server" Text="Agregar Creador" CssClass="btn btn-dark" OnClick="btnAgregarCreador_Click" />
+                <asp:Button ID="btnAgregarCreador" runat="server" Text="Agregar" CssClass="btn btn-dark"
+                    OnClick="btnAgregarCreador_Click" />
             </div>
         </div>
 
         <asp:Panel ID="panelCreadoresInsertados" runat="server" CssClass="d-flex flex-wrap gap-2 mt-3 mt-creadores" />
+        
+        <!-- Tema -->
+    <div class="form-group">
+        <div class="d-flex justify-content-between align-items-center mb-1">
+            <label for="ddlTemas" class="form-label m-0">Tema:</label>
+            <asp:Button ID="btnCargarTemas" runat="server"
+                CssClass="btn btn-sm btn-outline-secondary d-flex align-items-center gap-1"
+                OnClick="btnCargarTemas_Click" ToolTip="Cargar Temas" Text="⟳ Cargar" />
         </div>
+
+        <div class="d-flex gap-2 align-items-center">
+            <asp:DropDownList ID="ddlTemas" runat="server" CssClass="form-control" />
+            <asp:Button ID="btnAgregarTema" runat="server" Text="Agregar" CssClass="btn btn-dark"
+                OnClick="btnAgregarTema_Click" />
+        </div>
+    </div>
+
+        <asp:Panel ID="panelTemasInsertados" runat="server" CssClass="d-flex flex-wrap gap-2 mt-3 mt-creadores" />
+    
+    
+    </div>
 
         <div class="success-message" id="successMessage">
             ✅ Material actualizado correctamente

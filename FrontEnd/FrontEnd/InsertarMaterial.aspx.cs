@@ -26,6 +26,36 @@ namespace FrontEnd
             get => ViewState["CreadoresInsertados"] as List<int> ?? new List<int>();
             set => ViewState["CreadoresInsertados"] = value;
         }
+
+        private List<TemaWS.temasDTO> TemasDisponibles
+        {
+            get => ViewState["TemasDisponibles"] as List<TemaWS.temasDTO> ?? new List<TemaWS.temasDTO>();
+            set => ViewState["TemasDisponibles"] = value;
+        }
+
+        private List<int> TemasSeleccionados
+        {
+            get => ViewState["TemasSeleccionados"] as List<int> ?? new List<int>();
+            set => ViewState["TemasSeleccionados"] = value;
+        }
+
+        private void ListarTemas()
+        {
+            var temaCliente = new TemaWS.TemaWSClient();
+            var temas = temaCliente.listarTemas().ToList();
+            TemasDisponibles = temas;
+
+            ddlTemas.DataSource = temas.Select(t => new
+            {
+                t.idTema,
+                nombreCompleto = $"{t.categoria} - {t.descripcion}"
+            }).ToList();
+
+            ddlTemas.DataTextField = "nombreCompleto";
+            ddlTemas.DataValueField = "idTema";
+            ddlTemas.DataBind();
+            ddlTemas.Items.Insert(0, new ListItem("Seleccione un tema", "0"));
+        }
         private void LlenarAnioPublicacion()
         {
             int currentYear = DateTime.Now.Year;
@@ -76,13 +106,29 @@ namespace FrontEnd
           
                 LlenarAnioPublicacion();
                 ListarEditoriales();
-                ListarCreadores();
-          
-            }
+                ddlCreadores.Items.Insert(0, new ListItem("Seleccione un creador", "0"));
+                ddlTemas.Items.Insert(0, new ListItem("Seleccione un tema", "0"));
+                //ListarCreadores();
+                // ListarTemas();
 
+            }
             MostrarCreadoresInsertados();
+            MostrarTemasInsertados();
+
         }
-        
+
+        protected void btnCargarCreadores_Click(object sender, EventArgs e)
+        {
+            ListarCreadores();
+            btnCargarCreadores.Visible = false;
+        }
+
+        protected void btnCargarTemas_Click(object sender, EventArgs e)
+        {
+            ListarTemas();
+            btnCargarTemas.Visible = false;
+        }
+
         private void MostrarCreadoresInsertados()
         {
             panelCreadoresInsertados.Controls.Clear();
@@ -144,6 +190,59 @@ namespace FrontEnd
             lista.Add(id);
 
             CreadoresInsertados = lista;
+            MostrarCreadoresInsertados();
+        }
+
+        protected void btnAgregarTema_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(ddlTemas.SelectedValue);
+            if (id == 0) return;
+
+            var lista = TemasSeleccionados;
+            if (!lista.Contains(id))
+                lista.Add(id);
+
+            TemasSeleccionados = lista;
+            MostrarTemasInsertados();
+        }
+
+        private void MostrarTemasInsertados()
+        {
+            panelTemasInsertados.Controls.Clear();
+
+            foreach (int id in TemasSeleccionados)
+            {
+                var tema = TemasDisponibles.FirstOrDefault(t => t.idTema == id);
+                if (tema == null) continue;
+
+                string texto = $"{tema.categoria} - {tema.descripcion}";
+
+                var contenedor = new Panel { CssClass = "badge bg-creador text-white p-2 rounded d-flex align-items-center" };
+                contenedor.Controls.Add(new Literal { Text = texto });
+
+                var btnEliminar = new Button
+                {
+                    Text = "✖",
+                    CssClass = "btn btn-sm btn-outline-light ms-2",
+                    CommandArgument = id.ToString()
+                };
+                btnEliminar.Click += btnEliminarTema_Click;
+
+                contenedor.Controls.Add(btnEliminar);
+                panelTemasInsertados.Controls.Add(contenedor);
+            }
+        }
+
+        protected void btnEliminarTema_Click(object sender, EventArgs e)
+        {
+            var boton = (Button)sender;
+            int id = int.Parse(boton.CommandArgument);
+
+            var lista = TemasSeleccionados;
+            lista.Remove(id);
+            TemasSeleccionados = lista;
+
+            MostrarTemasInsertados();
         }
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
@@ -208,17 +307,42 @@ namespace FrontEnd
                 material.editorial.idEditorialSpecified = true;
 
 
+                var listaCreadores = CreadoresInsertados.Select(id => new MaterialWS.creadoresDTO
+                {
+                    idCreador = id,
+                    idCreadorSpecified = true
+                }).ToArray();
 
-                material.creadores(
-                    CreadoresInsertados.Select(id => new MaterialWS.creadoresDTO
-                    {
-                        idCreador = id,
-                        idCreadorSpecified = true
-                    }).ToList()
-                );
+                var listaTemas = TemasSeleccionados.Select(id => new MaterialWS.temasDTO
+                {
+                    idTema = id,
+                    idTemaSpecified = true
+                }).ToArray();
+                /*
+                if (listaCreadores != null && listaCreadores.Length > 0)
+                {
+                    var creadorIds = string.Join(", ", listaCreadores.Select(c => c.idCreador));
+                    Response.Write($"<script>alert('IDs Creadores: {creadorIds}');</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('La lista de creadores está vacía o es null');</script>");
+                }
+
+                if (listaTemas != null && listaTemas.Length > 0)
+                {
+                    var temaIds = string.Join(", ", listaTemas.Select(t => t.idTema));
+                    Response.Write($"<script>alert('IDs Temas: {temaIds}');</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('La lista de temas está vacía o es null');</script>");
+                }
+                */
+
                 var materialCliente = new MaterialWS.MaterialWSClient();
-                var result = materialCliente.insertarMaterial(material);
-
+                var result = materialCliente.insertarMaterial(material,listaCreadores,listaTemas);
+                
                 if (result > 0)
                 {
                     Response.Write("<script>alert('✅ Material insertado correctamente');</script>");
