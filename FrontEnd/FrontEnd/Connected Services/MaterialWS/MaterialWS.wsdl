@@ -5,68 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/MaterialWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="listarMaterialesVigentesPorSede">
-    <part name="parameters" element="tns:listarMaterialesVigentesPorSede" />
+  <message name="listarMaterialesPorSedeYFiltro">
+    <part name="parameters" element="tns:listarMaterialesPorSedeYFiltro" />
   </message>
-  <message name="listarMaterialesVigentesPorSedeResponse">
-    <part name="parameters" element="tns:listarMaterialesVigentesPorSedeResponse" />
+  <message name="listarMaterialesPorSedeYFiltroResponse">
+    <part name="parameters" element="tns:listarMaterialesPorSedeYFiltroResponse" />
   </message>
-  <message name="contarStockFisicoPorMaterial">
-    <part name="parameters" element="tns:contarStockFisicoPorMaterial" />
+  <message name="listarMasSolicitados">
+    <part name="parameters" element="tns:listarMasSolicitados" />
   </message>
-  <message name="contarStockFisicoPorMaterialResponse">
-    <part name="parameters" element="tns:contarStockFisicoPorMaterialResponse" />
-  </message>
-  <message name="BusinessException">
-    <part name="fault" element="tns:BusinessException" />
-  </message>
-  <message name="contarPrestadosFisicosPorMaterial">
-    <part name="parameters" element="tns:contarPrestadosFisicosPorMaterial" />
-  </message>
-  <message name="contarPrestadosFisicosPorMaterialResponse">
-    <part name="parameters" element="tns:contarPrestadosFisicosPorMaterialResponse" />
-  </message>
-  <message name="listarTodosPaginadoAvanzado">
-    <part name="parameters" element="tns:listarTodosPaginadoAvanzado" />
-  </message>
-  <message name="listarTodosPaginadoAvanzadoResponse">
-    <part name="parameters" element="tns:listarTodosPaginadoAvanzadoResponse" />
-  </message>
-  <message name="listarMaterialesPaginadoPorTema">
-    <part name="parameters" element="tns:listarMaterialesPaginadoPorTema" />
-  </message>
-  <message name="listarMaterialesPaginadoPorTemaResponse">
-    <part name="parameters" element="tns:listarMaterialesPaginadoPorTemaResponse" />
-  </message>
-  <message name="listarTodosPaginadoIntermedio">
-    <part name="parameters" element="tns:listarTodosPaginadoIntermedio" />
-  </message>
-  <message name="listarTodosPaginadoIntermedioResponse">
-    <part name="parameters" element="tns:listarTodosPaginadoIntermedioResponse" />
-  </message>
-  <message name="listarCreadoresPorMaterial">
-    <part name="parameters" element="tns:listarCreadoresPorMaterial" />
-  </message>
-  <message name="listarCreadoresPorMaterialResponse">
-    <part name="parameters" element="tns:listarCreadoresPorMaterialResponse" />
-  </message>
-  <message name="listarTemasPorMaterial">
-    <part name="parameters" element="tns:listarTemasPorMaterial" />
-  </message>
-  <message name="listarTemasPorMaterialResponse">
-    <part name="parameters" element="tns:listarTemasPorMaterialResponse" />
-  </message>
-  <message name="listarEjemplaresMaterial">
-    <part name="parameters" element="tns:listarEjemplaresMaterial" />
-  </message>
-  <message name="listarEjemplaresMaterialResponse">
-    <part name="parameters" element="tns:listarEjemplaresMaterialResponse" />
-  </message>
-  <message name="listarMaterialesPorSede">
-    <part name="parameters" element="tns:listarMaterialesPorSede" />
-  </message>
-  <message name="listarMaterialesPorSedeResponse">
-    <part name="parameters" element="tns:listarMaterialesPorSedeResponse" />
+  <message name="listarMasSolicitadosResponse">
+    <part name="parameters" element="tns:listarMasSolicitadosResponse" />
   </message>
   <message name="modificarMaterial">
     <part name="parameters" element="tns:modificarMaterial" />
@@ -74,17 +23,17 @@
   <message name="modificarMaterialResponse">
     <part name="parameters" element="tns:modificarMaterialResponse" />
   </message>
-  <message name="insertarMaterial">
-    <part name="parameters" element="tns:insertarMaterial" />
-  </message>
-  <message name="insertarMaterialResponse">
-    <part name="parameters" element="tns:insertarMaterialResponse" />
-  </message>
   <message name="eliminarMaterial">
     <part name="parameters" element="tns:eliminarMaterial" />
   </message>
   <message name="eliminarMaterialResponse">
     <part name="parameters" element="tns:eliminarMaterialResponse" />
+  </message>
+  <message name="insertarMaterial">
+    <part name="parameters" element="tns:insertarMaterial" />
+  </message>
+  <message name="insertarMaterialResponse">
+    <part name="parameters" element="tns:insertarMaterialResponse" />
   </message>
   <message name="listarTodos">
     <part name="parameters" element="tns:listarTodos" />
@@ -104,17 +53,14 @@
   <message name="listarMasRecientesResponse">
     <part name="parameters" element="tns:listarMasRecientesResponse" />
   </message>
-  <message name="listarMasSolicitados">
-    <part name="parameters" element="tns:listarMasSolicitados" />
-  </message>
-  <message name="listarMasSolicitadosResponse">
-    <part name="parameters" element="tns:listarMasSolicitadosResponse" />
-  </message>
   <message name="obtenerNombreCreadorRandomPorMaterial">
     <part name="parameters" element="tns:obtenerNombreCreadorRandomPorMaterial" />
   </message>
   <message name="obtenerNombreCreadorRandomPorMaterialResponse">
     <part name="parameters" element="tns:obtenerNombreCreadorRandomPorMaterialResponse" />
+  </message>
+  <message name="BusinessException">
+    <part name="fault" element="tns:BusinessException" />
   </message>
   <message name="contarDisponiblesFisicosPorMaterial">
     <part name="parameters" element="tns:contarDisponiblesFisicosPorMaterial" />
@@ -128,23 +74,53 @@
   <message name="listarMaterialesPorTituloParcialPaginadoResponse">
     <part name="parameters" element="tns:listarMaterialesPorTituloParcialPaginadoResponse" />
   </message>
-  <message name="listarPorAutor">
-    <part name="parameters" element="tns:listarPorAutor" />
-  </message>
-  <message name="listarPorAutorResponse">
-    <part name="parameters" element="tns:listarPorAutorResponse" />
-  </message>
   <message name="contarMateriales">
     <part name="parameters" element="tns:contarMateriales" />
   </message>
   <message name="contarMaterialesResponse">
     <part name="parameters" element="tns:contarMaterialesResponse" />
   </message>
-  <message name="listarMaterialesPorSedeYFiltro">
-    <part name="parameters" element="tns:listarMaterialesPorSedeYFiltro" />
+  <message name="listarPorAutor">
+    <part name="parameters" element="tns:listarPorAutor" />
   </message>
-  <message name="listarMaterialesPorSedeYFiltroResponse">
-    <part name="parameters" element="tns:listarMaterialesPorSedeYFiltroResponse" />
+  <message name="listarPorAutorResponse">
+    <part name="parameters" element="tns:listarPorAutorResponse" />
+  </message>
+  <message name="listarEjemplaresMaterial">
+    <part name="parameters" element="tns:listarEjemplaresMaterial" />
+  </message>
+  <message name="listarEjemplaresMaterialResponse">
+    <part name="parameters" element="tns:listarEjemplaresMaterialResponse" />
+  </message>
+  <message name="listarCreadoresPorMaterial">
+    <part name="parameters" element="tns:listarCreadoresPorMaterial" />
+  </message>
+  <message name="listarCreadoresPorMaterialResponse">
+    <part name="parameters" element="tns:listarCreadoresPorMaterialResponse" />
+  </message>
+  <message name="listarTemasPorMaterial">
+    <part name="parameters" element="tns:listarTemasPorMaterial" />
+  </message>
+  <message name="listarTemasPorMaterialResponse">
+    <part name="parameters" element="tns:listarTemasPorMaterialResponse" />
+  </message>
+  <message name="listarMaterialesPorSede">
+    <part name="parameters" element="tns:listarMaterialesPorSede" />
+  </message>
+  <message name="listarMaterialesPorSedeResponse">
+    <part name="parameters" element="tns:listarMaterialesPorSedeResponse" />
+  </message>
+  <message name="listarMaterialesPaginado">
+    <part name="parameters" element="tns:listarMaterialesPaginado" />
+  </message>
+  <message name="listarMaterialesPaginadoResponse">
+    <part name="parameters" element="tns:listarMaterialesPaginadoResponse" />
+  </message>
+  <message name="listarTodosPaginadoBasico">
+    <part name="parameters" element="tns:listarTodosPaginadoBasico" />
+  </message>
+  <message name="listarTodosPaginadoBasicoResponse">
+    <part name="parameters" element="tns:listarTodosPaginadoBasicoResponse" />
   </message>
   <message name="listarMaterialesPaginadoPorEditorial">
     <part name="parameters" element="tns:listarMaterialesPaginadoPorEditorial" />
@@ -158,81 +134,68 @@
   <message name="listarMaterialPorTituloResponse">
     <part name="parameters" element="tns:listarMaterialPorTituloResponse" />
   </message>
-  <message name="listarTodosPaginadoBasico">
-    <part name="parameters" element="tns:listarTodosPaginadoBasico" />
-  </message>
-  <message name="listarTodosPaginadoBasicoResponse">
-    <part name="parameters" element="tns:listarTodosPaginadoBasicoResponse" />
-  </message>
   <message name="contarMaterialesPorSede">
     <part name="parameters" element="tns:contarMaterialesPorSede" />
   </message>
   <message name="contarMaterialesPorSedeResponse">
     <part name="parameters" element="tns:contarMaterialesPorSedeResponse" />
   </message>
-  <message name="listarMaterialesPaginado">
-    <part name="parameters" element="tns:listarMaterialesPaginado" />
+  <message name="listarMaterialesVigentesPorSede">
+    <part name="parameters" element="tns:listarMaterialesVigentesPorSede" />
   </message>
-  <message name="listarMaterialesPaginadoResponse">
-    <part name="parameters" element="tns:listarMaterialesPaginadoResponse" />
+  <message name="listarMaterialesVigentesPorSedeResponse">
+    <part name="parameters" element="tns:listarMaterialesVigentesPorSedeResponse" />
+  </message>
+  <message name="contarStockFisicoPorMaterial">
+    <part name="parameters" element="tns:contarStockFisicoPorMaterial" />
+  </message>
+  <message name="contarStockFisicoPorMaterialResponse">
+    <part name="parameters" element="tns:contarStockFisicoPorMaterialResponse" />
+  </message>
+  <message name="listarTodosPaginadoIntermedio">
+    <part name="parameters" element="tns:listarTodosPaginadoIntermedio" />
+  </message>
+  <message name="listarTodosPaginadoIntermedioResponse">
+    <part name="parameters" element="tns:listarTodosPaginadoIntermedioResponse" />
+  </message>
+  <message name="listarMaterialesPaginadoPorTema">
+    <part name="parameters" element="tns:listarMaterialesPaginadoPorTema" />
+  </message>
+  <message name="listarMaterialesPaginadoPorTemaResponse">
+    <part name="parameters" element="tns:listarMaterialesPaginadoPorTemaResponse" />
+  </message>
+  <message name="listarTodosPaginadoAvanzado">
+    <part name="parameters" element="tns:listarTodosPaginadoAvanzado" />
+  </message>
+  <message name="listarTodosPaginadoAvanzadoResponse">
+    <part name="parameters" element="tns:listarTodosPaginadoAvanzadoResponse" />
+  </message>
+  <message name="contarPrestadosFisicosPorMaterial">
+    <part name="parameters" element="tns:contarPrestadosFisicosPorMaterial" />
+  </message>
+  <message name="contarPrestadosFisicosPorMaterialResponse">
+    <part name="parameters" element="tns:contarPrestadosFisicosPorMaterialResponse" />
   </message>
   <portType name="MaterialWS">
-    <operation name="listarMaterialesVigentesPorSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPorSedeRequest" message="tns:listarMaterialesVigentesPorSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPorSedeResponse" message="tns:listarMaterialesVigentesPorSedeResponse" />
+    <operation name="listarMaterialesPorSedeYFiltro">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFiltroRequest" message="tns:listarMaterialesPorSedeYFiltro" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFiltroResponse" message="tns:listarMaterialesPorSedeYFiltroResponse" />
     </operation>
-    <operation name="contarStockFisicoPorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMaterialRequest" message="tns:contarStockFisicoPorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMaterialResponse" message="tns:contarStockFisicoPorMaterialResponse" />
-      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMaterial/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
-    </operation>
-    <operation name="contarPrestadosFisicosPorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMaterialRequest" message="tns:contarPrestadosFisicosPorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMaterialResponse" message="tns:contarPrestadosFisicosPorMaterialResponse" />
-      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMaterial/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
-    </operation>
-    <operation name="listarTodosPaginadoAvanzado">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzadoRequest" message="tns:listarTodosPaginadoAvanzado" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzadoResponse" message="tns:listarTodosPaginadoAvanzadoResponse" />
-      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
-    </operation>
-    <operation name="listarMaterialesPaginadoPorTema">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPorTemaRequest" message="tns:listarMaterialesPaginadoPorTema" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPorTemaResponse" message="tns:listarMaterialesPaginadoPorTemaResponse" />
-      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPorTema/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
-    </operation>
-    <operation name="listarTodosPaginadoIntermedio">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermedioRequest" message="tns:listarTodosPaginadoIntermedio" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermedioResponse" message="tns:listarTodosPaginadoIntermedioResponse" />
-      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermedio/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
-    </operation>
-    <operation name="listarCreadoresPorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialRequest" message="tns:listarCreadoresPorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialResponse" message="tns:listarCreadoresPorMaterialResponse" />
-    </operation>
-    <operation name="listarTemasPorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialRequest" message="tns:listarTemasPorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialResponse" message="tns:listarTemasPorMaterialResponse" />
-    </operation>
-    <operation name="listarEjemplaresMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialRequest" message="tns:listarEjemplaresMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialResponse" message="tns:listarEjemplaresMaterialResponse" />
-    </operation>
-    <operation name="listarMaterialesPorSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeRequest" message="tns:listarMaterialesPorSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeResponse" message="tns:listarMaterialesPorSedeResponse" />
+    <operation name="listarMasSolicitados">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRequest" message="tns:listarMasSolicitados" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosResponse" message="tns:listarMasSolicitadosResponse" />
     </operation>
     <operation name="modificarMaterial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialRequest" message="tns:modificarMaterial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/modificarMaterialResponse" message="tns:modificarMaterialResponse" />
     </operation>
-    <operation name="insertarMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialRequest" message="tns:insertarMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialResponse" message="tns:insertarMaterialResponse" />
-    </operation>
     <operation name="eliminarMaterial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialRequest" message="tns:eliminarMaterial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialResponse" message="tns:eliminarMaterialResponse" />
+    </operation>
+    <operation name="insertarMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialRequest" message="tns:insertarMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/insertarMaterialResponse" message="tns:insertarMaterialResponse" />
     </operation>
     <operation name="listarTodos">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosRequest" message="tns:listarTodos" />
@@ -245,10 +208,6 @@
     <operation name="listarMasRecientes">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesRequest" message="tns:listarMasRecientes" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasRecientesResponse" message="tns:listarMasRecientesResponse" />
-    </operation>
-    <operation name="listarMasSolicitados">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosRequest" message="tns:listarMasSolicitados" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMasSolicitadosResponse" message="tns:listarMasSolicitadosResponse" />
     </operation>
     <operation name="obtenerNombreCreadorRandomPorMaterial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerNombreCreadorRandomPorMaterialRequest" message="tns:obtenerNombreCreadorRandomPorMaterial" />
@@ -265,17 +224,38 @@
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorTituloParcialPaginadoResponse" message="tns:listarMaterialesPorTituloParcialPaginadoResponse" />
       <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorTituloParcialPaginado/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
     </operation>
-    <operation name="listarPorAutor">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorRequest" message="tns:listarPorAutor" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorResponse" message="tns:listarPorAutorResponse" />
-    </operation>
     <operation name="contarMateriales">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesRequest" message="tns:contarMateriales" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesResponse" message="tns:contarMaterialesResponse" />
     </operation>
-    <operation name="listarMaterialesPorSedeYFiltro">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFiltroRequest" message="tns:listarMaterialesPorSedeYFiltro" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeYFiltroResponse" message="tns:listarMaterialesPorSedeYFiltroResponse" />
+    <operation name="listarPorAutor">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorRequest" message="tns:listarPorAutor" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarPorAutorResponse" message="tns:listarPorAutorResponse" />
+    </operation>
+    <operation name="listarEjemplaresMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialRequest" message="tns:listarEjemplaresMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialResponse" message="tns:listarEjemplaresMaterialResponse" />
+    </operation>
+    <operation name="listarCreadoresPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialRequest" message="tns:listarCreadoresPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialResponse" message="tns:listarCreadoresPorMaterialResponse" />
+    </operation>
+    <operation name="listarTemasPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialRequest" message="tns:listarTemasPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTemasPorMaterialResponse" message="tns:listarTemasPorMaterialResponse" />
+    </operation>
+    <operation name="listarMaterialesPorSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeRequest" message="tns:listarMaterialesPorSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPorSedeResponse" message="tns:listarMaterialesPorSedeResponse" />
+    </operation>
+    <operation name="listarMaterialesPaginado">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoRequest" message="tns:listarMaterialesPaginado" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoResponse" message="tns:listarMaterialesPaginadoResponse" />
+    </operation>
+    <operation name="listarTodosPaginadoBasico">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRequest" message="tns:listarTodosPaginadoBasico" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoResponse" message="tns:listarTodosPaginadoBasicoResponse" />
+      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasico/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
     </operation>
     <operation name="listarMaterialesPaginadoPorEditorial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPorEditorialRequest" message="tns:listarMaterialesPaginadoPorEditorial" />
@@ -286,24 +266,44 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloRequest" message="tns:listarMaterialPorTitulo" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialPorTituloResponse" message="tns:listarMaterialPorTituloResponse" />
     </operation>
-    <operation name="listarTodosPaginadoBasico">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoRequest" message="tns:listarTodosPaginadoBasico" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasicoResponse" message="tns:listarTodosPaginadoBasicoResponse" />
-      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoBasico/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
-    </operation>
     <operation name="contarMaterialesPorSede">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesPorSedeRequest" message="tns:contarMaterialesPorSede" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesPorSedeResponse" message="tns:contarMaterialesPorSedeResponse" />
       <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarMaterialesPorSede/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
     </operation>
-    <operation name="listarMaterialesPaginado">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoRequest" message="tns:listarMaterialesPaginado" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoResponse" message="tns:listarMaterialesPaginadoResponse" />
+    <operation name="listarMaterialesVigentesPorSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPorSedeRequest" message="tns:listarMaterialesVigentesPorSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesVigentesPorSedeResponse" message="tns:listarMaterialesVigentesPorSedeResponse" />
+    </operation>
+    <operation name="contarStockFisicoPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMaterialRequest" message="tns:contarStockFisicoPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMaterialResponse" message="tns:contarStockFisicoPorMaterialResponse" />
+      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarStockFisicoPorMaterial/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="listarTodosPaginadoIntermedio">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermedioRequest" message="tns:listarTodosPaginadoIntermedio" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermedioResponse" message="tns:listarTodosPaginadoIntermedioResponse" />
+      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoIntermedio/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="listarMaterialesPaginadoPorTema">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPorTemaRequest" message="tns:listarMaterialesPaginadoPorTema" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPorTemaResponse" message="tns:listarMaterialesPaginadoPorTemaResponse" />
+      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarMaterialesPaginadoPorTema/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="listarTodosPaginadoAvanzado">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzadoRequest" message="tns:listarTodosPaginadoAvanzado" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzadoResponse" message="tns:listarTodosPaginadoAvanzadoResponse" />
+      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosPaginadoAvanzado/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="contarPrestadosFisicosPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMaterialRequest" message="tns:contarPrestadosFisicosPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMaterialResponse" message="tns:contarPrestadosFisicosPorMaterialResponse" />
+      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/contarPrestadosFisicosPorMaterial/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
     </operation>
   </portType>
   <binding name="MaterialWSPortBinding" type="tns:MaterialWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarMaterialesVigentesPorSede">
+    <operation name="listarMaterialesPorSedeYFiltro">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -312,94 +312,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="contarStockFisicoPorMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="BusinessException">
-        <soap:fault use="literal" name="BusinessException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="contarPrestadosFisicosPorMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="BusinessException">
-        <soap:fault use="literal" name="BusinessException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarTodosPaginadoAvanzado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="BusinessException">
-        <soap:fault use="literal" name="BusinessException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarMaterialesPaginadoPorTema">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="BusinessException">
-        <soap:fault use="literal" name="BusinessException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarTodosPaginadoIntermedio">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="BusinessException">
-        <soap:fault use="literal" name="BusinessException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarCreadoresPorMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTemasPorMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarEjemplaresMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarMaterialesPorSede">
+    <operation name="listarMasSolicitados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -417,7 +330,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarMaterial">
+    <operation name="eliminarMaterial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -426,7 +339,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarMaterial">
+    <operation name="insertarMaterial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -454,15 +367,6 @@
       </output>
     </operation>
     <operation name="listarMasRecientes">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarMasSolicitados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -507,15 +411,6 @@
         <soap:fault use="literal" name="BusinessException" namespace="" />
       </fault>
     </operation>
-    <operation name="listarPorAutor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="contarMateriales">
       <soap:operation soapAction="" />
       <input>
@@ -525,7 +420,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarMaterialesPorSedeYFiltro">
+    <operation name="listarPorAutor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -533,6 +428,63 @@
       <output>
         <soap:body use="literal" />
       </output>
+    </operation>
+    <operation name="listarEjemplaresMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCreadoresPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTemasPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMaterialesPorSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMaterialesPaginado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosPaginadoBasico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
     </operation>
     <operation name="listarMaterialesPaginadoPorEditorial">
       <soap:operation soapAction="" />
@@ -555,18 +507,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosPaginadoBasico">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="BusinessException">
-        <soap:fault use="literal" name="BusinessException" namespace="" />
-      </fault>
-    </operation>
     <operation name="contarMaterialesPorSede">
       <soap:operation soapAction="" />
       <input>
@@ -579,7 +519,7 @@
         <soap:fault use="literal" name="BusinessException" namespace="" />
       </fault>
     </operation>
-    <operation name="listarMaterialesPaginado">
+    <operation name="listarMaterialesVigentesPorSede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -587,6 +527,66 @@
       <output>
         <soap:body use="literal" />
       </output>
+    </operation>
+    <operation name="contarStockFisicoPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarTodosPaginadoIntermedio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarMaterialesPaginadoPorTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarTodosPaginadoAvanzado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="contarPrestadosFisicosPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
     </operation>
   </binding>
   <service name="MaterialWS">

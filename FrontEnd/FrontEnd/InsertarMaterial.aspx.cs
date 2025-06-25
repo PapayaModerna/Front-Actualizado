@@ -246,13 +246,16 @@ namespace FrontEnd
         }
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-        /*    var material = new MaterialWS.materialesDTO();
-
-            material.nivel = new MaterialWS.nivelesInglesDTO();
-            material.editorial = new MaterialWS.editorialesDTO();
+            // Crear una instancia del DTO del material
+            var material = new MaterialWS.materialesDTO
+            {
+                nivel = new MaterialWS.nivelesInglesDTO(),
+                editorial = new MaterialWS.editorialesDTO()
+            };
 
             try
             {
+                // Obtener los valores de los campos del formulario
                 string titulo = txtTitulo.Text;
                 string edicion = txtEdicion.Text;
                 int anioPublicacion = Convert.ToInt32(ddlAnioPublicacion.SelectedValue);
@@ -260,14 +263,17 @@ namespace FrontEnd
                 int idEditorial = Convert.ToInt32(ddlEditorial.SelectedValue);
                 string portada = string.Empty;
 
+                // Validar si se ha seleccionado un archivo de portada
                 if (fileUploadPortada.HasFile)
                 {
-                    if (fileUploadPortada.FileBytes.Length > 1024 * 1024)
+                    // Validación de tamaño del archivo
+                    if (fileUploadPortada.FileBytes.Length > 1024 * 1024) // Limitar a 1MB
                     {
                         Response.Write("<script>alert('El archivo es demasiado grande. Máximo 1MB.');</script>");
                         return;
                     }
 
+                    // Validación de proporciones de la imagen
                     using (var img = System.Drawing.Image.FromStream(fileUploadPortada.PostedFile.InputStream))
                     {
                         int width = img.Width;
@@ -281,20 +287,21 @@ namespace FrontEnd
                         }
                     }
 
+                    // Guardar la imagen en el servidor
                     fileUploadPortada.PostedFile.InputStream.Position = 0;
-
                     string extension = Path.GetExtension(fileUploadPortada.FileName).ToLower();
                     string fileName = $"nuevo_{DateTime.Now.Ticks}{extension}";
                     string filePath = Path.Combine(Server.MapPath("~/Images/Portadas/"), fileName);
-
                     fileUploadPortada.SaveAs(filePath);
                     portada = $"~/Images/Portadas/{fileName}";
                 }
                 else
                 {
+                    // Si no se carga un archivo, usamos la portada anterior (si existe)
                     portada = hiddenPortadaAnterior.Value;
                 }
 
+                // Asignar los valores al DTO del material
                 material.titulo = titulo;
                 material.edicion = edicion;
                 material.anioPublicacion = anioPublicacion;
@@ -306,7 +313,7 @@ namespace FrontEnd
                 material.editorial.idEditorial = idEditorial;
                 material.editorial.idEditorialSpecified = true;
 
-
+                // Convertir los creadores y temas seleccionados a arrays de DTOs
                 var listaCreadores = CreadoresInsertados.Select(id => new MaterialWS.creadoresDTO
                 {
                     idCreador = id,
@@ -318,31 +325,25 @@ namespace FrontEnd
                     idTema = id,
                     idTemaSpecified = true
                 }).ToArray();
-                /*
-                if (listaCreadores != null && listaCreadores.Length > 0)
+
+                // Validación de creadores y temas
+                if (listaCreadores.Length == 0)
                 {
-                    var creadorIds = string.Join(", ", listaCreadores.Select(c => c.idCreador));
-                    Response.Write($"<script>alert('IDs Creadores: {creadorIds}');</script>");
-                }
-                else
-                {
-                    Response.Write("<script>alert('La lista de creadores está vacía o es null');</script>");
+                    Response.Write("<script>alert('Debe seleccionar al menos un creador.');</script>");
+                    return;
                 }
 
-                if (listaTemas != null && listaTemas.Length > 0)
+                if (listaTemas.Length == 0)
                 {
-                    var temaIds = string.Join(", ", listaTemas.Select(t => t.idTema));
-                    Response.Write($"<script>alert('IDs Temas: {temaIds}');</script>");
+                    Response.Write("<script>alert('Debe seleccionar al menos un tema.');</script>");
+                    return;
                 }
-                else
-                {
-                    Response.Write("<script>alert('La lista de temas está vacía o es null');</script>");
-                }
-                */
 
+                // Llamar al servicio para insertar el material
                 var materialCliente = new MaterialWS.MaterialWSClient();
-                var result = materialCliente.insertarMaterial(material,listaCreadores,listaTemas);
-                
+                var result = materialCliente.insertarMaterial(material, listaCreadores, listaTemas);
+
+                // Comprobar el resultado
                 if (result > 0)
                 {
                     Response.Write("<script>alert('✅ Material insertado correctamente');</script>");
@@ -355,9 +356,10 @@ namespace FrontEnd
             }
             catch (Exception ex)
             {
+                // Manejo de errores
                 string mensaje = $"Error al insertar el material: {ex.Message}";
                 Response.Write("<script>alert('" + mensaje.Replace("'", "\\'") + "');</script>");
-            }*/
+            }
         }
     }
 }

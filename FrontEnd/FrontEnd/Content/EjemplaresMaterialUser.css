@@ -1,0 +1,130 @@
+﻿/* Estilos para las secciones de las sedes */
+.sede-section {
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: #f8f9fa; /* Fondo claro por defecto */
+    margin-top:2rem;
+}
+
+/* Fondo gris apagado para el modo oscuro */
+html.dark-mode .sede-section {
+    background-color: #5c6368; /* Gris apagado para el fondo en modo nocturno */
+}
+
+/* Estilos de los títulos de las sedes */
+.sede-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem; /* Títulos más grandes */
+    font-weight: bold;
+    color: #000000; /* Color negro para el título */
+    margin-bottom: 1rem;
+}
+
+/* Estilos del contenedor de la sede */
+.sede-box {
+    background-color: #ffffff; /* Fondo claro por defecto */
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Fondo gris apagado para el modo oscuro */
+html.dark-mode .sede-box {
+    background-color: #2a2a2a; /* Fondo oscuro en modo nocturno */
+}
+
+/* Estilos para los ejemplares */
+.ejemplar-item {
+    flex: 1 1 30%; /* Tres columnas */
+    min-width: 280px;
+}
+
+/* Estilos de las tarjetas de ejemplares */
+.ejemplar-card {
+    background-color: #ffffff; /* Fondo claro por defecto */
+    color: #343a40; /* Color oscuro para el texto */
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el modo nocturno en las tarjetas */
+html.dark-mode .ejemplar-card {
+    background-color: #2a2a2a; /* Fondo oscuro en modo nocturno */
+    color: #ffffff; /* Texto blanco en modo nocturno */
+}
+
+/* Hover sobre las tarjetas */
+.ejemplar-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos de los ejemplares */
+.ejemplar-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Información de los ejemplares */
+.ejemplar-info {
+    font-size: 1rem;
+    color: #6c757d; /* Color gris para el texto */
+}
+
+/* Estilo de los botones */
+.btn-success {
+    background-color: #28a745; /* Verde por defecto */
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hover sobre el botón */
+    .btn-success:hover {
+        background-color: #218838; /* Verde más oscuro */
+    }
+
+/* Estilos para el botón en modo nocturno */
+html.dark-mode .btn-success {
+    background-color: #007bff; /* Azul en modo oscuro */
+    color: #fff;
+}
+
+/* Fondo y color de texto en el modo oscuro */
+html.dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+    /* Estilo para el texto en modo nocturno */
+    html.dark-mode .ejemplar-info {
+        color: #adb5bd; /* Gris más suave en modo oscuro */
+    }
+.material-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #212529; /* Color para el modo claro */
+    margin-top: 15px;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para el modo oscuro */
+html.dark-mode .material-title {
+    color: #f8f9fa; /* Blanco para modo oscuro */
+}
+.no-ejemplares-msg {
+    font-size: 1.2rem;
+    color: #dc3545; /* Color rojo */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    display: block;
+}

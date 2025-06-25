@@ -55,21 +55,19 @@ namespace FrontEnd
         protected void btnSolicitarPrestamo_Click(object sender, EventArgs e)
         {
             var carrito = Session["CarritoEjemplares"] as List<int>;
-            int idPersona = 7;
+            int idPersona = (int)Session["idPersona"];
 
             if (carrito != null && carrito.Count > 0)
             {
                 try
                 {
+                    Session["CarritoEjemplares"] = new List<int>();
                     prestamowsClient.solicitarPrestamo(idPersona, carrito.ToArray());
 
-                    // Limpia el carrito
                     Session["CarritoEjemplares"] = new List<int>();
 
-                    // Actualiza visual
                     CargarCarrito();
 
-                    // Notifica al usuario
                     ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('Préstamo solicitado correctamente.');", true);
                 }
                 catch (Exception ex)
@@ -81,6 +79,12 @@ namespace FrontEnd
             {
                 ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('El carrito está vacío.');", true);
             }
+        }
+        protected void btnEliminarTodos_Click(object sender, EventArgs e)
+        {
+            Session["CarritoEjemplares"] = new List<int>();
+            CargarCarrito();
+            ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('Todos los ejemplares han sido eliminados del carrito.');", true);
         }
     }
 }
