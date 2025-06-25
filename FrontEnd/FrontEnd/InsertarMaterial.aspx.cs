@@ -26,6 +26,36 @@ namespace FrontEnd
             get => ViewState["CreadoresInsertados"] as List<int> ?? new List<int>();
             set => ViewState["CreadoresInsertados"] = value;
         }
+
+        private List<TemaWS.temasDTO> TemasDisponibles
+        {
+            get => ViewState["TemasDisponibles"] as List<TemaWS.temasDTO> ?? new List<TemaWS.temasDTO>();
+            set => ViewState["TemasDisponibles"] = value;
+        }
+
+        private List<int> TemasSeleccionados
+        {
+            get => ViewState["TemasSeleccionados"] as List<int> ?? new List<int>();
+            set => ViewState["TemasSeleccionados"] = value;
+        }
+
+        private void ListarTemas()
+        {
+            var temaCliente = new TemaWS.TemaWSClient();
+            var temas = temaCliente.listarTemas().ToList();
+            TemasDisponibles = temas;
+
+            ddlTemas.DataSource = temas.Select(t => new
+            {
+                t.idTema,
+                nombreCompleto = $"{t.categoria} - {t.descripcion}"
+            }).ToList();
+
+            ddlTemas.DataTextField = "nombreCompleto";
+            ddlTemas.DataValueField = "idTema";
+            ddlTemas.DataBind();
+            ddlTemas.Items.Insert(0, new ListItem("Seleccione un tema", "0"));
+        }
         private void LlenarAnioPublicacion()
         {
             int currentYear = DateTime.Now.Year;
@@ -76,13 +106,29 @@ namespace FrontEnd
           
                 LlenarAnioPublicacion();
                 ListarEditoriales();
-                ListarCreadores();
-          
-            }
+                ddlCreadores.Items.Insert(0, new ListItem("Seleccione un creador", "0"));
+                ddlTemas.Items.Insert(0, new ListItem("Seleccione un tema", "0"));
+                //ListarCreadores();
+                // ListarTemas();
 
+            }
             MostrarCreadoresInsertados();
+            MostrarTemasInsertados();
+
         }
-        
+
+        protected void btnCargarCreadores_Click(object sender, EventArgs e)
+        {
+            ListarCreadores();
+            btnCargarCreadores.Visible = false;
+        }
+
+        protected void btnCargarTemas_Click(object sender, EventArgs e)
+        {
+            ListarTemas();
+            btnCargarTemas.Visible = false;
+        }
+
         private void MostrarCreadoresInsertados()
         {
             panelCreadoresInsertados.Controls.Clear();
@@ -144,16 +190,72 @@ namespace FrontEnd
             lista.Add(id);
 
             CreadoresInsertados = lista;
+            MostrarCreadoresInsertados();
+        }
+
+        protected void btnAgregarTema_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(ddlTemas.SelectedValue);
+            if (id == 0) return;
+
+            var lista = TemasSeleccionados;
+            if (!lista.Contains(id))
+                lista.Add(id);
+
+            TemasSeleccionados = lista;
+            MostrarTemasInsertados();
+        }
+
+        private void MostrarTemasInsertados()
+        {
+            panelTemasInsertados.Controls.Clear();
+
+            foreach (int id in TemasSeleccionados)
+            {
+                var tema = TemasDisponibles.FirstOrDefault(t => t.idTema == id);
+                if (tema == null) continue;
+
+                string texto = $"{tema.categoria} - {tema.descripcion}";
+
+                var contenedor = new Panel { CssClass = "badge bg-creador text-white p-2 rounded d-flex align-items-center" };
+                contenedor.Controls.Add(new Literal { Text = texto });
+
+                var btnEliminar = new Button
+                {
+                    Text = "✖",
+                    CssClass = "btn btn-sm btn-outline-light ms-2",
+                    CommandArgument = id.ToString()
+                };
+                btnEliminar.Click += btnEliminarTema_Click;
+
+                contenedor.Controls.Add(btnEliminar);
+                panelTemasInsertados.Controls.Add(contenedor);
+            }
+        }
+
+        protected void btnEliminarTema_Click(object sender, EventArgs e)
+        {
+            var boton = (Button)sender;
+            int id = int.Parse(boton.CommandArgument);
+
+            var lista = TemasSeleccionados;
+            lista.Remove(id);
+            TemasSeleccionados = lista;
+
+            MostrarTemasInsertados();
         }
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-        /*    var material = new MaterialWS.materialesDTO();
-
-            material.nivel = new MaterialWS.nivelesInglesDTO();
-            material.editorial = new MaterialWS.editorialesDTO();
+            // Crear una instancia del DTO del material
+            var material = new MaterialWS.materialesDTO
+            {
+                nivel = new MaterialWS.nivelesInglesDTO(),
+                editorial = new MaterialWS.editorialesDTO()
+            };
 
             try
             {
+                // Obtener los valores de los campos del formulario
                 string titulo = txtTitulo.Text;
                 string edicion = txtEdicion.Text;
                 int anioPublicacion = Convert.ToInt32(ddlAnioPublicacion.SelectedValue);
@@ -161,14 +263,17 @@ namespace FrontEnd
                 int idEditorial = Convert.ToInt32(ddlEditorial.SelectedValue);
                 string portada = string.Empty;
 
+                // Validar si se ha seleccionado un archivo de portada
                 if (fileUploadPortada.HasFile)
                 {
-                    if (fileUploadPortada.FileBytes.Length > 1024 * 1024)
+                    // Validación de tamaño del archivo
+                    if (fileUploadPortada.FileBytes.Length > 1024 * 1024) // Limitar a 1MB
                     {
                         Response.Write("<script>alert('El archivo es demasiado grande. Máximo 1MB.');</script>");
                         return;
                     }
 
+                    // Validación de proporciones de la imagen
                     using (var img = System.Drawing.Image.FromStream(fileUploadPortada.PostedFile.InputStream))
                     {
                         int width = img.Width;
@@ -182,20 +287,21 @@ namespace FrontEnd
                         }
                     }
 
+                    // Guardar la imagen en el servidor
                     fileUploadPortada.PostedFile.InputStream.Position = 0;
-
                     string extension = Path.GetExtension(fileUploadPortada.FileName).ToLower();
                     string fileName = $"nuevo_{DateTime.Now.Ticks}{extension}";
                     string filePath = Path.Combine(Server.MapPath("~/Images/Portadas/"), fileName);
-
                     fileUploadPortada.SaveAs(filePath);
                     portada = $"~/Images/Portadas/{fileName}";
                 }
                 else
                 {
+                    // Si no se carga un archivo, usamos la portada anterior (si existe)
                     portada = hiddenPortadaAnterior.Value;
                 }
 
+                // Asignar los valores al DTO del material
                 material.titulo = titulo;
                 material.edicion = edicion;
                 material.anioPublicacion = anioPublicacion;
@@ -207,18 +313,37 @@ namespace FrontEnd
                 material.editorial.idEditorial = idEditorial;
                 material.editorial.idEditorialSpecified = true;
 
+                // Convertir los creadores y temas seleccionados a arrays de DTOs
+                var listaCreadores = CreadoresInsertados.Select(id => new MaterialWS.creadoresDTO
+                {
+                    idCreador = id,
+                    idCreadorSpecified = true
+                }).ToArray();
 
+                var listaTemas = TemasSeleccionados.Select(id => new MaterialWS.temasDTO
+                {
+                    idTema = id,
+                    idTemaSpecified = true
+                }).ToArray();
 
-                material.creadores(
-                    CreadoresInsertados.Select(id => new MaterialWS.creadoresDTO
-                    {
-                        idCreador = id,
-                        idCreadorSpecified = true
-                    }).ToList()
-                );
+                // Validación de creadores y temas
+                if (listaCreadores.Length == 0)
+                {
+                    Response.Write("<script>alert('Debe seleccionar al menos un creador.');</script>");
+                    return;
+                }
+
+                if (listaTemas.Length == 0)
+                {
+                    Response.Write("<script>alert('Debe seleccionar al menos un tema.');</script>");
+                    return;
+                }
+
+                // Llamar al servicio para insertar el material
                 var materialCliente = new MaterialWS.MaterialWSClient();
-                var result = materialCliente.insertarMaterial(material);
+                var result = materialCliente.insertarMaterial(material, listaCreadores, listaTemas);
 
+                // Comprobar el resultado
                 if (result > 0)
                 {
                     Response.Write("<script>alert('✅ Material insertado correctamente');</script>");
@@ -231,9 +356,10 @@ namespace FrontEnd
             }
             catch (Exception ex)
             {
+                // Manejo de errores
                 string mensaje = $"Error al insertar el material: {ex.Message}";
                 Response.Write("<script>alert('" + mensaje.Replace("'", "\\'") + "');</script>");
-            }*/
+            }
         }
     }
 }

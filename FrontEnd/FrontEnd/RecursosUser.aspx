@@ -362,7 +362,7 @@
                                     <p class="card-text small"><a id="lnkDetalle" runat="server" class="text-primary" href="#">Ver detalle</a></p>
                                 </div>
                                 <div class="card-footer-custom">
-                                     <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" />
+                                     <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" CommandArgument='<%# Eval("idMaterial") %>' OnClick="btnBorrow_Click" />
                                      <a href="#" class="btn btn-light btn-sm"><i class="fas fa-bookmark"></i></a>
                                 </div>
                             </div>
@@ -407,7 +407,7 @@
                                     OnClick="lnkDetalle_Click" />
                                 </div>
                                 <div class="card-footer-custom">
-                                     <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" />
+                                     <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" CommandArgument='<%# Eval("idMaterial") %>' OnClick="btnBorrow_Click" />
                                      <a href="#" class="btn btn-light btn-sm"><i class="fas fa-bookmark"></i></a>
                                 </div>
                             </div>
@@ -449,19 +449,14 @@
                                     <a id="lnkDetalle" runat="server" class="text-primary" href="#">Ver detalle</a></p>
                                 </div>
                                 <div class="card-footer-custom">
-                                        <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" />
-                                        <a href="#" class="btn btn-light btn-sm"><i class="fas fa-bookmark"></i></a>
+                                     <asp:Button ID="btnBorrow" runat="server" CssClass="btn btn-primary btn-sm" Text="BORROW" CommandArgument='<%# Eval("idMaterial") %>' OnClick="btnBorrow_Click" />
+                                     <a href="#" class="btn btn-light btn-sm"><i class="fas fa-bookmark"></i></a>
                                 </div>
                             </div>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
-            <asp:Button ID="btnTestFueraRepeater" runat="server" 
-            Text="🚀 TEST AGREGAR ID 2 AL CARRITO"
-            CssClass="btn btn-danger mt-3"
-            OnClick="btnTestFueraRepeater_Click" />
-             <div class="details-expander"></div>
         </div>
     </div>
     <script type="text/javascript">
@@ -627,7 +622,6 @@
                     seccionesNiveles.forEach(sec => sec.style.display = '');
                 }
             });
-            // --- FIN BUSCADOR ANIMADO ---
         });
     </script>
 </asp:Content>

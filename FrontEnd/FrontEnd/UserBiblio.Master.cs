@@ -18,6 +18,11 @@ namespace FrontEnd
         }
         public void ActualizarCantidadCarrito()
         {
+            if (Session["CarritoEjemplares"] == null)
+            {
+                Session["CarritoEjemplares"] = new List<int>();
+            }
+
             var carrito = Session["CarritoEjemplares"] as List<int>;
             int cantidad = carrito != null ? carrito.Count : 0;
             lblCantidadCarrito.Text = cantidad.ToString();

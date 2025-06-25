@@ -33,7 +33,13 @@ namespace FrontEnd
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+            {
+                if (Session["prestamos"] != null)
+                {
+                    prestamos = (List<FrontEnd.PrestamoWS.prestamosDTO>)Session["prestamos"];
+                }
+            }
         }
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -48,7 +54,7 @@ namespace FrontEnd
                 {
                     txtNombres.Text = $"{personaEncontrada.nombre} {personaEncontrada.paterno}";
                     prestamos = prestamoWSClient.listarPrestamosSolicitadosPorPersona(personaEncontrada.idPersona).ToList();
-
+                    Session["prestamos"] = prestamos;
                     DateTime fechaActual = DateTime.Now;
                     DateTime fechaLimite = fechaActual.AddDays(-2);
 
@@ -99,13 +105,17 @@ namespace FrontEnd
         }
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (Session["prestamos"] != null)
+            {
+                prestamos = (List<FrontEnd.PrestamoWS.prestamosDTO>)Session["prestamos"];
+            }
             if (prestamos != null && prestamos.Count > 0)
             {
                 var prestamoMasAntiguo = prestamos.OrderBy(p => p.fechaSolicitud).FirstOrDefault();
                 if (prestamoMasAntiguo != null)
                 {
                     prestamoWSClient.recogerPrestamo(prestamoMasAntiguo.idPrestamo);
-                    Response.Redirect("~/PrestamosPrincipal.aspx");
+                    Response.Redirect("~/PrestamosPrincipalAdmin.aspx");
                 }
                 else
                 {

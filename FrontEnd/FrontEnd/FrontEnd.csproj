@@ -587,6 +587,7 @@
     <Content Include="Content\DetalleLibros.css" />
     <Content Include="Content\DetallesPersona.css" />
     <Content Include="Content\EditarMaterial.css" />
+    <Content Include="Content\EjemplaresMaterialUser.css" />
     <Content Include="Content\IndexAdmin.css" />
     <Content Include="Content\InsertarMaterial.css" />
     <Content Include="Content\PrestamosAdmin.css" />
@@ -594,6 +595,7 @@
     <Content Include="DetallesAdmin.aspx" />
     <Content Include="DevolucionPrestamo.aspx" />
     <Content Include="EditarMaterial.aspx" />
+    <Content Include="EjemplaresMaterialUser.aspx" />
     <Content Include="EjemplaresMaterialAdmin.aspx" />
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
@@ -713,6 +715,13 @@
     </Compile>
     <Compile Include="DevolucionPrestamo.aspx.designer.cs">
       <DependentUpon>DevolucionPrestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EjemplaresMaterialUser.aspx.cs">
+      <DependentUpon>EjemplaresMaterialUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EjemplaresMaterialUser.aspx.designer.cs">
+      <DependentUpon>EjemplaresMaterialUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="EjemplaresMaterialAdmin.aspx.cs">
       <DependentUpon>EjemplaresMaterialAdmin.aspx</DependentUpon>

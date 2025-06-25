@@ -189,26 +189,15 @@ namespace FrontEnd
             }
 
         }
-        protected void btnTestFueraRepeater_Click(object sender, EventArgs e)
+        protected void btnBorrow_Click(object sender, EventArgs e)
         {
-            var carrito = Session["CarritoEjemplares"] as List<int> ?? new List<int>();
-
-            if (true)
-            {
-                carrito.Add(61);
-                Session["CarritoEjemplares"] = carrito;
-
-                // Actualiza contador de carrito en el master
-                var master = this.Master as UserBiblio;
-                master?.ActualizarCantidadCarrito();
-
-                ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('ID 2 agregado al carrito');", true);
-            }
+            Button btn = (Button)sender;
+            string idMaterial = btn.CommandArgument;
+            string script = $"window.location.href='EjemplaresMaterialUser.aspx?idMaterial={idMaterial}';";
+            ClientScript.RegisterStartupScript(this.GetType(), "redirect", script, true);
         }
         protected void lnkDetalle_Click(object sender, EventArgs e)
         {
-            // Aquí puedes implementar la lógica para mostrar detalle del ejemplar.
-            // Por ahora, puedes poner solo un debug o redireccionamiento:
             Response.Write("<script>alert('Se hizo clic en Ver detalle');</script>");
         }
     }
