@@ -74,6 +74,7 @@
     <None Include="Connected Services\CreadorWS\CreadorWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="AgregarEjemplarAdmin.aspx" />
     <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.creadoresDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -595,6 +596,7 @@
     <Content Include="DevolucionPrestamo.aspx" />
     <Content Include="EditarMaterial.aspx" />
     <Content Include="EjemplaresMaterialUser.aspx" />
+    <Content Include="EjemplaresMaterialAdmin.aspx" />
     <Content Include="Images\myholylogo.png" />
     <Content Include="IndexUser.aspx" />
     <Content Include="IndexAdmin.aspx" />
@@ -605,6 +607,7 @@
     <Content Include="ModificarUsuarioAdmin.aspx" />
     <Content Include="PrestamosPrincipalAdmin.aspx" />
     <Content Include="RecursosUser.aspx" />
+    <Content Include="ReportesPrincipalAdmin.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -635,6 +638,13 @@
     </Compile>
     <Compile Include="AdminBiblio.Master.designer.cs">
       <DependentUpon>AdminBiblio.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEjemplarAdmin.aspx.cs">
+      <DependentUpon>AgregarEjemplarAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarEjemplarAdmin.aspx.designer.cs">
+      <DependentUpon>AgregarEjemplarAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\CreadorWS\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -714,6 +724,13 @@
     <Compile Include="EjemplaresMaterialUser.aspx.designer.cs">
       <DependentUpon>EjemplaresMaterialUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EjemplaresMaterialAdmin.aspx.cs">
+      <DependentUpon>EjemplaresMaterialAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EjemplaresMaterialAdmin.aspx.designer.cs">
+      <DependentUpon>EjemplaresMaterialAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HistorialPrestamosUser.aspx.cs">
       <DependentUpon>HistorialPrestamosUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -748,6 +765,13 @@
     </Compile>
     <Compile Include="RecojoPrestamo.aspx.designer.cs">
       <DependentUpon>RecojoPrestamo.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesPrincipalAdmin.aspx.cs">
+      <DependentUpon>ReportesPrincipalAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesPrincipalAdmin.aspx.designer.cs">
+      <DependentUpon>ReportesPrincipalAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPerfilVista.Master.cs">
       <DependentUpon>UserPerfilVista.Master</DependentUpon>

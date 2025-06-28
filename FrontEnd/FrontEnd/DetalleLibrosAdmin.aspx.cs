@@ -80,7 +80,17 @@ namespace FrontEnd
 
         protected void btnEjemplares_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EjemplaresMaterial.aspx");
+            // Obtener el ID del material
+            string idMaterial = lblId.Text;
+
+            // Obtener el ID de la sede desde la query string (si fue pasada desde IndexAdmin)
+            string idSede = Request.QueryString["sede"];
+
+            // Redirigir pasando ambos parámetros
+            if (!string.IsNullOrEmpty(idSede))
+                Response.Redirect($"EjemplaresMaterialAdmin.aspx?id={idMaterial}&sede={idSede}");
+            else
+                Response.Redirect($"EjemplaresMaterialAdmin.aspx?id={idMaterial}");
         }
 
     }
