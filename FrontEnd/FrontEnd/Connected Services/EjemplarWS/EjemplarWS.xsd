@@ -24,6 +24,8 @@
   <xs:element name="listarEjemplares" type="tns:listarEjemplares" />
   <xs:element name="listarEjemplaresDisponiblesPorMaterial" type="tns:listarEjemplaresDisponiblesPorMaterial" />
   <xs:element name="listarEjemplaresDisponiblesPorMaterialResponse" type="tns:listarEjemplaresDisponiblesPorMaterialResponse" />
+  <xs:element name="listarEjemplaresPorPrestamo" type="tns:listarEjemplaresPorPrestamo" />
+  <xs:element name="listarEjemplaresPorPrestamoResponse" type="tns:listarEjemplaresPorPrestamoResponse" />
   <xs:element name="listarEjemplaresResponse" type="tns:listarEjemplaresResponse" />
   <xs:element name="listarFisicosDisponiblesPorMaterialYSede" type="tns:listarFisicosDisponiblesPorMaterialYSede" />
   <xs:element name="listarFisicosDisponiblesPorMaterialYSedeResponse" type="tns:listarFisicosDisponiblesPorMaterialYSedeResponse" />
@@ -105,16 +107,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerEjemplar">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerEjemplarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:ejemplaresDTO" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="contarEjemplaresDisponiblesPorMaterialYSede">
     <xs:sequence>
       <xs:element name="idMaterial" type="xs:int" />
@@ -131,12 +123,14 @@
       <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEjemplares">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarEjemplaresResponse">
+  <xs:complexType name="obtenerEjemplar">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEjemplarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ejemplaresDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarEjemplar">
@@ -159,14 +153,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="contarDisponiblesPorSede">
-    <xs:sequence>
-      <xs:element name="idSede" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarEjemplares">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="contarDisponiblesPorSedeResponse">
+  <xs:complexType name="listarEjemplaresResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="contarTotalPorMaterial">
@@ -175,6 +167,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="contarTotalPorMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorSede">
+    <xs:sequence>
+      <xs:element name="idSede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contarDisponiblesPorSedeResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -215,6 +217,16 @@
   <xs:complexType name="contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresPorPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEjemplaresPorPrestamoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplaresDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="contarEjemplaresNoDisponiblesPorMaterialYSede">

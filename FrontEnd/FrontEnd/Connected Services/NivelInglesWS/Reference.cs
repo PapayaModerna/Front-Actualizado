@@ -16,22 +16,13 @@ namespace FrontEnd.NivelInglesWS {
     public interface NivelInglesWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.NivelInglesWS.modificarNivelResponse modificarNivel(FrontEnd.NivelInglesWS.modificarNivelRequest request);
+        FrontEnd.NivelInglesWS.eliminarNivelResponse eliminarNivel(FrontEnd.NivelInglesWS.eliminarNivelRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelResponse")]
-        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.modificarNivelResponse> modificarNivelAsync(FrontEnd.NivelInglesWS.modificarNivelRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.NivelInglesWS.listarNivelesResponse listarNiveles(FrontEnd.NivelInglesWS.listarNivelesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesResponse")]
-        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.listarNivelesResponse> listarNivelesAsync(FrontEnd.NivelInglesWS.listarNivelesRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelResponse")]
+        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.eliminarNivelResponse> eliminarNivelAsync(FrontEnd.NivelInglesWS.eliminarNivelRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/obtenerNivelPorIdRequest" +
@@ -47,6 +38,15 @@ namespace FrontEnd.NivelInglesWS {
         System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse> obtenerNivelPorIdAsync(FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.NivelInglesWS.modificarNivelResponse modificarNivel(FrontEnd.NivelInglesWS.modificarNivelRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelResponse")]
+        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.modificarNivelResponse> modificarNivelAsync(FrontEnd.NivelInglesWS.modificarNivelRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/insertarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/insertarNivelResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -56,57 +56,47 @@ namespace FrontEnd.NivelInglesWS {
         System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.insertarNivelResponse> insertarNivelAsync(FrontEnd.NivelInglesWS.insertarNivelRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.NivelInglesWS.eliminarNivelResponse eliminarNivel(FrontEnd.NivelInglesWS.eliminarNivelRequest request);
+        FrontEnd.NivelInglesWS.listarNivelesResponse listarNiveles(FrontEnd.NivelInglesWS.listarNivelesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelResponse")]
-        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.eliminarNivelResponse> eliminarNivelAsync(FrontEnd.NivelInglesWS.eliminarNivelRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesResponse")]
+        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.listarNivelesResponse> listarNivelesAsync(FrontEnd.NivelInglesWS.listarNivelesRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarNivel", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarNivelRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNivel", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarNivelRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idNivel;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombreNivel;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion;
-        
-        public modificarNivelRequest() {
+        public eliminarNivelRequest() {
         }
         
-        public modificarNivelRequest(int idNivel, string nombreNivel, string descripcion) {
+        public eliminarNivelRequest(int idNivel) {
             this.idNivel = idNivel;
-            this.nombreNivel = nombreNivel;
-            this.descripcion = descripcion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarNivelResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarNivelResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNivelResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarNivelResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarNivelResponse() {
+        public eliminarNivelResponse() {
         }
         
-        public modificarNivelResponse(int @return) {
+        public eliminarNivelResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -204,34 +194,6 @@ namespace FrontEnd.NivelInglesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNiveles", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarNivelesRequest {
-        
-        public listarNivelesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNivelesResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarNivelesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.NivelInglesWS.nivelesInglesDTO[] @return;
-        
-        public listarNivelesResponse() {
-        }
-        
-        public listarNivelesResponse(FrontEnd.NivelInglesWS.nivelesInglesDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerNivelPorId", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class obtenerNivelPorIdRequest {
         
@@ -261,6 +223,52 @@ namespace FrontEnd.NivelInglesWS {
         }
         
         public obtenerNivelPorIdResponse(FrontEnd.NivelInglesWS.nivelesInglesDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarNivel", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarNivelRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idNivel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombreNivel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion;
+        
+        public modificarNivelRequest() {
+        }
+        
+        public modificarNivelRequest(int idNivel, string nombreNivel, string descripcion) {
+            this.idNivel = idNivel;
+            this.nombreNivel = nombreNivel;
+            this.descripcion = descripcion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarNivelResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarNivelResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarNivelResponse() {
+        }
+        
+        public modificarNivelResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -309,35 +317,27 @@ namespace FrontEnd.NivelInglesWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNivel", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarNivelRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNiveles", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarNivelesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idNivel;
-        
-        public eliminarNivelRequest() {
-        }
-        
-        public eliminarNivelRequest(int idNivel) {
-            this.idNivel = idNivel;
+        public listarNivelesRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNivelResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarNivelResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNivelesResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarNivelesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.NivelInglesWS.nivelesInglesDTO[] @return;
         
-        public eliminarNivelResponse() {
+        public listarNivelesResponse() {
         }
         
-        public eliminarNivelResponse(int @return) {
+        public listarNivelesResponse(FrontEnd.NivelInglesWS.nivelesInglesDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -370,6 +370,52 @@ namespace FrontEnd.NivelInglesWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.NivelInglesWS.eliminarNivelResponse FrontEnd.NivelInglesWS.NivelInglesWS.eliminarNivel(FrontEnd.NivelInglesWS.eliminarNivelRequest request) {
+            return base.Channel.eliminarNivel(request);
+        }
+        
+        public int eliminarNivel(int idNivel) {
+            FrontEnd.NivelInglesWS.eliminarNivelRequest inValue = new FrontEnd.NivelInglesWS.eliminarNivelRequest();
+            inValue.idNivel = idNivel;
+            FrontEnd.NivelInglesWS.eliminarNivelResponse retVal = ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).eliminarNivel(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.eliminarNivelResponse> FrontEnd.NivelInglesWS.NivelInglesWS.eliminarNivelAsync(FrontEnd.NivelInglesWS.eliminarNivelRequest request) {
+            return base.Channel.eliminarNivelAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.eliminarNivelResponse> eliminarNivelAsync(int idNivel) {
+            FrontEnd.NivelInglesWS.eliminarNivelRequest inValue = new FrontEnd.NivelInglesWS.eliminarNivelRequest();
+            inValue.idNivel = idNivel;
+            return ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).eliminarNivelAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse FrontEnd.NivelInglesWS.NivelInglesWS.obtenerNivelPorId(FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest request) {
+            return base.Channel.obtenerNivelPorId(request);
+        }
+        
+        public FrontEnd.NivelInglesWS.nivelesInglesDTO obtenerNivelPorId(int idNivel) {
+            FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest inValue = new FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest();
+            inValue.idNivel = idNivel;
+            FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse retVal = ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).obtenerNivelPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse> FrontEnd.NivelInglesWS.NivelInglesWS.obtenerNivelPorIdAsync(FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest request) {
+            return base.Channel.obtenerNivelPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse> obtenerNivelPorIdAsync(int idNivel) {
+            FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest inValue = new FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest();
+            inValue.idNivel = idNivel;
+            return ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).obtenerNivelPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontEnd.NivelInglesWS.modificarNivelResponse FrontEnd.NivelInglesWS.NivelInglesWS.modificarNivel(FrontEnd.NivelInglesWS.modificarNivelRequest request) {
             return base.Channel.modificarNivel(request);
         }
@@ -394,50 +440,6 @@ namespace FrontEnd.NivelInglesWS {
             inValue.nombreNivel = nombreNivel;
             inValue.descripcion = descripcion;
             return ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).modificarNivelAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.NivelInglesWS.listarNivelesResponse FrontEnd.NivelInglesWS.NivelInglesWS.listarNiveles(FrontEnd.NivelInglesWS.listarNivelesRequest request) {
-            return base.Channel.listarNiveles(request);
-        }
-        
-        public FrontEnd.NivelInglesWS.nivelesInglesDTO[] listarNiveles() {
-            FrontEnd.NivelInglesWS.listarNivelesRequest inValue = new FrontEnd.NivelInglesWS.listarNivelesRequest();
-            FrontEnd.NivelInglesWS.listarNivelesResponse retVal = ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).listarNiveles(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.listarNivelesResponse> FrontEnd.NivelInglesWS.NivelInglesWS.listarNivelesAsync(FrontEnd.NivelInglesWS.listarNivelesRequest request) {
-            return base.Channel.listarNivelesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.listarNivelesResponse> listarNivelesAsync() {
-            FrontEnd.NivelInglesWS.listarNivelesRequest inValue = new FrontEnd.NivelInglesWS.listarNivelesRequest();
-            return ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).listarNivelesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse FrontEnd.NivelInglesWS.NivelInglesWS.obtenerNivelPorId(FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest request) {
-            return base.Channel.obtenerNivelPorId(request);
-        }
-        
-        public FrontEnd.NivelInglesWS.nivelesInglesDTO obtenerNivelPorId(int idNivel) {
-            FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest inValue = new FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest();
-            inValue.idNivel = idNivel;
-            FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse retVal = ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).obtenerNivelPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse> FrontEnd.NivelInglesWS.NivelInglesWS.obtenerNivelPorIdAsync(FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest request) {
-            return base.Channel.obtenerNivelPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse> obtenerNivelPorIdAsync(int idNivel) {
-            FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest inValue = new FrontEnd.NivelInglesWS.obtenerNivelPorIdRequest();
-            inValue.idNivel = idNivel;
-            return ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).obtenerNivelPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -466,26 +468,24 @@ namespace FrontEnd.NivelInglesWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.NivelInglesWS.eliminarNivelResponse FrontEnd.NivelInglesWS.NivelInglesWS.eliminarNivel(FrontEnd.NivelInglesWS.eliminarNivelRequest request) {
-            return base.Channel.eliminarNivel(request);
+        FrontEnd.NivelInglesWS.listarNivelesResponse FrontEnd.NivelInglesWS.NivelInglesWS.listarNiveles(FrontEnd.NivelInglesWS.listarNivelesRequest request) {
+            return base.Channel.listarNiveles(request);
         }
         
-        public int eliminarNivel(int idNivel) {
-            FrontEnd.NivelInglesWS.eliminarNivelRequest inValue = new FrontEnd.NivelInglesWS.eliminarNivelRequest();
-            inValue.idNivel = idNivel;
-            FrontEnd.NivelInglesWS.eliminarNivelResponse retVal = ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).eliminarNivel(inValue);
+        public FrontEnd.NivelInglesWS.nivelesInglesDTO[] listarNiveles() {
+            FrontEnd.NivelInglesWS.listarNivelesRequest inValue = new FrontEnd.NivelInglesWS.listarNivelesRequest();
+            FrontEnd.NivelInglesWS.listarNivelesResponse retVal = ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).listarNiveles(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.eliminarNivelResponse> FrontEnd.NivelInglesWS.NivelInglesWS.eliminarNivelAsync(FrontEnd.NivelInglesWS.eliminarNivelRequest request) {
-            return base.Channel.eliminarNivelAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.listarNivelesResponse> FrontEnd.NivelInglesWS.NivelInglesWS.listarNivelesAsync(FrontEnd.NivelInglesWS.listarNivelesRequest request) {
+            return base.Channel.listarNivelesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.eliminarNivelResponse> eliminarNivelAsync(int idNivel) {
-            FrontEnd.NivelInglesWS.eliminarNivelRequest inValue = new FrontEnd.NivelInglesWS.eliminarNivelRequest();
-            inValue.idNivel = idNivel;
-            return ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).eliminarNivelAsync(inValue);
+        public System.Threading.Tasks.Task<FrontEnd.NivelInglesWS.listarNivelesResponse> listarNivelesAsync() {
+            FrontEnd.NivelInglesWS.listarNivelesRequest inValue = new FrontEnd.NivelInglesWS.listarNivelesRequest();
+            return ((FrontEnd.NivelInglesWS.NivelInglesWS)(this)).listarNivelesAsync(inValue);
         }
     }
 }

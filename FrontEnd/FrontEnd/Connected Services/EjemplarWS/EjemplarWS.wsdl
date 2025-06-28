@@ -5,41 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/EjemplarWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="contarDisponiblesPorSede">
-    <part name="parameters" element="tns:contarDisponiblesPorSede" />
-  </message>
-  <message name="contarDisponiblesPorSedeResponse">
-    <part name="parameters" element="tns:contarDisponiblesPorSedeResponse" />
-  </message>
   <message name="contarTotalPorMaterial">
     <part name="parameters" element="tns:contarTotalPorMaterial" />
   </message>
   <message name="contarTotalPorMaterialResponse">
     <part name="parameters" element="tns:contarTotalPorMaterialResponse" />
   </message>
-  <message name="contarDisponiblesPorMaterial">
-    <part name="parameters" element="tns:contarDisponiblesPorMaterial" />
+  <message name="contarDisponiblesPorSede">
+    <part name="parameters" element="tns:contarDisponiblesPorSede" />
   </message>
-  <message name="contarDisponiblesPorMaterialResponse">
-    <part name="parameters" element="tns:contarDisponiblesPorMaterialResponse" />
-  </message>
-  <message name="obtenerPrimerEjemplarDisponiblePorMaterial">
-    <part name="parameters" element="tns:obtenerPrimerEjemplarDisponiblePorMaterial" />
-  </message>
-  <message name="obtenerPrimerEjemplarDisponiblePorMaterialResponse">
-    <part name="parameters" element="tns:obtenerPrimerEjemplarDisponiblePorMaterialResponse" />
-  </message>
-  <message name="contarFisicosDisponiblesPorMaterial">
-    <part name="parameters" element="tns:contarFisicosDisponiblesPorMaterial" />
-  </message>
-  <message name="contarFisicosDisponiblesPorMaterialResponse">
-    <part name="parameters" element="tns:contarFisicosDisponiblesPorMaterialResponse" />
-  </message>
-  <message name="listarFisicosDisponiblesPorMaterialYSede">
-    <part name="parameters" element="tns:listarFisicosDisponiblesPorMaterialYSede" />
-  </message>
-  <message name="listarFisicosDisponiblesPorMaterialYSedeResponse">
-    <part name="parameters" element="tns:listarFisicosDisponiblesPorMaterialYSedeResponse" />
+  <message name="contarDisponiblesPorSedeResponse">
+    <part name="parameters" element="tns:contarDisponiblesPorSedeResponse" />
   </message>
   <message name="listarEjemplaresDisponiblesPorMaterial">
     <part name="parameters" element="tns:listarEjemplaresDisponiblesPorMaterial" />
@@ -47,41 +23,23 @@
   <message name="listarEjemplaresDisponiblesPorMaterialResponse">
     <part name="parameters" element="tns:listarEjemplaresDisponiblesPorMaterialResponse" />
   </message>
-  <message name="listarEjemplares">
-    <part name="parameters" element="tns:listarEjemplares" />
+  <message name="listarFisicosDisponiblesPorMaterialYSede">
+    <part name="parameters" element="tns:listarFisicosDisponiblesPorMaterialYSede" />
   </message>
-  <message name="listarEjemplaresResponse">
-    <part name="parameters" element="tns:listarEjemplaresResponse" />
+  <message name="listarFisicosDisponiblesPorMaterialYSedeResponse">
+    <part name="parameters" element="tns:listarFisicosDisponiblesPorMaterialYSedeResponse" />
   </message>
-  <message name="obtenerEjemplar">
-    <part name="parameters" element="tns:obtenerEjemplar" />
+  <message name="contarFisicosDisponiblesPorMaterial">
+    <part name="parameters" element="tns:contarFisicosDisponiblesPorMaterial" />
   </message>
-  <message name="obtenerEjemplarResponse">
-    <part name="parameters" element="tns:obtenerEjemplarResponse" />
+  <message name="contarFisicosDisponiblesPorMaterialResponse">
+    <part name="parameters" element="tns:contarFisicosDisponiblesPorMaterialResponse" />
   </message>
-  <message name="eliminarEjemplar">
-    <part name="parameters" element="tns:eliminarEjemplar" />
+  <message name="obtenerPrimerEjemplarDisponiblePorMaterial">
+    <part name="parameters" element="tns:obtenerPrimerEjemplarDisponiblePorMaterial" />
   </message>
-  <message name="eliminarEjemplarResponse">
-    <part name="parameters" element="tns:eliminarEjemplarResponse" />
-  </message>
-  <message name="insertarEjemplar">
-    <part name="parameters" element="tns:insertarEjemplar" />
-  </message>
-  <message name="insertarEjemplarResponse">
-    <part name="parameters" element="tns:insertarEjemplarResponse" />
-  </message>
-  <message name="modificarEjemplar">
-    <part name="parameters" element="tns:modificarEjemplar" />
-  </message>
-  <message name="modificarEjemplarResponse">
-    <part name="parameters" element="tns:modificarEjemplarResponse" />
-  </message>
-  <message name="contarTotalPorSede">
-    <part name="parameters" element="tns:contarTotalPorSede" />
-  </message>
-  <message name="contarTotalPorSedeResponse">
-    <part name="parameters" element="tns:contarTotalPorSedeResponse" />
+  <message name="obtenerPrimerEjemplarDisponiblePorMaterialResponse">
+    <part name="parameters" element="tns:obtenerPrimerEjemplarDisponiblePorMaterialResponse" />
   </message>
   <message name="contarEjemplaresFisicosDisponiblesPorMaterialYSede">
     <part name="parameters" element="tns:contarEjemplaresFisicosDisponiblesPorMaterialYSede" />
@@ -89,14 +47,26 @@
   <message name="contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse">
     <part name="parameters" element="tns:contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse" />
   </message>
+  <message name="listarEjemplaresPorPrestamo">
+    <part name="parameters" element="tns:listarEjemplaresPorPrestamo" />
+  </message>
+  <message name="listarEjemplaresPorPrestamoResponse">
+    <part name="parameters" element="tns:listarEjemplaresPorPrestamoResponse" />
+  </message>
+  <message name="BusinessException">
+    <part name="fault" element="tns:BusinessException" />
+  </message>
+  <message name="contarDisponiblesPorMaterial">
+    <part name="parameters" element="tns:contarDisponiblesPorMaterial" />
+  </message>
+  <message name="contarDisponiblesPorMaterialResponse">
+    <part name="parameters" element="tns:contarDisponiblesPorMaterialResponse" />
+  </message>
   <message name="contarEjemplaresNoDisponiblesPorMaterialYSede">
     <part name="parameters" element="tns:contarEjemplaresNoDisponiblesPorMaterialYSede" />
   </message>
   <message name="contarEjemplaresNoDisponiblesPorMaterialYSedeResponse">
     <part name="parameters" element="tns:contarEjemplaresNoDisponiblesPorMaterialYSedeResponse" />
-  </message>
-  <message name="BusinessException">
-    <part name="fault" element="tns:BusinessException" />
   </message>
   <message name="contarEjemplaresDisponiblesPorMaterialYSede">
     <part name="parameters" element="tns:contarEjemplaresDisponiblesPorMaterialYSede" />
@@ -104,62 +74,79 @@
   <message name="contarEjemplaresDisponiblesPorMaterialYSedeResponse">
     <part name="parameters" element="tns:contarEjemplaresDisponiblesPorMaterialYSedeResponse" />
   </message>
+  <message name="insertarEjemplar">
+    <part name="parameters" element="tns:insertarEjemplar" />
+  </message>
+  <message name="insertarEjemplarResponse">
+    <part name="parameters" element="tns:insertarEjemplarResponse" />
+  </message>
+  <message name="eliminarEjemplar">
+    <part name="parameters" element="tns:eliminarEjemplar" />
+  </message>
+  <message name="eliminarEjemplarResponse">
+    <part name="parameters" element="tns:eliminarEjemplarResponse" />
+  </message>
+  <message name="modificarEjemplar">
+    <part name="parameters" element="tns:modificarEjemplar" />
+  </message>
+  <message name="modificarEjemplarResponse">
+    <part name="parameters" element="tns:modificarEjemplarResponse" />
+  </message>
+  <message name="obtenerEjemplar">
+    <part name="parameters" element="tns:obtenerEjemplar" />
+  </message>
+  <message name="obtenerEjemplarResponse">
+    <part name="parameters" element="tns:obtenerEjemplarResponse" />
+  </message>
+  <message name="contarTotalPorSede">
+    <part name="parameters" element="tns:contarTotalPorSede" />
+  </message>
+  <message name="contarTotalPorSedeResponse">
+    <part name="parameters" element="tns:contarTotalPorSedeResponse" />
+  </message>
+  <message name="listarEjemplares">
+    <part name="parameters" element="tns:listarEjemplares" />
+  </message>
+  <message name="listarEjemplaresResponse">
+    <part name="parameters" element="tns:listarEjemplaresResponse" />
+  </message>
   <portType name="EjemplarWS">
-    <operation name="contarDisponiblesPorSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorSedeRequest" message="tns:contarDisponiblesPorSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorSedeResponse" message="tns:contarDisponiblesPorSedeResponse" />
-    </operation>
     <operation name="contarTotalPorMaterial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorMaterialRequest" message="tns:contarTotalPorMaterial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorMaterialResponse" message="tns:contarTotalPorMaterialResponse" />
     </operation>
-    <operation name="contarDisponiblesPorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMaterialRequest" message="tns:contarDisponiblesPorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMaterialResponse" message="tns:contarDisponiblesPorMaterialResponse" />
-    </operation>
-    <operation name="obtenerPrimerEjemplarDisponiblePorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDisponiblePorMaterialRequest" message="tns:obtenerPrimerEjemplarDisponiblePorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDisponiblePorMaterialResponse" message="tns:obtenerPrimerEjemplarDisponiblePorMaterialResponse" />
-    </operation>
-    <operation name="contarFisicosDisponiblesPorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPorMaterialRequest" message="tns:contarFisicosDisponiblesPorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPorMaterialResponse" message="tns:contarFisicosDisponiblesPorMaterialResponse" />
-    </operation>
-    <operation name="listarFisicosDisponiblesPorMaterialYSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPorMaterialYSedeRequest" message="tns:listarFisicosDisponiblesPorMaterialYSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPorMaterialYSedeResponse" message="tns:listarFisicosDisponiblesPorMaterialYSedeResponse" />
+    <operation name="contarDisponiblesPorSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorSedeRequest" message="tns:contarDisponiblesPorSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorSedeResponse" message="tns:contarDisponiblesPorSedeResponse" />
     </operation>
     <operation name="listarEjemplaresDisponiblesPorMaterial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponiblesPorMaterialRequest" message="tns:listarEjemplaresDisponiblesPorMaterial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresDisponiblesPorMaterialResponse" message="tns:listarEjemplaresDisponiblesPorMaterialResponse" />
     </operation>
-    <operation name="listarEjemplares">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresRequest" message="tns:listarEjemplares" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresResponse" message="tns:listarEjemplaresResponse" />
+    <operation name="listarFisicosDisponiblesPorMaterialYSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPorMaterialYSedeRequest" message="tns:listarFisicosDisponiblesPorMaterialYSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarFisicosDisponiblesPorMaterialYSedeResponse" message="tns:listarFisicosDisponiblesPorMaterialYSedeResponse" />
     </operation>
-    <operation name="obtenerEjemplar">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarRequest" message="tns:obtenerEjemplar" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarResponse" message="tns:obtenerEjemplarResponse" />
+    <operation name="contarFisicosDisponiblesPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPorMaterialRequest" message="tns:contarFisicosDisponiblesPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarFisicosDisponiblesPorMaterialResponse" message="tns:contarFisicosDisponiblesPorMaterialResponse" />
     </operation>
-    <operation name="eliminarEjemplar">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/eliminarEjemplarRequest" message="tns:eliminarEjemplar" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/eliminarEjemplarResponse" message="tns:eliminarEjemplarResponse" />
-    </operation>
-    <operation name="insertarEjemplar">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarRequest" message="tns:insertarEjemplar" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarResponse" message="tns:insertarEjemplarResponse" />
-    </operation>
-    <operation name="modificarEjemplar">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/modificarEjemplarRequest" message="tns:modificarEjemplar" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/modificarEjemplarResponse" message="tns:modificarEjemplarResponse" />
-    </operation>
-    <operation name="contarTotalPorSede">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorSedeRequest" message="tns:contarTotalPorSede" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorSedeResponse" message="tns:contarTotalPorSedeResponse" />
+    <operation name="obtenerPrimerEjemplarDisponiblePorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDisponiblePorMaterialRequest" message="tns:obtenerPrimerEjemplarDisponiblePorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerPrimerEjemplarDisponiblePorMaterialResponse" message="tns:obtenerPrimerEjemplarDisponiblePorMaterialResponse" />
     </operation>
     <operation name="contarEjemplaresFisicosDisponiblesPorMaterialYSede">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisponiblesPorMaterialYSedeRequest" message="tns:contarEjemplaresFisicosDisponiblesPorMaterialYSede" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse" message="tns:contarEjemplaresFisicosDisponiblesPorMaterialYSedeResponse" />
+    </operation>
+    <operation name="listarEjemplaresPorPrestamo">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresPorPrestamoRequest" message="tns:listarEjemplaresPorPrestamo" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresPorPrestamoResponse" message="tns:listarEjemplaresPorPrestamoResponse" />
+      <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresPorPrestamo/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
+    </operation>
+    <operation name="contarDisponiblesPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMaterialRequest" message="tns:contarDisponiblesPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarDisponiblesPorMaterialResponse" message="tns:contarDisponiblesPorMaterialResponse" />
     </operation>
     <operation name="contarEjemplaresNoDisponiblesPorMaterialYSede">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresNoDisponiblesPorMaterialYSedeRequest" message="tns:contarEjemplaresNoDisponiblesPorMaterialYSede" />
@@ -171,18 +158,33 @@
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresDisponiblesPorMaterialYSedeResponse" message="tns:contarEjemplaresDisponiblesPorMaterialYSedeResponse" />
       <fault wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarEjemplaresDisponiblesPorMaterialYSede/Fault/BusinessException" name="BusinessException" message="tns:BusinessException" />
     </operation>
+    <operation name="insertarEjemplar">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarRequest" message="tns:insertarEjemplar" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/insertarEjemplarResponse" message="tns:insertarEjemplarResponse" />
+    </operation>
+    <operation name="eliminarEjemplar">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/eliminarEjemplarRequest" message="tns:eliminarEjemplar" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/eliminarEjemplarResponse" message="tns:eliminarEjemplarResponse" />
+    </operation>
+    <operation name="modificarEjemplar">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/modificarEjemplarRequest" message="tns:modificarEjemplar" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/modificarEjemplarResponse" message="tns:modificarEjemplarResponse" />
+    </operation>
+    <operation name="obtenerEjemplar">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarRequest" message="tns:obtenerEjemplar" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/obtenerEjemplarResponse" message="tns:obtenerEjemplarResponse" />
+    </operation>
+    <operation name="contarTotalPorSede">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorSedeRequest" message="tns:contarTotalPorSede" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/contarTotalPorSedeResponse" message="tns:contarTotalPorSedeResponse" />
+    </operation>
+    <operation name="listarEjemplares">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresRequest" message="tns:listarEjemplares" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EjemplarWS/listarEjemplaresResponse" message="tns:listarEjemplaresResponse" />
+    </operation>
   </portType>
   <binding name="EjemplarWSPortBinding" type="tns:EjemplarWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="contarDisponiblesPorSede">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="contarTotalPorMaterial">
       <soap:operation soapAction="" />
       <input>
@@ -192,34 +194,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="contarDisponiblesPorMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerPrimerEjemplarDisponiblePorMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="contarFisicosDisponiblesPorMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarFisicosDisponiblesPorMaterialYSede">
+    <operation name="contarDisponiblesPorSede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -237,7 +212,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarEjemplares">
+    <operation name="listarFisicosDisponiblesPorMaterialYSede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -246,7 +221,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerEjemplar">
+    <operation name="contarFisicosDisponiblesPorMaterial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -255,34 +230,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarEjemplar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarEjemplar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarEjemplar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="contarTotalPorSede">
+    <operation name="obtenerPrimerEjemplarDisponiblePorMaterial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -292,6 +240,27 @@
       </output>
     </operation>
     <operation name="contarEjemplaresFisicosDisponiblesPorMaterialYSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEjemplaresPorPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="BusinessException">
+        <soap:fault use="literal" name="BusinessException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="contarDisponiblesPorMaterial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -323,6 +292,60 @@
       <fault name="BusinessException">
         <soap:fault use="literal" name="BusinessException" namespace="" />
       </fault>
+    </operation>
+    <operation name="insertarEjemplar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEjemplar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEjemplar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerEjemplar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="contarTotalPorSede">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEjemplares">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
     </operation>
   </binding>
   <service name="EjemplarWS">

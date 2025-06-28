@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/PrestamoEjemplarWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="listarPrestamosAtrasados">
-    <part name="parameters" element="tns:listarPrestamosAtrasados" />
+  <message name="insertarPrestamoEjemplar">
+    <part name="parameters" element="tns:insertarPrestamoEjemplar" />
   </message>
-  <message name="listarPrestamosAtrasadosResponse">
-    <part name="parameters" element="tns:listarPrestamosAtrasadosResponse" />
+  <message name="insertarPrestamoEjemplarResponse">
+    <part name="parameters" element="tns:insertarPrestamoEjemplarResponse" />
   </message>
   <message name="listarPrestamosDevueltos">
     <part name="parameters" element="tns:listarPrestamosDevueltos" />
@@ -17,17 +17,11 @@
   <message name="listarPrestamosDevueltosResponse">
     <part name="parameters" element="tns:listarPrestamosDevueltosResponse" />
   </message>
-  <message name="insertarPrestamoEjemplar">
-    <part name="parameters" element="tns:insertarPrestamoEjemplar" />
+  <message name="listarPrestamosAtrasados">
+    <part name="parameters" element="tns:listarPrestamosAtrasados" />
   </message>
-  <message name="insertarPrestamoEjemplarResponse">
-    <part name="parameters" element="tns:insertarPrestamoEjemplarResponse" />
-  </message>
-  <message name="listarPrestamosSolicitados">
-    <part name="parameters" element="tns:listarPrestamosSolicitados" />
-  </message>
-  <message name="listarPrestamosSolicitadosResponse">
-    <part name="parameters" element="tns:listarPrestamosSolicitadosResponse" />
+  <message name="listarPrestamosAtrasadosResponse">
+    <part name="parameters" element="tns:listarPrestamosAtrasadosResponse" />
   </message>
   <message name="modificarPrestamoEjemplar">
     <part name="parameters" element="tns:modificarPrestamoEjemplar" />
@@ -35,17 +29,17 @@
   <message name="modificarPrestamoEjemplarResponse">
     <part name="parameters" element="tns:modificarPrestamoEjemplarResponse" />
   </message>
+  <message name="listarPrestamosSolicitados">
+    <part name="parameters" element="tns:listarPrestamosSolicitados" />
+  </message>
+  <message name="listarPrestamosSolicitadosResponse">
+    <part name="parameters" element="tns:listarPrestamosSolicitadosResponse" />
+  </message>
   <message name="eliminarPrestamoEjemplar">
     <part name="parameters" element="tns:eliminarPrestamoEjemplar" />
   </message>
   <message name="eliminarPrestamoEjemplarResponse">
     <part name="parameters" element="tns:eliminarPrestamoEjemplarResponse" />
-  </message>
-  <message name="listarTodosPrestamoEjemplar">
-    <part name="parameters" element="tns:listarTodosPrestamoEjemplar" />
-  </message>
-  <message name="listarTodosPrestamoEjemplarResponse">
-    <part name="parameters" element="tns:listarTodosPrestamoEjemplarResponse" />
   </message>
   <message name="listarPrestamosNoCulminados">
     <part name="parameters" element="tns:listarPrestamosNoCulminados" />
@@ -59,34 +53,36 @@
   <message name="obtenerPrestamoEjemplarResponse">
     <part name="parameters" element="tns:obtenerPrestamoEjemplarResponse" />
   </message>
+  <message name="listarTodosPrestamoEjemplar">
+    <part name="parameters" element="tns:listarTodosPrestamoEjemplar" />
+  </message>
+  <message name="listarTodosPrestamoEjemplarResponse">
+    <part name="parameters" element="tns:listarTodosPrestamoEjemplarResponse" />
+  </message>
   <portType name="PrestamoEjemplarWS">
-    <operation name="listarPrestamosAtrasados">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtrasadosRequest" message="tns:listarPrestamosAtrasados" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtrasadosResponse" message="tns:listarPrestamosAtrasadosResponse" />
+    <operation name="insertarPrestamoEjemplar">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEjemplarRequest" message="tns:insertarPrestamoEjemplar" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEjemplarResponse" message="tns:insertarPrestamoEjemplarResponse" />
     </operation>
     <operation name="listarPrestamosDevueltos">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosDevueltosRequest" message="tns:listarPrestamosDevueltos" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosDevueltosResponse" message="tns:listarPrestamosDevueltosResponse" />
     </operation>
-    <operation name="insertarPrestamoEjemplar">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEjemplarRequest" message="tns:insertarPrestamoEjemplar" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEjemplarResponse" message="tns:insertarPrestamoEjemplarResponse" />
-    </operation>
-    <operation name="listarPrestamosSolicitados">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSolicitadosRequest" message="tns:listarPrestamosSolicitados" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSolicitadosResponse" message="tns:listarPrestamosSolicitadosResponse" />
+    <operation name="listarPrestamosAtrasados">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtrasadosRequest" message="tns:listarPrestamosAtrasados" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtrasadosResponse" message="tns:listarPrestamosAtrasadosResponse" />
     </operation>
     <operation name="modificarPrestamoEjemplar">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/modificarPrestamoEjemplarRequest" message="tns:modificarPrestamoEjemplar" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/modificarPrestamoEjemplarResponse" message="tns:modificarPrestamoEjemplarResponse" />
     </operation>
+    <operation name="listarPrestamosSolicitados">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSolicitadosRequest" message="tns:listarPrestamosSolicitados" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSolicitadosResponse" message="tns:listarPrestamosSolicitadosResponse" />
+    </operation>
     <operation name="eliminarPrestamoEjemplar">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEjemplarRequest" message="tns:eliminarPrestamoEjemplar" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEjemplarResponse" message="tns:eliminarPrestamoEjemplarResponse" />
-    </operation>
-    <operation name="listarTodosPrestamoEjemplar">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamoEjemplarRequest" message="tns:listarTodosPrestamoEjemplar" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamoEjemplarResponse" message="tns:listarTodosPrestamoEjemplarResponse" />
     </operation>
     <operation name="listarPrestamosNoCulminados">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosNoCulminadosRequest" message="tns:listarPrestamosNoCulminados" />
@@ -96,10 +92,14 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/obtenerPrestamoEjemplarRequest" message="tns:obtenerPrestamoEjemplar" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/obtenerPrestamoEjemplarResponse" message="tns:obtenerPrestamoEjemplarResponse" />
     </operation>
+    <operation name="listarTodosPrestamoEjemplar">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamoEjemplarRequest" message="tns:listarTodosPrestamoEjemplar" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamoEjemplarResponse" message="tns:listarTodosPrestamoEjemplarResponse" />
+    </operation>
   </portType>
   <binding name="PrestamoEjemplarWSPortBinding" type="tns:PrestamoEjemplarWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarPrestamosAtrasados">
+    <operation name="insertarPrestamoEjemplar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -117,16 +117,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarPrestamoEjemplar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPrestamosSolicitados">
+    <operation name="listarPrestamosAtrasados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -144,7 +135,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarPrestamoEjemplar">
+    <operation name="listarPrestamosSolicitados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -153,7 +144,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosPrestamoEjemplar">
+    <operation name="eliminarPrestamoEjemplar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -172,6 +163,15 @@
       </output>
     </operation>
     <operation name="obtenerPrestamoEjemplar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosPrestamoEjemplar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -180,6 +180,9 @@
     <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.contarEjemplaresNoDisponiblesPorMaterialYSedeResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\EjemplarWS\FrontEnd.EjemplarWS.listarEjemplaresPorPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\EjemplarWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

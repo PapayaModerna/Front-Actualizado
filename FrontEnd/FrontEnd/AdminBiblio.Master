@@ -136,10 +136,10 @@
                     <a href="PrestamosPrincipalAdmin.aspx"><i class="fa-solid fa-book-bookmark me-2"></i>PRÉSTAMOS</a>
                 </li>
                 <li class="nav-item mb-1">
-                    <a href="ReportesPrincipalAdmin.aspx">REPORTES</a>
+                    <a href="ReportesPrincipalAdmin.aspx"><i class="fa-solid fa-file-alt me-2"></i>REPORTES</a>
                 </li>
                 <li class="nav-item mb-1">
-                    <a href="UsuariosAdmin.aspx">USUARIOS</a>
+                    <a href="UsuariosAdmin.aspx"><i class="fa-solid fa-person me-2"></i>USUARIOS</a>
                 </li>
             </ul>
             <hr>

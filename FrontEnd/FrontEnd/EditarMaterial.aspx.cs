@@ -79,10 +79,8 @@ namespace FrontEnd
                     txtTitulo.Text = material.titulo;
                     txtEdicion.Text = material.edicion;
                     chkVigente.Checked = material.vigente;
-
-                    // Llenar los dropdowns de Año de Publicación y Editorial
                     ddlAnioPublicacion.Items.Clear();
-                    if (material.anioPublicacion != 0) // Validar si el año es válido
+                    if (material.anioPublicacion != 0) 
                     {
                         ddlAnioPublicacion.Items.Add(new ListItem(material.anioPublicacion.ToString(), material.anioPublicacion.ToString()));
                     }
@@ -121,7 +119,7 @@ namespace FrontEnd
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            int materialId = 11;
+            int materialId = 0;
             var material = new MaterialWS.materialesDTO();
 
             material.nivel = new MaterialWS.nivelesInglesDTO();
@@ -135,18 +133,16 @@ namespace FrontEnd
                 int anioPublicacion = Convert.ToInt32(ddlAnioPublicacion.SelectedValue);
                 bool vigente = chkVigente.Checked;
                 int idEditorial = Convert.ToInt32(ddlEditorial.SelectedValue);
-                string portada = string.Empty; // Inicializamos la portada
+                string portada = string.Empty;
 
                 if (fileUploadPortada.HasFile)
                 {
-                    // Validar tamaño máximo (1MB)
                     if (fileUploadPortada.FileBytes.Length > 1024 * 1024)
                     {
                         Response.Write("<script>alert('El archivo es demasiado grande. Máximo 1MB.');</script>");
                         return;
                     }
 
-                    // Validar proporción 2:3 (750 / 500 = 1.5)
                     using (var img = System.Drawing.Image.FromStream(fileUploadPortada.PostedFile.InputStream))
                     {
                         int width = img.Width;
@@ -160,7 +156,6 @@ namespace FrontEnd
                         }
                     }
 
-                    // Reiniciar el stream antes de guardar
                     fileUploadPortada.PostedFile.InputStream.Position = 0;
 
                     string extension = Path.GetExtension(fileUploadPortada.FileName).ToLower();
@@ -196,7 +191,6 @@ namespace FrontEnd
 
                 Response.Write("<script>alert('IdEditorial'+ material.editorial.idEditorial);</script>");
 
-                // Llamar al servicio para actualizar el material
                 var result = materialwsClient.modificarMaterial(material);
 
                 if (result > 0)

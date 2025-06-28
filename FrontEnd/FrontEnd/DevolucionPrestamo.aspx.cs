@@ -28,18 +28,15 @@ namespace FrontEnd
         {
             if (IsPostBack)
             {
-                // Recuperamos los ejemplares prestados desde la sesión si es un postback
                 if (Session["ejemplaresPrestados"] != null)
                 {
                     ejemplaresPrestados = (List<FrontEnd.PrestamoWS.ejemplaresDTO>)Session["ejemplaresPrestados"];
                 }
 
-                // Recuperamos los ejemplares seleccionados desde la sesión
                 List<int> ejemplaresSeleccionados = (List<int>)Session["ejemplaresSeleccionados"];
 
                 if (ejemplaresPrestados != null && ejemplaresPrestados.Count > 0)
                 {
-                    // Iteramos a través de los ejemplares para generar los CheckBox
                     foreach (var ejemplar in ejemplaresPrestados)
                     {
                         var material = materialWSClient.obtenerPorId(ejemplar.material.idMaterial);
@@ -51,13 +48,11 @@ namespace FrontEnd
                                 ID = "cb" + ejemplar.idEjemplar
                             };
 
-                            // Asignamos el valor del ID del ejemplar para poder identificarlo
                             cbEjemplar.Attributes["data-id"] = ejemplar.idEjemplar.ToString();
 
-                            // Verificamos si el ejemplar está en la lista de seleccionados
                             if (ejemplaresSeleccionados != null && ejemplaresSeleccionados.Contains(ejemplar.idEjemplar))
                             {
-                                cbEjemplar.Checked = true; // Marcamos el CheckBox si está seleccionado
+                                cbEjemplar.Checked = true;
                             }
 
                             Panel pnlEjemplar = new Panel();
@@ -95,7 +90,6 @@ namespace FrontEnd
                                 ejemplaresPrestados = prestamoWSClient.listarEjemplaresPrestadosPorPersona(prestamo.persona.idPersona).ToList();
                                 Session["ejemplaresPrestados"] = ejemplaresPrestados;
 
-                                // Guardamos los ejemplares seleccionados en la sesión
                                 List<int> ejemplaresSeleccionados = new List<int>();
 
                                 phEjemplares.Controls.Clear();
@@ -113,10 +107,8 @@ namespace FrontEnd
                                                 ID = "cb" + ejemplar.idEjemplar
                                             };
 
-                                            // Asignamos el valor del ID del ejemplar para poder identificarlo
                                             cbEjemplar.Attributes["data-id"] = ejemplar.idEjemplar.ToString();
 
-                                            // Agregamos el ID del ejemplar a la lista de seleccionados
                                             ejemplaresSeleccionados.Add(ejemplar.idEjemplar);
 
                                             Panel pnlEjemplar = new Panel();
@@ -126,7 +118,6 @@ namespace FrontEnd
                                         }
                                     }
 
-                                    // Guardamos los ejemplares seleccionados en la sesión
                                     Session["ejemplaresSeleccionados"] = ejemplaresSeleccionados;
                                 }
                                 else
@@ -170,7 +161,6 @@ namespace FrontEnd
                 {
                     if (control is Panel pnl && pnl.Controls[0] is CheckBox cbEjemplar && cbEjemplar.Checked)
                     {
-                        // Recuperamos el ID del ejemplar desde el atributo personalizado 'data-id'
                         var ejemplarId = int.Parse(cbEjemplar.Attributes["data-id"]);
                         ejemplaresSeleccionados.Add(ejemplarId);
                     }

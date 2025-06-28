@@ -32,8 +32,13 @@ namespace FrontEnd
                 CargarSedes();
                 actualizarTituloSede();
                 int totalLibros = materialWSClient.contarMateriales();
-                var ejemplares = ejemplarWSClient.listarEjemplares();
-                int totalEjemplares = ejemplares.Length;
+                int totalEjemplares=0;
+                int[] sedesIds = { 1, 2, 3 };
+                foreach (int sedeId in sedesIds)
+                {
+                    var ejemplaresPorSede = ejemplarWSClient.contarTotalPorSede(sedeId);
+                    totalEjemplares += ejemplaresPorSede;
+                }
                 lblCantidadLibros.Text = $"{totalLibros} Libros";
                 lblCantidadEjemplares.Text = $"{totalEjemplares} Ejemplares físicos y digitales";
             }
@@ -55,10 +60,14 @@ namespace FrontEnd
             if (idSede == 0)
             {
                 totalLibros = materialWSClient.contarMateriales();
-                var ejemplares = ejemplarWSClient.listarEjemplares();
-                totalEjemplares = ejemplares.Length;
+                int[] sedesIds = { 1, 2, 3 };
+                foreach (int sedeId in sedesIds)
+                {
+                    var ejemplaresPorSede = ejemplarWSClient.contarTotalPorSede(sedeId);
+                    totalEjemplares += ejemplaresPorSede;
+                }
             }
-            else // Una sede específica
+            else
             {
                 totalLibros = materialWSClient.contarMaterialesPorSede(idSede);
                 totalEjemplares = ejemplarWSClient.contarTotalPorSede(idSede);
@@ -124,7 +133,7 @@ namespace FrontEnd
             List<FrontEnd.MaterialWS.materialesDTO> libros;
             int total = 0;
 
-            if (idSede == 0) // TODAS LAS SEDES
+            if (idSede == 0)
             {
                 if (porTitulo)
                 {
@@ -146,7 +155,7 @@ namespace FrontEnd
                     total = materialWSClient.contarMateriales();
                 }
             }
-            else // UNA SEDE ESPECÍFICA
+            else 
             {
                 var todos = materialWSClient.listarMaterialesPorTituloParcialPaginado(filtro,idSede, 1000, 1);
                 if (todos != null)

@@ -55,10 +55,11 @@ namespace FrontEnd
                     txtNombres.Text = $"{personaEncontrada.nombre} {personaEncontrada.paterno}";
                     prestamos = prestamoWSClient.listarPrestamosSolicitadosPorPersona(personaEncontrada.idPersona).ToList();
                     Session["prestamos"] = prestamos;
-                    DateTime fechaActual = DateTime.Now;
-                    DateTime fechaLimite = fechaActual.AddDays(-2);
+                    DateTime fechaActual = DateTime.Now.Date;
+                    DateTime fechaLimite = fechaActual.AddDays(-2).Date;
 
-                    var prestamo = prestamos.FirstOrDefault(p => p.fechaSolicitud >= fechaLimite && p.fechaSolicitud <= fechaActual);
+
+                    var prestamo = prestamos.FirstOrDefault(p => p.fechaSolicitud.Date >= fechaLimite && p.fechaSolicitud.Date <= fechaActual);
 
                     if (prestamo != null)
                     {

@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/NivelInglesWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="modificarNivel">
-    <part name="parameters" element="tns:modificarNivel" />
+  <message name="eliminarNivel">
+    <part name="parameters" element="tns:eliminarNivel" />
   </message>
-  <message name="modificarNivelResponse">
-    <part name="parameters" element="tns:modificarNivelResponse" />
-  </message>
-  <message name="listarNiveles">
-    <part name="parameters" element="tns:listarNiveles" />
-  </message>
-  <message name="listarNivelesResponse">
-    <part name="parameters" element="tns:listarNivelesResponse" />
+  <message name="eliminarNivelResponse">
+    <part name="parameters" element="tns:eliminarNivelResponse" />
   </message>
   <message name="obtenerNivelPorId">
     <part name="parameters" element="tns:obtenerNivelPorId" />
@@ -23,52 +17,49 @@
   <message name="obtenerNivelPorIdResponse">
     <part name="parameters" element="tns:obtenerNivelPorIdResponse" />
   </message>
+  <message name="modificarNivel">
+    <part name="parameters" element="tns:modificarNivel" />
+  </message>
+  <message name="modificarNivelResponse">
+    <part name="parameters" element="tns:modificarNivelResponse" />
+  </message>
   <message name="insertarNivel">
     <part name="parameters" element="tns:insertarNivel" />
   </message>
   <message name="insertarNivelResponse">
     <part name="parameters" element="tns:insertarNivelResponse" />
   </message>
-  <message name="eliminarNivel">
-    <part name="parameters" element="tns:eliminarNivel" />
+  <message name="listarNiveles">
+    <part name="parameters" element="tns:listarNiveles" />
   </message>
-  <message name="eliminarNivelResponse">
-    <part name="parameters" element="tns:eliminarNivelResponse" />
+  <message name="listarNivelesResponse">
+    <part name="parameters" element="tns:listarNivelesResponse" />
   </message>
   <portType name="NivelInglesWS">
-    <operation name="modificarNivel">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelRequest" message="tns:modificarNivel" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelResponse" message="tns:modificarNivelResponse" />
-    </operation>
-    <operation name="listarNiveles">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesRequest" message="tns:listarNiveles" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesResponse" message="tns:listarNivelesResponse" />
+    <operation name="eliminarNivel">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelRequest" message="tns:eliminarNivel" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelResponse" message="tns:eliminarNivelResponse" />
     </operation>
     <operation name="obtenerNivelPorId">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/obtenerNivelPorIdRequest" message="tns:obtenerNivelPorId" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/obtenerNivelPorIdResponse" message="tns:obtenerNivelPorIdResponse" />
     </operation>
+    <operation name="modificarNivel">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelRequest" message="tns:modificarNivel" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/modificarNivelResponse" message="tns:modificarNivelResponse" />
+    </operation>
     <operation name="insertarNivel">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/insertarNivelRequest" message="tns:insertarNivel" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/insertarNivelResponse" message="tns:insertarNivelResponse" />
     </operation>
-    <operation name="eliminarNivel">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelRequest" message="tns:eliminarNivel" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/eliminarNivelResponse" message="tns:eliminarNivelResponse" />
+    <operation name="listarNiveles">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesRequest" message="tns:listarNiveles" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/NivelInglesWS/listarNivelesResponse" message="tns:listarNivelesResponse" />
     </operation>
   </portType>
   <binding name="NivelInglesWSPortBinding" type="tns:NivelInglesWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarNivel">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarNiveles">
+    <operation name="eliminarNivel">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,6 +77,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="modificarNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarNivel">
       <soap:operation soapAction="" />
       <input>
@@ -95,7 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarNivel">
+    <operation name="listarNiveles">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

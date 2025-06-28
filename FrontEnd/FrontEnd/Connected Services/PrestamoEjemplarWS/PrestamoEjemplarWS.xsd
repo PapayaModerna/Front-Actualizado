@@ -68,14 +68,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDeEjemplaresDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarPrestamosAtrasados">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarPrestamosAtrasadosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDeEjemplaresDTO" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarPrestamoEjemplar">
     <xs:sequence>
       <xs:element minOccurs="0" name="idPestamo" type="xs:int" />
@@ -86,6 +78,14 @@
   <xs:complexType name="insertarPrestamoEjemplarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosAtrasados">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosAtrasadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamosDeEjemplaresDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerPrestamoEjemplar">

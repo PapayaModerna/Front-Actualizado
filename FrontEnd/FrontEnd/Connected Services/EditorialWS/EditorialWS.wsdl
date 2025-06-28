@@ -5,18 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/EditorialWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="listarEditoriales">
-    <part name="parameters" element="tns:listarEditoriales" />
-  </message>
-  <message name="listarEditorialesResponse">
-    <part name="parameters" element="tns:listarEditorialesResponse" />
-  </message>
-  <message name="insertarEditorial">
-    <part name="parameters" element="tns:insertarEditorial" />
-  </message>
-  <message name="insertarEditorialResponse">
-    <part name="parameters" element="tns:insertarEditorialResponse" />
-  </message>
   <message name="modificarEditorial">
     <part name="parameters" element="tns:modificarEditorial" />
   </message>
@@ -29,21 +17,25 @@
   <message name="eliminarEditorialResponse">
     <part name="parameters" element="tns:eliminarEditorialResponse" />
   </message>
+  <message name="listarEditoriales">
+    <part name="parameters" element="tns:listarEditoriales" />
+  </message>
+  <message name="listarEditorialesResponse">
+    <part name="parameters" element="tns:listarEditorialesResponse" />
+  </message>
   <message name="obtenerEditorial">
     <part name="parameters" element="tns:obtenerEditorial" />
   </message>
   <message name="obtenerEditorialResponse">
     <part name="parameters" element="tns:obtenerEditorialResponse" />
   </message>
+  <message name="insertarEditorial">
+    <part name="parameters" element="tns:insertarEditorial" />
+  </message>
+  <message name="insertarEditorialResponse">
+    <part name="parameters" element="tns:insertarEditorialResponse" />
+  </message>
   <portType name="EditorialWS">
-    <operation name="listarEditoriales">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesRequest" message="tns:listarEditoriales" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesResponse" message="tns:listarEditorialesResponse" />
-    </operation>
-    <operation name="insertarEditorial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialRequest" message="tns:insertarEditorial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialResponse" message="tns:insertarEditorialResponse" />
-    </operation>
     <operation name="modificarEditorial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialRequest" message="tns:modificarEditorial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialResponse" message="tns:modificarEditorialResponse" />
@@ -52,31 +44,21 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest" message="tns:eliminarEditorial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse" message="tns:eliminarEditorialResponse" />
     </operation>
+    <operation name="listarEditoriales">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesRequest" message="tns:listarEditoriales" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesResponse" message="tns:listarEditorialesResponse" />
+    </operation>
     <operation name="obtenerEditorial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest" message="tns:obtenerEditorial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse" message="tns:obtenerEditorialResponse" />
     </operation>
+    <operation name="insertarEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialRequest" message="tns:insertarEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialResponse" message="tns:insertarEditorialResponse" />
+    </operation>
   </portType>
   <binding name="EditorialWSPortBinding" type="tns:EditorialWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarEditoriales">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarEditorial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="modificarEditorial">
       <soap:operation soapAction="" />
       <input>
@@ -95,7 +77,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarEditoriales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="obtenerEditorial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEditorial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -11,12 +11,6 @@
   <message name="insertarTemaResponse">
     <part name="parameters" element="tns:insertarTemaResponse" />
   </message>
-  <message name="listarTemas">
-    <part name="parameters" element="tns:listarTemas" />
-  </message>
-  <message name="listarTemasResponse">
-    <part name="parameters" element="tns:listarTemasResponse" />
-  </message>
   <message name="obtenerTemaPorId">
     <part name="parameters" element="tns:obtenerTemaPorId" />
   </message>
@@ -29,6 +23,12 @@
   <message name="eliminarTemaResponse">
     <part name="parameters" element="tns:eliminarTemaResponse" />
   </message>
+  <message name="listarTemas">
+    <part name="parameters" element="tns:listarTemas" />
+  </message>
+  <message name="listarTemasResponse">
+    <part name="parameters" element="tns:listarTemasResponse" />
+  </message>
   <message name="modificarTema">
     <part name="parameters" element="tns:modificarTema" />
   </message>
@@ -40,10 +40,6 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaRequest" message="tns:insertarTema" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaResponse" message="tns:insertarTemaResponse" />
     </operation>
-    <operation name="listarTemas">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarTemasRequest" message="tns:listarTemas" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarTemasResponse" message="tns:listarTemasResponse" />
-    </operation>
     <operation name="obtenerTemaPorId">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/obtenerTemaPorIdRequest" message="tns:obtenerTemaPorId" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/obtenerTemaPorIdResponse" message="tns:obtenerTemaPorIdResponse" />
@@ -51,6 +47,10 @@
     <operation name="eliminarTema">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/eliminarTemaRequest" message="tns:eliminarTema" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/eliminarTemaResponse" message="tns:eliminarTemaResponse" />
+    </operation>
+    <operation name="listarTemas">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarTemasRequest" message="tns:listarTemas" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarTemasResponse" message="tns:listarTemasResponse" />
     </operation>
     <operation name="modificarTema">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/modificarTemaRequest" message="tns:modificarTema" />
@@ -68,15 +68,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTemas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="obtenerTemaPorId">
       <soap:operation soapAction="" />
       <input>
@@ -87,6 +78,15 @@
       </output>
     </operation>
     <operation name="eliminarTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTemas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

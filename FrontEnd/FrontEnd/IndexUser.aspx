@@ -2,11 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Banner de anuncios -->
     <div class="alert alert-info mb-4" role="alert">
-        <!-- Aquí puedes colocar anuncios importantes para los usuarios -->
     </div>
-    <!-- Lista de libros disponibles -->
     <div class="card">
         <div class="card-header bg-primary text-white">
             Libros disponibles

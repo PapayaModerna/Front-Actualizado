@@ -16,17 +16,17 @@ namespace FrontEnd.PrestamoEjemplarWS {
     public interface PrestamoEjemplarWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtra" +
-            "sadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtra" +
-            "sadosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+            "mplarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse listarPrestamosAtrasados(FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest request);
+        FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse insertarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtra" +
-            "sadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtra" +
-            "sadosResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse> listarPrestamosAtrasadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
+            "mplarResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse> insertarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosDevu" +
@@ -42,30 +42,17 @@ namespace FrontEnd.PrestamoEjemplarWS {
         System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse> listarPrestamosDevueltosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
-            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
-            "mplarResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtra" +
+            "sadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtra" +
+            "sadosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse insertarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarRequest request);
+        FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse listarPrestamosAtrasados(FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
-            "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/insertarPrestamoEje" +
-            "mplarResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarResponse> insertarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.insertarPrestamoEjemplarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
-            "citadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
-            "citadosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse listarPrestamosSolicitados(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
-            "citadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
-            "citadosResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> listarPrestamosSolicitadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtra" +
+            "sadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosAtra" +
+            "sadosResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse> listarPrestamosAtrasadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/modificarPrestamoEj" +
@@ -81,6 +68,19 @@ namespace FrontEnd.PrestamoEjemplarWS {
         System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarResponse> modificarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.modificarPrestamoEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
+            "citadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
+            "citadosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse listarPrestamosSolicitados(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
+            "citadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosSoli" +
+            "citadosResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> listarPrestamosSolicitadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
             "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
             "mplarResponse")]
@@ -92,19 +92,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
             "mplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/eliminarPrestamoEje" +
             "mplarResponse")]
         System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse> eliminarPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
-            "EjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
-            "EjemplarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse listarTodosPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
-            "EjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
-            "EjemplarResponse")]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse> listarTodosPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarPrestamosNoCu" +
@@ -131,6 +118,19 @@ namespace FrontEnd.PrestamoEjemplarWS {
             "plarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/obtenerPrestamoEjem" +
             "plarResponse")]
         System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.obtenerPrestamoEjemplarResponse> obtenerPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.obtenerPrestamoEjemplarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
+            "EjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
+            "EjemplarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse listarTodosPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
+            "EjemplarRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/PrestamoEjemplarWS/listarTodosPrestamo" +
+            "EjemplarResponse")]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse> listarTodosPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request);
     }
     
     /// <remarks/>
@@ -288,62 +288,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosAtrasados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPrestamosAtrasadosRequest {
-        
-        public listarPrestamosAtrasadosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosAtrasadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPrestamosAtrasadosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
-        
-        public listarPrestamosAtrasadosResponse() {
-        }
-        
-        public listarPrestamosAtrasadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosDevueltos", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPrestamosDevueltosRequest {
-        
-        public listarPrestamosDevueltosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosDevueltosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPrestamosDevueltosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
-        
-        public listarPrestamosDevueltosResponse() {
-        }
-        
-        public listarPrestamosDevueltosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class insertarPrestamoEjemplarRequest {
         
@@ -390,27 +334,55 @@ namespace FrontEnd.PrestamoEjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosSolicitados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPrestamosSolicitadosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosDevueltos", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPrestamosDevueltosRequest {
         
-        public listarPrestamosSolicitadosRequest() {
+        public listarPrestamosDevueltosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosSolicitadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarPrestamosSolicitadosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosDevueltosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPrestamosDevueltosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
         
-        public listarPrestamosSolicitadosResponse() {
+        public listarPrestamosDevueltosResponse() {
         }
         
-        public listarPrestamosSolicitadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
+        public listarPrestamosDevueltosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosAtrasados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPrestamosAtrasadosRequest {
+        
+        public listarPrestamosAtrasadosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosAtrasadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPrestamosAtrasadosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
+        
+        public listarPrestamosAtrasadosResponse() {
+        }
+        
+        public listarPrestamosAtrasadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -454,6 +426,34 @@ namespace FrontEnd.PrestamoEjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosSolicitados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPrestamosSolicitadosRequest {
+        
+        public listarPrestamosSolicitadosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosSolicitadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarPrestamosSolicitadosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
+        
+        public listarPrestamosSolicitadosResponse() {
+        }
+        
+        public listarPrestamosSolicitadosResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class eliminarPrestamoEjemplarRequest {
         
@@ -488,34 +488,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
         }
         
         public eliminarPrestamoEjemplarResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosPrestamoEjemplarRequest {
-        
-        public listarTodosPrestamoEjemplarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPrestamoEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarTodosPrestamoEjemplarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
-        
-        public listarTodosPrestamoEjemplarResponse() {
-        }
-        
-        public listarTodosPrestamoEjemplarResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -589,6 +561,34 @@ namespace FrontEnd.PrestamoEjemplarWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPrestamoEjemplar", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosPrestamoEjemplarRequest {
+        
+        public listarTodosPrestamoEjemplarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPrestamoEjemplarResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarTodosPrestamoEjemplarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return;
+        
+        public listarTodosPrestamoEjemplarResponse() {
+        }
+        
+        public listarTodosPrestamoEjemplarResponse(FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PrestamoEjemplarWSChannel : FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS, System.ServiceModel.IClientChannel {
     }
@@ -614,48 +614,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
         
         public PrestamoEjemplarWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosAtrasados(FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest request) {
-            return base.Channel.listarPrestamosAtrasados(request);
-        }
-        
-        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosAtrasados() {
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest();
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosAtrasados(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosAtrasadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest request) {
-            return base.Channel.listarPrestamosAtrasadosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse> listarPrestamosAtrasadosAsync() {
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest();
-            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosAtrasadosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosDevueltos(FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest request) {
-            return base.Channel.listarPrestamosDevueltos(request);
-        }
-        
-        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosDevueltos() {
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest();
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosDevueltos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosDevueltosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest request) {
-            return base.Channel.listarPrestamosDevueltosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse> listarPrestamosDevueltosAsync() {
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest();
-            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosDevueltosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -686,24 +644,45 @@ namespace FrontEnd.PrestamoEjemplarWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosSolicitados(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request) {
-            return base.Channel.listarPrestamosSolicitados(request);
+        FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosDevueltos(FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest request) {
+            return base.Channel.listarPrestamosDevueltos(request);
         }
         
-        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosSolicitados() {
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest();
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosSolicitados(inValue);
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosDevueltos() {
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest();
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosDevueltos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosSolicitadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request) {
-            return base.Channel.listarPrestamosSolicitadosAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosDevueltosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest request) {
+            return base.Channel.listarPrestamosDevueltosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> listarPrestamosSolicitadosAsync() {
-            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest();
-            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosSolicitadosAsync(inValue);
+        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosResponse> listarPrestamosDevueltosAsync() {
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosDevueltosRequest();
+            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosDevueltosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosAtrasados(FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest request) {
+            return base.Channel.listarPrestamosAtrasados(request);
+        }
+        
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosAtrasados() {
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest();
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosAtrasados(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosAtrasadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest request) {
+            return base.Channel.listarPrestamosAtrasadosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosResponse> listarPrestamosAtrasadosAsync() {
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosAtrasadosRequest();
+            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosAtrasadosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -730,6 +709,27 @@ namespace FrontEnd.PrestamoEjemplarWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosSolicitados(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request) {
+            return base.Channel.listarPrestamosSolicitados(request);
+        }
+        
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarPrestamosSolicitados() {
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest();
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosSolicitados(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarPrestamosSolicitadosAsync(FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest request) {
+            return base.Channel.listarPrestamosSolicitadosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosResponse> listarPrestamosSolicitadosAsync() {
+            FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarPrestamosSolicitadosRequest();
+            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarPrestamosSolicitadosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.eliminarPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.eliminarPrestamoEjemplarRequest request) {
             return base.Channel.eliminarPrestamoEjemplar(request);
         }
@@ -752,27 +752,6 @@ namespace FrontEnd.PrestamoEjemplarWS {
             inValue.idPrestamo = idPrestamo;
             inValue.idEjemplar = idEjemplar;
             return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).eliminarPrestamoEjemplarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarTodosPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request) {
-            return base.Channel.listarTodosPrestamoEjemplar(request);
-        }
-        
-        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarTodosPrestamoEjemplar() {
-            FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest();
-            FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarTodosPrestamoEjemplar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarTodosPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request) {
-            return base.Channel.listarTodosPrestamoEjemplarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse> listarTodosPrestamoEjemplarAsync() {
-            FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest();
-            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarTodosPrestamoEjemplarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -819,6 +798,27 @@ namespace FrontEnd.PrestamoEjemplarWS {
             inValue.idPrestamo = idPrestamo;
             inValue.idEjemplar = idEjemplar;
             return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).obtenerPrestamoEjemplarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarTodosPrestamoEjemplar(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request) {
+            return base.Channel.listarTodosPrestamoEjemplar(request);
+        }
+        
+        public FrontEnd.PrestamoEjemplarWS.prestamosDeEjemplaresDTO[] listarTodosPrestamoEjemplar() {
+            FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest();
+            FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse retVal = ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarTodosPrestamoEjemplar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse> FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS.listarTodosPrestamoEjemplarAsync(FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest request) {
+            return base.Channel.listarTodosPrestamoEjemplarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarResponse> listarTodosPrestamoEjemplarAsync() {
+            FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest inValue = new FrontEnd.PrestamoEjemplarWS.listarTodosPrestamoEjemplarRequest();
+            return ((FrontEnd.PrestamoEjemplarWS.PrestamoEjemplarWS)(this)).listarTodosPrestamoEjemplarAsync(inValue);
         }
     }
 }

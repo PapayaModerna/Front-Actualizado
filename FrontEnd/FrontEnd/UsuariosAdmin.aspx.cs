@@ -102,7 +102,7 @@ namespace FrontEnd
         {
             var btn = (Button)sender;
             string idPersona = btn.CommandArgument;
-            Response.Redirect($"SancionarUsuarioAdmin.aspx?id={idPersona}");
+            Response.Redirect($"SancionarUser.aspx?id={idPersona}");
         }
     }
 }
