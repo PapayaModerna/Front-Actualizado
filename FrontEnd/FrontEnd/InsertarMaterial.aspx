@@ -174,15 +174,23 @@
         this.uploadArea.classList.remove('dragover');
     }
 
-    handleDrop(e) {
-        e.preventDefault();
-        this.uploadArea.classList.remove('dragover');
+        handleDrop(e) {
+            e.preventDefault();
+            this.uploadArea.classList.remove('dragover');
 
-        const files = e.dataTransfer.files;
-        if (files.length > 0) {
-            this.processFile(files[0]);
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+
+                // ⚠️ Inyectar el archivo al input fileUpload (solo 1 archivo)
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                this.fileInput.files = dataTransfer.files;
+
+                // Mostrar previsualización
+                this.processFile(file);
+            }
         }
-    }
 
     handleFileSelect(e) {
         const file = e.target.files[0];
