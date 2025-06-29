@@ -5,15 +5,22 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FrontEnd.MaterialWS;
+using FrontEnd.EjemplarWS;
 
 namespace FrontEnd
 {
     public partial class DetalleLibrosAdmin : System.Web.UI.Page
     {
         private MaterialWSClient materialWSClient;
+        private EjemplarWSClient ejemplarWSClient;
+        int cantidadEjemplaresDisponibles;
+        int cantidadNoDisponible;
+        int cantidadEjemplares;
+
         protected void Page_Init(object sender, EventArgs e)
         {
             materialWSClient = new MaterialWSClient();
+            ejemplarWSClient = new EjemplarWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -51,6 +58,23 @@ namespace FrontEnd
                         ? string.Join(", ", temas.Select(t => t.descripcion))
                         : "-";
                     Session["MaterialSeleccionado"] = libro;
+                    int idSede = Convert.ToInt32(Session["idSede"]);
+                    if(idSede != 0)
+                    {
+                        cantidadEjemplaresDisponibles = ejemplarWSClient.contarEjemplaresDisponiblesPorMaterialYSede(libro.idMaterial, idSede);
+                        cantidadNoDisponible = ejemplarWSClient.contarEjemplaresNoDisponiblesPorMaterialYSede(libro.idMaterial, idSede);
+                        cantidadEjemplares = cantidadEjemplaresDisponibles + cantidadNoDisponible;
+                    }
+                    else
+                    {
+                        cantidadEjemplaresDisponibles = ejemplarWSClient.contarDisponiblesPorMaterial(libro.idMaterial);
+                        cantidadEjemplares = ejemplarWSClient.contarTotalPorMaterial(libro.idMaterial);
+                        int cantidadNoDisponible = cantidadEjemplares - cantidadEjemplaresDisponibles;
+                    }
+                        
+                    lblEjemplaresTotales.Text = cantidadEjemplares.ToString();
+                    lblEjemplaresDisponibles.Text = cantidadEjemplaresDisponibles.ToString();
+                    lblEjemplaresNoDisponibles.Text = cantidadNoDisponible.ToString();
                     imgPortada.ImageUrl = libro.portada ?? "~/Images/Portadas/portadaprueba.jpg";
                 }
                 else

@@ -31,6 +31,15 @@
             <div class="mb-4">
                 <strong>Temas:</strong> <asp:Label ID="lblTemas" runat="server" CssClass="ms-2" />
             </div>
+            <div>
+                <strong>Ejemplares disponibles:</strong> <asp:Label ID="lblEjemplaresDisponibles" runat="server" CssClass="ms-2" />
+            </div>
+            <div class="mb-4">
+                <strong>Ejemplares no disponibles:</strong> <asp:Label ID="lblEjemplaresNoDisponibles" runat="server" CssClass="ms-2" />
+            </div>
+            <div class="mb-4">
+                <strong>Ejemplares totales:</strong> <asp:Label ID="lblEjemplaresTotales" runat="server" CssClass="ms-2" />
+            </div>
 
             <!-- Botones -->
             <div class="d-flex flex-wrap gap-2">
