@@ -129,6 +129,7 @@ namespace FrontEnd
             string filtro = ViewState["Filtro"].ToString();
             int idSede = int.Parse(ddlSedes.SelectedValue);
             bool porTitulo = !string.IsNullOrEmpty(filtro);
+            Session["idSede"] = idSede;
 
             List<FrontEnd.MaterialWS.materialesDTO> libros;
             int total = 0;
