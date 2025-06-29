@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/TemaWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="insertarTema">
-    <part name="parameters" element="tns:insertarTema" />
-  </message>
-  <message name="insertarTemaResponse">
-    <part name="parameters" element="tns:insertarTemaResponse" />
-  </message>
   <message name="obtenerTemaPorId">
     <part name="parameters" element="tns:obtenerTemaPorId" />
   </message>
@@ -22,6 +16,18 @@
   </message>
   <message name="eliminarTemaResponse">
     <part name="parameters" element="tns:eliminarTemaResponse" />
+  </message>
+  <message name="listarNombresTemas">
+    <part name="parameters" element="tns:listarNombresTemas" />
+  </message>
+  <message name="listarNombresTemasResponse">
+    <part name="parameters" element="tns:listarNombresTemasResponse" />
+  </message>
+  <message name="insertarTema">
+    <part name="parameters" element="tns:insertarTema" />
+  </message>
+  <message name="insertarTemaResponse">
+    <part name="parameters" element="tns:insertarTemaResponse" />
   </message>
   <message name="listarTemas">
     <part name="parameters" element="tns:listarTemas" />
@@ -36,10 +42,6 @@
     <part name="parameters" element="tns:modificarTemaResponse" />
   </message>
   <portType name="TemaWS">
-    <operation name="insertarTema">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaRequest" message="tns:insertarTema" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaResponse" message="tns:insertarTemaResponse" />
-    </operation>
     <operation name="obtenerTemaPorId">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/obtenerTemaPorIdRequest" message="tns:obtenerTemaPorId" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/obtenerTemaPorIdResponse" message="tns:obtenerTemaPorIdResponse" />
@@ -47,6 +49,14 @@
     <operation name="eliminarTema">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/eliminarTemaRequest" message="tns:eliminarTema" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/eliminarTemaResponse" message="tns:eliminarTemaResponse" />
+    </operation>
+    <operation name="listarNombresTemas">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarNombresTemasRequest" message="tns:listarNombresTemas" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarNombresTemasResponse" message="tns:listarNombresTemasResponse" />
+    </operation>
+    <operation name="insertarTema">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaRequest" message="tns:insertarTema" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaResponse" message="tns:insertarTemaResponse" />
     </operation>
     <operation name="listarTemas">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarTemasRequest" message="tns:listarTemas" />
@@ -59,15 +69,6 @@
   </portType>
   <binding name="TemaWSPortBinding" type="tns:TemaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarTema">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="obtenerTemaPorId">
       <soap:operation soapAction="" />
       <input>
@@ -78,6 +79,24 @@
       </output>
     </operation>
     <operation name="eliminarTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarNombresTemas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTema">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

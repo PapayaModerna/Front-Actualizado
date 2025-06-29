@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using FrontEnd.EjemplarWS;
 using FrontEnd.PrestamoWS;
 using FrontEnd.PersonaWS;
+using FrontEnd.SancionWS;
 namespace FrontEnd
 {
     public partial class Carrito : System.Web.UI.Page
@@ -14,12 +15,13 @@ namespace FrontEnd
         private EjemplarWSClient ejemplarwsClient;
         private PersonaWSClient personawsClient;
         private PrestamoWSClient prestamowsClient;
-
+        private SancionWSClient sancionwsClient;
         protected void Page_Init(object sender, EventArgs e)
         {
             ejemplarwsClient = new EjemplarWSClient();
             personawsClient = new PersonaWSClient();
             prestamowsClient = new PrestamoWSClient();
+            sancionwsClient = new SancionWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -57,10 +59,17 @@ namespace FrontEnd
             var carrito = Session["CarritoEjemplares"] as List<int>;
             int idPersona = (int)Session["idPersona"];
 
+
+
             if (carrito != null && carrito.Count > 0)
             {
                 try
                 {
+                    if (TienesSancionesActivas(idPersona))
+                    {
+                        ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('No puedes realizar el préstamo debido a que tienes sanciones activas.');", true);
+                        return;  
+                    }
                     Session["CarritoEjemplares"] = new List<int>();
                     prestamowsClient.solicitarPrestamo(idPersona, carrito.ToArray());
 
@@ -85,6 +94,18 @@ namespace FrontEnd
             Session["CarritoEjemplares"] = new List<int>();
             CargarCarrito();
             ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('Todos los ejemplares han sido eliminados del carrito.');", true);
+        }
+        public bool TienesSancionesActivas(int idPersona)
+        {
+            try
+            {
+                bool tieneSanciones = sancionwsClient.tieneSancionesActivas(idPersona);
+                return tieneSanciones;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al consultar sanciones: " + ex.Message);
+            }
         }
     }
 }

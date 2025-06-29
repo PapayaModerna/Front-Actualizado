@@ -93,6 +93,9 @@
     <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.obtenerCreadorPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CreadorWS\FrontEnd.CreadorWS.listarNombresAutoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\EditorialWS\EditorialWS.wsdl" />
     <None Include="Connected Services\EditorialWS\EditorialWS.xsd">
       <SubType>Designer</SubType>
@@ -285,6 +288,15 @@
     <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesPorSedeResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.buscarMaterialesUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesTotalPorFiltroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\FrontEnd.MaterialWS.contarMaterialesUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\MaterialWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -307,6 +319,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\NivelInglesWS\FrontEnd.NivelInglesWS.obtenerNivelPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\NivelInglesWS\FrontEnd.NivelInglesWS.listarNombresNivelesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\NivelInglesWS\Reference.svcmap">
@@ -604,6 +619,9 @@
     <Content Include="Connected Services\TemaWS\FrontEnd.TemaWS.temasDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\TemaWS\FrontEnd.TemaWS.listarNombresTemasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\TemaWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -632,6 +650,7 @@
     <Content Include="Content\InsertarMaterial.css" />
     <Content Include="Content\PrestamosAdmin.css" />
     <Content Include="DetalleLibrosAdmin.aspx" />
+    <Content Include="DetalleRecurso.aspx" />
     <Content Include="DetallesAdmin.aspx" />
     <Content Include="DevolucionPrestamo.aspx" />
     <Content Include="EditarMaterial.aspx" />
@@ -755,6 +774,13 @@
     </Compile>
     <Compile Include="Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleRecurso.aspx.cs">
+      <DependentUpon>DetalleRecurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleRecurso.aspx.designer.cs">
+      <DependentUpon>DetalleRecurso.aspx</DependentUpon>
     </Compile>
     <Compile Include="DevolucionPrestamo.aspx.cs">
       <DependentUpon>DevolucionPrestamo.aspx</DependentUpon>

@@ -16,15 +16,6 @@ namespace FrontEnd.TemaWS {
     public interface TemaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.TemaWS.insertarTemaResponse insertarTema(FrontEnd.TemaWS.insertarTemaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaResponse")]
-        System.Threading.Tasks.Task<FrontEnd.TemaWS.insertarTemaResponse> insertarTemaAsync(FrontEnd.TemaWS.insertarTemaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/obtenerTemaPorIdRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/obtenerTemaPorIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,6 +32,24 @@ namespace FrontEnd.TemaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/eliminarTemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/eliminarTemaResponse")]
         System.Threading.Tasks.Task<FrontEnd.TemaWS.eliminarTemaResponse> eliminarTemaAsync(FrontEnd.TemaWS.eliminarTemaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarNombresTemasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarNombresTemasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.TemaWS.listarNombresTemasResponse listarNombresTemas(FrontEnd.TemaWS.listarNombresTemasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarNombresTemasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarNombresTemasResponse")]
+        System.Threading.Tasks.Task<FrontEnd.TemaWS.listarNombresTemasResponse> listarNombresTemasAsync(FrontEnd.TemaWS.listarNombresTemasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.TemaWS.insertarTemaResponse insertarTema(FrontEnd.TemaWS.insertarTemaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/insertarTemaResponse")]
+        System.Threading.Tasks.Task<FrontEnd.TemaWS.insertarTemaResponse> insertarTemaAsync(FrontEnd.TemaWS.insertarTemaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarTemasRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/TemaWS/listarTemasResponse")]
@@ -179,42 +188,6 @@ namespace FrontEnd.TemaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTema", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarTemaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontEnd.TemaWS.temasDTO tema;
-        
-        public insertarTemaRequest() {
-        }
-        
-        public insertarTemaRequest(FrontEnd.TemaWS.temasDTO tema) {
-            this.tema = tema;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTemaResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarTemaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarTemaResponse() {
-        }
-        
-        public insertarTemaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTemaPorId", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class obtenerTemaPorIdRequest {
         
@@ -280,6 +253,70 @@ namespace FrontEnd.TemaWS {
         }
         
         public eliminarTemaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNombresTemas", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarNombresTemasRequest {
+        
+        public listarNombresTemasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarNombresTemasResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarNombresTemasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.TemaWS.temasDTO[] @return;
+        
+        public listarNombresTemasResponse() {
+        }
+        
+        public listarNombresTemasResponse(FrontEnd.TemaWS.temasDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTema", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarTemaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontEnd.TemaWS.temasDTO tema;
+        
+        public insertarTemaRequest() {
+        }
+        
+        public insertarTemaRequest(FrontEnd.TemaWS.temasDTO tema) {
+            this.tema = tema;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTemaResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarTemaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarTemaResponse() {
+        }
+        
+        public insertarTemaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -376,29 +413,6 @@ namespace FrontEnd.TemaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.TemaWS.insertarTemaResponse FrontEnd.TemaWS.TemaWS.insertarTema(FrontEnd.TemaWS.insertarTemaRequest request) {
-            return base.Channel.insertarTema(request);
-        }
-        
-        public int insertarTema(FrontEnd.TemaWS.temasDTO tema) {
-            FrontEnd.TemaWS.insertarTemaRequest inValue = new FrontEnd.TemaWS.insertarTemaRequest();
-            inValue.tema = tema;
-            FrontEnd.TemaWS.insertarTemaResponse retVal = ((FrontEnd.TemaWS.TemaWS)(this)).insertarTema(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.TemaWS.insertarTemaResponse> FrontEnd.TemaWS.TemaWS.insertarTemaAsync(FrontEnd.TemaWS.insertarTemaRequest request) {
-            return base.Channel.insertarTemaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontEnd.TemaWS.insertarTemaResponse> insertarTemaAsync(FrontEnd.TemaWS.temasDTO tema) {
-            FrontEnd.TemaWS.insertarTemaRequest inValue = new FrontEnd.TemaWS.insertarTemaRequest();
-            inValue.tema = tema;
-            return ((FrontEnd.TemaWS.TemaWS)(this)).insertarTemaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontEnd.TemaWS.obtenerTemaPorIdResponse FrontEnd.TemaWS.TemaWS.obtenerTemaPorId(FrontEnd.TemaWS.obtenerTemaPorIdRequest request) {
             return base.Channel.obtenerTemaPorId(request);
         }
@@ -442,6 +456,50 @@ namespace FrontEnd.TemaWS {
             FrontEnd.TemaWS.eliminarTemaRequest inValue = new FrontEnd.TemaWS.eliminarTemaRequest();
             inValue.idTema = idTema;
             return ((FrontEnd.TemaWS.TemaWS)(this)).eliminarTemaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.TemaWS.listarNombresTemasResponse FrontEnd.TemaWS.TemaWS.listarNombresTemas(FrontEnd.TemaWS.listarNombresTemasRequest request) {
+            return base.Channel.listarNombresTemas(request);
+        }
+        
+        public FrontEnd.TemaWS.temasDTO[] listarNombresTemas() {
+            FrontEnd.TemaWS.listarNombresTemasRequest inValue = new FrontEnd.TemaWS.listarNombresTemasRequest();
+            FrontEnd.TemaWS.listarNombresTemasResponse retVal = ((FrontEnd.TemaWS.TemaWS)(this)).listarNombresTemas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.TemaWS.listarNombresTemasResponse> FrontEnd.TemaWS.TemaWS.listarNombresTemasAsync(FrontEnd.TemaWS.listarNombresTemasRequest request) {
+            return base.Channel.listarNombresTemasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.TemaWS.listarNombresTemasResponse> listarNombresTemasAsync() {
+            FrontEnd.TemaWS.listarNombresTemasRequest inValue = new FrontEnd.TemaWS.listarNombresTemasRequest();
+            return ((FrontEnd.TemaWS.TemaWS)(this)).listarNombresTemasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.TemaWS.insertarTemaResponse FrontEnd.TemaWS.TemaWS.insertarTema(FrontEnd.TemaWS.insertarTemaRequest request) {
+            return base.Channel.insertarTema(request);
+        }
+        
+        public int insertarTema(FrontEnd.TemaWS.temasDTO tema) {
+            FrontEnd.TemaWS.insertarTemaRequest inValue = new FrontEnd.TemaWS.insertarTemaRequest();
+            inValue.tema = tema;
+            FrontEnd.TemaWS.insertarTemaResponse retVal = ((FrontEnd.TemaWS.TemaWS)(this)).insertarTema(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.TemaWS.insertarTemaResponse> FrontEnd.TemaWS.TemaWS.insertarTemaAsync(FrontEnd.TemaWS.insertarTemaRequest request) {
+            return base.Channel.insertarTemaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.TemaWS.insertarTemaResponse> insertarTemaAsync(FrontEnd.TemaWS.temasDTO tema) {
+            FrontEnd.TemaWS.insertarTemaRequest inValue = new FrontEnd.TemaWS.insertarTemaRequest();
+            inValue.tema = tema;
+            return ((FrontEnd.TemaWS.TemaWS)(this)).insertarTemaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

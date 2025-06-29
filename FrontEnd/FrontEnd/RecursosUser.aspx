@@ -2,134 +2,165 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
-     body {
-    font-family: 'Roboto', sans-serif;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
 
-h1 {
-    font-size: 1.5rem;
-    text-align: left;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    color: #333;
-}
+        h1 {
+            font-size: 1.5rem;
+            text-align: left;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
 
-html.dark-mode h1 {
-    color: white; 
-}
+        html.dark-mode h1 {
+            color: white;
+        }
 
-.buscador-animado {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-}
+        .buscador-animado {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
 
-.buscador-gradient-border {
-    background: linear-gradient(90deg, #1e3c72, #232526);
-    padding: 6px;
-    border-radius: 1rem;
-    transition: box-shadow 0.3s;
-    box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.10);
-    width: 100%;
-    max-width: 100%;
-}
+        .buscador-contenedor {
+            background: white;
+            border-radius: 1.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            height: 3.5rem;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #ccc;
+            padding: 5px 15px;
+        }
 
-.buscador-contenedor {
-    background: white;
-    border-radius: 1.2rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    min-height: 3.5rem;
-    height: 3.5rem;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid #ccc; 
-}
+        .buscador-input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 1.25rem;
+            padding: 0.7rem 0.5rem;
+            width: 70%;
+        }
 
-.buscador-input-row {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 3.5rem;
-    padding: 0 1.2rem;
-}
+        .buscador-btn {
+            background: #7c5cff;
+            color: #fff;
+            border: none;
+            border-radius: 0.8rem;
+            width: auto;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0 15px;
+        }
 
-.buscador-input {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 1.25rem;
-    padding: 0.7rem 0.5rem;
-    width: 100%;
-}
+        .buscador-ddls {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding-right: 20px;
+            width: 30%;
+        }
 
-.buscador-btn {
-    background: #7c5cff;
-    color: #fff;
-    border: none;
-    border-radius: 0.8rem;
-    width: auto; 
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1.2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0 10px; 
-}
+        .buscador-ddls select {
+            font-size: 1rem;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            width: 100%;
+        }
 
-.buscador-ddls {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    padding-right: 20px;
-}
+        #resultadosBusquedaContainer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-.buscador-ddls select {
-    font-size: 1rem;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    width: 110px; 
-}
+        .card {
+            display: flex;
+            flex-direction: row;
+            width: 22rem;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
 
-.buscador-ddls select option {
-    font-size: 1rem;
-}
+        .card:hover {
+            transform: scale(1.05);
+        }
 
-html.dark-mode .buscador-gradient-border {
-    background: linear-gradient(90deg, #232526, #414345);
-}
+        .card-img-top {
+            max-width: 120px;
+            max-height: 180px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
 
-html.dark-mode .buscador-contenedor {
-    background-color: #2b3035;
-    border-color: #495057;
-}
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            flex-grow: 1;
+        }
 
-html.dark-mode .buscador-btn {
-    background-color: #7c5cff;
-}
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-.buscador-ddls select {
-    color: #333;
-}
+        .card-text {
+            margin-bottom: 5px;
+        }
 
-html.dark-mode .buscador-ddls select {
-    background-color: #495057;
-    color: #fff;
-}
-html.dark-mode {
-    background-color: #1e1e1e;
-    color: white;
-}
+        .btn {
+            margin-top: 10px;
+        }
+
+        .paginacion {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .paginacion .btn {
+            background-color: #7c5cff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .paginacion .btn:hover {
+            background-color: #6a47e3;
+        }
+
+        .paginacion .btn:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
     </style>
 </asp:Content>
 
@@ -146,38 +177,41 @@ html.dark-mode {
                 <form id="formBuscador" class="buscador-animado" autocomplete="off" method="post">
                     <div class="buscador-contenedor">
                         <asp:TextBox ID="txtBusqueda" runat="server" class="buscador-input" placeholder="Buscar..." />
-                        <button type="submit" class="buscador-btn" runat="server" Text="Buscar" OnClick="realizarBusqueda">
-                            <i class="fas fa-search"></i>
-                        </button>
-
+                        <asp:Button ID="btnBuscar" runat="server" CssClass="buscador-btn" Text="Buscar" OnClick="realizarBusqueda" />
                         <div class="buscador-ddls">
-                            <asp:DropDownList ID="ddlTemas" runat="server" class="form-control">
-                            </asp:DropDownList>
-                            <asp:DropDownList ID="ddlAutor" runat="server" class="form-control">
-                            </asp:DropDownList>
-                            <asp:DropDownList ID="ddlNivel" runat="server" class="form-control">
-                            </asp:DropDownList>
+                            <asp:DropDownList ID="ddlTemas" runat="server" class="form-control"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlAutor" runat="server" class="form-control"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlNivel" runat="server" class="form-control"></asp:DropDownList>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
 
-        <div id="resultadosBusquedaContainer" class="row" style="display:none;">
-            <div class="col-12">
+        <div id="resultadosBusquedaContainer" runat="server" class="row" style="display:none;">
+            <div class="col-12 d-flex flex-wrap">
                 <asp:Repeater ID="rptResultados" runat="server">
                     <ItemTemplate>
-                        <div class="card" style="width: 18rem; margin: 10px;">
-                            <img src="~/images/default.jpg" class="card-img-top" alt="Imagen del material">
+                        <div class="card" style="width: 18rem; margin: 10px; display: flex; flex-direction: column; justify-content: space-between;">
+                            <img src='<%# ResolveUrl("~/Images/Portadas/portadaprueba.jpg") %>' class="card-img-top" alt="Imagen del material">
                             <div class="card-body">
                                 <h5 class="card-title"><%# Eval("titulo") %></h5>
-                                <p class="card-text">Editorial: <%# Eval("idEditorial") %></p>
-                                <p class="card-text">Año Publicación: <%# Eval("anhoPublicacion") %></p>
-                                <a href="#" class="btn btn-primary">Ver detalles</a>
+                                <p class="card-text">Editorial ID: <%# Eval("editorial.idEditorial") %></p>
+                                <p class="card-text">Año de Publicación: <%# Eval("anioPublicacion") %></p>
+                                <a href='<%# "DetalleRecurso.aspx?idMaterial=" + Eval("idMaterial") %>' class="btn btn-primary">Ver detalles</a>
                             </div>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
+                <div class="paginacion">
+                    <asp:Repeater ID="rptPaginacion" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkPagina" runat="server" CommandArgument='<%# Eval("NumeroPagina") %>' OnClick="lnkPagina_Click" CssClass="btn btn-light">
+                                <%# Eval("NumeroPagina") %>
+                            </asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
             </div>
         </div>
     </div>

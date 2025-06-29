@@ -1,87 +1,127 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FrontEnd.MaterialWS;
-using FrontEnd.EjemplarWS;
-using FrontEnd.PrestamoWS;
+using FrontEnd.CreadorWS;
+using FrontEnd.TemaWS;
+using FrontEnd.NivelInglesWS;
+using System.Diagnostics;
 
 namespace FrontEnd
 {
     public partial class RecursosUser : System.Web.UI.Page
     {
         private MaterialWSClient materialwsClient;
+        private CreadorWSClient creadorwsClient;
+        private TemaWSClient temawsClient;
+        private NivelInglesWSClient nivelIngleswsClient;
+
+        private const int CantidadPagina = 10;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             materialwsClient = new MaterialWSClient();
+            creadorwsClient = new CreadorWSClient();
+            temawsClient = new TemaWSClient();
+            nivelIngleswsClient = new NivelInglesWSClient();
         }
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 LlenarDDLS();
+                ViewState["Filtro"] = "";
+                ViewState["PaginaActual"] = 1;
+                CargarResultados(1);
             }
+        }
+        protected void realizarBusqueda(object sender, EventArgs e)
+        {
+            CargarResultados(1); 
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ViewState["Filtro"] = txtBusqueda.Text.Trim();
+            ViewState["PaginaActual"] = 1;
+            CargarResultados(1);
         }
 
         private void LlenarDDLS()
         {
-           /* List<Material> temas = materialwsClient.listarNombresTemas();
-            ddlTemas.DataSource = temas;
-            ddlTemas.DataTextField = "Titulo";  
-            ddlTemas.DataValueField = "Id";    
-            ddlTemas.DataBind();
+            var temas = temawsClient.listarNombresTemas();
+            ddlTemas.Items.Clear();
             ddlTemas.Items.Insert(0, new ListItem("Temas", ""));
+            foreach (var tema in temas)
+            {
+                ListItem item = new ListItem(tema.descripcion, tema.idTema.ToString());
+                ddlTemas.Items.Add(item);
+            }
 
-            List<Material> autores = materialwsClient.listarNombresAutores();
-            ddlAutor.DataSource = autores;
-            ddlAutor.DataTextField = "Titulo";  
-            ddlAutor.DataValueField = "Id";    
-            ddlAutor.DataBind();
+            var autores = creadorwsClient.listarNombresAutores();
+            ddlAutor.Items.Clear();
             ddlAutor.Items.Insert(0, new ListItem("Autores", ""));
+            foreach (var autor in autores)
+            {
+                ListItem item = new ListItem(autor.seudonimo, autor.idCreador.ToString());
+                ddlAutor.Items.Add(item);
+            }
 
-            List<string> niveles = materialwsClient.listarNiveles(); 
-            ddlNivel.DataSource = niveles;
-            ddlNivel.DataBind();
-            ddlNivel.Items.Insert(0, new ListItem("Niveles", ""));*/
+            var niveles = nivelIngleswsClient.listarNombresNiveles();
+            ddlNivel.Items.Clear();
+            ddlNivel.Items.Insert(0, new ListItem("Niveles", ""));
+            foreach (var nivel in niveles)
+            {
+                ListItem item = new ListItem(nivel.nivel.ToString(), nivel.idNivel.ToString());
+                ddlNivel.Items.Add(item);
+            }
         }
 
-        protected void realizarBusqueda()
+        protected void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            /*int idSede = Convert.ToInt32(ddlAutor.SelectedValue == "" ? "-1" : ddlAutor.SelectedValue);
-            int idTema = Convert.ToInt32(ddlTemas.SelectedValue == "" ? "-1" : ddlTemas.SelectedValue);
-            int idNivel = Convert.ToInt32(ddlNivel.SelectedValue == "" ? "-1" : ddlNivel.SelectedValue);
+            ViewState["Filtro"] = txtBusqueda.Text.Trim();
+            ViewState["PaginaActual"] = 1;
+            CargarResultados(1);
+        }
 
-            string filtro = txtBusqueda.Text.Trim();
-            if (string.IsNullOrEmpty(filtro)) filtro = "";
+        protected void CargarResultados(int pagina)
+        {
+            int idTema = string.IsNullOrEmpty(ddlTemas.SelectedValue) ? -1 : Convert.ToInt32(ddlTemas.SelectedValue);
+            int idAutor = string.IsNullOrEmpty(ddlAutor.SelectedValue) ? -1 : Convert.ToInt32(ddlAutor.SelectedValue);
+            int idNivel = string.IsNullOrEmpty(ddlNivel.SelectedValue) ? -1 : Convert.ToInt32(ddlNivel.SelectedValue);
 
-            int cantPag = 10; 
-            int pag = 1; 
+            string filtro = string.IsNullOrWhiteSpace(txtBusqueda.Text) ? "" : txtBusqueda.Text.Trim();
 
-            var resultados = materialwsClient.buscadorUsuario(idSede, idTema, idNivel, filtro, cantPag, pag);
+            int totalPorPagina = materialwsClient.contarMaterialesUsuario(idTema, idAutor, idNivel, filtro);
+            int totalPaginas = (int)Math.Ceiling((double)totalPorPagina / CantidadPagina);
+            var paginas = Enumerable.Range(1, totalPaginas)
+                                    .Select(n => new { NumeroPagina = n })
+                                    .ToList();
 
+            rptPaginacion.DataSource = paginas;
+            rptPaginacion.DataBind();
+
+            var resultados = materialwsClient.buscarMaterialesUsuario(idTema, idAutor, idNivel, filtro, CantidadPagina, pagina);
             if (resultados != null && resultados.Length > 0)
             {
                 resultadosBusquedaContainer.Visible = true;
-                resultadosBusqueda.DataSource = resultados;
-                resultadosBusqueda.DataBind();
+                resultadosBusquedaContainer.Style["display"] = "block";
+                rptResultados.DataSource = resultados;
+                rptResultados.DataBind();
             }
             else
             {
                 resultadosBusquedaContainer.Visible = false;
-            }*/
+            }
         }
 
-        [WebMethod]
-        public static string BuscarMateriales(string texto, string tipo, string autor, string tema, string nivel)
+        protected void lnkPagina_Click(object sender, EventArgs e)
         {
-            string c="a";
-            return c;
+            int paginaSeleccionada = int.Parse(((LinkButton)sender).CommandArgument);
+            ViewState["PaginaActual"] = paginaSeleccionada;
+            CargarResultados(paginaSeleccionada);
         }
 
         protected void btnBorrow_Click(object sender, EventArgs e)

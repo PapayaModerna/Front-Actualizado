@@ -11,79 +11,79 @@ namespace FrontEnd
 {
 
 
-    public partial class RecursosUser
+    public partial class DetalleRecurso
     {
 
         /// <summary>
-        /// Control txtBusqueda.
+        /// Control detalleTitulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBusqueda;
+        protected global::System.Web.UI.WebControls.Label detalleTitulo;
 
         /// <summary>
-        /// Control btnBuscar.
+        /// Control detalleImagen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.WebControls.Image detalleImagen;
 
         /// <summary>
-        /// Control ddlTemas.
+        /// Control detalleAnio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTemas;
+        protected global::System.Web.UI.WebControls.Label detalleAnio;
 
         /// <summary>
-        /// Control ddlAutor.
+        /// Control detalleEditorial.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAutor;
+        protected global::System.Web.UI.WebControls.Label detalleEditorial;
 
         /// <summary>
-        /// Control ddlNivel.
+        /// Control detalleCreador.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNivel;
+        protected global::System.Web.UI.WebControls.Label detalleCreador;
 
         /// <summary>
-        /// Control resultadosBusquedaContainer.
+        /// Control detalleNivel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl resultadosBusquedaContainer;
+        protected global::System.Web.UI.WebControls.Label detalleNivel;
 
         /// <summary>
-        /// Control rptResultados.
+        /// Control detalleStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptResultados;
+        protected global::System.Web.UI.WebControls.Label detalleStock;
 
         /// <summary>
-        /// Control rptPaginacion.
+        /// Control btnVerEjemplares.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptPaginacion;
+        protected global::System.Web.UI.WebControls.Button btnVerEjemplares;
     }
 }

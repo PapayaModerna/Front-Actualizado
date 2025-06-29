@@ -4,20 +4,20 @@
   <xs:element name="eliminarTemaResponse" type="tns:eliminarTemaResponse" />
   <xs:element name="insertarTema" type="tns:insertarTema" />
   <xs:element name="insertarTemaResponse" type="tns:insertarTemaResponse" />
+  <xs:element name="listarNombresTemas" type="tns:listarNombresTemas" />
+  <xs:element name="listarNombresTemasResponse" type="tns:listarNombresTemasResponse" />
   <xs:element name="listarTemas" type="tns:listarTemas" />
   <xs:element name="listarTemasResponse" type="tns:listarTemasResponse" />
   <xs:element name="modificarTema" type="tns:modificarTema" />
   <xs:element name="modificarTemaResponse" type="tns:modificarTemaResponse" />
   <xs:element name="obtenerTemaPorId" type="tns:obtenerTemaPorId" />
   <xs:element name="obtenerTemaPorIdResponse" type="tns:obtenerTemaPorIdResponse" />
-  <xs:complexType name="obtenerTemaPorId">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idTema" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarNombresTemas">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="obtenerTemaPorIdResponse">
+  <xs:complexType name="listarNombresTemasResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:temasDTO" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:temasDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="temasDTO">
@@ -26,6 +26,16 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="idTema" type="xs:int" />
       <xs:element minOccurs="0" name="temaPadre" type="tns:temasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTemaPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTema" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTemaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:temasDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarTema">
