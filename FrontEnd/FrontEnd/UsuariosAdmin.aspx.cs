@@ -97,12 +97,5 @@ namespace FrontEnd
                 lblSinResultadosUsuarios.Visible = true;
             }
         }
-
-        protected void btnSancionar_Click(object sender, EventArgs e)
-        {
-            var btn = (Button)sender;
-            string idPersona = btn.CommandArgument;
-            Response.Redirect($"SancionarUser.aspx?id={idPersona}");
-        }
     }
 }

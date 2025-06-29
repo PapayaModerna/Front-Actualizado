@@ -61,8 +61,9 @@
                                             </a>
                                         </td>
                                         <td>
-                                            <asp:Button ID="btnSancionar" runat="server" Text="Sancionar" CssClass="btn btn-danger btn-sm"
-                                                CommandArgument='<%# Eval("idPersona") %>' OnClick="btnSancionar_Click" />
+                                            <a href="SancionarUser.aspx?idUsuario=<%# Eval("idPersona") %>" class="btn btn-danger btn-sm">
+                                                <i class="fas fa-ban"></i> Sancionar
+                                            </a>
                                         </td>
                                     </tr>
                                 </ItemTemplate>

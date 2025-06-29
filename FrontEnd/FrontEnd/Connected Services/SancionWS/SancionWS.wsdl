@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="SancionWS" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/myholywrapper-v2.1/SancionWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
+    </xsd:schema>
+  </types>
+  <message name="tieneSancionesActivas">
+    <part name="parameters" element="tns:tieneSancionesActivas" />
+  </message>
+  <message name="tieneSancionesActivasResponse">
+    <part name="parameters" element="tns:tieneSancionesActivasResponse" />
+  </message>
+  <message name="listarSancionesPorPersona">
+    <part name="parameters" element="tns:listarSancionesPorPersona" />
+  </message>
+  <message name="listarSancionesPorPersonaResponse">
+    <part name="parameters" element="tns:listarSancionesPorPersonaResponse" />
+  </message>
+  <message name="obtenerSancionPorId">
+    <part name="parameters" element="tns:obtenerSancionPorId" />
+  </message>
+  <message name="obtenerSancionPorIdResponse">
+    <part name="parameters" element="tns:obtenerSancionPorIdResponse" />
+  </message>
+  <message name="verificarSancionesActivas">
+    <part name="parameters" element="tns:verificarSancionesActivas" />
+  </message>
+  <message name="verificarSancionesActivasResponse">
+    <part name="parameters" element="tns:verificarSancionesActivasResponse" />
+  </message>
+  <message name="modificarSancion">
+    <part name="parameters" element="tns:modificarSancion" />
+  </message>
+  <message name="modificarSancionResponse">
+    <part name="parameters" element="tns:modificarSancionResponse" />
+  </message>
+  <message name="listarSanciones">
+    <part name="parameters" element="tns:listarSanciones" />
+  </message>
+  <message name="listarSancionesResponse">
+    <part name="parameters" element="tns:listarSancionesResponse" />
+  </message>
+  <message name="eliminarSancion">
+    <part name="parameters" element="tns:eliminarSancion" />
+  </message>
+  <message name="eliminarSancionResponse">
+    <part name="parameters" element="tns:eliminarSancionResponse" />
+  </message>
+  <message name="insertarSancion">
+    <part name="parameters" element="tns:insertarSancion" />
+  </message>
+  <message name="insertarSancionResponse">
+    <part name="parameters" element="tns:insertarSancionResponse" />
+  </message>
+  <portType name="SancionWS">
+    <operation name="tieneSancionesActivas">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/tieneSancionesActivasRequest" message="tns:tieneSancionesActivas" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/tieneSancionesActivasResponse" message="tns:tieneSancionesActivasResponse" />
+    </operation>
+    <operation name="listarSancionesPorPersona">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/listarSancionesPorPersonaRequest" message="tns:listarSancionesPorPersona" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/listarSancionesPorPersonaResponse" message="tns:listarSancionesPorPersonaResponse" />
+    </operation>
+    <operation name="obtenerSancionPorId">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/obtenerSancionPorIdRequest" message="tns:obtenerSancionPorId" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/obtenerSancionPorIdResponse" message="tns:obtenerSancionPorIdResponse" />
+    </operation>
+    <operation name="verificarSancionesActivas">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/verificarSancionesActivasRequest" message="tns:verificarSancionesActivas" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/verificarSancionesActivasResponse" message="tns:verificarSancionesActivasResponse" />
+    </operation>
+    <operation name="modificarSancion">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/modificarSancionRequest" message="tns:modificarSancion" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/modificarSancionResponse" message="tns:modificarSancionResponse" />
+    </operation>
+    <operation name="listarSanciones">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/listarSancionesRequest" message="tns:listarSanciones" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/listarSancionesResponse" message="tns:listarSancionesResponse" />
+    </operation>
+    <operation name="eliminarSancion">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/eliminarSancionRequest" message="tns:eliminarSancion" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/eliminarSancionResponse" message="tns:eliminarSancionResponse" />
+    </operation>
+    <operation name="insertarSancion">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/insertarSancionRequest" message="tns:insertarSancion" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/SancionWS/insertarSancionResponse" message="tns:insertarSancionResponse" />
+    </operation>
+  </portType>
+  <binding name="SancionWSPortBinding" type="tns:SancionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="tieneSancionesActivas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSancionesPorPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerSancionPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarSancionesActivas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarSancion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSanciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSancion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarSancion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SancionWS">
+    <port name="SancionWSPort" binding="tns:SancionWSPortBinding">
+      <soap:address location="http://localhost:8080/myholywrapper-v2.1/SancionWS" />
+    </port>
+  </service>
+</definitions>

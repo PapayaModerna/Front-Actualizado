@@ -511,11 +511,48 @@
     <None Include="Connected Services\PrestamoWS\PrestamoWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.eliminarSancionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.insertarSancionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.listarSancionesPorPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.listarSancionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.modificarSancionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.obtenerSancionPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.sancionesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.tieneSancionesActivasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.verificarSancionesActivasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SancionWS\SancionWS.wsdl" />
+    <None Include="Connected Services\SancionWS\SancionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\SedeWS\configuration91.svcinfo" />
     <None Include="Connected Services\SedeWS\configuration.svcinfo" />
     <None Include="Connected Services\PrestamoWS\configuration91.svcinfo" />
     <None Include="Connected Services\PrestamoWS\configuration.svcinfo" />
     <None Include="Connected Services\PrestamoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\SancionWS\configuration91.svcinfo" />
+    <None Include="Connected Services\SancionWS\configuration.svcinfo" />
+    <None Include="Connected Services\SancionWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -611,6 +648,7 @@
     <Content Include="PrestamosPrincipalAdmin.aspx" />
     <Content Include="RecursosUser.aspx" />
     <Content Include="ReportesPrincipalAdmin.aspx" />
+    <Content Include="SancionarUser.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -685,6 +723,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\PrestamoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SancionWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -775,6 +818,13 @@
     </Compile>
     <Compile Include="ReportesPrincipalAdmin.aspx.designer.cs">
       <DependentUpon>ReportesPrincipalAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SancionarUser.aspx.cs">
+      <DependentUpon>SancionarUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SancionarUser.aspx.designer.cs">
+      <DependentUpon>SancionarUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPerfilVista.Master.cs">
       <DependentUpon>UserPerfilVista.Master</DependentUpon>
@@ -915,6 +965,7 @@
     <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
     <WCFMetadataStorage Include="Connected Services\PrestamoEjemplarWS\" />
     <WCFMetadataStorage Include="Connected Services\PrestamoWS\" />
+    <WCFMetadataStorage Include="Connected Services\SancionWS\" />
     <WCFMetadataStorage Include="Connected Services\SedeWS\" />
     <WCFMetadataStorage Include="Connected Services\TemaWS\" />
   </ItemGroup>

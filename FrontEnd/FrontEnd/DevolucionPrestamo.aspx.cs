@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using FrontEnd.PrestamoWS;
 using FrontEnd.PersonaWS;
 using FrontEnd.MaterialWS;
+using FrontEnd.EjemplarWS;
 
 namespace FrontEnd
 {
@@ -15,12 +16,14 @@ namespace FrontEnd
         private PrestamoWSClient prestamoWSClient;
         private PersonaWSClient personaWSClient;
         private MaterialWSClient materialWSClient;
-        private List<FrontEnd.PrestamoWS.ejemplaresDTO> ejemplaresPrestados;
+        private EjemplarWSClient ejemplarWSClient;
+        private List<FrontEnd.EjemplarWS.ejemplaresDTO> ejemplaresPrestados;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             prestamoWSClient = new PrestamoWSClient();
             personaWSClient = new PersonaWSClient();
+            ejemplarWSClient = new EjemplarWSClient();
             materialWSClient = new MaterialWSClient();
         }
 
@@ -30,7 +33,7 @@ namespace FrontEnd
             {
                 if (Session["ejemplaresPrestados"] != null)
                 {
-                    ejemplaresPrestados = (List<FrontEnd.PrestamoWS.ejemplaresDTO>)Session["ejemplaresPrestados"];
+                    ejemplaresPrestados = (List<FrontEnd.EjemplarWS.ejemplaresDTO>)Session["ejemplaresPrestados"];
                 }
 
                 List<int> ejemplaresSeleccionados = (List<int>)Session["ejemplaresSeleccionados"];
@@ -80,6 +83,7 @@ namespace FrontEnd
                         {
                             txtFechaSolicitud.Text = prestamo.fechaSolicitud.ToShortDateString();
                             txtFechaDevolucion.Text = prestamo.fechaDevolucion.ToShortDateString();
+                            txtFechaRealDevolucion.Text= DateTime.Now.ToShortDateString();
 
                             var persona = personaWSClient.obtenerPersona(prestamo.persona.idPersona);
 
@@ -87,7 +91,7 @@ namespace FrontEnd
                             {
                                 string nombreCompleto = $"{persona.nombre} {persona.paterno} {persona.materno}";
                                 txtNombres.Text = $"Código: {persona.codigo} - {nombreCompleto}";
-                                ejemplaresPrestados = prestamoWSClient.listarEjemplaresPrestadosPorPersona(prestamo.persona.idPersona).ToList();
+                                ejemplaresPrestados = ejemplarWSClient.listarEjemplaresPorPrestamo(prestamo.persona.idPersona).ToList();
                                 Session["ejemplaresPrestados"] = ejemplaresPrestados;
 
                                 List<int> ejemplaresSeleccionados = new List<int>();
@@ -151,7 +155,7 @@ namespace FrontEnd
         {
             if (Session["ejemplaresPrestados"] != null)
             {
-                ejemplaresPrestados = (List<FrontEnd.PrestamoWS.ejemplaresDTO>)Session["ejemplaresPrestados"];
+                ejemplaresPrestados = (List<FrontEnd.EjemplarWS.ejemplaresDTO>)Session["ejemplaresPrestados"];
             }
 
             if (ejemplaresPrestados != null && ejemplaresPrestados.Count > 0)

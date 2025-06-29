@@ -51,7 +51,6 @@
 
                 </asp:Panel>
 
-                <!-- Formulario para Reestablecer la contraseña -->
                 <asp:Panel ID="pnlReset" runat="server" CssClass="form-box reset-panel w-100 d-none mt-5" style="max-width: 500px;">
                     <h1 class="fw-bold text-center mb-4">Reestablecer Contraseña</h1>
                     <div class="mb-3 position-relative">

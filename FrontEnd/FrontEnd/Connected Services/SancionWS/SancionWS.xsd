@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarSancion" type="tns:eliminarSancion" />
+  <xs:element name="eliminarSancionResponse" type="tns:eliminarSancionResponse" />
+  <xs:element name="insertarSancion" type="tns:insertarSancion" />
+  <xs:element name="insertarSancionResponse" type="tns:insertarSancionResponse" />
+  <xs:element name="listarSanciones" type="tns:listarSanciones" />
+  <xs:element name="listarSancionesPorPersona" type="tns:listarSancionesPorPersona" />
+  <xs:element name="listarSancionesPorPersonaResponse" type="tns:listarSancionesPorPersonaResponse" />
+  <xs:element name="listarSancionesResponse" type="tns:listarSancionesResponse" />
+  <xs:element name="modificarSancion" type="tns:modificarSancion" />
+  <xs:element name="modificarSancionResponse" type="tns:modificarSancionResponse" />
+  <xs:element name="obtenerSancionPorId" type="tns:obtenerSancionPorId" />
+  <xs:element name="obtenerSancionPorIdResponse" type="tns:obtenerSancionPorIdResponse" />
+  <xs:element name="tieneSancionesActivas" type="tns:tieneSancionesActivas" />
+  <xs:element name="tieneSancionesActivasResponse" type="tns:tieneSancionesActivasResponse" />
+  <xs:element name="verificarSancionesActivas" type="tns:verificarSancionesActivas" />
+  <xs:element name="verificarSancionesActivasResponse" type="tns:verificarSancionesActivasResponse" />
+  <xs:complexType name="modificarSancion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idSancion" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoSancion" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="duracion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarSancionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSancion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idSancion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSancionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSanciones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarSancionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sancionesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sancionesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="duracion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idSancion" type="xs:int" />
+      <xs:element minOccurs="0" name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="prestamo" type="tns:prestamosDTO" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoSancion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prestamosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaDevolucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPrestamo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSolicitud" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+      <xs:element minOccurs="0" name="persona" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="deuda" type="xs:double" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaContratoFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaContratoInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSancionFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelesInglesDTO" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="sede" type="tns:sedesDTO" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoPersona" />
+      <xs:element minOccurs="0" name="turno" type="tns:turnos" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nivelesInglesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idNivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sedesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="correoContacto" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerSancionPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idSancion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerSancionPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:sancionesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificarSancionesActivas">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificarSancionesActivasResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarSancionesPorPersona">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSancionesPorPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sancionesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSancion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoSancion" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="duracion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSancionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tieneSancionesActivas">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tieneSancionesActivasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoSancion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DANHO" />
+      <xs:enumeration value="PERDIDA" />
+      <xs:enumeration value="DEMORA" />
+      <xs:enumeration value="EXCEPCION" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nivel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASICO" />
+      <xs:enumeration value="INTERMEDIO" />
+      <xs:enumeration value="AVANZADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoPersona">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PROFESOR" />
+      <xs:enumeration value="ADMINISTRADOR" />
+      <xs:enumeration value="ESTUDIANTE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="turnos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MANHANA" />
+      <xs:enumeration value="TARDE" />
+      <xs:enumeration value="NOCHE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
