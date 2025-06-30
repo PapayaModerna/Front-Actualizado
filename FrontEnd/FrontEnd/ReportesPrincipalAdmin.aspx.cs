@@ -81,10 +81,8 @@ namespace FrontEnd
             int anho = int.Parse(ddlAnho.SelectedValue);
             int mes = int.Parse(ddlMes.SelectedValue);
 
-            // TODO: Llama a tu backend para obtener el PDF de materiales más solicitados
-            // byte[] reporte = Servicio.ReporteMaterialesMasSolicitados(sedeId, anho, mes);
-
-            byte[] reporte = new byte[0]; // Reemplaza por la llamada real
+            var reporteWSClient = new ReporteGeneralWSClient();
+            byte[] reporte = reporteWSClient.reporteMaterialesSolicitados(sedeId, anho, mes);
 
             Response.Clear();
             Response.ContentType = "application/pdf";

@@ -540,6 +540,9 @@
     <Content Include="Connected Services\ReporteGeneralWS\FrontEnd.ReporteGeneralWS.reportesGeneralesDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ReporteGeneralWS\FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ReporteGeneralWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

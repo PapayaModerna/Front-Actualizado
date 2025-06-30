@@ -28,6 +28,19 @@ namespace FrontEnd.ReporteGeneralWS {
         System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.generarReporteResponse> generarReporteAsync(FrontEnd.ReporteGeneralWS.generarReporteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/listarPorPeriodoReque" +
+            "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/listarPorPeriodoRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse listarPorPeriodo(FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/listarPorPeriodoReque" +
+            "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/listarPorPeriodoRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse> listarPorPeriodoAsync(FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/reporteGeneralRequest" +
             "", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/reporteGeneralRespons" +
             "e")]
@@ -41,17 +54,17 @@ namespace FrontEnd.ReporteGeneralWS {
         System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.reporteGeneralResponse> reporteGeneralAsync(FrontEnd.ReporteGeneralWS.reporteGeneralRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/listarPorPeriodoReque" +
-            "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/listarPorPeriodoRespo" +
-            "nse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/reporteMaterialesSoli" +
+            "citadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/reporteMaterialesSoli" +
+            "citadosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse listarPorPeriodo(FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest request);
+        FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosResponse reporteMaterialesSolicitados(FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/listarPorPeriodoReque" +
-            "st", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/listarPorPeriodoRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse> listarPorPeriodoAsync(FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/reporteMaterialesSoli" +
+            "citadosRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/ReporteGeneralWS/reporteMaterialesSoli" +
+            "citadosResponse")]
+        System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosResponse> reporteMaterialesSolicitadosAsync(FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -84,52 +97,6 @@ namespace FrontEnd.ReporteGeneralWS {
     public partial class generarReporteResponse {
         
         public generarReporteResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteGeneral", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class reporteGeneralRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int sedeId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int anho;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int mes;
-        
-        public reporteGeneralRequest() {
-        }
-        
-        public reporteGeneralRequest(int sedeId, int anho, int mes) {
-            this.sedeId = sedeId;
-            this.anho = anho;
-            this.mes = mes;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteGeneralResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class reporteGeneralResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
-        public byte[] @return;
-        
-        public reporteGeneralResponse() {
-        }
-        
-        public reporteGeneralResponse(byte[] @return) {
-            this.@return = @return;
         }
     }
     
@@ -1078,6 +1045,98 @@ namespace FrontEnd.ReporteGeneralWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteGeneral", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class reporteGeneralRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int sedeId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int anho;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int mes;
+        
+        public reporteGeneralRequest() {
+        }
+        
+        public reporteGeneralRequest(int sedeId, int anho, int mes) {
+            this.sedeId = sedeId;
+            this.anho = anho;
+            this.mes = mes;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteGeneralResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class reporteGeneralResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public reporteGeneralResponse() {
+        }
+        
+        public reporteGeneralResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteMaterialesSolicitados", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class reporteMaterialesSolicitadosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int sedeId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int anho;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int mes;
+        
+        public reporteMaterialesSolicitadosRequest() {
+        }
+        
+        public reporteMaterialesSolicitadosRequest(int sedeId, int anho, int mes) {
+            this.sedeId = sedeId;
+            this.anho = anho;
+            this.mes = mes;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteMaterialesSolicitadosResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class reporteMaterialesSolicitadosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public reporteMaterialesSolicitadosResponse() {
+        }
+        
+        public reporteMaterialesSolicitadosResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ReporteGeneralWSChannel : FrontEnd.ReporteGeneralWS.ReporteGeneralWS, System.ServiceModel.IClientChannel {
     }
@@ -1130,6 +1189,35 @@ namespace FrontEnd.ReporteGeneralWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse FrontEnd.ReporteGeneralWS.ReporteGeneralWS.listarPorPeriodo(FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest request) {
+            return base.Channel.listarPorPeriodo(request);
+        }
+        
+        public FrontEnd.ReporteGeneralWS.reportesGeneralesDTO[] listarPorPeriodo(int anio, int mes, int idPrestamo, int idPersona) {
+            FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest inValue = new FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest();
+            inValue.anio = anio;
+            inValue.mes = mes;
+            inValue.idPrestamo = idPrestamo;
+            inValue.idPersona = idPersona;
+            FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse retVal = ((FrontEnd.ReporteGeneralWS.ReporteGeneralWS)(this)).listarPorPeriodo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse> FrontEnd.ReporteGeneralWS.ReporteGeneralWS.listarPorPeriodoAsync(FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest request) {
+            return base.Channel.listarPorPeriodoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse> listarPorPeriodoAsync(int anio, int mes, int idPrestamo, int idPersona) {
+            FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest inValue = new FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest();
+            inValue.anio = anio;
+            inValue.mes = mes;
+            inValue.idPrestamo = idPrestamo;
+            inValue.idPersona = idPersona;
+            return ((FrontEnd.ReporteGeneralWS.ReporteGeneralWS)(this)).listarPorPeriodoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontEnd.ReporteGeneralWS.reporteGeneralResponse FrontEnd.ReporteGeneralWS.ReporteGeneralWS.reporteGeneral(FrontEnd.ReporteGeneralWS.reporteGeneralRequest request) {
             return base.Channel.reporteGeneral(request);
         }
@@ -1157,32 +1245,30 @@ namespace FrontEnd.ReporteGeneralWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse FrontEnd.ReporteGeneralWS.ReporteGeneralWS.listarPorPeriodo(FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest request) {
-            return base.Channel.listarPorPeriodo(request);
+        FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosResponse FrontEnd.ReporteGeneralWS.ReporteGeneralWS.reporteMaterialesSolicitados(FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosRequest request) {
+            return base.Channel.reporteMaterialesSolicitados(request);
         }
         
-        public FrontEnd.ReporteGeneralWS.reportesGeneralesDTO[] listarPorPeriodo(int anio, int mes, int idPrestamo, int idPersona) {
-            FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest inValue = new FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest();
-            inValue.anio = anio;
+        public byte[] reporteMaterialesSolicitados(int sedeId, int anho, int mes) {
+            FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosRequest inValue = new FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosRequest();
+            inValue.sedeId = sedeId;
+            inValue.anho = anho;
             inValue.mes = mes;
-            inValue.idPrestamo = idPrestamo;
-            inValue.idPersona = idPersona;
-            FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse retVal = ((FrontEnd.ReporteGeneralWS.ReporteGeneralWS)(this)).listarPorPeriodo(inValue);
+            FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosResponse retVal = ((FrontEnd.ReporteGeneralWS.ReporteGeneralWS)(this)).reporteMaterialesSolicitados(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse> FrontEnd.ReporteGeneralWS.ReporteGeneralWS.listarPorPeriodoAsync(FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest request) {
-            return base.Channel.listarPorPeriodoAsync(request);
+        System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosResponse> FrontEnd.ReporteGeneralWS.ReporteGeneralWS.reporteMaterialesSolicitadosAsync(FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosRequest request) {
+            return base.Channel.reporteMaterialesSolicitadosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse> listarPorPeriodoAsync(int anio, int mes, int idPrestamo, int idPersona) {
-            FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest inValue = new FrontEnd.ReporteGeneralWS.listarPorPeriodoRequest();
-            inValue.anio = anio;
+        public System.Threading.Tasks.Task<FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosResponse> reporteMaterialesSolicitadosAsync(int sedeId, int anho, int mes) {
+            FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosRequest inValue = new FrontEnd.ReporteGeneralWS.reporteMaterialesSolicitadosRequest();
+            inValue.sedeId = sedeId;
+            inValue.anho = anho;
             inValue.mes = mes;
-            inValue.idPrestamo = idPrestamo;
-            inValue.idPersona = idPersona;
-            return ((FrontEnd.ReporteGeneralWS.ReporteGeneralWS)(this)).listarPorPeriodoAsync(inValue);
+            return ((FrontEnd.ReporteGeneralWS.ReporteGeneralWS)(this)).reporteMaterialesSolicitadosAsync(inValue);
         }
     }
 }

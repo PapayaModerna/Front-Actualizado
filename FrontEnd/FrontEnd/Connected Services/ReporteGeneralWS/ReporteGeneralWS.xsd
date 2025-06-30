@@ -6,6 +6,8 @@
   <xs:element name="listarPorPeriodoResponse" type="tns:listarPorPeriodoResponse" />
   <xs:element name="reporteGeneral" type="tns:reporteGeneral" />
   <xs:element name="reporteGeneralResponse" type="tns:reporteGeneralResponse" />
+  <xs:element name="reporteMaterialesSolicitados" type="tns:reporteMaterialesSolicitados" />
+  <xs:element name="reporteMaterialesSolicitadosResponse" type="tns:reporteMaterialesSolicitadosResponse" />
   <xs:complexType name="listarPorPeriodo">
     <xs:sequence>
       <xs:element minOccurs="0" name="anio" type="xs:int" />
@@ -74,6 +76,18 @@
       <xs:element minOccurs="0" name="fechaSolicitud" type="xs:dateTime" />
       <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
       <xs:element minOccurs="0" name="persona" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteMaterialesSolicitados">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sedeId" type="xs:int" />
+      <xs:element minOccurs="0" name="anho" type="xs:int" />
+      <xs:element minOccurs="0" name="mes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteMaterialesSolicitadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="reporteGeneral">
