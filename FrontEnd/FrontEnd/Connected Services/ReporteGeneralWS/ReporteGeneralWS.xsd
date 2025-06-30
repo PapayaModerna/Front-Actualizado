@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="generarReporte" type="tns:generarReporte" />
+  <xs:element name="generarReporteResponse" type="tns:generarReporteResponse" />
+  <xs:element name="listarPorPeriodo" type="tns:listarPorPeriodo" />
+  <xs:element name="listarPorPeriodoResponse" type="tns:listarPorPeriodoResponse" />
+  <xs:element name="reporteGeneral" type="tns:reporteGeneral" />
+  <xs:element name="reporteGeneralResponse" type="tns:reporteGeneralResponse" />
+  <xs:complexType name="listarPorPeriodo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anio" type="xs:int" />
+      <xs:element minOccurs="0" name="mes" type="xs:int" />
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorPeriodoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reportesGeneralesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportesGeneralesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anio" type="xs:int" />
+      <xs:element minOccurs="0" name="mes" type="xs:int" />
+      <xs:element minOccurs="0" name="persona" type="tns:personasDTO" />
+      <xs:element minOccurs="0" name="prestamo" type="tns:prestamosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="deuda" type="xs:double" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaContratoFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaContratoInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSancionFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelesInglesDTO" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="sede" type="tns:sedesDTO" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoPersona" />
+      <xs:element minOccurs="0" name="turno" type="tns:turnos" />
+      <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nivelesInglesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idNivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sedesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="correoContacto" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prestamosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaDevolucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPrestamo" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSolicitud" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPrestamo" type="xs:int" />
+      <xs:element minOccurs="0" name="persona" type="tns:personasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGeneral">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sedeId" type="xs:int" />
+      <xs:element minOccurs="0" name="anho" type="xs:int" />
+      <xs:element minOccurs="0" name="mes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteGeneralResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anio" type="xs:int" />
+      <xs:element minOccurs="0" name="mes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:simpleType name="nivel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASICO" />
+      <xs:enumeration value="INTERMEDIO" />
+      <xs:enumeration value="AVANZADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoPersona">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PROFESOR" />
+      <xs:enumeration value="ADMINISTRADOR" />
+      <xs:enumeration value="ESTUDIANTE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="turnos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MANHANA" />
+      <xs:enumeration value="TARDE" />
+      <xs:enumeration value="NOCHE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -3,18 +3,22 @@
     <h4 class="mb-4">Reportes</h4>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-    <link href="<%= ResolveUrl("~/Content/DetalleLibros.css") %>" rel="stylesheet" type="text/css" />
+    <title>Reportes Administrativos</title>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-md-6 mx-auto">
-                <div class="detalle-libro-container text-center py-5">
-                    <asp:Button ID="btnGenerarReporte" runat="server" Text="Generar Reporte" CssClass="btn btn-primary" />
-                </div>
-            </div>
+    <div style="margin: 40px;">
+        <div style="margin-bottom: 20px;">
+            <asp:Label ID="lblSede" runat="server" Text="Sede:" AssociatedControlID="ddlSede" />
+            <asp:DropDownList ID="ddlSede" runat="server" />
+            &nbsp;&nbsp;
+            <asp:Label ID="lblAnho" runat="server" Text="Año:" AssociatedControlID="ddlAnho" />
+            <asp:DropDownList ID="ddlAnho" runat="server" />
+            &nbsp;&nbsp;
+            <asp:Label ID="lblMes" runat="server" Text="Mes:" AssociatedControlID="ddlMes" />
+            <asp:DropDownList ID="ddlMes" runat="server" />
         </div>
+        <asp:Button ID="btnGenerarReporteGeneral" runat="server" Text="Generar Reporte General" OnClick="btnGenerarReporteGeneral_Click" CssClass="btn btn-primary" />
+        &nbsp;
+        <asp:Button ID="btnMaterialesMasSolicitados" runat="server" Text="Materiales Más Solicitados" OnClick="btnMaterialesMasSolicitados_Click" CssClass="btn btn-secondary" />
     </div>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
