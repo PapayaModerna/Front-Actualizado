@@ -316,6 +316,18 @@ namespace FrontEnd
                     idTemaSpecified = true
                 }).ToArray();
 
+                /*System.Diagnostics.Debug.WriteLine("Creadores:");
+                foreach (var creador in listaCreadores)
+                {
+                    System.Diagnostics.Debug.WriteLine("ID Creador: " + creador.idCreador);
+                }
+
+                System.Diagnostics.Debug.WriteLine("Temas:");
+                foreach (var tema in listaTemas)
+                {
+                    System.Diagnostics.Debug.WriteLine("ID Tema: " + tema.idTema);
+                }*/
+
                 if (listaCreadores.Length == 0)
                 {
                     Response.Write("<script>alert('Debe seleccionar al menos un creador.');</script>");

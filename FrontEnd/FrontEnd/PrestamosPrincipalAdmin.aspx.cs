@@ -59,7 +59,6 @@ namespace FrontEnd
             try
             {
                 var prestamosWS = prestamoWSClient.listarPrestamosPaginado(10, pagina);
-
                 var lista = prestamosWS
                     .Select(p => new
                     {
