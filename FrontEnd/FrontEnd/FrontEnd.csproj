@@ -526,6 +526,24 @@
     <None Include="Connected Services\PrestamoWS\PrestamoWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ReporteGeneralWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteGeneralWS\configuration.svcinfo" />
+    <Content Include="Connected Services\ReporteGeneralWS\FrontEnd.ReporteGeneralWS.generarReporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ReporteGeneralWS\FrontEnd.ReporteGeneralWS.listarPorPeriodoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ReporteGeneralWS\FrontEnd.ReporteGeneralWS.reporteGeneralResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ReporteGeneralWS\FrontEnd.ReporteGeneralWS.reportesGeneralesDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ReporteGeneralWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.eliminarSancionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -553,6 +571,10 @@
     <Content Include="Connected Services\SancionWS\FrontEnd.SancionWS.verificarSancionesActivasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\ReporteGeneralWS\ReporteGeneralWS.wsdl" />
+    <None Include="Connected Services\ReporteGeneralWS\ReporteGeneralWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\SancionWS\SancionWS.wsdl" />
     <None Include="Connected Services\SancionWS\SancionWS.xsd">
       <SubType>Designer</SubType>
@@ -742,6 +764,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\PrestamoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ReporteGeneralWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -991,6 +1018,7 @@
     <WCFMetadataStorage Include="Connected Services\PersonaWS\" />
     <WCFMetadataStorage Include="Connected Services\PrestamoEjemplarWS\" />
     <WCFMetadataStorage Include="Connected Services\PrestamoWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteGeneralWS\" />
     <WCFMetadataStorage Include="Connected Services\SancionWS\" />
     <WCFMetadataStorage Include="Connected Services\SedeWS\" />
     <WCFMetadataStorage Include="Connected Services\TemaWS\" />
