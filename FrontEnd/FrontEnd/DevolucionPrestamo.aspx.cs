@@ -91,7 +91,10 @@ namespace FrontEnd
                             {
                                 string nombreCompleto = $"{persona.nombre} {persona.paterno} {persona.materno}";
                                 txtNombres.Text = $"Código: {persona.codigo} - {nombreCompleto}";
-                                ejemplaresPrestados = ejemplarWSClient.listarEjemplaresPorPrestamo(prestamo.persona.idPersona).ToList();
+                                var ejemplaresAux = ejemplarWSClient.listarEjemplaresPorPrestamo(codigo).ToList();
+                                ejemplaresPrestados = ejemplaresAux
+                                                .Where(x => !x.disponible)
+                                                .ToList();
                                 Session["ejemplaresPrestados"] = ejemplaresPrestados;
 
                                 List<int> ejemplaresSeleccionados = new List<int>();
